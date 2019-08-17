@@ -1,0 +1,274 @@
+html {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+*::after,
+*::before,
+* {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif, Helvetica, Verdana;
+    padding: 2em 0;
+}
+
+.cards-container {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-gap: 2em;
+}
+
+.cards-container .cards {
+    display: grid;
+    grid-row-gap: 1rem;
+}
+
+.cards-container .cards .border-card:nth-child(2) {
+    order: -1;
+}
+
+.cards-container .cards .border-card {
+    width: 810px;
+    background: transparent;
+    min-height: 258px;
+    height: 258px;
+    max-height: 258px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 30px;
+    transition: all .5s ease-in;
+}
+
+.cards-container .cards .border-card:nth-child(3) {
+    background: rgba(98,125,77,1);
+    background: -moz-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(98,125,77,1)), color-stop(54%, rgba(99,153,49,1)), color-stop(100%, rgba(151,235,77,1)));
+    background: -webkit-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+}
+
+
+.cards-container .cards .border-card:hover {
+    background: rgba(98,125,77,1);
+    background: -moz-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(98,125,77,1)), color-stop(54%, rgba(99,153,49,1)), color-stop(100%, rgba(151,235,77,1)));
+    background: -webkit-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+}
+
+.cards-container .cards .border-card:hover .card,
+.cards-container .cards .border-red:hover .card {
+    border: .1em solid transparent;
+}
+
+.cards-container .cards .card {
+    overflow: hidden;
+    min-height: 248px;
+    height: 248px;
+    max-height: 248px;
+    background: #F0F0F0;
+    width: 800px;
+    max-width: 800px;
+    padding: 2em 2em;
+    border: .1em solid rgba(0, 0, 0, .5);
+    border-radius: 27px;
+}
+
+.cards-container .cards .border-red .card {
+    border: .1em solid #F0F0F0;
+}
+
+.cards-container .cards .border-card:nth-child(3) .card {
+    border: .1em solid #F0F0F0;
+}
+
+.cards-container .cards .border-red {
+    background: red;
+}
+
+.cards-container .cards .card .players-thumbnails-score,
+.cards-container .cards .card .players-info-games  {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.cards-container .cards .card .players-info-games .player .player-info-nation-nickname {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-column-gap: .5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.cards-container .cards .card .players-info-games .player-2-info .player-info-nation-nickname .player-info-nation {
+    order: 2;
+}
+
+.cards-container .cards .card .players-info-games .player-2-info .player-info-teamname {
+    text-align: right;
+}
+
+.cards-container .cards .card .players-info-games .player .player-info-teamname {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: rgba(0,0,0, .8);
+}
+
+.cards-container .cards .card .players-info-games .stats-games-pk {
+    align-self: end;
+    display: grid;
+    grid-row-gap: .5rem;
+    margin-bottom: -10px;
+}
+
+.cards-container .cards .card .players-info-games .stats-games-pk .game-1,
+.cards-container .cards .card .players-info-games .stats-games-pk .game-2,
+.cards-container .cards .card .players-info-games .stats-games-pk .pk {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: .7rem;
+}
+
+.cards-container .cards .card .players-info-games .stats-games-pk span:nth-child(2),
+.cards-container .cards .card .players-info-games .stats-games-pk span:nth-child(4) {
+    font-weight: bold;
+    color: rgba(0,0,0, .2);
+}
+
+.cards-container .cards .card .players-info-games .stats-games-pk span:nth-child(1),
+.cards-container .cards .card .players-info-games .stats-games-pk span:nth-child(5) {
+    font-weight: bold;
+}
+
+.cards-container .cards .card .players-info-games .stats-games-pk .game-1 span:nth-child(3), 
+.cards-container .cards .card .players-info-games .stats-games-pk .game-2 span:nth-child(3), 
+.cards-container .cards .card .players-info-games .stats-games-pk .pk span:nth-child(3) {
+    font-weight: bold;
+    color: rgba(0, 0, 0, .5);
+}
+
+.cards-container .cards .card .players-info-games .player {
+    display: grid;
+    grid-template-rows: repeat(2, 40px);
+}
+
+.cards-container .cards .card .players-thumbnails-score .player {
+    position: relative;
+}
+
+.cards-container .cards .card .players-thumbnails-score .player .player-images-thumbnail {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: rgba(98,125,77,1);
+    background: -moz-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(98,125,77,1)), color-stop(54%, rgba(99,153,49,1)), color-stop(100%, rgba(151,235,77,1)));
+    background: -webkit-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+    background: linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(99,153,49,1) 54%, rgba(151,235,77,1) 100%);
+}
+
+.cards-container .cards .card .players-thumbnails-score .player-1-images .player-images-team-logo::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2.5px;
+    background: rgba(0,0,0,.1);
+    margin-left: -12%;
+    margin-top: -1.5%;
+} 
+
+.cards-container .cards .card .players-thumbnails-score .player-2-images .player-images-team-logo::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2.5px;
+    background: rgba(0,0,0,.1);
+    margin-left: 49%;
+} 
+
+.cards-container .cards .card .players-thumbnails-score .player-2-images .player-images-thumbnail {
+    order: 2;
+}
+
+.cards-container .cards .card .players-thumbnails-score .player .player-images-thumbnail img {
+    border-radius: 50%;
+    width: 80px;
+    vertical-align: top;
+}
+
+.cards-container .cards .card .players-thumbnails-score .player .player-images-team-logo img {
+    height: 90px;
+    width: 90px;
+}
+
+.cards-container .cards .card .players-thumbnails-score .player-1-images,
+.cards-container .cards .card .players-thumbnails-score .player-2-images,
+.cards-container .cards .card .players-thumbnails-score .stats-final-score {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-gap: 3em;
+}
+
+.cards-container .cards .card .players-thumbnails-score .stats-final-score {
+    font-size: 2em;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+    justify-items: center;
+    width: 162px;
+    grid-column-gap: .5rem;
+    position: relative;
+}
+
+.cards-container .cards .card .players-thumbnails-score .stats-final-score .live {   
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    font-size: 20px;
+    text-align: center;
+    background: red;
+    border-radius: 0 0 6px 6px;
+    color: #ffffff;
+}
+
+.cards-container .cards .card .players-thumbnails-score .stats-final-score .live p {
+    margin-top: -2px;
+    font-weight: bold; 
+}
+
+.cards-container .cards .card .players-thumbnails-score .stats-final-score .stats-score {
+    background: white;
+    text-align: center;
+    border-radius: 6px;    
+    display: grid;
+    align-content: center;
+    border-radius: 6px;
+    min-width: 73px;
+    width: 73px;
+    max-width: 73px;
+    height: 100.8px;
+    max-height: 100.8px;
+    font-size: 3rem;
+    font-weight: bold;
+    -webkit-box-shadow: 2px 6px 16px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 6px 16px -2px rgba(0,0,0,0.75);
+    box-shadow: 2px 6px 11px -2px rgba(0,0,0,0.75);
+}
