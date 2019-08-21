@@ -216,7 +216,8 @@ section.horarios {
 
 .cards-container .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 33%));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 25%));
+    justify-content: space-around;
     grid-row-gap: 1rem;
     grid-column-gap: .3rem;
 }
