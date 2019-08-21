@@ -237,6 +237,11 @@ section.horarios {
     grid-template-rows: 37px auto;
     grid-row-gap: .6rem;
     position: relative;
+    transition: all .3s ease;
+}
+
+.cards-container .cards .card:hover {
+    transform: scale(1.2);
 }
 
 .cards-container .cards .card:nth-child(3n+2) {    
