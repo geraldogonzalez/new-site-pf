@@ -240,15 +240,52 @@ section.horarios {
     transition: all .3s ease;
 }
 
+svg, rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill:transparent;
+    border-radius: 5px;
+}
+
+rect {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #69ca62;
+    border-radius: 10px;
+    stroke-width: 4;
+    stroke-dasharray: 215;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate
+{
+    0%{
+        stroke-dashoffset: 800;
+    }
+    100%{
+        stroke-dashoffset:0;
+    }
+}
+
 .cards-container .cards .card:hover {
     transform: scale(1.2);
 }
 
-.cards-container .cards .card:nth-child(3n+2) {    
+.cards-container .cards .live {    
+    border: 2px solid red;
+}
+
+.cards-container .cards .card.xbox {    
     border: 2px solid #119910;
 }
 
-.cards-container .cards .card:nth-child(3n) {    
+.cards-container .cards .card.ps4 {    
     border: 2px solid #0070cc;
 }
 
@@ -274,6 +311,47 @@ section.horarios {
     display: grid;
     grid-auto-flow: column;
 }
+
+/* --------- MATCHS WINNERS AND LOSERS START ---------*/
+
+.cards-container .cards .card .players-thumbnails-score .lose {
+    filter: grayscale(1);
+    opacity: .5;
+} 
+
+.cards-container .cards .card .players-info-games .lose {
+    opacity: .5;
+}
+
+.cards-container .cards .card.xbox .players-thumbnails-score .scores .win {
+    background: linear-gradient(to bottom, #a0d838 0%, #119910 80%, #196f18 100%);
+}
+
+.cards-container .cards .card.xbox .players-thumbnails-score .scores .win .pk-win {
+    position: absolute;
+    font-size: 7px;
+    bottom: -5px;
+    text-align: center;
+    width: 100%;
+}
+
+.cards-container .cards .card.ps4 .players-thumbnails-score .scores .win .pk-win {
+    position: absolute;
+    font-size: 7px;
+    bottom: -5px;
+    text-align: center;
+    width: 100%;
+}
+
+.cards-container .cards .card.ps4 .players-thumbnails-score .scores .win {
+    background: linear-gradient(to bottom, #8fd5fd 0%, #0070cc 100%);
+}
+
+.cards-container .cards .card.xbox .players-thumbnails-score .scores .win p,
+.cards-container .cards .card.ps4 .players-thumbnails-score .scores .win p {
+    color: white;
+}
+/* --------- END ---------*/
 
 .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo {
     grid-column-gap: 13px;
@@ -301,11 +379,11 @@ section.horarios {
     border-radius: 50%;
 }
 
-.cards-container .cards .card .ps4-players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
+.cards-container .cards .ps4 .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
     background: linear-gradient(-120deg, #8fd5fd 0%, #0070cc 100%);
 }
 
-.cards-container .cards .card .xbox-players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
+.cards-container .cards .xbox .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
     background: linear-gradient(-120deg, #a0d838 0%, #119910 80%, #196f18 100%);
 }
 
@@ -340,6 +418,7 @@ section.horarios {
     justify-content: space-between;
     grid-column-gap: .5rem;
     grid-template-columns: repeat(2, 30px);
+    position: relative;
 }
 
 .cards-container .cards .card .players-thumbnails-score .scores .score {    
@@ -351,11 +430,43 @@ section.horarios {
     height: 42px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    position: relative;
 }
 
 .cards-container .cards .card .players-thumbnails-score .scores .score p {
     color: #040404;
     font-size: 22px;
+}
+
+.cards-container .cards .live .players-thumbnails-score .scores .live-match {
+    position: absolute;
+    bottom: -8px;
+    height: 10px;
+    width: 100%;
+    text-align: center;
+    background: red;
+    padding-top: 1px;
+    border-radius: 0 0 3px 3px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    animation-name: live;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes live {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: white;
+    }
+    
+    100% {
+        color: red;
+    } 
 }
 
 .cards-container .cards .card .players-info-games {
