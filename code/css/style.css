@@ -33,7 +33,7 @@ header.header .contenedor-header .consola {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 header.header .contenedor-header .consola .titulo {
@@ -49,8 +49,13 @@ header.header .contenedor-header .consola .titulo .fab {
 
 header.header .contenedor-header .consola .consola-btn {
     display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 1rem;
+    grid-template-columns: repeat(2, 50%);
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:80px;
+    width:100%;
+    z-index: 10000;
 }
 
 header.header .contenedor-header .consola .consola-btn a {
@@ -58,18 +63,35 @@ header.header .contenedor-header .consola .consola-btn a {
     text-decoration: none;
     border: 1.5px solid rgba(0, 0, 0, .2);
     padding: .5rem;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem; 
 }
 
-header.header .contenedor-header .consola .consola-btn a.active {
-    color: black;
-    border: 1.5px solid black;
+header.header .contenedor-header .consola .consola-btn a {
+    background: #aaaaaa;
+}
+
+header.header .contenedor-header .consola .consola-btn a.btn-xbox.active {
+    background: linear-gradient(to right, #a0d838 0%, #119910 80%, #196f18 100%);
+    color: white;
+    border: 1.5px solid #aaaaaa;
+}
+
+header.header .contenedor-header .consola .consola-btn a.btn-ps4.active {
+    background: linear-gradient(to right, #8fd5fd 0%, #0070cc 100%);
+    color: white;
+    border: 1.5px solid #aaaaaa;
 }
 
 header.header .contenedor-header .menu {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(3, 90px);
-    justify-content: start;
+    justify-content: center;
     font-size: .8rem;
     text-align: center;
     grid-column-gap: .2rem;
@@ -132,6 +154,53 @@ header.header .contenedor-header .menu a i.fas{
 
 
 
+/*---------- MEDIAQUERIES HEADER ----------*/
+
+@media screen and (min-width: 1024px) {
+
+    header.header .contenedor-header .menu {
+        justify-content: start;
+    }
+
+    header.header .contenedor-header .consola .consola-btn {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: unset;
+        grid-column-gap: 1rem;
+        position: initial;
+        left: unset;
+        bottom: unset;
+        height: unset;
+        width: unset;
+        background: unset;
+        z-index: unset;
+    }
+
+    header.header .contenedor-header .consola .consola-btn a {
+        font-size: 1rem; 
+        display: block;
+    }
+
+    header.header .contenedor-header .consola {
+        justify-content: space-between;
+    }
+
+    header.header .contenedor-header .consola .consola-btn a.btn-xbox.active,
+    header.header .contenedor-header .consola .consola-btn a.btn-ps4.active {
+        color: black;
+        border: 1.5px solid black;
+        background: white;
+    }
+
+    
+    header.header .contenedor-header .consola .consola-btn a.btn-ps4 {
+        background: white;
+    }
+
+}
+
+
+
 /*---------- MAIN -----------*/
 
 main {
@@ -153,9 +222,20 @@ section.horarios {
     margin-bottom: 1rem;
 }
 
+section.horarios div:nth-child(+n+2) {
+    display: none;
+}
 
 
 
+
+/*---------- MEDIAQUERIES MAIN ----------*/
+
+@media screen and (min-width: 1024px) {
+    section.horarios div:nth-child(+n+2) {
+        display: block;
+    }
+}
 
 
 
@@ -205,6 +285,7 @@ section.horarios {
 
 /* ESTILOS CARDS */
 
+
 .cards-container {
     /*width: 90%;*/
     margin: 0 auto;
@@ -216,10 +297,12 @@ section.horarios {
 
 .cards-container .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 25%));
-    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(273px, 100%));
+    justify-content: center;
+    justify-items: center;
     grid-row-gap: 1rem;
     grid-column-gap: .3rem;
+    margin-bottom: 85px;
 }
 
 
@@ -227,17 +310,22 @@ section.horarios {
 
 .cards-container .cards .card {
     font-size: .5rem;
-    padding: 12px 12px 15px 12px; 
+    padding: 12px; 
     border: 1px solid #aaaaaa;
     background: #f6f6f6;
-    width: 330px;
-    height: 105px;
+    width: 273px;
+    height: 98px;
     border-radius: 10px;
     display: grid;
-    grid-template-rows: 37px auto;
-    grid-row-gap: .6rem;
+    grid-template-rows: 34px auto;
+    grid-row-gap: 12px;
     position: relative;
-    transition: all .3s ease;
+    transition: all .3s ease;    
+}
+
+
+.cards-container .cards .card:nth-child(+n+8) {
+    display: none;
 }
 
 svg, rect {
@@ -247,7 +335,7 @@ svg, rect {
     width: 100%;
     height: 100%;
     fill:transparent;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 rect {
@@ -258,15 +346,15 @@ rect {
     fill: transparent;
     stroke: #69ca62;
     border-radius: 10px;
-    stroke-width: 4;
-    stroke-dasharray: 215;
-    animation: animate 3s linear infinite;
+    stroke-width: 6;
+    stroke-dasharray: 185;
+    animation: animate 1000s linear infinite;
 }
 
 @keyframes animate
 {
     0%{
-        stroke-dashoffset: 800;
+        stroke-dashoffset: 200000;
     }
     100%{
         stroke-dashoffset:0;
@@ -297,7 +385,7 @@ rect {
 .cards-container .cards .card .players-thumbnails-score .player::before {
     content: '';
     position: absolute;
-    height: 37px;
+    height: 34px;
     width: 1px;
     background: #979797;
     margin-left: 50%;
@@ -361,8 +449,8 @@ rect {
     display: grid;
     justify-items: center;
     align-items: center;
-    width: 37px;
-    height: 37px;
+    width: 34px;
+    height: 34px;
     border: 1px solid transparent;
     border-radius: 50%;
     position: relative;
@@ -373,8 +461,8 @@ rect {
     content: '';
     position: absolute;
     background: #b7b7b7;
-    width: 37px;
-    height: 37px;
+    width: 34px;
+    height: 34px;
     z-index: 1;
     border-radius: 50%;
 }
@@ -395,8 +483,8 @@ rect {
 }
 
 .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo .logo {
-    width: 37px;
-    height: 37px;
+    width: 34px;
+    height: 34px;
 }
 
 .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo .logo img {
@@ -416,8 +504,8 @@ rect {
 
 .cards-container .cards .card .players-thumbnails-score .scores {
     justify-content: space-between;
-    grid-column-gap: .5rem;
-    grid-template-columns: repeat(2, 30px);
+    grid-column-gap: 5px;
+    grid-template-columns: repeat(2, 28px);
     position: relative;
 }
 
@@ -427,7 +515,7 @@ rect {
     align-content: center;
     justify-content: center;
     border-radius: 3px;
-    height: 42px;
+    height: 38px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
     position: relative;
@@ -476,17 +564,20 @@ rect {
 .cards-container .cards .card .players-info-games .player {
     display: grid;
     grid-template-rows: 14px 10px;
+    grid-row-gap: 4px;
 }
 
 .cards-container .cards .card .players-info-games .player1 .nation-nick {
     display: grid;
     grid-template-columns: 20px auto;
+    grid-column-gap: 4px;
     align-items: center;
 }
 
 .cards-container .cards .card .players-info-games .player2 .nation-nick {
     display: grid;
     grid-template-columns: auto 20px;
+    grid-column-gap: 4px;
     align-items: center;
 }
 
@@ -514,13 +605,14 @@ rect {
 }
 
 .cards-container .cards .card .players-info-games .player .nation-nick .nick p {
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .cards-container .cards .card .players-info-games .player .team {
-    font-size: 10px;
+    font-size: 12px;
     color: #040404;
     font-style: italic;
+    opacity: .7;
 }
 
 .cards-container .cards .card .players-info-games .player2 .team {
@@ -528,7 +620,7 @@ rect {
 }
 
 .cards-container .cards .card .players-info-games .games {
-    display: grid;
+    display: none;
     justify-items: center;
     grid-template-columns: 68px;
     grid-row-gap: 5px;
@@ -552,4 +644,374 @@ rect {
 .cards-container .cards .card .players-info-games .games .game2 span:nth-child(4),
 .cards-container .cards .card .players-info-games .games .penalty-kick span:nth-child(4) {
     color: #d8d8d8;
+}
+
+
+
+
+
+
+
+
+
+/*---------- MEDIAQUERIES CARDS ----------*/
+
+@media screen and (min-width: 1024px) {
+        
+    .cards-container {
+        /*width: 90%;*/
+        margin: 0 auto;
+        display: grid;
+        grid-auto-flow: column;
+        grid-row-gap: 2rem;
+        grid-column-gap: .5rem;
+    }
+
+    .cards-container .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 25%));
+        justify-content: space-around;
+        grid-row-gap: 1rem;
+        grid-column-gap: .3rem;
+        margin-bottom: 0;
+    }
+
+
+    /* ---------- CARD OVERVIEW ---------- */
+
+    .cards-container .cards .card {
+        font-size: .5rem;
+        padding: 12px 12px 15px 12px; 
+        border: 1px solid #aaaaaa;
+        background: #f6f6f6;
+        width: 330px;
+        height: 105px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-rows: 37px auto;
+        grid-row-gap: .6rem;
+        position: relative;
+        transition: all .3s ease;    
+    }
+    
+    .cards-container .cards .card:nth-child(+n+8) {
+        display: block;
+    }
+
+    svg, rect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        fill:transparent;
+        border-radius: 8px;
+    }
+
+    rect {
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        fill: transparent;
+        stroke: #69ca62;
+        border-radius: 10px;
+        stroke-width: 6;
+        stroke-dasharray: 215;
+        animation: animate 1000s linear infinite;
+    }
+
+    @keyframes animate
+    {
+        0%{
+            stroke-dashoffset: 200000;
+        }
+        100%{
+            stroke-dashoffset:0;
+        }
+    }
+
+    .cards-container .cards .card:hover {
+        transform: scale(1.2);
+    }
+
+    .cards-container .cards .live {    
+        border: 2px solid red;
+    }
+
+    .cards-container .cards .card.xbox {    
+        border: 2px solid #119910;
+    }
+
+    .cards-container .cards .card.ps4 {    
+        border: 2px solid #0070cc;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score .player {
+        position: relative;
+    }
+
+
+    .cards-container .cards .card .players-thumbnails-score .player::before {
+        content: '';
+        position: absolute;
+        height: 37px;
+        width: 1px;
+        background: #979797;
+        margin-left: 50%;
+        left: -.5px;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score,
+    .cards-container .cards .card .players-info-games,
+    .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo,
+    .cards-container .cards .card .players-thumbnails-score .scores {
+        display: grid;
+        grid-auto-flow: column;
+    }
+
+    /* --------- MATCHS WINNERS AND LOSERS START ---------*/
+
+    .cards-container .cards .card .players-thumbnails-score .lose {
+        filter: grayscale(1);
+        opacity: .5;
+    } 
+
+    .cards-container .cards .card .players-info-games .lose {
+        opacity: .5;
+    }
+
+    .cards-container .cards .card.xbox .players-thumbnails-score .scores .win {
+        background: linear-gradient(to bottom, #a0d838 0%, #119910 80%, #196f18 100%);
+    }
+
+    .cards-container .cards .card.xbox .players-thumbnails-score .scores .win .pk-win {
+        position: absolute;
+        font-size: 7px;
+        bottom: -5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .cards-container .cards .card.ps4 .players-thumbnails-score .scores .win .pk-win {
+        position: absolute;
+        font-size: 7px;
+        bottom: -5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .cards-container .cards .card.ps4 .players-thumbnails-score .scores .win {
+        background: linear-gradient(to bottom, #8fd5fd 0%, #0070cc 100%);
+    }
+
+    .cards-container .cards .card.xbox .players-thumbnails-score .scores .win p,
+    .cards-container .cards .card.ps4 .players-thumbnails-score .scores .win p {
+        color: white;
+    }
+    /* --------- END ---------*/
+
+    .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo {
+        grid-column-gap: 13px;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo .thumbnail {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 37px;
+        height: 37px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        position: relative;
+        z-index: 11;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
+        content: '';
+        position: absolute;
+        background: #b7b7b7;
+        width: 37px;
+        height: 37px;
+        z-index: 1;
+        border-radius: 50%;
+    }
+
+    .cards-container .cards .ps4 .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
+        background: linear-gradient(-120deg, #8fd5fd 0%, #0070cc 100%);
+    }
+
+    .cards-container .cards .xbox .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
+        background: linear-gradient(-120deg, #a0d838 0%, #119910 80%, #196f18 100%);
+    }
+
+    .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo .thumbnail img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo .logo {
+        width: 37px;
+        height: 37px;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score .player .thumbnail-logo .logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score,
+    .cards-container .cards .card .players-info-games {
+        justify-content: space-between;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score {
+        align-items: center;
+        align-content: center;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score .scores {
+        justify-content: space-between;
+        grid-column-gap: .5rem;
+        grid-template-columns: repeat(2, 30px);
+        position: relative;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score .scores .score {    
+        background: #ffffff;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        border-radius: 3px;
+        height: 42px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+        position: relative;
+    }
+
+    .cards-container .cards .card .players-thumbnails-score .scores .score p {
+        color: #040404;
+        font-size: 22px;
+    }
+
+    .cards-container .cards .live .players-thumbnails-score .scores .live-match {
+        position: absolute;
+        bottom: -8px;
+        height: 10px;
+        width: 100%;
+        text-align: center;
+        background: red;
+        padding-top: 1px;
+        border-radius: 0 0 3px 3px;
+        color: white;
+        letter-spacing: 1px;
+        font-weight: bold;
+        animation-name: live;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes live {
+        0% {
+            color: red;
+        }
+
+        50% {
+            color: white;
+        }
+        
+        100% {
+            color: red;
+        } 
+    }
+
+    .cards-container .cards .card .players-info-games {
+        align-items: center;
+    }
+
+    .cards-container .cards .card .players-info-games .player {
+        display: grid;
+        grid-template-rows: 14px 10px;
+        grid-row-gap: unset;
+    }
+
+    .cards-container .cards .card .players-info-games .player1 .nation-nick {
+        display: grid;
+        grid-template-columns: 20px auto;
+        align-items: center;
+    }
+
+    .cards-container .cards .card .players-info-games .player2 .nation-nick {
+        display: grid;
+        grid-template-columns: auto 20px;
+        align-items: center;
+    }
+
+    .cards-container .cards .card .players-info-games .player .nation-nick .nation {
+        max-height: 12px;
+        max-width: 20px;
+        overflow: hidden;
+        border: 0.6px solid white;
+        border-radius: 2.6px;
+    }
+
+    .cards-container .cards .card .players-info-games .player .nation-nick .nation  img {    
+        width: 20px;
+        height: 12px;
+        vertical-align: top;
+    }
+
+
+    .cards-container .cards .card .players-info-games .player .nation-nick .nick {
+        height: 14px;
+        overflow: hidden;
+        display: grid;
+        align-items: center;
+        align-content: center;
+    }
+
+    .cards-container .cards .card .players-info-games .player .nation-nick .nick p {
+        font-size: 14px;
+    }
+
+    .cards-container .cards .card .players-info-games .player .team {
+        font-size: 10px;
+        color: #040404;
+        font-style: italic;
+        opacity: 1;
+    }
+
+    .cards-container .cards .card .players-info-games .player2 .team {
+        text-align: right;
+    }
+
+    .cards-container .cards .card .players-info-games .games {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 68px;
+        grid-row-gap: 5px;
+        font-size: 8px;
+        font-weight: bold;
+    }
+
+    .cards-container .cards .card .players-info-games .games .game1 span:nth-child(3),
+    .cards-container .cards .card .players-info-games .games .game2 span:nth-child(3),
+    .cards-container .cards .card .players-info-games .games .penalty-kick span:nth-child(3) {
+        font-size: 8px;
+        letter-spacing: .5px;
+        color: #565656;
+    /*    margin: 0 2px; */
+    }
+
+    .cards-container .cards .card .players-info-games .games .game1 span:nth-child(2),
+    .cards-container .cards .card .players-info-games .games .game2 span:nth-child(2),
+    .cards-container .cards .card .players-info-games .games .penalty-kick span:nth-child(2),
+    .cards-container .cards .card .players-info-games .games .game1 span:nth-child(4),
+    .cards-container .cards .card .players-info-games .games .game2 span:nth-child(4),
+    .cards-container .cards .card .players-info-games .games .penalty-kick span:nth-child(4) {
+        color: #d8d8d8;
+    }
+
 }
