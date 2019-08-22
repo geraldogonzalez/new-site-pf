@@ -529,14 +529,14 @@ rect {
 .cards-container .cards .live .players-thumbnails-score .scores .live-match {
     position: absolute;
     bottom: -8px;
-    height: 10px;
+    height: 8px;
     width: 100%;
     text-align: center;
     background: red;
-    padding-top: 1px;
+    padding-top: 0px;
     border-radius: 0 0 3px 3px;
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-weight: bold;
     animation-name: live;
     animation-duration: 3s;
