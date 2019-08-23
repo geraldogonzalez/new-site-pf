@@ -695,7 +695,7 @@ rect {
     }
     
     .cards-container .cards .card:nth-child(+n+8) {
-        display: block;
+        display: grid;
     }
 
     svg, rect {
