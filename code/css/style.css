@@ -96,6 +96,7 @@ header.header .contenedor-header .consola .consola-btn a {
     display: grid;
     grid-auto-flow: column;
     align-content: center;
+    align-items: center;
     justify-content: center;
     font-size: 2rem; 
 }
@@ -1178,7 +1179,7 @@ rect {
 .xbox-bracket .cards-container .cards .matchs .border-card .connector3,
 .xbox-bracket .cards-container .cards .matchs .border-card .connector3 .connector4 {
     position: absolute;
-    border: 2px solid #a0d838;
+    border: 2px solid #0e7a0d;
     border-left-style: none;
     z-index: 8;
 }
@@ -1188,7 +1189,7 @@ rect {
 .ps4-bracket .cards-container .cards .matchs .border-card .connector3,
 .ps4-bracket .cards-container .cards .matchs .border-card .connector3 .connector4 {
     position: absolute;
-    border: 2px solid #8fd5fd;
+    border: 2px solid #0070cc;
     border-left-style: none;
     z-index: 8;
 }
