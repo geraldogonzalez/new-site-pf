@@ -62,13 +62,13 @@ header.header .contenedor-header .consola .titulo {
 
 header.header .contenedor-header .consola .titulo h2 {
     font-family: NimbusSanCon-Bol;
-    font-size: 2rem;
-    letter-spacing: -1px;
-    word-spacing: 4px;
+    font-weight: normal;
+    font-size: 1.6rem;
+    word-spacing: 1px;
 }
 
 header.header .contenedor-header .consola .titulo .fab {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 header.header .contenedor-header .consola .consola-btn {
@@ -82,10 +82,15 @@ header.header .contenedor-header .consola .consola-btn {
     z-index: 10000;
 }
 
+header.header .contenedor-header .consola .consola-btn-bracket {
+    grid-template-columns: repeat(3, calc(33.3%));
+}
+
 header.header .contenedor-header .consola .consola-btn a {
     color: rgba(0, 0, 0, .2);
     text-decoration: none;
     border: 1.5px solid rgba(0, 0, 0, .2);
+    background: white;
     padding: .7rem 1rem;
     height: 100%;
     display: grid;
@@ -95,8 +100,23 @@ header.header .contenedor-header .consola .consola-btn a {
     font-size: 2rem; 
 }
 
-header.header .contenedor-header .consola .consola-btn a {
-    background: #aaaaaa;
+
+header.header .contenedor-header .consola .consola-btn-bracket a {
+    font-size: 1.5rem;
+
+}
+
+header.header .contenedor-header .consola .consola-btn a.btn-final {
+    grid-template-rows: repeat(2, 50%);
+    letter-spacing: -1px;
+    font-size: 1rem;
+    justify-items: center;
+    order: 2;
+    text-align: center;
+}
+
+header.header .contenedor-header .consola .consola-btn a.btn-xbox {
+    order: 3;
 }
 
 header.header .contenedor-header .consola .consola-btn a.btn-xbox.active {
@@ -107,6 +127,12 @@ header.header .contenedor-header .consola .consola-btn a.btn-xbox.active {
 
 header.header .contenedor-header .consola .consola-btn a.btn-ps4.active {
     background: linear-gradient(to right, #8fd5fd 0%, #0070cc 100%);
+    color: white;
+    border: 1.5px solid #aaaaaa;
+}
+
+header.header .contenedor-header .consola .consola-btn a.btn-final.active {
+    background: linear-gradient(to right, #F4D166 0%, #F0BE25 80%, #AE860C 100%);
     color: white;
     border: 1.5px solid #aaaaaa;
 }
@@ -192,9 +218,29 @@ header.header .contenedor-header .menu a i.fas{
     header.header .contenedor-header .consola .titulo h2 {
         font-family: NimbusSanCon-Bol;
         font-weight: normal;
-        font-size: 2.4rem;
+        font-size: 1.6rem;
         letter-spacing: -1px;
         word-spacing: 4px;
+    }
+
+    header.header .contenedor-header .consola .titulo .fab {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media screen and (min-width: 400px) {
+    
+    header.header .contenedor-header .consola .consola-btn a.btn-final {
+        font-size: 1.3rem;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    header.header .contenedor-header .consola .titulo h2 {
+        font-size: 2.4rem;
     }
 
     header.header .contenedor-header .consola .titulo .fab {
@@ -251,11 +297,15 @@ header.header .contenedor-header .menu a i.fas{
     header.header .contenedor-header .consola .consola-btn a {
         font-size: 1.2rem;
     }
+
+    header.header .contenedor-header .consola .consola-btn a.btn-final {
+        order: 3;
+    }
 }
 
 
 
-/*---------- MAIN -----------*/
+/*---------- MAIN MACTHUPS -----------*/
 
 main {
     width: 95%;
@@ -284,17 +334,14 @@ section.horarios div:nth-child(+n+2) {
 
 
 
-/*---------- MEDIAQUERIES MAIN ----------*/
+
+/*---------- MEDIAQUERIES MAIN MATCHUPS ----------*/
 
 @media screen and (min-width: 1024px) {
     section.horarios div:nth-child(+n+2) {
         display: block;
     }
 }
-
-
-
-
 
 
 
@@ -414,22 +461,39 @@ rect {
     100%{
         stroke-dashoffset:0;
     }
+
 }
 
-.cards-container .cards .card:hover {
-    transform: scale(1.07);
+.cards-container .cards .border-card.live .card {
+    border: none;
 }
 
-.cards-container .cards .live {    
-    border: 2px solid red;
+.cards-container .cards .border-card.xbox,
+.cards-container .cards .border-card.ps4,
+.cards-container .cards .border-card.live {   
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 11px;
+    padding: 3px;
+    background: transparent;
+    z-index: 9;
 }
 
-.cards-container .cards .card.xbox {    
-    border: 2px solid #119910;
+.cards-container .cards .border-card.live {    
+    background: red;
+}
+.cards-container .cards .border-card.xbox:hover .card,
+.cards-container .cards .border-card.ps4:hover .card {    
+    border: 1px solid transparent;
 }
 
-.cards-container .cards .card.ps4 {    
-    border: 2px solid #0070cc;
+.cards-container .cards .border-card.xbox:hover {    
+    background: linear-gradient(to left, #a0d838 0%, #119910 80%, #196f18 100%);
+}
+
+.cards-container .cards .border-card.ps4:hover {
+    background: linear-gradient(to left, #8fd5fd 0%, #0070cc 100%);
 }
 
 .cards-container .cards .card .players-thumbnails-score .player {
@@ -466,11 +530,11 @@ rect {
     opacity: .5;
 }
 
-.cards-container .cards .card.xbox .players-thumbnails-score .scores .win {
+.cards-container .cards .border-card.xbox .card .players-thumbnails-score .scores .win {
     background: linear-gradient(to bottom, #a0d838 0%, #119910 80%, #196f18 100%);
 }
 
-.cards-container .cards .card.xbox .players-thumbnails-score .scores .win .pk-win {
+.cards-container .cards .border-card.xbox .card .players-thumbnails-score .scores .win .pk-win {
     position: absolute;
     font-size: 7px;
     bottom: -5px;
@@ -478,7 +542,7 @@ rect {
     width: 100%;
 }
 
-.cards-container .cards .card.ps4 .players-thumbnails-score .scores .win .pk-win {
+.cards-container .cards .border-card.ps4 .card .players-thumbnails-score .scores .win .pk-win {
     position: absolute;
     font-size: 7px;
     bottom: -5px;
@@ -486,12 +550,12 @@ rect {
     width: 100%;
 }
 
-.cards-container .cards .card.ps4 .players-thumbnails-score .scores .win {
+.cards-container .cards .border-card.ps4 .card .players-thumbnails-score .scores .win {
     background: linear-gradient(to bottom, #8fd5fd 0%, #0070cc 100%);
 }
 
-.cards-container .cards .card.xbox .players-thumbnails-score .scores .win p,
-.cards-container .cards .card.ps4 .players-thumbnails-score .scores .win p {
+.cards-container .cards .border-card.xbox .card .players-thumbnails-score .scores .win p,
+.cards-container .cards .border-card.ps4 .card .players-thumbnails-score .scores .win p {
     color: white;
 }
 /* --------- END ---------*/
@@ -754,22 +818,6 @@ rect {
         100%{
             stroke-dashoffset:0;
         }
-    }
-
-    .cards-container .cards .card:hover {
-        transform: scale(1.2);
-    }
-
-    .cards-container .cards .live {    
-        border: 2px solid red;
-    }
-
-    .cards-container .cards .card.xbox {    
-        border: 2px solid #119910;
-    }
-
-    .cards-container .cards .card.ps4 {    
-        border: 2px solid #0070cc;
     }
 
     .cards-container .cards .card .players-thumbnails-score .player {
@@ -1047,5 +1095,335 @@ rect {
     .cards-container .cards .card .players-info-games .games .penalty-kick span:nth-child(4) {
         color: #d8d8d8;
     }
+
+}
+/* ------------ END MATCHUPS STYLES ------------ */
+
+
+
+
+
+
+/* ------------ BRACKETS STYLES ------------ */
+
+/*---------- MAIN BRACKETS -----------*/
+
+.main-bracket {
+    overflow-x: auto;
+}
+
+.main-bracket .round-title {
+    display: grid;
+    grid-template-columns: repeat(5, 283px);
+    font-family: NimbusSanCon-Bol;
+    letter-spacing: -1.5px;
+    font-size: 1.1rem;
+    grid-column-gap: 2rem;
+    padding-bottom: .5rem;
+    border-bottom: 1.5px solid #F1F1F1;
+    width: 1540px;
+}
+
+.main-bracket .cards-container {
+    grid-template-columns: repeat(5, 273px);
+    grid-column-gap: 1.5rem;
+}
+
+.main-bracket .cards-container .cards {
+    grid-template-columns: unset;
+    justify-content: unset;
+    justify-items: unset;
+    grid-row-gap: 1rem;
+    margin-bottom: 85px;
+    position: relative;
+}
+
+.main-bracket .cards-container .cards::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 285px;
+    width: 2px;
+    background: #F1F1F1;
+}
+
+.main-bracket .cards-container .cards .matchs {
+    display: grid;
+    gap: 6px;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+
+.main-bracket .cards-container .quarterfinal .matchs {
+    margin-top: 1rem;
+}
+
+.main-bracket .cards-container .semi-final .matchs {
+    margin-top: .5rem;
+}
+
+.main-bracket .cards-container .final .matchs {
+    margin-top: 0;
+}
+
+/* ----------- ESTILOS PARA LOS CONECTORES ----------- */
+
+.main-bracket .cards-container .cards .matchs .border-card {
+    position: relative;
+}
+
+.xbox-bracket .cards-container .cards .matchs .border-card .connector1,
+.xbox-bracket .cards-container .cards .matchs .border-card .connector1 .connector2,
+.xbox-bracket .cards-container .cards .matchs .border-card .connector3,
+.xbox-bracket .cards-container .cards .matchs .border-card .connector3 .connector4 {
+    position: absolute;
+    border: 2px solid #a0d838;
+    border-left-style: none;
+    z-index: 8;
+}
+
+.ps4-bracket .cards-container .cards .matchs .border-card .connector1,
+.ps4-bracket .cards-container .cards .matchs .border-card .connector1 .connector2,
+.ps4-bracket .cards-container .cards .matchs .border-card .connector3,
+.ps4-bracket .cards-container .cards .matchs .border-card .connector3 .connector4 {
+    position: absolute;
+    border: 2px solid #8fd5fd;
+    border-left-style: none;
+    z-index: 8;
+}
+
+
+/* ----------- ROUND 16 ----------- */
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector1 {
+    height: 50.5px;
+    width: 11px;
+    right: -8px;
+    top: 56.5px;
+    border-bottom: none;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector1 .connector2 {
+    width: 15px;
+    right: -15px;
+    bottom: -2px;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector3 {
+    height: 50.5px;
+    width: 11px;
+    right: -8px;
+    bottom: 56.5px;
+    border-top: none;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector3 .connector4 {
+    width: 15px;
+    right: -15px;
+    top: -2px;
+}
+
+
+
+/* ----------- QUARTERFINALS ----------- */
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 {
+    height: 116px;
+    width: 12px;
+    right: -9px;
+    top: 56.5px;
+    border-bottom: none;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 .connector2 {
+    width: 15px;
+    right: -15px;
+    bottom: -2px;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 {
+    height: 116px;
+    width: 12px;
+    right: -9px;
+    bottom: 56.5px;
+    border-top: none;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 .connector4 {
+    width: 15px;
+    right: -15px;
+    top: -2px;
+}
+
+
+/* ----------- SEMI-FINALS ----------- */
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector1 {
+    height: 245px;
+    width: 12px;
+    right: -9px;
+    top: 56.5px;
+    border-bottom: none;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector1 .connector2 {
+    width: 15px;
+    right: -15px;
+    bottom: -2px;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector3 {
+    height: 245px;
+    width: 12px;
+    right: -9px;
+    bottom: 56.5px;
+    border-top: none;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector3 .connector4 {
+    width: 15px;
+    right: -15px;
+    top: -2px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main-bracket {
+        max-width: 1800px;
+    }
+
+    .main-bracket .round-title {
+        display: grid;
+        grid-template-columns: repeat(5, 283px);
+        font-family: NimbusSanCon-Bol;
+        letter-spacing: -1.5px;
+        font-size: 1.1rem;
+        grid-column-gap: 2rem;
+        padding-bottom: .5rem;
+        border-bottom: 1.5px solid #F1F1F1;
+        width: 140%;
+    }
+    
+    .main-bracket .round-title {
+        grid-template-columns: repeat(5, 330px);
+    }
+    
+    .main-bracket .cards-container {
+        grid-template-columns: repeat(5, 330px);
+    }
+    
+    .main-bracket .round-title div {
+        margin-left: 4.5rem;
+    }
+    .main-bracket .cards-container .cards {
+        margin-left: 4rem;
+        width: 330px;
+        position: relative;
+        margin-left: 4rem;
+    }
+
+    .main-bracket .cards-container .cards::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        left: 343px;
+        width: 1px;
+        background: #F1F1F1;
+    }
+
+    
+/* ----------- ROUND 16 ----------- */
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector1 {
+    height: 57.5px;
+    width: 11px;
+    right: -8px;
+    top: 56.5px;
+    border-bottom: none;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector1 .connector2 {
+    width: 15px;
+    right: -15px;
+    bottom: -2px;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector3 {
+    height: 57.5px;
+    width: 11px;
+    right: -8px;
+    bottom: 56.5px;
+    border-top: none;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector3 .connector4 {
+    width: 15px;
+    right: -15px;
+    top: -2px;
+}
+
+
+
+/* ----------- QUARTERFINALS ----------- */
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 {
+    height: 126.5px;
+    width: 12px;
+    right: -9px;
+    top: 56.5px;
+    border-bottom: none;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 .connector2 {
+    width: 15px;
+    right: -15px;
+    bottom: -2px;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 {
+    height: 126.5px;
+    width: 12px;
+    right: -9px;
+    bottom: 56.5px;
+    border-top: none;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 .connector4 {
+    width: 15px;
+    right: -15px;
+    top: -2px;
+}
+
+
+/* ----------- SEMI-FINALS ----------- */
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector1 {
+    height: 262.5px;
+    width: 12px;
+    right: -9px;
+    top: 56.5px;
+    border-bottom: none;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector1 .connector2 {
+    width: 15px;
+    right: -15px;
+    bottom: -2px;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector3 {
+    height: 262.5px;
+    width: 12px;
+    right: -9px;
+    bottom: 56.5px;
+    border-top: none;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector3 .connector4 {
+    width: 15px;
+    right: -15px;
+    top: -2px;
+}
 
 }
