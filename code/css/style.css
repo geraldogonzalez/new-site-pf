@@ -1748,4 +1748,18 @@ rect {
     .main-grand-final .grand-final-container .grand-final .consolas .conector1 {
         width: 72.5%;
     }
+
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1 span:nth-child(2)::before,
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2 span:nth-child(2)::before,
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series span:nth-child(2)::before,
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series span:nth-child(2)::before {
+        width: 25%;
+    }
+
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1 span:nth-child(2)::after,
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2 span:nth-child(2)::after,
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series span:nth-child(2)::after,
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series span:nth-child(2)::after {
+        width: 25%;
+    }
 }
