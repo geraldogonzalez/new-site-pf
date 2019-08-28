@@ -1721,6 +1721,10 @@ rect {
         width: 1000px;
     }
 
+    .main-grand-final .hours {
+        margin-left: -75px;
+    }
+
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1,
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2,
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series,
