@@ -133,7 +133,7 @@ header.header .contenedor-header .consola .consola-btn a.btn-ps4.active {
 }
 
 header.header .contenedor-header .consola .consola-btn a.btn-final.active {
-    background: linear-gradient(to right, #F4D166 0%, #F0BE25 80%, #AE860C 100%);
+    background: linear-gradient(to right, #F4D166 0%, #F0BE25 60%, #AE860C 100%);
     color: white;
     border: 1.5px solid #aaaaaa;
 }
@@ -284,7 +284,8 @@ header.header .contenedor-header .menu a i.fas{
     }
 
     header.header .contenedor-header .consola .consola-btn a.btn-xbox.active,
-    header.header .contenedor-header .consola .consola-btn a.btn-ps4.active {
+    header.header .contenedor-header .consola .consola-btn a.btn-ps4.active,
+    header.header .contenedor-header .consola .consola-btn a.btn-final.active {
         color: black;
         border: 1.5px solid black;
         background: white;
@@ -895,7 +896,7 @@ rect {
         align-items: center;
         width: 37px;
         height: 37px;
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         border-radius: 50%;
         position: relative;
         z-index: 11;
@@ -1427,4 +1428,320 @@ rect {
     top: -2px;
 }
 
+}
+
+
+
+
+
+/* --------------- GRAND FINAL STYLES --------------- */
+
+
+/* --------------- MAIN --------------- */
+
+.main-grand-final .hours {
+    padding-bottom: .5rem;
+    border-bottom: 1.5px solid #f1f1f1;
+    font-size: 1.1rem;
+    display: grid;
+    grid-template-columns: 160px repeat(3, 80px);;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.main-grand-final .hours div {
+    height: 1rem;
+    position: relative;
+}
+
+.main-grand-final .hours div:first-child {
+    padding-left: 75px;
+}
+
+.main-grand-final .hours div:nth-child(+n+2)::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: -21%;
+    background: #000;
+    bottom: -2px;
+}
+
+.main-grand-final .grand-final-container {
+    width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: unset;
+    grid-row-gap: unset;
+    grid-column-gap: unset;
+    justify-content: center;
+}
+
+.main-grand-final .grand-final-container .grand-final {
+    display: grid;
+    grid-template-columns: unset;
+    justify-content: unset;
+    grid-row-gap: unset;
+    grid-column-gap: unset;
+    margin-bottom: 5rem;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner {
+    display: grid;
+    justify-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .thumbnail-nation { 
+    position: relative;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .thumbnail-nation .thumbnail {
+    padding: 3px;
+    background: linear-gradient(45deg, #F4D166 0%, #F0BE25 60%, #AE860C 100%);
+    display: grid;
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .thumbnail-nation .thumbnail img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .thumbnail-nation .nation {
+    position: absolute;
+    bottom: -1px;
+    right: -4px;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .thumbnail-nation .nation img {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    box-shadow: 0px 1px 1px black;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .team-nick-console {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-column-gap: 16px;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .team-nick-console .team-logo img {
+    width: 25px;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .team-nick-console .nickname {
+    font-family: NimbusSanCon-Bol;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    background: linear-gradient(to left, #F4D166 0%, #F0BE25 10%, #AE860C 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #F0BE25;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .team-nick-console .console {
+    font-size: 22px;
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final {
+    padding: 3px;
+    background: linear-gradient(to left, #F4D166 0%, #F0BE25 10%, #AE860C 30%);
+    border-radius: 10px;
+    position: relative;
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card {
+    border: none;
+    height: 178px;
+    grid-template-rows: 37px 20px auto;
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .lose {
+    filter: grayscale(0);
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .xbox .thumbnail-logo .thumbnail::before {
+    background: linear-gradient(-120deg, #a0d838 0%, #119910 80%, #196f18 100%)
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .ps4 .thumbnail-logo .thumbnail::before {
+    background: linear-gradient(-120deg, #8fd5fd 0%, #0070cc 100%)
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .scores .win {
+    background: linear-gradient(to left, #F4D166 0%, #F0BE25 5%, #AE860C 85%);
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .scores .win p {
+    color: white;
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-row-gap: .2rem;
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1,
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2,
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series,
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series {
+    display: grid;
+    grid-auto-flow: column;
+    width: 300px;
+    grid-template-columns: 10% 80% 10%;
+    justify-items: center;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    align-items: center;
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1 span:nth-child(2),
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2 span:nth-child(2),
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series span:nth-child(2),
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series span:nth-child(2) {
+    color: rgba(0,0,0,.65);
+    font-weight: normal;
+    font-size: 11px;
+    word-spacing: -1px;
+    letter-spacing: 0;
+    margin-bottom: -4px;
+    position: relative;
+    width: 100%;
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1 span:nth-child(2)::before,
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2 span:nth-child(2)::before,
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series span:nth-child(2)::before,
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series span:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 28%;
+    left: 0;
+    top: 5px;
+    background: rgba(0,0,0,.1);
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1 span:nth-child(2)::after,
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2 span:nth-child(2)::after,
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series span:nth-child(2)::after,
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series span:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 28%;
+    right: 0;
+    top: 5px;
+    background: rgba(0,0,0,.1);
+}
+
+.main-grand-final .grand-final-container .grand-final .consolas {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 33.33%);
+    justify-items: center;
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs {
+    display: grid;
+    grid-template-columns: 336px 100px 336px;
+    width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-grand-final .grand-final-container .grand-final .consolas .xbox-one {
+    grid-column: 3 / 4;
+}
+
+.main-grand-final .grand-final-container .grand-final .consolas .conector1,
+.main-grand-final .grand-final-container .grand-final .consolas .conector2 {
+    position: absolute;
+    border: 2px solid #AE860C;
+    z-index: 8;
+}
+
+.main-grand-final .grand-final-container .grand-final .consolas .conector2 {
+    border: 3px solid #AE860C;
+}
+
+.main-grand-final .grand-final-container .grand-final .consolas .conector1 {
+    width: 66.5%;
+    height: 40px;
+    bottom: -51px;
+    border-bottom-style: none;
+}
+
+.main-grand-final .grand-final-container .grand-final .consolas .conector2 {
+    height: 36px;
+    right: 50%;
+    top: -36px;
+    border-left-style: none;
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final .winner-connector {
+    position: absolute;
+    height: 25px;
+    width: 3px;
+    background: #AE860C;
+    top: -25px;
+    right: 49.5%;
+}
+
+
+
+/* ------------ MEDIAQUERIES ------------ */
+
+@media screen and (max-width: 1024px) {
+
+    .grand-final-header {
+        margin-bottom: 1rem!important; 
+    }
+
+    .main-grand-final {
+        overflow-x: scroll;
+    }
+
+    .main-grand-final .hours {
+        width: 1000px;
+    }
+
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1,
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2,
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series,
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series {    
+        width: 249px;
+        font-size: 13px;
+    }
+
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1 span:nth-child(2), .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2 span:nth-child(2), .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series span:nth-child(2), .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series span:nth-child(2) {
+        font-size: 11px;
+    }
+
+    .main-grand-final .grand-final-container .grand-final .matchs {   
+        grid-template-columns: 279px 100px 279px;
+    }
+
+    .main-grand-final .grand-final-container .grand-final .consolas {
+        grid-template-columns: 279px 50px 279px;
+        grid-column-gap: 12rem;
+    }
+    .main-grand-final .grand-final-container .grand-final .consolas .conector1 {
+        width: 72.5%;
+    }
 }
