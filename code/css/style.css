@@ -432,40 +432,6 @@ section.horarios div:nth-child(+n+2) {
     display: none;
 }
 
-svg, rect {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    width: 273px;
-    height: 98px;
-    fill: transparent;
-    border-radius: 8px;
-}
-
-rect {
-    top: 0px;
-    left: 0px;
-    width: 273px;
-    height: 100%;
-    fill: transparent;
-    stroke: #69ca62;
-    border-radius: 10px;
-    stroke-width: 6;
-    stroke-dasharray: 185;
-    animation: animate 1000s linear infinite;
-}
-
-@keyframes animate
-{
-    0%{
-        stroke-dashoffset: 200000;
-    }
-    100%{
-        stroke-dashoffset:0;
-    }
-
-}
-
 .cards-container .cards .border-card.live .card {
     border: none;
 }
@@ -787,39 +753,6 @@ rect {
     
     .cards-container .cards .card:nth-child(+n+8) {
         display: grid;
-    }
-
-    svg, rect {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        fill:transparent;
-        border-radius: 8px;
-    }
-
-    rect {
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        fill: transparent;
-        stroke: #69ca62;
-        border-radius: 10px;
-        stroke-width: 6;
-        stroke-dasharray: 215;
-        animation: animate 1000s linear infinite;
-    }
-
-    @keyframes animate
-    {
-        0%{
-            stroke-dashoffset: 200000;
-        }
-        100%{
-            stroke-dashoffset:0;
-        }
     }
 
     .cards-container .cards .card .players-thumbnails-score .player {
@@ -1529,6 +1462,28 @@ rect {
     grid-auto-flow: column;
     align-items: center;
     grid-column-gap: 16px;
+    position: relative;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .team-nick-console::before,
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .team-nick-console::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 25px;
+    margin-left: 32px;
+    background: rgba(0, 0, 0, .1);
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .team-nick-console::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 25px;
+    top: 2px;
+    right: 0;
+    background: rgba(0, 0, 0, .1);
+    margin-right: 32px;
 }
 
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-nick-console .team-logo img {
@@ -1567,11 +1522,11 @@ rect {
 }
 
 .main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .xbox .thumbnail-logo .thumbnail::before {
-    background: linear-gradient(-120deg, #a0d838 0%, #119910 80%, #196f18 100%)
+    background: linear-gradient(-120deg, #a0d838 0%, #119910 80%, #196f18 100%);
 }
 
 .main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .ps4 .thumbnail-logo .thumbnail::before {
-    background: linear-gradient(-120deg, #8fd5fd 0%, #0070cc 100%)
+    background: linear-gradient(-120deg, #8fd5fd 0%, #0070cc 100%);
 }
 
 .main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .scores .win {
@@ -1752,14 +1707,173 @@ rect {
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1 span:nth-child(2)::before,
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2 span:nth-child(2)::before,
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series span:nth-child(2)::before,
-    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series span:nth-child(2)::before {
-        width: 25%;
-    }
-
+    .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series span:nth-child(2)::before,
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game1 span:nth-child(2)::after,
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .game2 span:nth-child(2)::after,
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .win-series span:nth-child(2)::after,
     .main-grand-final .grand-final-container .grand-final .card-grand-final .card .games .rank-series span:nth-child(2)::after {
         width: 25%;
     }
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------- STANDINGS STYLES --------------- */
+
+
+/* --------------- MAIN --------------- */
+
+.main-standings {
+    padding-top: 1.5rem;
+}
+
+.tabla-standings {
+    margin: 0 auto;
+}
+
+.tabla-standings thead tr,
+.tabla-standings tbody tr {
+    display: grid;
+    grid-template-columns: 250px repeat(6, 125px) 185px;
+    grid-column-gap: .3rem;
+    height: 45px;
+    text-align: left;
+}
+
+.tabla-standings thead tr th,
+.tabla-standings tbody tr td {
+    padding: 0 .3rem 0 1.5rem;
+}
+
+.tabla-standings thead tr th {
+    background: linear-gradient(to bottom, #8bd451, #00a55e);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    border-radius: 3px;
+    letter-spacing: .5px;
+}
+
+.ps4 .tabla-standings thead tr th {
+    background: linear-gradient(to bottom, #18CDFF, #4466FF);
+} 
+
+.tabla-standings tbody tr {
+    height: 70px;
+    border-bottom: 2px solid rgba(0, 0, 0, .07);
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.tabla-standings tbody tr:hover {
+    background: rgba(0, 0, 0, .04);
+}
+
+.tabla-standings tbody tr:hover td .info {
+    opacity: 1;
+}
+
+.tabla-standings tbody tr td {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: start;
+}
+
+.tabla-standings tbody tr td:first-child {
+    grid-template-columns: 44px auto;
+    grid-column-gap: 1rem;
+    font-size: 1.4rem;
+}
+
+.tabla-standings tbody tr td .thumbnail {
+    padding: 2px;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-120deg, #a0d838 0%, #119910 80%, #196f18 100%);
+    border-radius: 50%;
+}
+
+.ps4 .tabla-standings tbody tr td .thumbnail {
+    background: linear-gradient(-120deg, #8fd5fd 0%, #0070cc 100%);
+}
+
+.tabla-standings tbody tr td .thumbnail img {
+    border-radius: 50%;
+    width: 40px;
+}
+
+.tabla-standings tbody tr td:nth-child(2) img {
+    width: 40px;
+}
+
+.tabla-standings tbody tr td:nth-child(3) img {
+    height: 24px;
+    width: 35px;
+    border-radius: 6px;
+}
+
+.tabla-standings tbody tr td .info {
+    justify-self: end;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid #000;
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    opacity: .2;
+}
+
+.tabla-standings tbody tr td .last-matches {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: .3rem;
+    font-size: 14px;
+}
+
+.xbox .tabla-standings tbody tr td .last-matches {
+    color: green;
+}
+
+.ps4 .tabla-standings tbody tr td .last-matches {
+    color: #0070cc;
+}
+
+.xbox .tabla-standings tbody tr td .last-matches i:nth-child(2) {
+    color: red;
+}
+
+.ps4 .tabla-standings tbody tr td .last-matches i:nth-child(2) {
+    color: red;
+}
+
+.tabla-standings tbody tr td .info:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .main-standings {
+        overflow-x: scroll;
+        margin-bottom: 150px; 
+    }
+
 }
