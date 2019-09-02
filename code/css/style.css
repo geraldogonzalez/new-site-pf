@@ -31,6 +31,10 @@ body {
     background: #fff;
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
 /*---------- HEADER -----------*/ 
 
 header.header {
@@ -208,11 +212,6 @@ nav .menu > li > ul {
     transition: all .3s ease;
 }
 
-nav .menu > li:hover > ul {
-    max-height: 1000px;
-    overflow: visible;
-}
-
 nav .menu li ul li {
     border: none;
     width: 100%;
@@ -250,6 +249,10 @@ nav a {
 
 .menu > li:hover > a {
     color: black;
+}
+
+i.fa-chevron-up {
+    display: none;
 }
 
 /*---------- MEDIAQUERIES HEADER ----------*/
@@ -309,7 +312,12 @@ nav a {
 
     nav {
         display: block;
-    }    
+    }
+
+    nav .menu > li:hover > ul {
+        max-height: 1000px;
+        overflow: visible;
+    }
 
     header.header .contenedor-header .consola .consola-btn {
         display: grid;
@@ -461,7 +469,16 @@ section.horarios div:nth-child(+n+2) {
     transition: all 100s ease;
 }
 
-.timeline-xbox::before {    
+.timeline-ps4 {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(to right, white 0%, rgba(0, 112, 204, .05) 65%, rgba(0, 112, 204, .1) 100%);
+    left: -294px;
+    width: 300px;
+    transition: all 100s ease;
+}
+
+.timeline-xbox::before{    
     content: '';
     position: absolute;
     right: -4px;
@@ -472,13 +489,35 @@ section.horarios div:nth-child(+n+2) {
     top: -6px;
 }
 
-.timeline-xbox::after {
+.timeline-ps4::before {    
+    content: '';
+    position: absolute;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    background: #8fd5fd;
+    border-radius: 50%;
+    top: -6px;
+}
+
+.timeline-xbox::after
+ {
     content: '';
     position: absolute;
     right: 0;
     width: 2px;
     height: 100%;
     background: #9fd736;
+}
+
+.timeline-ps4::after
+ {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: #8fd5fd;
 }
 
 .cards-container .cards {
