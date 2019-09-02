@@ -18,7 +18,6 @@
         <div class="contenedor-header">
             <div class="consola">
                 <div class="titulo">
-                    <i class="fab fa-xbox"></i>
                     <h2>MATCHUPS ROUND <span class="round">2</span></h2>
                 </div>
                 <div class="consola-btn">
@@ -26,12 +25,21 @@
                     <a href="xbox-rounds.html" class="btn-xbox"><i class="fab fa-xbox"></i> XBOX</a>
                 </div>
             </div>
-            <nav class="menu">
-                <a href="#">Standings</a>
-                <a href="#" class="active"><span>Round <span class="round">2</span> </span> <i
-                        class="fas fa-chevron-down"></i>
-                </a>
-                <a href="#">Final Standings</a>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Standings</a></li>
+                    <li class="active"><a href="#">Round<i
+                        class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li class=""><a href="#">Round <span>1</span></a></li>
+                            <li><a href="#">Round <span>2</span></a></li>
+                            <li><a href="#">Round <span>3</span></a></li>
+                            <li><a href="#">Round <span>4</span></a></li>
+                            <li><a href="#">Round <span>5</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Final Standings</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -49,7 +57,7 @@
         <section class="cards-container">
             <article class="cards">
 
-                <div class="border-card">
+                <div class="border-card live">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1">
@@ -66,11 +74,13 @@
 
                             <div class="scores">
                                 <div class="NimbusSanCon-Bol score score-player1">
-                                    <p>-</p>
+                                    <p>0</p>
                                 </div>
                                 <div class="NimbusSanCon-Bol score score-player1">
-                                    <p>-</p>
+                                    <p>1</p>
                                 </div>
+
+                                <p class="live-match">LIVE</p>
                             </div>
 
                             <div class="player player2">
@@ -156,7 +166,7 @@
                     </div>
                 </div>
 
-                <div class="border-card xbox">
+                <div class="border-card current-xbox current-border">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1 lose">
@@ -177,7 +187,6 @@
                                 </div>
                                 <div class="score score-player2 win">
                                     <p>4</p>
-                                    <p class="pk-win">PK</p>
                                 </div>
                             </div>
 
@@ -262,9 +271,10 @@
 
                         </div>
                     </div>
+                    <div class="border-current izquierda-derecha"></div>
                 </div>
 
-                <div class="border-card ps4">
+                <div class="border-card current-ps4 current-border">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1 lose">
@@ -285,7 +295,6 @@
                                 </div>
                                 <div class="score score-player2 win">
                                     <p>4</p>
-                                    <p class="pk-win">PK</p>
                                 </div>
                             </div>
 
@@ -389,7 +398,7 @@
 
                             <div class="scores">
                                 <div class="NimbusSanCon-Bol score score-player1">
-                                    <p>0</p>
+                                    <p>2</p>
                                 </div>
                                 <div class="NimbusSanCon-Bol score score-player1">
                                     <p>0</p>
@@ -481,7 +490,7 @@
                     </div>
                 </div>
 
-                <div class="border-card xbox">
+                <div class="border-card current-xbox current-border">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1 lose">
@@ -588,7 +597,7 @@
                     </div>
                 </div>
 
-                <div class="border-card ps4">
+                <div class="border-card current-ps4 current-border">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1">
@@ -695,7 +704,7 @@
                     </div>
                 </div>
 
-                <div class="border-card">
+                <div class="border-card live">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1">
@@ -712,11 +721,13 @@
 
                             <div class="scores">
                                 <div class="NimbusSanCon-Bol score score-player1">
-                                    <p>-</p>
+                                    <p>1</p>
                                 </div>
                                 <div class="NimbusSanCon-Bol score score-player1">
-                                    <p>-</p>
+                                    <p>1</p>
                                 </div>
+
+                                <p class="live-match">LIVE</p>
                             </div>
 
                             <div class="player player2">
@@ -802,7 +813,7 @@
                     </div>
                 </div>
 
-                <div class="border-card xbox">
+                <div class="border-card current-xbox current-border">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1 lose">
@@ -909,7 +920,7 @@
                     </div>
                 </div>
 
-                <div class="border-card ps4">
+                <div class="border-card current-ps4 current-border">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1">
@@ -1016,7 +1027,7 @@
                     </div>
                 </div>
 
-                <div class="border-card">
+                <div class="border-card live">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1">
@@ -1033,11 +1044,13 @@
 
                             <div class="scores">
                                 <div class="NimbusSanCon-Bol score score-player1">
-                                    <p>-</p>
+                                    <p>4</p>
                                 </div>
                                 <div class="NimbusSanCon-Bol score score-player1">
-                                    <p>-</p>
+                                    <p>2</p>
                                 </div>
+
+                                <p class="live-match">LIVE</p>
                             </div>
 
                             <div class="player player2">
@@ -1123,7 +1136,7 @@
                     </div>
                 </div>
 
-                <div class="border-card xbox">
+                <div class="border-card current-xbox current-border">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1 lose">
@@ -1230,7 +1243,7 @@
                     </div>
                 </div>
 
-                <div class="border-card ps4">
+                <div class="border-card current-ps4 current-border">
                     <div class="card">
                         <div class="players-thumbnails-score">
                             <div class="player player1">

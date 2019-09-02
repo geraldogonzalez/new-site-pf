@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PS4 Rounds</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -26,12 +26,21 @@
                     <a href="xbox-rounds.html" class="btn-xbox"><i class="fab fa-xbox"></i> XBOX</a>
                 </div>
             </div>
-            <nav class="menu">
-                <a href="ps4-standings.html">Standings</a>
-                <a href="#" class="active"><span>Round <span class="round">1</span> </span> <i
-                        class="fas fa-chevron-down"></i>
-                </a>
-                <a href="#">Final Standings</a>
+            <nav>
+                <ul class="menu">
+                    <li><a href="ps4-standings.html">Standings</a></li>
+                    <li class="active"><a href="#">Round 1<i
+                        class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li class="active"><a href="#">Round <span>1</span></a></li>
+                            <li><a href="#">Round <span>2</span></a></li>
+                            <li><a href="#">Round <span>3</span></a></li>
+                            <li><a href="#">Round <span>4</span></a></li>
+                            <li><a href="#">Round <span>5</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Final Standings</a></li>
+                </ul>
             </nav>
         </div>
     </header>
