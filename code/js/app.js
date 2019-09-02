@@ -86,11 +86,17 @@ function dropdownMenu(e) {
         submenu.style.maxHeight = '1000px';
         submenu.style.overflow = 'visible';
         e.target.style.display = 'none';
-        document.querySelector('.fa-chevron-up').style.display = 'block';
+        document.querySelector('.fa-chevron-up').style.display = 'grid';
+        document.querySelector('.fa-chevron-up').style.width = '100%';
+        document.querySelector('.fa-chevron-up').style.height = '100%';
+        document.querySelector('.fa-chevron-up').style.alignItems = 'center';
     } else if(e.target.classList.contains('fa-chevron-up')) {
         submenu.style.maxHeight = '0';
         submenu.style.overflow = 'hidden';
         e.target.style.display = 'none';
-        document.querySelector('.fa-chevron-down').style.display = 'block';
+        document.querySelector('.fa-chevron-down').style.display = 'grid';
+        document.querySelector('.fa-chevron-down').style.width = '100%';
+        document.querySelector('.fa-chevron-down').style.height = '100%';
+        document.querySelector('.fa-chevron-down').style.alignItems = 'center';
     }
 }
