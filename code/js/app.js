@@ -1,16 +1,24 @@
 // VARIABLES
 let tablaInfo = document.querySelector('.tabla-standings');
-var scroll = document.querySelector('.player-history').scrollWidth;
+let mqDropdown = window.matchMedia('(max-width: 1024px)');
+let menu = document.querySelector('.menu li:nth-child(2)');
+let submenu = document.querySelector('.menu .submenu');
 
 // EVENTS LISTENERS
 
 cargarEventListeners();
 
 function cargarEventListeners(){
-    tablaInfo.addEventListener('click', mostrarPartidos);
-    tablaInfo.addEventListener('click', siguiente);
-    tablaInfo.addEventListener('click', anterior);
+    if(tablaInfo) {
+        tablaInfo.addEventListener('click', mostrarPartidos);
+        tablaInfo.addEventListener('click', siguiente);
+        tablaInfo.addEventListener('click', anterior);
+    }
+    if(mqDropdown.matches){
+        menu.addEventListener('mouseover', dropdownMenu)
+    }
 }
+
 
 
 
@@ -18,7 +26,6 @@ function cargarEventListeners(){
 
 // Función que muestra el historial del player.
 function mostrarPartidos(e){
-
 	if(e.target.classList.contains('oculto')){
         let btnInfo = e.target.parentElement;
         let playerInfo = e.target.parentElement.parentElement.parentElement;
@@ -72,4 +79,18 @@ function anterior(e){
             e.target.parentElement.style.display = 'none';
         }
     }   
+}
+
+function dropdownMenu(e) {
+    if(e.target.classList.contains('fa-chevron-down')) {
+        submenu.style.maxHeight = '1000px';
+        submenu.style.overflow = 'visible';
+        e.target.style.display = 'none';
+        document.querySelector('.fa-chevron-up').style.display = 'block';
+    } else if(e.target.classList.contains('fa-chevron-up')) {
+        submenu.style.maxHeight = '0';
+        submenu.style.overflow = 'hidden';
+        e.target.style.display = 'none';
+        document.querySelector('.fa-chevron-down').style.display = 'block';
+    }
 }
