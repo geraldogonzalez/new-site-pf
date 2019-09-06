@@ -124,19 +124,19 @@ header.header .contenedor-header .consola .consola-btn a.btn-xbox {
 }
 
 header.header .contenedor-header .consola .consola-btn a.btn-xbox.active {
-    background: linear-gradient(to right, #a0d838 0%, #119910 80%, #196f18 100%);
+    background: linear-gradient(to top, #00a661, #abe354);
     color: white;
     border: 1.5px solid #aaaaaa;
 }
 
 header.header .contenedor-header .consola .consola-btn a.btn-ps4.active {
-    background: linear-gradient(to right, #8fd5fd 0%, #0070cc 100%);
+    background: linear-gradient(to top, #4b5ffc, #36c5fd);
     color: white;
     border: 1.5px solid #aaaaaa;
 }
 
 header.header .contenedor-header .consola .consola-btn a.btn-final.active {
-    background: linear-gradient(to right, #F4D166 0%, #F0BE25 60%, #AE860C 100%);
+    background: linear-gradient(to top, #a27f14, #e6c870);
     color: white;
     border: 1.5px solid #aaaaaa;
 }
@@ -404,45 +404,6 @@ section.horarios div:nth-child(+n+2) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ESTILOS CARDS */
 
 
@@ -459,16 +420,16 @@ section.horarios div:nth-child(+n+2) {
 .timeline-xbox {
     position: absolute;
     height: 100%;
-    background: linear-gradient(to right, white 0%, rgba(159, 215, 54, 0.1) 65%, rgba(159, 215, 54, .3) 100%);
+    background: linear-gradient(to right, white 0%, rgba(171, 227, 84, .1) 65%, rgba(171, 227, 84, .3) 100%);
     left: -294px;
     width: 300px;
-    transition: all 100s ease;
+    transition: all 100s ease ; 
 }
 
 .timeline-ps4 {
     position: absolute;
     height: 100%;
-    background: linear-gradient(to right, white 0%, rgba(0, 112, 204, .05) 65%, rgba(0, 112, 204, .1) 100%);
+    background: linear-gradient(to right, white 0%, rgba(54, 197, 253, .05) 65%, rgba(54, 197, 253, .1) 100%);
     left: -294px;
     width: 300px;
     transition: all 100s ease;
@@ -480,7 +441,7 @@ section.horarios div:nth-child(+n+2) {
     right: -4px;
     width: 10px;
     height: 10px;
-    background: #9fd736;
+    background: #abe354;
     border-radius: 50%;
     top: -6px;
 }
@@ -491,7 +452,7 @@ section.horarios div:nth-child(+n+2) {
     right: -4px;
     width: 10px;
     height: 10px;
-    background: #8fd5fd;
+    background: #36c5fd;
     border-radius: 50%;
     top: -6px;
 }
@@ -503,7 +464,7 @@ section.horarios div:nth-child(+n+2) {
     right: 0;
     width: 2px;
     height: 100%;
-    background: #9fd736;
+    background: #abe354;
 }
 
 .timeline-ps4::after
@@ -513,7 +474,7 @@ section.horarios div:nth-child(+n+2) {
     right: 0;
     width: 2px;
     height: 100%;
-    background: #8fd5fd;
+    background: #36c5fd;
 }
 
 .cards-container .cards {
@@ -557,42 +518,38 @@ section.horarios div:nth-child(+n+2) {
     display: grid;
     justify-items: center;
     align-items: center;
-    border-radius: 11px;
-    padding: 3px;
+    border-radius: 10px;
+    padding: 2px;
     background: transparent;
     z-index: 9;
     position: relative;
+    transition: all .3s ease;
 }
 
 .border-card.live {    
-    background: red;
+    background: linear-gradient(to right, #cf0123, #f30042);
 }
+
+.border-card.live:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, .4);
+}
+
 .border-card.xbox:hover .card,
 .border-card.ps4:hover .card {    
     border: 1px solid transparent;
+    box-shadow: 0px 6px 12px rgba(0,0,0,.4);
 }
 
 .border-card.xbox:hover {    
-    background: linear-gradient(to left, #9fd736 0%, #119910 80%, #196f18 100%);
+    background: linear-gradient(to right, #00a661, #abe354);
 }
 
 .border-card.ps4:hover {
-    background: linear-gradient(to left, #8fd5fd 0%, #0070cc 100%);
+    background: linear-gradient(to right, #4b5ffc, #36c5fd);
 }
 
 .card .players-thumbnails-score .player {
     position: relative;
-}
-
-
-.card .players-thumbnails-score .player::before {
-    content: '';
-    position: absolute;
-    height: 34px;
-    width: 1px;
-    background: #979797;
-    margin-left: 50%;
-    left: -.5px;
 }
 
 .card .players-thumbnails-score,
@@ -607,18 +564,25 @@ section.horarios div:nth-child(+n+2) {
 
 .card .players-thumbnails-score .lose {
     filter: grayscale(1);
-    opacity: .5;
-} 
+    opacity: .75;
+}
+
+.card .players-thumbnails-score .lose .thumbnail-logo .logo {
+    opacity: .50;
+    filter: grayscale(1);
+}
+
+.card .players-thumbnails-score .player.lose .thumbnail-logo .thumbnail {
+    background: #b1b1b1;
+}
 
 .card .players-info-games .lose {
     opacity: .5;
 }
 
-.border-card.xbox .card .players-thumbnails-score .scores .win {
-    background: linear-gradient(to bottom, #a0d838 0%, #119910 80%, #196f18 100%);
-}
 
-.border-card.xbox .card .players-thumbnails-score .scores .win .pk-win {
+.border-card .card .players-thumbnails-score .scores .win .pk-win,
+.border-card .card .players-thumbnails-score .scores .lose .pk-lose {
     position: absolute;
     font-size: 7px;
     bottom: -5px;
@@ -626,22 +590,19 @@ section.horarios div:nth-child(+n+2) {
     width: 100%;
 }
 
-.border-card.ps4 .card .players-thumbnails-score .scores .win .pk-win {
-    position: absolute;
-    font-size: 7px;
-    bottom: -5px;
-    text-align: center;
-    width: 100%;
+.border-card.ps4 .players-thumbnails-score .scores .win {
+    background: linear-gradient(to top, #4b5ffc, #36c5fd);
 }
 
-.border-card.ps4 .card .players-thumbnails-score .scores .win {
-    background: linear-gradient(to bottom, #8fd5fd 0%, #0070cc 100%);
+.border-card.xbox .players-thumbnails-score .scores .win {
+    background: linear-gradient(to top, #00a661, #abe354);
 }
 
 .border-card.xbox .card .players-thumbnails-score .scores .win p,
 .border-card.ps4 .card .players-thumbnails-score .scores .win p {
     color: white;
 }
+
 /* --------- END ---------*/
 
 .card .players-thumbnails-score .player .thumbnail-logo {
@@ -654,28 +615,19 @@ section.horarios div:nth-child(+n+2) {
     align-items: center;
     width: 34px;
     height: 34px;
-    border: 1px solid transparent;
+    padding: 2px;
+    background: #7c7c7c;
     border-radius: 50%;
     position: relative;
     z-index: 11;
 }
 
-.card .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
-    content: '';
-    position: absolute;
-    background: #b7b7b7;
-    width: 34px;
-    height: 34px;
-    z-index: 1;
-    border-radius: 50%;
+.ps4 .players-thumbnails-score .player .thumbnail-logo .thumbnail {
+    background: linear-gradient(to top, #4b5ffc, #36c5fd);
 }
 
-.ps4 .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
-    background: linear-gradient(-120deg, #8fd5fd 0%, #0070cc 100%);
-}
-
-.xbox .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
-    background: linear-gradient(-120deg, #a0d838 0%, #119910 80%, #196f18 100%);
+.xbox .players-thumbnails-score .player .thumbnail-logo .thumbnail {
+    background: linear-gradient(to top, #00a661, #abe354);
 }
 
 .card .players-thumbnails-score .player .thumbnail-logo .thumbnail img {
@@ -720,7 +672,7 @@ section.horarios div:nth-child(+n+2) {
     border-radius: 3px;
     height: 38px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
     position: relative;
 }
 
@@ -729,26 +681,51 @@ section.horarios div:nth-child(+n+2) {
     font-size: 22px;
 }
 
-.live .players-thumbnails-score .scores .live-match {
+.live .players-thumbnails-score .scores .live-match,
+.border-card .players-thumbnails-score .scores .playing,
+.card-grand-final .players-thumbnails-score .scores .playing {
     position: absolute;
     bottom: -8px;
-    height: 8px;
+    height: 9px;
     width: 100%;
+    font-size: 7px;
+    font-weight: bold;
     text-align: center;
-    background: red;
-    padding-top: 0px;
+    letter-spacing: 0.6px;
+    background: linear-gradient(to top, #cf0123, #f30042);
     border-radius: 0 0 3px 3px;
     color: white;
-    letter-spacing: 2px;
-    font-weight: bold;
     animation-name: live;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+    display: grid;
+    align-content: center;
+    padding-top: .6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+}
+
+.border-card.xbox-live .players-thumbnails-score .scores .playing {
+    background: linear-gradient(to top, #00a661, #abe354);
+}
+
+.border-card.ps4-live .players-thumbnails-score .scores .playing {
+    background: linear-gradient(to top, #4b5ffc, #36c5fd);
+}
+
+.card-grand-final .players-thumbnails-score .scores .playing {
+    background: linear-gradient(to top, #a27f14, #e6c870);
+}
+
+.border-card.xbox-live .players-thumbnails-score .scores .score p,
+.border-card.ps4-live .players-thumbnails-score .scores .score p,
+.live .players-thumbnails-score .scores .score p,
+.card-grand-final .players-thumbnails-score .scores .score p {
+    padding-bottom: 9.5px;
 }
 
 @keyframes live {
     0% {
-        color: red;
+        color: transparent;
     }
 
     50% {
@@ -756,7 +733,7 @@ section.horarios div:nth-child(+n+2) {
     }
     
     100% {
-        color: red;
+        color: transparent;
     } 
 }
 
@@ -770,7 +747,8 @@ section.horarios div:nth-child(+n+2) {
     grid-row-gap: 4px;
 }
 
-.card .players-info-games .player1 .nation-nick {
+.card .players-info-games .player1 .nation-nick,
+.card .players-info-games .player2 .nation-nick {
     display: grid;
     grid-template-columns: 20px auto;
     grid-column-gap: 4px;
@@ -778,10 +756,7 @@ section.horarios div:nth-child(+n+2) {
 }
 
 .card .players-info-games .player2 .nation-nick {
-    display: grid;
     grid-template-columns: auto 20px;
-    grid-column-gap: 4px;
-    align-items: center;
 }
 
 .card .players-info-games .player .nation-nick .nation {
@@ -841,11 +816,8 @@ section.horarios div:nth-child(+n+2) {
     }
 
     .cards-container .cards {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(330px, 25%));
         justify-content: space-around;
-        grid-row-gap: 1rem;
-        grid-column-gap: .3rem;
         margin-bottom: 0;
     }
 
@@ -853,127 +825,22 @@ section.horarios div:nth-child(+n+2) {
     /* ---------- CARD OVERVIEW ---------- */
 
     .card {
-        font-size: .5rem;
-        padding: 12px 12px 15px 12px; 
-        border: 1px solid #aaaaaa;
-        background: #f6f6f6;
+        padding: 12px 12px 15px 12px;
         width: 330px;
         height: 105px;
-        border-radius: 10px;
-        display: grid;
         grid-template-rows: 37px auto;
-        grid-row-gap: .6rem;
-        position: relative;
-        transition: all .3s ease;    
+        grid-row-gap: .6rem; 
     }
     
     .card:nth-child(+n+8) {
         display: grid;
     }
 
-    .card .players-thumbnails-score .player {
-        position: relative;
-    }
-
-
-    .card .players-thumbnails-score .player::before {
-        content: '';
-        position: absolute;
-        height: 37px;
-        width: 1px;
-        background: #979797;
-        margin-left: 50%;
-        left: -.5px;
-    }
-
-    .card .players-thumbnails-score,
-    .card .players-info-games,
-    .card .players-thumbnails-score .player .thumbnail-logo,
-    .card .players-thumbnails-score .scores {
-        display: grid;
-        grid-auto-flow: column;
-    }
-
-    /* --------- MATCHS WINNERS AND LOSERS START ---------*/
-
-    .card .players-thumbnails-score .lose {
-        filter: grayscale(1);
-        opacity: .5;
-    } 
-
-    .card .players-info-games .lose {
-        opacity: .5;
-    }
-
-    .card.xbox .players-thumbnails-score .scores .win {
-        background: linear-gradient(to bottom, #a0d838 0%, #119910 80%, #196f18 100%);
-    }
-
-    .card.xbox .players-thumbnails-score .scores .win .pk-win {
-        position: absolute;
-        font-size: 7px;
-        bottom: -5px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .card.ps4 .players-thumbnails-score .scores .win .pk-win {
-        position: absolute;
-        font-size: 7px;
-        bottom: -5px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .card.ps4 .players-thumbnails-score .scores .win {
-        background: linear-gradient(to bottom, #8fd5fd 0%, #0070cc 100%);
-    }
-
-    .card.xbox .players-thumbnails-score .scores .win p,
-    .card.ps4 .players-thumbnails-score .scores .win p {
-        color: white;
-    }
     /* --------- END ---------*/
 
-    .card .players-thumbnails-score .player .thumbnail-logo {
-        grid-column-gap: 13px;
-    }
-
     .card .players-thumbnails-score .player .thumbnail-logo .thumbnail {
-        display: grid;
-        justify-items: center;
-        align-items: center;
         width: 37px;
         height: 37px;
-        border: 2px solid transparent;
-        border-radius: 50%;
-        position: relative;
-        z-index: 11;
-    }
-
-    .card .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
-        content: '';
-        position: absolute;
-        background: #b7b7b7;
-        width: 37px;
-        height: 37px;
-        z-index: 1;
-        border-radius: 50%;
-    }
-
-    .ps4 .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
-        background: linear-gradient(-120deg, #8fd5fd 0%, #0070cc 100%);
-    }
-
-    .xbox .players-thumbnails-score .player .thumbnail-logo .thumbnail::before {
-        background: linear-gradient(-120deg, #a0d838 0%, #119910 80%, #196f18 100%);
-    }
-
-    .card .players-thumbnails-score .player .thumbnail-logo .thumbnail img {
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-        z-index: 11;
     }
 
     .card .players-thumbnails-score .player .thumbnail-logo .logo {
@@ -981,119 +848,16 @@ section.horarios div:nth-child(+n+2) {
         height: 37px;
     }
 
-    .card .players-thumbnails-score .player .thumbnail-logo .logo img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .card .players-thumbnails-score,
-    .card .players-info-games {
-        justify-content: space-between;
-    }
-
-    .card .players-thumbnails-score {
-        align-items: center;
-        align-content: center;
-    }
-
     .card .players-thumbnails-score .scores {
-        justify-content: space-between;
-        grid-column-gap: .5rem;
         grid-template-columns: repeat(2, 30px);
-        position: relative;
     }
 
-    .card .players-thumbnails-score .scores .score {    
-        background: #ffffff;
-        display: grid;
-        align-content: center;
-        justify-content: center;
-        border-radius: 3px;
+    .card .players-thumbnails-score .scores .score {
         height: 42px;
-        overflow: hidden;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-        position: relative;
-    }
-
-    .card .players-thumbnails-score .scores .score p {
-        color: #040404;
-        font-size: 22px;
-    }
-
-    .live .players-thumbnails-score .scores .live-match {
-        position: absolute;
-        bottom: -8px;
-        height: 10px;
-        width: 100%;
-        text-align: center;
-        background: red;
-        padding-top: 1px;
-        border-radius: 0 0 3px 3px;
-        color: white;
-        letter-spacing: 1px;
-        font-weight: bold;
-        animation-name: live;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-    }
-
-    @keyframes live {
-        0% {
-            color: red;
-        }
-
-        50% {
-            color: white;
-        }
-        
-        100% {
-            color: red;
-        } 
-    }
-
-    .card .players-info-games {
-        align-items: center;
     }
 
     .card .players-info-games .player {
-        display: grid;
-        grid-template-rows: 14px 10px;
         grid-row-gap: unset;
-    }
-
-    .card .players-info-games .player1 .nation-nick {
-        display: grid;
-        grid-template-columns: 20px auto;
-        align-items: center;
-    }
-
-    .card .players-info-games .player2 .nation-nick {
-        display: grid;
-        grid-template-columns: auto 20px;
-        align-items: center;
-    }
-
-    .card .players-info-games .player .nation-nick .nation {
-        max-height: 12px;
-        max-width: 20px;
-        overflow: hidden;
-        border: 0.6px solid white;
-        border-radius: 2.6px;
-    }
-
-    .card .players-info-games .player .nation-nick .nation  img {    
-        width: 20px;
-        height: 12px;
-        vertical-align: top;
-    }
-
-
-    .card .players-info-games .player .nation-nick .nick {
-        height: 14px;
-        overflow: hidden;
-        display: grid;
-        align-items: center;
-        align-content: center;
     }
 
     .card .players-info-games .player .nation-nick .nick p {
@@ -1102,13 +866,7 @@ section.horarios div:nth-child(+n+2) {
 
     .card .players-info-games .player .team {
         font-size: 10px;
-        color: #040404;
-        font-style: italic;
         opacity: 1;
-    }
-
-    .card .players-info-games .player2 .team {
-        text-align: right;
     }
 
     .card .players-info-games .games {
@@ -1229,7 +987,7 @@ section.horarios div:nth-child(+n+2) {
 .xbox-bracket .cards-container .cards .matchs .border-card .connector3,
 .xbox-bracket .cards-container .cards .matchs .border-card .connector3 .connector4 {
     position: absolute;
-    border: 2px solid #0e7a0d;
+    border: 2px solid #00a661;
     border-left-style: none;
     z-index: 8;
 }
@@ -1239,103 +997,103 @@ section.horarios div:nth-child(+n+2) {
 .ps4-bracket .cards-container .cards .matchs .border-card .connector3,
 .ps4-bracket .cards-container .cards .matchs .border-card .connector3 .connector4 {
     position: absolute;
-    border: 2px solid #0070cc;
+    border: 2px solid #4b5ffc;
     border-left-style: none;
     z-index: 8;
 }
 
 
-/* ----------- ROUND 16 ----------- */
-
-.main-bracket .cards-container .round-16 .matchs .border-card .connector1 {
-    height: 50.5px;
-    width: 11px;
-    right: -8px;
-    top: 56.5px;
-    border-bottom: none;
-}
-
-.main-bracket .cards-container .round-16 .matchs .border-card .connector1 .connector2 {
-    width: 15px;
-    right: -15px;
-    bottom: -2px;
-}
-
-.main-bracket .cards-container .round-16 .matchs .border-card .connector3 {
-    height: 50.5px;
-    width: 11px;
-    right: -8px;
-    bottom: 56.5px;
-    border-top: none;
-}
-
-.main-bracket .cards-container .round-16 .matchs .border-card .connector3 .connector4 {
-    width: 15px;
-    right: -15px;
-    top: -2px;
-}
-
-
-
-/* ----------- QUARTERFINALS ----------- */
-
-.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 {
-    height: 116px;
-    width: 12px;
-    right: -9px;
-    top: 56.5px;
-    border-bottom: none;
-}
-
-.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 .connector2 {
-    width: 15px;
-    right: -15px;
-    bottom: -2px;
-}
-
-.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 {
-    height: 116px;
-    width: 12px;
-    right: -9px;
-    bottom: 56.5px;
-    border-top: none;
-}
-
-.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 .connector4 {
-    width: 15px;
-    right: -15px;
-    top: -2px;
-}
-
-
-/* ----------- SEMI-FINALS ----------- */
-
-.main-bracket .cards-container .semi-final .matchs .border-card .connector1 {
-    height: 245px;
-    width: 12px;
-    right: -9px;
-    top: 56.5px;
-    border-bottom: none;
-}
-
-.main-bracket .cards-container .semi-final .matchs .border-card .connector1 .connector2 {
-    width: 15px;
-    right: -15px;
-    bottom: -2px;
-}
-
-.main-bracket .cards-container .semi-final .matchs .border-card .connector3 {
-    height: 245px;
-    width: 12px;
-    right: -9px;
-    bottom: 56.5px;
-    border-top: none;
-}
-
+.main-bracket .cards-container .round-16 .matchs .border-card .connector1 .connector2,
+.main-bracket .cards-container .round-16 .matchs .border-card .connector3 .connector4,
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 .connector2,
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 .connector4,
+.main-bracket .cards-container .semi-final .matchs .border-card .connector1 .connector2,
 .main-bracket .cards-container .semi-final .matchs .border-card .connector3 .connector4 {
     width: 15px;
     right: -15px;
-    top: -2px;
+}
+
+
+/* ----------- ROUND 16 ----------- */
+
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector1,
+.main-bracket .cards-container .round-16 .matchs .border-card .connector3 {
+    height: 50.5px;
+    width: 11px;
+    right: -9px;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector1 {
+    top: 56.5px;
+    border-bottom: none;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector3 {
+    bottom: 56.5px;
+    border-top: none;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector1 .connector2 {
+    bottom: 0px;
+}
+
+.main-bracket .cards-container .round-16 .matchs .border-card .connector3 .connector4 {
+    top: 0px;
+}
+
+/* ----------- QUARTERFINALS ----------- */
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1,
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 {
+    height: 116px;
+    width: 12px;
+    right: -10px;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 {
+    top: 56.5px;
+    border-bottom: none;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 {
+    bottom: 56.5px;
+    border-top: none;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 .connector2 {
+    bottom: 1px;
+}
+
+.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 .connector4 {
+    top: 1px;
+}
+
+/* ----------- SEMI-FINALS ----------- */
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector1,
+.main-bracket .cards-container .semi-final .matchs .border-card .connector3 {
+    height: 245px;
+    width: 12px;
+    right: -10px;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector1 {
+    top: 56.5px;
+    border-bottom: none;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector3 {
+    bottom: 56.5px;
+    border-top: none;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector1 .connector2 {
+    bottom: 3px;
+}
+
+.main-bracket .cards-container .semi-final .matchs .border-card .connector3 .connector4 {
+    top: 3px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1345,19 +1103,8 @@ section.horarios div:nth-child(+n+2) {
     }
 
     .main-bracket .round-title {
-        display: grid;
-        grid-template-columns: repeat(5, 283px);
-        font-family: NimbusSanCon-Bol;
-        letter-spacing: -1.5px;
-        font-size: 1.1rem;
-        grid-column-gap: 2rem;
-        padding-bottom: .5rem;
-        border-bottom: 1.5px solid #F1F1F1;
-        width: 142%;
-    }
-    
-    .main-bracket .round-title {
         grid-template-columns: repeat(5, 330px);
+        width: 142%;
     }
     
     .main-bracket .cards-container {
@@ -1383,99 +1130,37 @@ section.horarios div:nth-child(+n+2) {
         background: #F1F1F1;
     }
 
-    
-/* ----------- ROUND 16 ----------- */
+        
+    /* ----------- ROUND 16 ----------- */
 
-.main-bracket .cards-container .round-16 .matchs .border-card .connector1 {
-    height: 57.5px;
-    width: 11px;
-    right: -8px;
-    top: 56.5px;
-    border-bottom: none;
-}
+    .main-bracket .cards-container .round-16 .matchs .border-card .connector1 {
+        height: 57.5px;
+    }
 
-.main-bracket .cards-container .round-16 .matchs .border-card .connector1 .connector2 {
-    width: 15px;
-    right: -15px;
-    bottom: -2px;
-}
-
-.main-bracket .cards-container .round-16 .matchs .border-card .connector3 {
-    height: 57.5px;
-    width: 11px;
-    right: -8px;
-    bottom: 56.5px;
-    border-top: none;
-}
-
-.main-bracket .cards-container .round-16 .matchs .border-card .connector3 .connector4 {
-    width: 15px;
-    right: -15px;
-    top: -2px;
-}
+    .main-bracket .cards-container .round-16 .matchs .border-card .connector3 {
+        height: 57.5px;
+    }
 
 
+    /* ----------- QUARTERFINALS ----------- */
 
-/* ----------- QUARTERFINALS ----------- */
+    .main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 {
+        height: 126.5px;
+    }
 
-.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 {
-    height: 126.5px;
-    width: 12px;
-    right: -9px;
-    top: 56.5px;
-    border-bottom: none;
-}
+    .main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 {
+        height: 126.5px;
+    }
 
-.main-bracket .cards-container .quarterfinal .matchs .border-card .connector1 .connector2 {
-    width: 15px;
-    right: -15px;
-    bottom: -2px;
-}
+    /* ----------- SEMI-FINALS ----------- */
 
-.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 {
-    height: 126.5px;
-    width: 12px;
-    right: -9px;
-    bottom: 56.5px;
-    border-top: none;
-}
+    .main-bracket .cards-container .semi-final .matchs .border-card .connector1 {
+        height: 262.5px;
+    }
 
-.main-bracket .cards-container .quarterfinal .matchs .border-card .connector3 .connector4 {
-    width: 15px;
-    right: -15px;
-    top: -2px;
-}
-
-
-/* ----------- SEMI-FINALS ----------- */
-
-.main-bracket .cards-container .semi-final .matchs .border-card .connector1 {
-    height: 262.5px;
-    width: 12px;
-    right: -9px;
-    top: 56.5px;
-    border-bottom: none;
-}
-
-.main-bracket .cards-container .semi-final .matchs .border-card .connector1 .connector2 {
-    width: 15px;
-    right: -15px;
-    bottom: -2px;
-}
-
-.main-bracket .cards-container .semi-final .matchs .border-card .connector3 {
-    height: 262.5px;
-    width: 12px;
-    right: -9px;
-    bottom: 56.5px;
-    border-top: none;
-}
-
-.main-bracket .cards-container .semi-final .matchs .border-card .connector3 .connector4 {
-    width: 15px;
-    right: -15px;
-    top: -2px;
-}
+    .main-bracket .cards-container .semi-final .matchs .border-card .connector3 {
+        height: 262.5px;
+    }
 
 }
 
@@ -1548,7 +1233,7 @@ section.horarios div:nth-child(+n+2) {
 
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .thumbnail-nation .thumbnail {
     padding: 3px;
-    background: linear-gradient(45deg, #F4D166 0%, #F0BE25 60%, #AE860C 100%);
+    background: linear-gradient(to top, #a27f14, #e6c870);
     display: grid;
     border-radius: 50%;
     margin-bottom: 2px;
@@ -1610,7 +1295,7 @@ section.horarios div:nth-child(+n+2) {
     font-family: NimbusSanCon-Bol;
     text-transform: uppercase;
     font-size: 1.3rem;
-    background: linear-gradient(to left, #F4D166 0%, #F0BE25 10%, #AE860C 60%);
+    background: linear-gradient(to right, #a27f14, #e6c870);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #F0BE25;
@@ -1622,9 +1307,14 @@ section.horarios div:nth-child(+n+2) {
 
 .main-grand-final .grand-final-container .grand-final .card-grand-final {
     padding: 3px;
-    background: linear-gradient(to left, #F4D166 0%, #F0BE25 10%, #AE860C 30%);
+    background: linear-gradient(to top, #a27f14, #e6c870);
     border-radius: 10px;
+    transition: all .3s ease;
     position: relative;
+}
+
+.main-grand-final .grand-final-container .grand-final .card-grand-final:hover {
+    box-shadow: 0px 6px 12px rgba(0,0,0,.4);
 }
 
 .main-grand-final .grand-final-container .grand-final .card-grand-final .card {
@@ -1637,16 +1327,16 @@ section.horarios div:nth-child(+n+2) {
     filter: grayscale(0);
 }
 
-.main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .xbox .thumbnail-logo .thumbnail::before {
-    background: linear-gradient(-120deg, #a0d838 0%, #119910 80%, #196f18 100%);
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .xbox .thumbnail-logo .thumbnail {
+    background: linear-gradient(to top, #00a661, #abe354);
 }
 
-.main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .ps4 .thumbnail-logo .thumbnail::before {
-    background: linear-gradient(-120deg, #8fd5fd 0%, #0070cc 100%);
+.main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .ps4 .thumbnail-logo .thumbnail {
+    background: linear-gradient(to top, #4b5ffc, #36c5fd);
 }
 
 .main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .scores .win {
-    background: linear-gradient(to left, #F4D166 0%, #F0BE25 5%, #AE860C 85%);
+    background: linear-gradient(to top, #a27f14, #e6c870);
 }
 
 .main-grand-final .grand-final-container .grand-final .card-grand-final .card .players-thumbnails-score .scores .win p {
@@ -1743,12 +1433,12 @@ section.horarios div:nth-child(+n+2) {
 .main-grand-final .grand-final-container .grand-final .consolas .conector1,
 .main-grand-final .grand-final-container .grand-final .consolas .conector2 {
     position: absolute;
-    border: 2px solid #AE860C;
+    border: 2px solid #a27f14;
     z-index: 8;
 }
 
 .main-grand-final .grand-final-container .grand-final .consolas .conector2 {
-    border: 3px solid #AE860C;
+    border: 3px solid #a27f14;
 }
 
 .main-grand-final .grand-final-container .grand-final .consolas .conector1 {
@@ -1769,7 +1459,7 @@ section.horarios div:nth-child(+n+2) {
     position: absolute;
     height: 25px;
     width: 3px;
-    background: #AE860C;
+    background: #a27f14;
     top: -25px;
     right: 49.5%;
 }
