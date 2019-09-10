@@ -1041,9 +1041,12 @@ section.horarios div:nth-child(+n+2) {
 .border-card.xbox-live .players-thumbnails-score .scores .score p,
 .border-card.ps4-live .players-thumbnails-score .scores .score p,
 .live .players-thumbnails-score .scores .score p,
-.grand-final .players-thumbnails-score .scores .score p,
-.border-card .card .players-thumbnails-score .scores .draw p:first-child {
+.grand-final .players-thumbnails-score .scores .score p {
     padding-bottom: 8.5px;
+}
+
+.border-card .card .players-thumbnails-score .scores .draw p:first-child {
+    padding-bottom: 2.5px;
 }
 
 @keyframes live {
