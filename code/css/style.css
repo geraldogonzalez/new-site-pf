@@ -2142,6 +2142,111 @@ section.horarios div:nth-child(+n+2) {
 
 @media screen and (max-width: 1024px) {
 
+    /* TRATANDO DE AJUSTAR LA TABLA A DISPOSITIVOS MÓVILES */
+
+    .tabla-standings thead tr, 
+    .tabla-standings tbody tr {
+        grid-template-columns: 120px repeat(6, 50px) 90px;
+    }
+
+    .tabla-standings thead tr th {
+        padding: 0;
+        text-align: center;
+    }
+
+    .tabla-standings thead tr, 
+    .tabla-standings tbody tr {
+        height: 40px;
+    }
+
+    .tabla-standings thead tr th {
+        font-size: 12px;
+    }
+
+    .tabla-standings tbody tr {
+        font-size: 11px;
+        grid-template-rows: 40px;
+    }
+
+    .tabla-standings tbody .player-info.mostrar {
+        height: 165px;
+        grid-template-rows: 40px 145px;
+    }
+
+    .tabla-standings tbody tr td {
+        padding-left: 0;
+        justify-items: center;
+    }
+
+    .tabla-standings tbody tr td:first-child {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .tabla-standings tbody tr td .thumbnail {
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+
+    .tabla-standings tbody tr td:first-child {
+        grid-template-columns: 1.875rem auto;
+        grid-column-gap: .5rem;
+        justify-content: center;
+    }
+
+    .ps4 .tabla-standings tbody tr td:first-child span.qualified, 
+    .xbox .tabla-standings tbody tr td:first-child span.qualified {
+        width: 4px;
+        height: 1.875rem;
+        left: 0;
+        top: 5px;
+    }
+
+    .tabla-standings tbody tr td:nth-child(2) img {
+        width: 1.875rem;
+    }
+
+    .tabla-standings tbody tr td:nth-child(3) img {
+        height: 1.5rem;
+        width: 1.9rem;
+    }
+
+    .tabla-standings tbody tr td:nth-child(2), 
+    .tabla-standings tbody tr td:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .tabla-standings tbody tr td .last-matches.eight {
+        grid-template-columns: repeat(4, 7px);
+        grid-column-gap: .2rem;
+        grid-row-gap: .2rem;
+        font-size: 7px;
+    }
+
+    .tabla-standings tbody tr td .last-matches.five {
+        grid-template-columns: repeat(5,7px);
+        grid-column-gap: .2rem;
+        font-size: 7px;
+    }
+
+    .tabla-standings tbody tr td .info {
+        width: 1.125rem;
+        height: 1.125rem;
+        font-size: .9rem;
+    }
+
+    .tabla-standings tbody tr td:last-child {
+        grid-column-gap: 0;
+        padding: 3px 0 18px 0;
+    }
+    .tabla-standings tbody tr td:last-child div h6 {
+        margin: 0 0 0 14px;
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+
+    /* FIN DEL CÓDIGO PARA AJUSTAR LA TABLA */
+
     .main-standings {
         overflow-x: scroll;
         margin-bottom: 150px; 
