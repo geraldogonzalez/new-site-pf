@@ -36,10 +36,15 @@ body {
 
 header.header {
     width: 95%;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto .5rem auto;
     position: relative;
     border-bottom: 2px solid #c8c8c8;
     background: #fff;
+}
+
+header.header.standings,
+header.header.rank {
+    margin: 0 auto 2rem auto;
 }
 
 header.header .contenedor-header {
@@ -455,6 +460,110 @@ main {
     background: #fff;
 }
 
+.main .rounds {
+    width: 93%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 20%));
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    font-family: NimbusSanCon-Bol;
+}
+
+.main .rounds h3 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.4rem;
+    opacity: .5;
+}
+
+.main .rounds .round {
+    display: grid;
+    justify-content: start;
+    grid-row-gap: .3rem;
+    position: relative;
+    z-index: 100;
+}
+
+.main .rounds .round.complete::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #00a661;
+    width: 100%;
+    top: 58%;
+}
+
+.main .rounds .round.playing::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: rgba(0,0,0,.4);
+    width: 100%;
+    top: 58%;
+}
+
+.main .rounds .round:nth-child(4)::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: rgba(0,0,0,.4);
+    width: 100%;
+    top: 58%;
+}
+
+.main .rounds .round div {    
+    font-size: .9rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 1rem;
+    letter-spacing: .35px;
+    border: .08rem solid #00a661;
+    border-radius: 3px;
+    color: #00a661;
+    text-align: center;
+    padding: 0 .2rem;
+    background: white;
+    z-index: 50;
+}
+
+.main .rounds .round.playing div {
+    width: 60px;
+    background: #00a661;
+    color: white;
+}
+
+.main .rounds .round > span {
+    font-family: SeravekWebBasicRegular;
+    font-size: .68rem;
+    letter-spacing: -.35px;
+    opacity: .5;
+}
+
+.main .rounds .round.playing div,
+.main .rounds .round.playing h3,
+.main .rounds .round.playing span {
+    opacity: 1;
+}
+
+.main .rounds .round.upcoming {
+    filter: grayscale(1);
+}
+
+.main .rounds .round.upcoming .hour {
+    height: 100%;
+    position: relative;
+}
+
+.main .rounds .round.upcoming .hour::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 102%;
+    right: -8px;
+    background: rgba(0,0,0, .4);
+}
+
 section.horarios {
     /*width: 90%;*/
     margin: 0 auto;
@@ -466,7 +575,7 @@ section.horarios {
     font-family: NimbusSanCon-Bol;
     letter-spacing: -1.5px;
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 section.horarios div:nth-child(+n+2) {
@@ -563,12 +672,22 @@ section.horarios div:nth-child(+n+2) {
 
 .cards-container .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(273px, 100%));
+    grid-template-columns: 273px;
     justify-content: center;
     justify-items: center;
     grid-row-gap: 1rem;
-    grid-column-gap: .3rem;
     margin-bottom: 85px;
+}
+
+.cards-container .cards:nth-child(2),
+.cards-container .cards:nth-child(3) {
+    display: none;
+}
+
+@media screen and (max-width: 1400px) {
+    .cards-container .cards:last-child {
+        display: none;
+    }
 }
 
 
@@ -750,19 +869,6 @@ section.horarios div:nth-child(+n+2) {
     100% {transform: translateY(120%);}
 }
 
-/*
-.border-card.xbox.live {    
-    background: linear-gradient(to right, #00a661, #abe354);
-}
-
-.border-card.ps4.live {
-    background: linear-gradient(to right, #4b5ffc, #36c5fd);
-}
-
-.border-card.grand-final.live {
-    background: linear-gradient(to top, #af8d26, #e3cc91);
-}*/
-
 .border-card.xbox:hover .card,
 .border-card.ps4:hover .card,
 .border-card.cl-dark:hover .card {    
@@ -883,6 +989,16 @@ section.horarios div:nth-child(+n+2) {
 
 .card .players-thumbnails-score .player .thumbnail-logo {
     grid-column-gap: 13px;
+    position: relative;
+}
+
+.card .players-thumbnails-score .player .thumbnail-logo::before {
+    content: '';
+    position: absolute;
+    background: rgba(126, 87, 87, .2);
+    width: 1px;
+    height: 100%;
+    left: 50%;
 }
 
 .card .players-thumbnails-score .player .thumbnail-logo .thumbnail {
@@ -894,7 +1010,6 @@ section.horarios div:nth-child(+n+2) {
     padding: 2px;
     background: #7c7c7c;
     border-radius: 50%;
-    position: relative;
     z-index: 11;
 }
 
@@ -1130,7 +1245,6 @@ section.horarios div:nth-child(+n+2) {
     display: none;
 }
 
-
 /* ESTILOS DE LAS CARTAS POR DEFECTO */
 
 .game-history .border-card:hover {
@@ -1193,14 +1307,25 @@ section.horarios div:nth-child(+n+2) {
         grid-auto-flow: column;
         grid-row-gap: 2rem;
         grid-column-gap: .5rem;
+        border-top: 1px solid rgba(0,0,0,.1);
     }
 
     .cards-container .cards {
-        grid-template-columns: repeat(auto-fit, minmax(330px, 25%));
-        justify-content: space-around;
+        grid-template-columns: 330px;
+        justify-content: space-evenly;
+        padding-top: 1.5rem;
+        border-right: 2px solid rgba(0,0,0,.1);
         margin-bottom: 0;
     }
 
+    .cards-container .cards:nth-child(2),
+    .cards-container .cards:nth-child(3) {
+        display: grid;
+    }
+    
+    .cards-container .cards:last-child {
+        border-right: none;
+    }
 
     /* ---------- CARD OVERVIEW ---------- */
 
@@ -1238,6 +1363,7 @@ section.horarios div:nth-child(+n+2) {
 
     .card .players-thumbnails-score .scores {
         grid-template-columns: repeat(2, 30px);
+        grid-column-gap: 8px;
     }
 
     .card .players-thumbnails-score .scores .score {
@@ -1266,31 +1392,59 @@ section.horarios div:nth-child(+n+2) {
         font-weight: bold;
     }
 
-    .card .players-info-games .games .game1 span:nth-child(1),
-    .card .players-info-games .games .game1 span:nth-child(5),
-    .card .players-info-games .games .game2 span:nth-child(1),
-    .card .players-info-games .games .game2 span:nth-child(5),
-    .card .players-info-games .games .penalty-kick span:nth-child(1),
-    .card .players-info-games .games .penalty-kick span:nth-child(5) {
+    .card .players-info-games .games .game1, 
+    .card .players-info-games .games .game2,
+    .card .players-info-games .games .penalty-kick {    
+        display: grid;
+        grid-template-columns: repeat(3, 20px);
+        justify-items: center;
+        align-items: baseline;
+        grid-column-gap: 4px;
         font-size: 11px;
+        color: #161616;
+        position: relative;
+        letter-spacing: -.35px;
     }
 
-    .card .players-info-games .games .game1 span:nth-child(3),
-    .card .players-info-games .games .game2 span:nth-child(3),
-    .card .players-info-games .games .penalty-kick span:nth-child(3) {
+    .card .players-info-games .games .player1-final-score-g1,
+    .card .players-info-games .games .player1-final-score-g2,
+    .card .players-info-games .games .player1-final-score-pk {
+        justify-self: left;
+    }
+
+    .card .players-info-games .games .player2-final-score-g1,
+    .card .players-info-games .games .player2-final-score-g2,
+    .card .players-info-games .games .player2-final-score-pk {
+        justify-self: right;
+    }
+
+    .card .players-info-games .games span:nth-child(2) {
         font-size: 8px;
-        letter-spacing: .5px;
         color: #565656;
-        margin: 0 2px;
+        letter-spacing: .5px;
+        font-weight: bold;
     }
 
-    .card .players-info-games .games .game1 span:nth-child(2),
-    .card .players-info-games .games .game2 span:nth-child(2),
-    .card .players-info-games .games .penalty-kick span:nth-child(2),
-    .card .players-info-games .games .game1 span:nth-child(4),
-    .card .players-info-games .games .game2 span:nth-child(4),
-    .card .players-info-games .games .penalty-kick span:nth-child(4) {
-        color: #d8d8d8;
+    .card .players-info-games .games span.line:nth-child(2)::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 12px;
+        top: 60%;
+        margin-top: -.5px;
+        right: 20%;
+        background: #d8d8d8;
+    }
+
+    .card .players-info-games .games span.line:nth-child(2)::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 12px;
+        top: 60%;
+        margin-top: -.5px;
+        left: 20%;
+        background: #d8d8d8;
     }
 
 }
@@ -2248,6 +2402,12 @@ section.horarios div:nth-child(+n+2) {
         justify-content: center;
     }
 
+    .tabla-standings tbody tr td:nth-child(8) {
+        grid-column-gap: .5rem;
+        justify-content: center;
+        padding: 0;
+    }
+
     .ps4 .tabla-standings tbody tr td:first-child span.qualified, 
     .xbox .tabla-standings tbody tr td:first-child span.qualified {
         width: 4px;
@@ -2284,9 +2444,9 @@ section.horarios div:nth-child(+n+2) {
     }
 
     .tabla-standings tbody tr td .info {
-        width: 1.125rem;
-        height: 1.125rem;
-        font-size: .9rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .tabla-standings tbody tr td:last-child {
@@ -2335,4 +2495,57 @@ section.horarios div:nth-child(+n+2) {
         grid-template-rows: 78px;
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+    
+    /* ESTILOS DE LA TABLA DE RANKING */
+
+    .tabla-rank {
+        margin: 0 auto;
+    }
+
+    .tabla-rank thead tr, 
+    .tabla-rank tbody tr {
+        display: grid;
+        grid-template-columns: 60px 180px repeat(3, 75px);
+        grid-column-gap: .3rem;
+        height: 50px;
+        text-align: center;
+    }
+
+
+    .ps4 .tabla-rank thead tr th {
+        background: linear-gradient(to top, #4b5ffc, #36c5fd);
+        border-radius: 3px;    
+        color: #f3f3f3;
+        font-size: 18px;
+        letter-spacing: -.1px;
+        display: grid;
+        align-items: center;
+        padding: 0;
+    }
+
+    .ps4 .tabla-rank thead tr th:nth-child(2) {
+        text-align: left;        
+        padding: 0 0 0 .75rem;
+    }
+
+    .xbox .tabla-rank thead tr th {
+        background:linear-gradient(to top, #00a661, #97dc56)
+    }
+
+    .tabla-rank thead tr th, 
+    .tabla-rank tbody tr td {
+        padding: 0;
+    }
+
+    .tabla-rank tbody tr td:nth-child(2) {
+        display: grid;
+        grid-template-columns: 3.125rem auto;
+        justify-content: center;
+        grid-column-gap: 1.25rem;
+        font-size: 1.375rem;
+        letter-spacing: -.2px;
+    }
 }
