@@ -3,6 +3,7 @@ let tablaInfo = document.querySelector('.tabla-standings');
 let mqDropdown = window.matchMedia('(max-width: 1024px)');
 let menu = document.querySelector('.menu li:nth-child(2)');
 let submenu = document.querySelector('.menu .submenu');
+let desplazar = 0;
 
 // EVENTS LISTENERS
 
@@ -64,18 +65,34 @@ function mostrarPartidos(e){
 
 function siguiente(e){
     if(e.target.classList.contains('fa-chevron-right')){
+        desplazar += 1; 
         let contenedorSlide = e.target.parentElement.parentElement;
 
         contenedorSlide.scrollLeft += 340;
-        e.target.parentElement.nextSibling.nextSibling.style.display = 'grid';
+        if(desplazar >= 1) {
+            e.target.parentElement.nextSibling.nextSibling.style.display = 'grid';
+        }
+
+        if(window.matchMedia('(max-width: 1499px)').matches){
+            if(desplazar >= 4) {
+                e.target.parentElement.style.display = 'none';
+            }
+        } else {
+            if(desplazar >= 3) {
+                e.target.parentElement.style.display = 'none';
+            }
+        }
     }   
 }
 
 function anterior(e){
     if(e.target.classList.contains('fa-chevron-left')){
+        desplazar = desplazar - 1; 
         let contenedorSlide = e.target.parentElement.parentElement;
+
         contenedorSlide.scrollLeft = contenedorSlide.scrollLeft - 340;
-        if(contenedorSlide.scrollLeft <= 0) {
+        if(desplazar <= 0) {
+            e.target.parentElement.previousSibling.previousSibling.style.display = 'grid';
             e.target.parentElement.style.display = 'none';
         }
     }   
