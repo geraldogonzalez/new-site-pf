@@ -609,7 +609,10 @@ section.horarios div:nth-child(+n+2) {
     transition: all .3s ease;
 }
 
-.border-card:hover {
+.border-card.xbox:hover,
+.border-card.ps4:hover,
+.border-card.live:hover,
+.border-card.cl-dark:hover {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, .4);
 }
 
@@ -1127,6 +1130,57 @@ section.horarios div:nth-child(+n+2) {
     display: none;
 }
 
+
+/* ESTILOS DE LAS CARTAS POR DEFECTO */
+
+.game-history .border-card:hover {
+    background: transparent;
+    box-shadow: unset;
+}
+
+.game-history .border-card:hover .card {
+    border: 1px solid #aaa;
+}
+
+
+.game-history .border-card.default .card .players-thumbnails-score .player .thumbnail-logo .thumbnail,
+.game-history .border-card.default .card .players-thumbnails-score .player .thumbnail-logo .logo,
+.game-history .border-card.default .card .players-thumbnails-score .scores .score {
+    background: #d8d8d8;
+    opacity: .45;
+}
+
+.game-history .border-card.default .card .players-thumbnails-score .player .thumbnail-logo .logo {
+    border-bottom-left-radius: 18.5px;
+    border-bottom-right-radius: 18.5px;
+}
+
+.game-history .border-card.default .card .players-thumbnails-score .scores .score {
+    box-shadow: unset;
+}
+
+.game-history .border-card.default .card .players-info-games .games {
+    opacity: .25;
+}
+
+.game-history .border-card.default .card .players-info-games .player1 .nation-nick, 
+.game-history .border-card.default .card .players-info-games .player2 .nation-nick {
+    color: black;
+    opacity: .30;
+    font-size: 14px;
+    font-family: NimbusSanCon-Bol;
+}
+
+.game-history .border-card.default .card .players-info-games .player .team {
+    color: black;
+    opacity: .30;
+    font-size: 14px;
+}
+
+.game-history .border-card.default .card .players-info-games .player .nation-nick .nation {
+    background: #d8d8d8;
+    height: 12px;
+}
 
 /*---------- MEDIAQUERIES CARDS ----------*/
 
