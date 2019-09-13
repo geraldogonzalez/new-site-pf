@@ -88,11 +88,11 @@ function siguiente(e){
 function anterior(e){
     if(e.target.classList.contains('fa-chevron-left')){
         desplazar = desplazar - 1; 
+        e.target.parentElement.previousSibling.previousSibling.style.display = 'grid';
         let contenedorSlide = e.target.parentElement.parentElement;
 
         contenedorSlide.scrollLeft = contenedorSlide.scrollLeft - 340;
         if(desplazar <= 0) {
-            e.target.parentElement.previousSibling.previousSibling.style.display = 'grid';
             e.target.parentElement.style.display = 'none';
         }
     }   
