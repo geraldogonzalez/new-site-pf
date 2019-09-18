@@ -2224,14 +2224,16 @@ section.horarios div:nth-child(+ n + 2) {
   position: relative;
 }
 
-.main-grand-final .grand-final-container .grand-final .live.grand-final {
+.main-grand-final .grand-final-container .grand-final .live.grand-final,
+.main-grand-final .grand-final-container .grand-final .playing-now.grand-final {
   max-width: unset;
   max-height: unset;
   padding: 0;
   overflow: hidden;
 }
 
-.main-grand-final .grand-final-container .grand-final .live.grand-final .card {
+.main-grand-final .grand-final-container .grand-final .live.grand-final .card,
+.main-grand-final .grand-final-container .grand-final .playing-now.grand-final .card {
   border: 1px solid #aaa;
 }
 
