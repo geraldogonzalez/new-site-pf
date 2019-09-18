@@ -33,7 +33,7 @@ function mostrarPartidos(e){
         let playerHistory = e.target.parentElement.parentElement.parentElement.childNodes[17];
         let siguiente = e.target.parentElement.parentElement.parentElement.childNodes[17].childNodes[15];
 
-		e.target.style.transform = 'rotate(-225deg)';
+		e.target.style.transform = 'rotate(-45deg)';
         btnInfo.classList.add('open');
         e.target.classList.add('mostrando');
         playerInfo.classList.add('mostrar');
