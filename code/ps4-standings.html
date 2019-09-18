@@ -30,16 +30,18 @@
             <nav>
                 <ul class="menu">
                     <li class="active"><a href="#">Standings</a></li>
-                    <li><a href="ps4-rounds.html">Round<i class="fas fa-chevron-down"></i></a>
+                    <li><a href="ps4-rounds.html">Round</a><!--<i
+                        class="fas fa-chevron-down"></i><i
+                        class="fas fa-chevron-up"></i></a>
                         <ul class="submenu">
                             <li class="active"><a href="#">Round <span>1</span></a></li>
                             <li><a href="#">Round <span>2</span></a></li>
                             <li><a href="#">Round <span>3</span></a></li>
                             <li><a href="#">Round <span>4</span></a></li>
                             <li><a href="#">Round <span>5</span></a></li>
-                        </ul>
+                        </ul>!-->
                     </li>
-                    <li><a href="#">Final Standings</a></li>
+                    <li><a href="ps4-rank.html">Ranking</a></li>
                 </ul>
                 <div class="search">
                     <i class="fas fa-search"></i> <input type="text" id="search" placeholder="Search">
@@ -51,14 +53,17 @@
     <!-- MAIN -->
 
     <main class="container main main-standings ps4">
+        <div class="search-mobile">
+            <i class="fas fa-search"></i> <input type="text" id="search-mobile" placeholder="Search player">
+        </div>
         <table class="tabla-standings">
             <thead>
                 <tr>
                     <th class="NimbusSanCon-Bol">PLAYER</th>
                     <th class="NimbusSanCon-Bol">TEAM</th>
                     <th class="NimbusSanCon-Bol">COUNTRY</th>
-                    <th class="NimbusSanCon-Bol">WON</th>
-                    <th class="NimbusSanCon-Bol">LOST</th>
+                    <th class="NimbusSanCon-Bol">W<span class="delete">ON</span></th>
+                    <th class="NimbusSanCon-Bol">L<span class="delete">OST</span></th>
                     <th class="NimbusSanCon-Bol">MB</th>
                     <th class="NimbusSanCon-Bol">GF</th>
                     <th class="NimbusSanCon-Bol">MATCHES</th>
@@ -7119,7 +7124,7 @@
 
     <script src="js/app.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/search.js"></script>
+    <script src="js/search.min.js"></script>
     <script src="https://kit.fontawesome.com/6c25d394b9.js"></script>
 </body>
 
