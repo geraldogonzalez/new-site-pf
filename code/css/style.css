@@ -54,7 +54,7 @@ body {
 /*---------- HEADER -----------*/
 
 header.header {
-  width: 95%;
+  width: 100%;
   margin: 0 auto 0.5rem auto;
   position: relative;
   border-bottom: 2px solid #c8c8c8;
@@ -66,24 +66,32 @@ header.header.standings {
 }
 
 header.header .contenedor-header {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
 header.header .contenedor-header .consola {
-  padding: 1rem 0;
+  padding: 2rem 22px 0 22px;
   display: grid;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   align-items: center;
   justify-content: center;
+  grid-row-gap: 30px;
 }
 
 header.header .contenedor-header .consola .titulo {
   display: grid;
   grid-auto-flow: column;
-  align-items: center;
+  align-items: baseline;
+  justify-content: start;
   grid-column-gap: 0.5rem;
   font-size: 12px;
+  order: 2;
+  margin-bottom: 10px;
+}
+
+header.header .contenedor-header .consola .titulo img {
+  width: 50px;
 }
 
 header.header .contenedor-header .consola .titulo h2 {
@@ -101,13 +109,10 @@ header.header .contenedor-header .consola .titulo .fab {
 
 header.header .contenedor-header .consola .consola-btn {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  height: 80px;
+  grid-template-columns: repeat(2, 133px);
+  grid-template-rows: 40px;
+  grid-column-gap: 10px; 
   width: 100%;
-  z-index: 10000;
 }
 
 header.header .contenedor-header .consola .consola-btn-bracket {
@@ -115,7 +120,7 @@ header.header .contenedor-header .consola .consola-btn-bracket {
 }
 
 header.header .contenedor-header .consola .consola-btn a {
-  color: rgba(22, 22, 22, 0.4);
+  color: rgba(22,22,22,.4);
   text-decoration: none;
   border: 2px solid rgba(22, 22, 22, 0.4);
   background: white;
@@ -126,7 +131,7 @@ header.header .contenedor-header .consola .consola-btn a {
   align-content: center;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 header.header .contenedor-header .consola .consola-btn-bracket a {
@@ -141,33 +146,19 @@ header.header .contenedor-header .consola .consola-btn a.btn-final {
   text-align: center;
 }
 
-header.header .contenedor-header .consola .consola-btn a.btn-xbox {
-  order: 3;
-}
-
-header.header .contenedor-header .consola .consola-btn a.btn-xbox.active {
-  background: linear-gradient(to top, #00a661, #abe354);
-  color: white;
-  border: 1.5px solid #aaaaaa;
-}
-
-header.header .contenedor-header .consola .consola-btn a.btn-ps4.active {
-  background: linear-gradient(to top, #4b5ffc, #36c5fd);
-  color: white;
-  border: 1.5px solid #aaaaaa;
-}
-
-header.header .contenedor-header .consola .consola-btn a.btn-final.active {
-  background: linear-gradient(to top, #af8d26, #e3cc91);
-  color: white;
-  border: 1.5px solid #aaaaaa;
-}
+  header.header .contenedor-header .consola .consola-btn a.btn-xbox.active,
+  header.header .contenedor-header .consola .consola-btn a.btn-ps4.active,
+  header.header .contenedor-header .consola .consola-btn a.btn-final.active {
+    color: #161616;
+    border: 2px solid #161616;
+    background: white;
+  }
 
 /* MENU STYLES */
 
 nav {
   display: grid;
-  justify-content: center;
+  padding: 0 9px;
 }
 
 nav ul {
@@ -179,16 +170,21 @@ nav ul {
 
 nav > ul {
   display: grid;
-  grid-template-columns: repeat(2, 91px) auto;
-  grid-column-gap: 0.5rem;
+  grid-template-columns: repeat(2, 85px) auto;
+  grid-column-gap: 0.3rem;
   align-items: end;
 }
 
 .menu li {
-  line-height: 2rem;
+  line-height: 19px;
   position: relative;
   background: white;
+  font-size: 15px;
   transition: all 0.4s ease;
+}
+
+.menu li:last-child {
+  max-width: 125px;
 }
 
 .menu > li.active::before {
@@ -226,7 +222,7 @@ nav .menu > li > ul {
   width: 100%;
   max-height: 0;
   overflow: hidden;
-  top: 2.1rem;
+  top: 1.71rem;
   transition: all 0.3s ease;
 }
 
@@ -261,20 +257,15 @@ nav .menu li ul li:hover a {
   color: #000;
 }
 
-.menu li:nth-child(2) a,
-.menu li:nth-child(2) li a {
-  display: grid;
-  grid-template-columns: 60px 20px;
-  align-items: center;
-}
-
 nav a {
   text-decoration: none;
   color: #a3a3a3;
-  font-size: 0.7rem;
+  font-size: 15px;
   font-weight: normal;
   transition: all 0.3s ease-in;
   display: inline-block;
+  padding-bottom: .4rem;
+  letter-spacing: -.2px;
 }
 
 .menu > li:hover > a {
@@ -290,10 +281,10 @@ nav .search {
   color: #a3a3a3;
   font-size: 11px;
   line-height: 13px;
-  display: grid;
   grid-auto-flow: column;
   align-items: center;
   grid-column-gap: 12px;
+  display: none;
 }
 
 nav .search input {
@@ -309,13 +300,13 @@ nav .search input {
 
 @media screen and (min-width: 320px) {
   header.header .contenedor-header .consola .titulo {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   header.header .contenedor-header .consola .titulo h2 {
     font-family: NimbusSanCon-Bol;
     font-weight: normal;
-    font-size: 1.6rem;
+    font-size: 28px;
     letter-spacing: -1px;
     word-spacing: 4px;
   }
@@ -329,13 +320,27 @@ nav .search input {
   header.header .contenedor-header .consola .consola-btn a.btn-final {
     font-size: 1.3rem;
   }
-
-  nav a {
-    font-size: 0.8rem;
+  
+  header.header .contenedor-header .consola .titulo {
+    justify-content: center;
   }
+
 }
 
 @media screen and (min-width: 768px) {
+  
+  header.header {
+    width: 95%;
+  }
+  
+  header.header .contenedor-header {
+    width: 90%;
+  }
+
+  header.header .contenedor-header .consola .titulo {
+    align-items: center;
+  }
+
   header.header .contenedor-header .consola .titulo h2 {
     font-size: 2.5rem;
   }
@@ -344,21 +349,36 @@ nav .search input {
     font-size: 2.5rem;
   }
 
+  nav {
+    padding: 0;
+  }
+
+  nav a {
+    padding: 0;
+    letter-spacing: 0;
+  }
+
+  nav > ul {
+    grid-template-columns: repeat(2, 91px) auto;
+    grid-column-gap: 0.5rem;
+  }
+
   nav > ul > li > a {
     font-size: 15px;
     letter-spacing: -0.2px;
     margin: 0 15px;
   }
 
-  nav .menu li ul li a {
-    margin: 0 10px;
+  nav > ul > li:last-child {
+    display: grid;
   }
 
-  .menu li:nth-child(2) a,
-  .menu li:nth-child(2) li a {
-    grid-template-columns: unset;
-    grid-auto-flow: column;
-    grid-column-gap: 10px;
+  nav .menu > li > ul {
+    top: 2.1rem;
+  }
+
+  nav .menu li ul li a {
+    margin: 0 10px;
   }
 
   .menu li:nth-child(2) a i.fas {
@@ -377,6 +397,11 @@ nav .search input {
     margin: 57px 0 46px 0;
     height: 40px;
     line-height: 0;
+    order: unset;
+  }
+
+  header.header .contenedor-header .consola .titulo img {
+    width: 75px;
   }
 
   nav {
@@ -389,6 +414,7 @@ nav .search input {
   nav .search {
     font-size: 15px;
     line-height: 18px;
+    display: grid;
   }
 
   nav .search i.fas {
@@ -408,6 +434,10 @@ nav .search input {
     overflow: visible;
   }
 
+  .menu li {
+    line-height: 2rem;
+  }
+
   header.header .contenedor-header .consola .consola-btn {
     display: grid;
     grid-auto-flow: column;
@@ -415,13 +445,6 @@ nav .search input {
     grid-template-rows: 60px;
     grid-column-gap: 1rem;
     text-align: center;
-    position: initial;
-    left: unset;
-    bottom: unset;
-    height: unset;
-    width: unset;
-    background: unset;
-    z-index: unset;
   }
 
   header.header .contenedor-header .consola .consola-btn a {
@@ -429,15 +452,8 @@ nav .search input {
   }
 
   header.header .contenedor-header .consola {
+    grid-auto-flow: column;
     justify-content: space-between;
-  }
-
-  header.header .contenedor-header .consola .consola-btn a.btn-xbox.active,
-  header.header .contenedor-header .consola .consola-btn a.btn-ps4.active,
-  header.header .contenedor-header .consola .consola-btn a.btn-final.active {
-    color: #161616;
-    border: 2px solid #161616;
-    background: white;
   }
 
   header.header .contenedor-header .consola .consola-btn a.btn-ps4 {
@@ -451,6 +467,7 @@ nav .search input {
   header.header .contenedor-header .consola .consola-btn a.btn-final {
     order: 3;
   }
+
 }
 
 /*---------- MAIN MACTHUPS -----------*/
@@ -485,6 +502,7 @@ main {
   grid-row-gap: 0.3rem;
   position: relative;
   z-index: 100;
+  overflow: hidden;
 }
 
 .main .rounds .round.complete::after {
@@ -506,8 +524,42 @@ main {
   top: 58%;
 }
 
+.main .rounds .round.playing::after {
+  background: rgba(0, 0, 0, 0.1);
+}
+
 .main .rounds .round:last-child::after {
   display: none;
+}
+
+.main .rounds .round.playing::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #00a661;
+  width: 0%;
+  left: 0;
+  top: 58%;
+  z-index: 1;
+  animation: 1700ms infinite playing;
+}
+
+@keyframes playing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+
+  90% {
+    left: 100%;
+    width: 100%;
+  }
+
+  100% {
+    left: 110%;
+  }
 }
 
 .main .rounds .round div {
@@ -586,6 +638,15 @@ section.horarios div:nth-child(+ n + 2) {
   section.horarios div:nth-child(+ n + 2) {
     display: block;
   }
+
+  .main-standings .search-mobile {
+    display: none;
+  }
+
+  .main .rounds {
+    grid-template-columns: repeat(4, minmax(100px, 23%)) 10%;
+  }
+
 }
 
 /* ESTILOS CARDS */
@@ -677,6 +738,10 @@ section.horarios div:nth-child(+ n + 2) {
   margin-bottom: 85px;
 }
 
+.main-bracket .cards-container .cards {
+  border-right: none;
+}
+
 .cards-container .cards:nth-child(2),
 .cards-container .cards:nth-child(3) {
   display: none;
@@ -733,15 +798,16 @@ section.horarios div:nth-child(+ n + 2) {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-.border-card.live .card span.right,
-.border-card.live .card span.left {
+.border-card .card span.right,
+.border-card .card span.left {
   position: absolute;
   width: 100%;
   height: 4px;
   border-radius: 3px;
 }
 
-.border-card.live .card span.right {
+.border-card.live .card span.right,
+.border-card.playing-now .card span.right {
   top: -1px;
   left: -1px;
   background: linear-gradient(
@@ -754,44 +820,46 @@ section.horarios div:nth-child(+ n + 2) {
   animation: animation-right 1105ms linear infinite;
 }
 
-.border-card.live.xbox:hover .card span.right {
+.border-card.live.xbox:hover .card span.right,
+.border-card.playing-now.xbox .card span.right {
   background: linear-gradient(
     to right,
     transparent,
-    #abe354,
     #00a661,
     #abe354,
     transparent
   );
 }
 
-.border-card.live.ps4:hover .card span.right {
+.border-card.live.ps4:hover .card span.right,
+.border-card.playing-now.ps4 .card span.right {
   background: linear-gradient(
     to right,
     transparent,
-    #36c5fd,
     #4b5ffc,
     #36c5fd,
     transparent
   );
 }
 
-.border-card.live.grand-final:hover .card span.right {
+.border-card.live.grand-final:hover .card span.right,
+.border-card.playing-now.grand-final .card span.right {
   background: linear-gradient(
     to right,
     transparent,
-    #e3cc91,
     #af8d26,
     #e3cc91,
     transparent
   );
 }
 
-.border-card.live.cl-dark:hover .card span.right {
+.border-card.live.cl-dark:hover .card span.right,
+.border-card.playing-now.cl-dark .card span.right {
   background: linear-gradient(to right, transparent, #5af7dc, transparent);
 }
 
-.border-card.live .card span.left {
+.border-card.live .card span.left,
+.border-card.playing-now .card span.left {
   bottom: -1px;
   right: -1px;
   background: linear-gradient(
@@ -804,52 +872,54 @@ section.horarios div:nth-child(+ n + 2) {
   animation: animation-left 1105ms linear infinite;
 }
 
-.border-card.live.xbox:hover .card span.left {
+.border-card.live.xbox:hover .card span.left,
+.border-card.playing-now.xbox .card span.left {
   background: linear-gradient(
     to left,
     transparent,
-    #abe354,
     #00a661,
     #abe354,
     transparent
   );
 }
 
-.border-card.live.ps4:hover .card span.left {
+.border-card.live.ps4:hover .card span.left,
+.border-card.playing-now.ps4 .card span.left {
   background: linear-gradient(
     to left,
     transparent,
-    #36c5fd,
     #4b5ffc,
     #36c5fd,
     transparent
   );
 }
 
-.border-card.live.grand-final:hover .card span.left {
+.border-card.live.grand-final:hover .card span.left,
+.border-card.playing-now.grand-final .card span.left {
   background: linear-gradient(
     to left,
     transparent,
-    #e3cc91,
     #af8d26,
     #e3cc91,
     transparent
   );
 }
 
-.border-card.live.cl-dark:hover .card span.left {
+.border-card.live.cl-dark:hover .card span.left,
+.border-card.playing-now.cl-dark .card span.left {
   background: linear-gradient(to left, transparent, #5af7dc, transparent);
 }
 
-.border-card.live .card span.top,
-.border-card.live .card span.bottom {
+.border-card .card span.top,
+.border-card .card span.bottom {
   position: absolute;
   height: 100%;
   width: 4px;
   border-radius: 3px;
 }
 
-.border-card.live .card span.bottom {
+.border-card.live .card span.bottom,
+.border-card.playing-now .card span.bottom {
   top: 0;
   right: -1px;
   background: linear-gradient(
@@ -863,44 +933,46 @@ section.horarios div:nth-child(+ n + 2) {
   animation-delay: 552.5ms;
 }
 
-.border-card.live.xbox:hover .card span.bottom {
+.border-card.live.xbox:hover .card span.bottom,
+.border-card.playing-now.xbox .card span.bottom {
   background: linear-gradient(
     to bottom,
     transparent,
-    #abe354,
     #00a661,
     #abe354,
     transparent
   );
 }
 
-.border-card.live.ps4:hover .card span.bottom {
+.border-card.live.ps4:hover .card span.bottom,
+.border-card.playing-now.ps4 .card span.bottom {
   background: linear-gradient(
     to bottom,
     transparent,
-    #36c5fd,
     #4b5ffc,
     #36c5fd,
     transparent
   );
 }
 
-.border-card.live.grand-final:hover .card span.bottom {
+.border-card.live.grand-final:hover .card span.bottom,
+.border-card.playing-now.grand-final .card span.bottom {
   background: linear-gradient(
     to bottom,
     transparent,
-    #e3cc91,
     #af8d26,
     #e3cc91,
     transparent
   );
 }
 
-.border-card.live.cl-dark:hover .card span.bottom {
+.border-card.live.cl-dark:hover .card span.bottom,
+.border-card.cl-dark.grand-final .card span.bottom {
   background: linear-gradient(to bottom, transparent, #5af7dc, transparent);
 }
 
-.border-card.live .card span.top {
+.border-card.live .card span.top,
+.border-card.playing-now .card span.top {
   top: 0;
   left: -1px;
   background: linear-gradient(
@@ -914,40 +986,41 @@ section.horarios div:nth-child(+ n + 2) {
   animation-delay: 552.5ms;
 }
 
-.border-card.live.xbox:hover .card span.top {
+.border-card.live.xbox:hover .card span.top,
+.border-card.playing-now.xbox .card span.top {
   background: linear-gradient(
     to top,
     transparent,
-    #abe354,
     #00a661,
     #abe354,
     transparent
   );
 }
 
-.border-card.live.ps4:hover .card span.top {
+.border-card.live.ps4:hover .card span.top,
+.border-card.playing-now.ps4 .card span.top {
   background: linear-gradient(
     to top,
     transparent,
-    #36c5fd,
     #4b5ffc,
     #36c5fd,
     transparent
   );
 }
 
-.border-card.live.grand-final:hover .card span.top {
+.border-card.live.grand-final:hover .card span.top,
+.border-card.playing-now.grand-final .card span.top {
   background: linear-gradient(
     to top,
     transparent,
-    #e3cc91,
     #af8d26,
     #e3cc91,
     transparent
   );
 }
 
-.border-card.live.cl-dark:hover .card span.top {
+.border-card.live.cl-dark:hover .card span.top,
+.border-card.playing-now.cl-dark .card span.top {
   background: linear-gradient(to top, transparent, #5af7dc, transparent);
 }
 
@@ -1001,7 +1074,8 @@ section.horarios div:nth-child(+ n + 2) {
   border: 1px solid transparent;
 }
 
-.border-card.live {
+.border-card.live,
+.border-card.playing-now {
   max-width: 273px;
   max-height: 98px;
   justify-content: center;
@@ -1236,6 +1310,7 @@ section.horarios div:nth-child(+ n + 2) {
 
 .border-card.xbox .players-thumbnails-score .scores .playing {
   background: linear-gradient(to top, #00a661, #abe354);
+  animation: none;
 }
 
 .border-card.xbox .card .players-thumbnails-score .scores .draw .draw {
@@ -1248,6 +1323,7 @@ section.horarios div:nth-child(+ n + 2) {
 
 .border-card.cl-dark .players-thumbnails-score .scores .playing {
   background: #5af7dc;
+  animation: none;
 }
 
 .border-card.cl-dark .card .players-thumbnails-score .scores .draw .draw {
@@ -1260,6 +1336,7 @@ section.horarios div:nth-child(+ n + 2) {
 
 .border-card.ps4 .players-thumbnails-score .scores .playing {
   background: linear-gradient(to top, #4b5ffc, #36c5fd);
+  animation: none;
 }
 
 .border-card.ps4 .card .players-thumbnails-score .scores .draw .draw {
@@ -1272,6 +1349,7 @@ section.horarios div:nth-child(+ n + 2) {
 
 .border-card.grand-final .players-thumbnails-score .scores .playing {
   background: linear-gradient(to top, #af8d26, #e3cc91);
+  animation: none;
 }
 
 .border-card.grand-final .players-thumbnails-score .scores .draw .draw {
@@ -1284,9 +1362,10 @@ section.horarios div:nth-child(+ n + 2) {
 
 .border-card.xbox-live .players-thumbnails-score .scores .score p,
 .border-card.ps4-live .players-thumbnails-score .scores .score p,
+.border-card.playing-now .players-thumbnails-score .scores .score p,
 .live .players-thumbnails-score .scores .score p,
 .grand-final .players-thumbnails-score .scores .score p {
-  padding-bottom: 8.5px;
+  padding-bottom: 11.5px;
 }
 
 .border-card .card .players-thumbnails-score .scores .draw p:first-child {
@@ -1492,7 +1571,8 @@ section.horarios div:nth-child(+ n + 2) {
 
   /* --------- END ---------*/
 
-  .border-card.live {
+  .border-card.live,
+  .border-card.playing-now {
     max-width: 330px;
     max-height: 105px;
     justify-content: center;
@@ -2418,6 +2498,10 @@ section.horarios div:nth-child(+ n + 2) {
   align-items: center;
 }
 
+.main-grand-final .grand-final-container .grand-final .matchs .fifa20-img img {
+  width: 100%;
+}
+
 .main-grand-final .grand-final-container .grand-final .consolas .xbox-one {
   grid-column: 3 / 4;
 }
@@ -2670,6 +2754,12 @@ section.horarios div:nth-child(+ n + 2) {
   background: linear-gradient(to top, #4b5ffc, #36c5fd);
 }
 
+
+.tabla-standings thead tr th:nth-child(4),
+.tabla-standings thead tr th:nth-child(5) {
+  display: flex;
+}
+
 .tabla-standings tbody tr {
   height: 78px;
   border-bottom: 1px solid #979797;
@@ -2912,35 +3002,130 @@ section.horarios div:nth-child(+ n + 2) {
 }
 
 @media screen and (max-width: 1024px) {
+  nav .search {
+    display: none;
+  }
+
   /* TRATANDO DE AJUSTAR LA TABLA A DISPOSITIVOS MÓVILES */
+  header.header.standings {
+    margin: 0 auto 0 auto;
+  }
+
+  .main-standings {
+    width: 100%;
+  }
+  
+  .main-standings .search-mobile {    
+    background: #f6f6f6;
+    padding-left: 21px;
+    height: 38px;
+    display: grid;
+    grid-template-columns: 13px 1fr;
+    align-items: center;
+    justify-content: start;
+    grid-column-gap: 10px;
+    margin-bottom: .5rem;
+  }
+  
+  .main-standings .search-mobile i {
+    color: #a3a3a3;
+    font-size: 13px;
+    background: #f6f6f6;
+  }
+
+  .main-standings .search-mobile input {
+    line-height: 17px;
+    border: none;
+    color: #a3a3a3;
+    background: #f6f6f6;
+    height: 100%;
+    font-size: 14px;
+    transition: all .3s ease;
+  }
+
+  .main-standings .search-mobile input:hover {
+    outline: none;
+    font-size: 1rem;
+  }
+
+  .tabla-standings {
+    display: grid;
+    justify-items: center;
+  }
+
+  .tabla-standings tbody {
+    width: 300px;
+  }
 
   .tabla-standings thead tr,
   .tabla-standings tbody tr {
-    grid-template-columns: 120px repeat(6, 50px) 90px;
+    grid-template-columns: 94px repeat(4, 26px) 87px;
+  }
+
+  .tabla-standings thead tr {
+    grid-column-gap: 3px;
   }
 
   .tabla-standings thead tr th {
     padding: 0;
     text-align: center;
+    height: 40px;
+    letter-spacing: -.1px;
   }
 
-  .tabla-standings thead tr,
-  .tabla-standings tbody tr {
+  .tabla-standings thead tr th:nth-child(4),
+  .tabla-standings thead tr th:nth-child(5) {
+    justify-content: center;
+  }
+
+  .tabla-standings thead tr {
     height: 40px;
   }
 
   .tabla-standings thead tr th {
-    font-size: 12px;
+    font-size: 18px;
+  }
+
+  .tabla-standings thead tr th .delete {
+    display: none;
+  }
+
+  .tabla-standings thead tr th:nth-child(2),
+  .tabla-standings thead tr th:nth-child(3) {
+    display: none;
+  }
+
+  .tabla-standings thead tr th:first-child,
+  .tabla-standings thead tr th:last-child {
+    text-align: left;
+    padding-left: 11px;
   }
 
   .tabla-standings tbody tr {
     font-size: 11px;
-    grid-template-rows: 40px;
+    height: 64px;
+    grid-template-rows: 64px;
+    border-bottom: 1px solid #cfcfcf;
   }
 
   .tabla-standings tbody .player-info.mostrar {
-    height: 165px;
-    grid-template-rows: 40px 145px;
+    height: 210px;
+    grid-template-rows: 64px 145px;
+  }
+
+  .tabla-standings tbody tr td .info {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+
+  .tabla-standings tbody tr td .info p {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    align-items: center;
+    position: absolute;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
   }
 
   .tabla-standings tbody tr td {
@@ -2948,34 +3133,39 @@ section.horarios div:nth-child(+ n + 2) {
     justify-items: center;
   }
 
-  .tabla-standings tbody tr td:first-child {
-    font-size: 11px;
-    letter-spacing: 1px;
-  }
-
   .tabla-standings tbody tr td .thumbnail {
     width: 1.875rem;
     height: 1.875rem;
+    display: none;
+  }
+
+  .tabla-standings tbody tr td {
+    letter-spacing: -.5px;
   }
 
   .tabla-standings tbody tr td:first-child {
-    grid-template-columns: 1.875rem auto;
-    grid-column-gap: 0.5rem;
-    justify-content: center;
+    grid-template-columns: unset;
+    grid-column-gap: unset;
+    justify-content: unset;
+    justify-items: unset;
+    font-size: 1rem;
+    text-align: left;
+    padding: 0 0 0 9px; 
   }
 
   .tabla-standings tbody tr td:nth-child(8) {
-    grid-column-gap: 0.5rem;
+    grid-column-gap: 4px;
     justify-content: center;
     padding: 0;
   }
 
   .ps4 .tabla-standings tbody tr td:first-child span.qualified,
   .xbox .tabla-standings tbody tr td:first-child span.qualified {
-    width: 4px;
+    width: 5px;
     height: 1.875rem;
     left: 0;
-    top: 5px;
+    top: 32px;
+    margin-top: -15px;
   }
 
   .tabla-standings tbody tr td:nth-child(2) img {
@@ -2990,35 +3180,49 @@ section.horarios div:nth-child(+ n + 2) {
   .tabla-standings tbody tr td:nth-child(2),
   .tabla-standings tbody tr td:nth-child(3) {
     padding-left: 0;
+    display: none;
   }
 
   .tabla-standings tbody tr td .last-matches.eight {
     grid-template-columns: repeat(4, 7px);
-    grid-column-gap: 0.2rem;
-    grid-row-gap: 0.2rem;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
     font-size: 7px;
   }
 
   .tabla-standings tbody tr td .last-matches.five {
     grid-template-columns: repeat(5, 7px);
-    grid-column-gap: 0.2rem;
+    grid-column-gap: 2px;
     font-size: 7px;
   }
 
   .tabla-standings tbody tr td .info {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 30px;
+    height: 30px;
     font-size: 1.5rem;
   }
 
   .tabla-standings tbody tr td:last-child {
     grid-column-gap: 0;
-    padding: 3px 0 18px 0;
+    padding: 11px 0 14px 0;
   }
+
   .tabla-standings tbody tr td:last-child div h6 {
     margin: 0 0 0 14px;
     font-size: 10px;
-    margin-bottom: 0;
+    padding-bottom: 5px;
+  }
+
+  table tr td .game-history .border-card {
+    padding: 0 4px 0 0;
+  }
+
+  table tr td.player-history.mostrar .game-history:nth-child(7) {
+    padding-right: 3rem;
+  }
+
+  .tabla-standings tbody tr td .control.siguiente i {
+    display: none;
   }
 
   /* FIN DEL CÓDIGO PARA AJUSTAR LA TABLA */
@@ -3032,9 +3236,6 @@ section.horarios div:nth-child(+ n + 2) {
     overflow-x: scroll;
   }
 
-  .tabla-standings tbody tr td .control {
-    display: none !important;
-  }
 }
 
 @media screen and (min-width: 1500px) {
@@ -3098,6 +3299,8 @@ header.header.rank {
 .main-rank {
     overflow: scroll;
     min-height: 50vh;
+    display: grid;
+    grid-gap: 2rem;
 }
 
 .tabla-rank {
@@ -3240,17 +3443,72 @@ header.header.rank {
     grid-template-rows: 8px; 
 }
 
-.tabla-rank tbody .player-info .points .rank-arrows .default {
+.tabla-rank tbody .player-info .rank-arrows .default {
     color: rgba(139, 139, 139, .6);
 }
 
-.tabla-rank tbody .player-info .points .rank-arrows .up {
+.tabla-rank tbody .player-info .rank-arrows .up {
     color: #76b13f;
 }
 
-.tabla-rank tbody .player-info .points .rank-arrows .down {
+.tabla-rank tbody .player-info .rank-arrows .down {
     color: #df002c;
 }
+
+.tabla-rank tbody tr.player-info td:first-child {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-column-gap: .6rem;
+}
+
+.tabla-rank tbody tr.player-info td:first-child .rank-arrows {
+  display: grid;
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.tabla-rank tbody tr.player-info td:first-child .rank-arrows .fas {  
+  font-size: 1.25rem;
+  line-height: 7px;
+  display: flex;
+  align-items: baseline;
+}
+
+.tabla-rank tbody tr.player-info td:first-child .rank-arrows span {
+  font-size: .67rem;
+}
+
+.main-rank .btn-ver-mas {
+  background: none;
+  border: 1px solid rgba(22, 22, 22, 0.2);
+  display: grid;
+  margin: 0 auto;
+  padding: .5rem 0 1rem 0;
+  width: 444px;
+  color: rgba(139, 139, 139, .6);
+  font-family: NimbusSanCon-Bol;
+  font-size: 1.1rem;
+  max-height: 94px;
+}
+
+.main-rank .btn-ver-mas:hover {
+  background: #f6f6f6;
+}
+
+.main-rank .btn-ver-mas span {
+  font-family: SeravekWebBasicRegular;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border: 1px solid rgba(22, 22, 22, 0.4);
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  margin-bottom: .5rem;
+  font-size: 1.3em;
+}
+
 
 @media screen and (min-width: 1024px) {
 
@@ -3307,6 +3565,10 @@ header.header.rank {
     .tabla-rank tbody .player-info .points .rank-arrows {
         display: grid;
         grid-template-rows: 10px; 
+    }
+
+    .main-rank .btn-ver-mas {
+      width: 564px;
     }
 
 }
