@@ -12,7 +12,7 @@
 
 <body>
 
-    <header class="header">
+    <header class="header header-brackets">
         <div class="contenedor-header grand-final-header">
             <div class="consola">
                 <div class="titulo">
@@ -41,39 +41,36 @@
 
                 <div class="grand-final-winner">
 
-                    <div class="thumbnail-nation">
-                        <div class="thumbnail">
-                            <img src="img/thumbnail.jpg"  alt="">
+                    <div class="team-thumbnail-nation">
+
+                        <div class="team-logo">
+                            <img src="img/barcelona.png"  alt="">
+                        </div>
+
+                        <div class="thumbnail-console">
+                            <div class="thumbnail">
+                                <img src="img/messi.jpg"  alt="">
+                                <div class="console ps4">
+                                    <i class="fab fa-playstation"></i>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="nation">
-                            <img src="img/bandera.png"   alt="">
+                            <img src="img/argentina.jpg"   alt="">
                         </div>
                     </div>
 
-                    <div class="team-nick-console">
-                        <div class="team-logo">
-                            <img src="img/escudo.png"  alt="">
-                        </div>
-
-                        <div class="nickname">
-                            GeraldoG09
-                        </div>
-
-                        <div class="console">
-                            <i class="fab fa-playstation"></i>
-                        </div>
+                    <div class="nick">
+                        Lionel Messi
                     </div>
 
                 </div>
 
-                <div class="border-card grand-final playing-now">
+                <!--
+                <div class="border-card grand-final">
                     <div class="winner-connector"></div>
                     <div class="card">
-                            <span class="right"></span>
-                            <span class="left"></span>
-                            <span class="bottom"></span>
-                            <span class="top"></span>
                             <div class="players-thumbnails-score">
                                 <div class="player player1 ps4">
                                     <div class="thumbnail-logo">
@@ -88,16 +85,15 @@
                                 </div>
 
                                 <div class="scores">
-                                    <div class="NimbusSanCon-Bol score score-player1">
+                                    <div class="NimbusSanCon-Bol score score-player1 win">
+                                        <p>3</p>
+                                    </div>
+                                    <div class="NimbusSanCon-Bol score score-player1 lose">
                                         <p>1</p>
                                     </div>
-                                    <div class="NimbusSanCon-Bol score score-player1">
-                                        <p>1</p>
-                                    </div>
-                                    <p class="playing">NOW PLAYING</p>
                                 </div>
 
-                                <div class="player player2 xbox">
+                                <div class="player player2 xbox lose">
                                     <div class="thumbnail-logo">
                                         <div class="logo">
                                             <img src="img/escudo.png"  alt="">
@@ -129,7 +125,7 @@
                                     </div>
                                 </div>
 
-                                <div class="player player2">
+                                <div class="player player2 lose">
                                     <div class="nation-nick">
 
                                         <div class="nick">
@@ -178,15 +174,164 @@
                                     </div>
                             </div>
                     </div>
+                </div> -->
+
+                <div class="border-card border-card-final grand-final">
+                        <div class="card card-final">
+                            <div class="players-thumbnails-score">
+                                <div class="player player1 win">
+                                    <div class="thumbnail-logo">
+                                        <div class="thumbnail">
+                                            <img src="img/messi.jpg" alt="">
+                                        </div>
+
+                                        <div class="logo">
+                                            <img src="img/barcelona.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="scores">
+                                    <div class="NimbusSanCon-Bol score score-player1 win">
+                                        <p>6</p>
+                                    </div>
+                                    <div class="NimbusSanCon-Bol score score-player1 lose">
+                                        <p>5</p>
+                                    </div>
+                                </div>
+
+                                <div class="player player2 lose">
+                                    <div class="thumbnail-logo">
+                                        <div class="logo">
+                                            <img src="img/juventus.png" alt="">
+                                        </div>
+
+                                        <div class="thumbnail">
+                                            <img src="img/ronaldo.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="players-info-games">
+
+                                <div class="player player1 win">
+                                    <div class="nation-nick">
+                                        <div class="nation">
+                                            <img src="img/argentina.jpg" alt="">
+                                        </div>
+
+                                        <div class="nick">
+                                            <p class="nickname NimbusSanCon-Bol">L. Messi</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team">
+                                        FC Barcelona
+                                    </div>
+                                </div>
+
+                                <div class="games">
+
+                                    <div class="game1">
+                                        <span class="NimbusSanCon-Bol player1-final-score-g1">5</span>
+                                        
+                                        <span class="line">G1</span>
+                                        
+                                        <span class="NimbusSanCon-Bol player2-final-score-g1">1</span>
+                                    </div>
+
+                                    <div class="game2">
+                                        <span class="NimbusSanCon-Bol player1-final-score-g2">1</span>
+                                        
+                                        <span class="line">G2</span>
+                                        
+                                        <span class="NimbusSanCon-Bol player2-final-score-g2">4</span>
+                                    </div>
+
+                                    <div class="penalty-kick">
+                                        <span class="NimbusSanCon-Bol player1-final-score-pk"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span class="NimbusSanCon-Bol player2-final-score-pk"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="player player2 lose">
+                                    <div class="nation-nick">
+
+                                        <div class="nick">
+                                            <p class="nickname NimbusSanCon-Bol">C. Ronaldo</p>
+                                        </div>
+
+                                        <div class="nation">
+                                            <img src="img/portugal.jpg" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="team">
+                                        Juventus
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="formation-record">
+
+                                <div class="player player-1">
+                                    <div class="formation">
+                                        <span>4-3-2-1</span>
+                                        <img src="img/formation/4-3-2-1.png" alt="">
+                                    </div>
+
+                                    <div class="record-goals">
+                                        <div class="ecl-record">
+                                            <span class="record"> 6 - 2</span>
+                                            <span>ECL RECORD</span>
+                                        </div>
+                                        <div class="goal-per-game">
+                                            <span class="goals">2.31</span>
+                                            <span>GOALS PER GAME</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="player player-2">
+
+                                    <div class="record-goals">
+                                        <div class="ecl-record">
+                                            <span class="record"> 6 - 2</span>
+                                            <span>ECL RECORD</span>
+                                        </div>
+                                        <div class="goal-per-game">
+                                            <span class="goals">2.22</span>
+                                            <span>GOALS PER GAME</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="formation">
+                                        <span>4-1-2-1-2</span>
+                                        <img src="img/formation/4-3-2-1.png" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                 </div>
 
                 <div class="consolas">
                     <div class="NimbusSanCon-Bol playstation">
-                        PS4 FINAL
+                        <i class="fab fa-playstation"></i> PS4 FINAL
                     </div>
 
                     <div class="NimbusSanCon-Bol xbox-one">
-                        XBOX 1 1 FINAL
+                        <i class="fab fa-xbox"></i> XBOX 1 FINAL
                     </div>
                     <div class="conector1">
                         <div class="conector2">
@@ -194,39 +339,40 @@
                     </div>
                 </div>
 
-                <div class="matchs xbox-ps4-final">
-                    <div class="border-card ps4">
-                        <div class="card">
+                <div class="matchs xbox-ps4-final"> 
+
+                    <div class="border-card border-card-final ps4">
+                        <div class="card card-final">
                             <div class="players-thumbnails-score">
-                                <div class="player player1 lose">
+                                <div class="player player1">
                                     <div class="thumbnail-logo">
                                         <div class="thumbnail">
-                                            <img src="img/thumbnail.jpg" alt="">
+                                            <img src="img/messi.jpg" alt="">
                                         </div>
 
                                         <div class="logo">
-                                            <img src="img/escudo.png" alt="">
+                                            <img src="img/barcelona.png" alt="">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="scores">
-                                    <div class="NimbusSanCon-Bol score score-player1">
-                                        <p>1</p>
-                                    </div>
                                     <div class="NimbusSanCon-Bol score score-player1 win">
-                                        <p>7</p>
+                                        <p>5</p>
+                                    </div>
+                                    <div class="NimbusSanCon-Bol score score-player2">
+                                        <p>1</p>
                                     </div>
                                 </div>
 
-                                <div class="player player2">
+                                <div class="player player2 lose">
                                     <div class="thumbnail-logo">
                                         <div class="logo">
-                                            <img src="img/escudo.png" alt="">
+                                            <img src="img/realmadrid.png" alt="">
                                         </div>
 
                                         <div class="thumbnail">
-                                            <img src="img/thumbnail.jpg" alt="">
+                                            <img src="img/modric.jpg" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -235,19 +381,19 @@
 
                             <div class="players-info-games">
 
-                                <div class="player player1 lose">
+                                <div class="player player1">
                                     <div class="nation-nick">
                                         <div class="nation">
-                                            <img src="img/bandera.png" alt="">
+                                            <img src="img/argentina.jpg" alt="">
                                         </div>
 
                                         <div class="nick">
-                                            <p class="nickname NimbusSanCon-Bol">GeraldoG09</p>
+                                            <p class="nickname NimbusSanCon-Bol">L. Messi</p>
                                         </div>
                                     </div>
 
                                     <div class="team">
-                                        TKO PF
+                                        F.C. Barcelona
                                     </div>
                                 </div>
 
@@ -262,11 +408,11 @@
                                     </div>
 
                                     <div class="game2">
-                                        <span class="NimbusSanCon-Bol player1-final-score-g2">1</span>
+                                        <span class="NimbusSanCon-Bol player1-final-score-g2">5</span>
                                         
                                         <span class="line">G2</span>
                                         
-                                        <span class="NimbusSanCon-Bol player2-final-score-g2">7</span>
+                                        <span class="NimbusSanCon-Bol player2-final-score-g2">1</span>
                                     </div>
 
                                     <div class="penalty-kick">
@@ -279,25 +425,67 @@
 
                                 </div>
 
-                                <div class="player player2">
+                                <div class="player player2 lose">
                                     <div class="nation-nick">
 
                                         <div class="nick">
-                                            <p class="nickname NimbusSanCon-Bol">GeraldoG09</p>
+                                            <p class="nickname NimbusSanCon-Bol">L. Modric</p>
                                         </div>
 
                                         <div class="nation">
-                                            <img src="img/bandera.png" alt="">
+                                            <img src="img/croacia.jpg" alt="">
                                         </div>
 
                                     </div>
 
                                     <div class="team">
-                                        TKO PF
+                                        Real Madrid C.F.
                                     </div>
 
                                 </div>
 
+                            </div>
+
+                            <div class="formation-record">
+
+                                <div class="player player-1">
+                                    <div class="formation">
+                                        <span>4-3-2-1</span>
+                                        <img src="img/formation/4-3-2-1.png" alt="">
+                                    </div>
+
+                                    <div class="record-goals">
+                                        <div class="ecl-record">
+                                            <span class="record"> 6 - 2</span>
+                                            <span>ECL RECORD</span>
+                                        </div>
+                                        <div class="goal-per-game">
+                                            <span class="goals">2.31</span>
+                                            <span>GOALS PER GAME</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="player player-2">
+
+                                    <div class="record-goals">
+                                        <div class="ecl-record">
+                                            <span class="record"> 6 - 2</span>
+                                            <span>ECL RECORD</span>
+                                        </div>
+                                        <div class="goal-per-game">
+                                            <span class="goals">2.22</span>
+                                            <span>GOALS PER GAME</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="formation">
+                                        <span>4-1-2-1-2</span>
+                                        <img src="img/formation/4-3-2-1.png" alt="">
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -305,39 +493,39 @@
                     <div class="fifa20-img">
                         <img src="img/fifa20.png"  alt="">
                     </div>
-
-                    <div class="border-card xbox">
-                        <div class="card">
+                    
+                    <div class="border-card border-card-final xbox">
+                        <div class="card card-final">
                             <div class="players-thumbnails-score">
                                 <div class="player player1 lose">
                                     <div class="thumbnail-logo">
                                         <div class="thumbnail">
-                                            <img src="img/thumbnail.jpg" alt="">
+                                            <img src="img/kdb.jpg" alt="">
                                         </div>
 
                                         <div class="logo">
-                                            <img src="img/escudo.png" alt="">
+                                            <img src="img/city.png" alt="">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="scores">
                                     <div class="NimbusSanCon-Bol score score-player1">
-                                        <p>1</p>
+                                        <p>0</p>
                                     </div>
                                     <div class="NimbusSanCon-Bol score score-player1 win">
-                                        <p>7</p>
+                                        <p>5</p>
                                     </div>
                                 </div>
 
                                 <div class="player player2">
                                     <div class="thumbnail-logo">
                                         <div class="logo">
-                                            <img src="img/escudo.png" alt="">
+                                            <img src="img/juventus.png" alt="">
                                         </div>
 
                                         <div class="thumbnail">
-                                            <img src="img/thumbnail.jpg" alt="">
+                                            <img src="img/ronaldo.jpg" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -349,16 +537,16 @@
                                 <div class="player player1 lose">
                                     <div class="nation-nick">
                                         <div class="nation">
-                                            <img src="img/bandera.png" alt="">
+                                            <img src="img/belgica.jpg" alt="">
                                         </div>
 
                                         <div class="nick">
-                                            <p class="nickname NimbusSanCon-Bol">GeraldoG09</p>
+                                            <p class="nickname NimbusSanCon-Bol">K. De Bruyne</p>
                                         </div>
                                     </div>
 
                                     <div class="team">
-                                        TKO PF
+                                        Manchester City
                                     </div>
                                 </div>
 
@@ -369,15 +557,15 @@
                                         
                                         <span class="line">G1</span>
                                         
-                                        <span class="NimbusSanCon-Bol player2-final-score-g1">0</span>
+                                        <span class="NimbusSanCon-Bol player2-final-score-g1">1</span>
                                     </div>
 
                                     <div class="game2">
-                                        <span class="NimbusSanCon-Bol player1-final-score-g2">1</span>
+                                        <span class="NimbusSanCon-Bol player1-final-score-g2">0</span>
                                         
                                         <span class="line">G2</span>
                                         
-                                        <span class="NimbusSanCon-Bol player2-final-score-g2">7</span>
+                                        <span class="NimbusSanCon-Bol player2-final-score-g2">4</span>
                                     </div>
 
                                     <div class="penalty-kick">
@@ -394,24 +582,67 @@
                                     <div class="nation-nick">
 
                                         <div class="nick">
-                                            <p class="nickname NimbusSanCon-Bol">GeraldoG09</p>
+                                            <p class="nickname NimbusSanCon-Bol">C. Ronaldo</p>
                                         </div>
 
                                         <div class="nation">
-                                            <img src="img/bandera.png" alt="">
+                                            <img src="img/portugal.jpg" alt="">
                                         </div>
 
                                     </div>
 
                                     <div class="team">
-                                        TKO PF
+                                        Juventus
                                     </div>
 
                                 </div>
 
                             </div>
+
+                            <div class="formation-record">
+
+                                <div class="player player-1">
+                                    <div class="formation">
+                                        <span>4-3-2-1</span>
+                                        <img src="img/formation/4-3-2-1.png" alt="">
+                                    </div>
+
+                                    <div class="record-goals">
+                                        <div class="ecl-record">
+                                            <span class="record"> 6 - 2</span>
+                                            <span>ECL RECORD</span>
+                                        </div>
+                                        <div class="goal-per-game">
+                                            <span class="goals">2.31</span>
+                                            <span>GOALS PER GAME</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="player player-2">
+
+                                    <div class="record-goals">
+                                        <div class="ecl-record">
+                                            <span class="record"> 6 - 2</span>
+                                            <span>ECL RECORD</span>
+                                        </div>
+                                        <div class="goal-per-game">
+                                            <span class="goals">2.22</span>
+                                            <span>GOALS PER GAME</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="formation">
+                                        <span>4-1-2-1-2</span>
+                                        <img src="img/formation/4-3-2-1.png" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
             </article>

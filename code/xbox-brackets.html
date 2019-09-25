@@ -12,7 +12,7 @@
 
 <body>
 
-    <header class="header">
+    <header class="header header-brackets">
         <div class="contenedor-header">
             <div class="consola">
                 <div class="titulo">
@@ -28,18 +28,55 @@
         </div>
     </header>
 
-    <main class="main-bracket xbox-bracket">
-        <section class="round-title">
-            <div><span>ROUND 16</span></div>
-            <div><span>QUARTERFINALS</span></div>
-            <div><span>SEMI-FINALS</span></div>
-            <div><span>XBOX FINAL</span></div>
-            <div><span>GRAND FINAL</span></div>
+    <main class="main main-bracket xbox-bracket">
+        <section class="rounds">
+            
+            <div class="round complete">
+                <div class="round-status">
+                    <h3>ROUND OF 16</h3>
+                    <a href="#">COMPLETE</a>
+                </div>
+                <span class="date">November 1</span>
+            </div>
+            
+            <div class="round complete">
+                <div class="round-status">
+                    <h3>QUARTERFINALS</h3>
+                    <a href="#">COMPLETE</a>
+                </div>
+                <span class="date">November 1</span>
+            </div>
+            
+            <div class="round playing">
+                <div class="round-status">
+                    <h3>SEMI-FINALS</h3>
+                    <a href="#">PLAYING</a>
+                </div>
+                <span class="games">0 Games Played out of 2</span>
+            </div>
+            
+            <div class="round upcoming">
+                <div class="round-status">
+                    <h3>XBOX FINAL</h3>
+                    <a href="#"><span class="hour">15:30</span>UPCOMING</a>
+                </div>
+                <span class="date">November 2</span>
+            </div>
+            
+            <div class="round upcoming">
+                <div class="round-status">
+                    <h3>GRAND FINAL</h3>
+                    <a href="#"><span class="hour">16:30</span>UPCOMING</a>
+                </div>                 
+                <span class="date">November 2</span>
+            </div>
+
         </section>
 
 
         <section class="cards-container">
             <div class="timeline-xbox"></div>
+
             <article class="cards round-16">
                 <div class="matchs">
                     <div class="border-card xbox">
@@ -1614,8 +1651,8 @@
 
             <article class="cards final">
                 <div class="matchs">
-                    <div class="border-card xbox">
-                        <div class="card">
+                    <div class="border-card border-card-final xbox">
+                        <div class="card card-final">
                             <div class="players-thumbnails-score">
                                 <div class="player player1 lose">
                                     <div class="thumbnail-logo">
@@ -1717,6 +1754,48 @@
 
                                 </div>
 
+                            </div>
+
+                            <div class="formation-record">
+
+                                <div class="player player-1">
+                                    <div class="formation">
+                                        <span>4-3-2-1</span>
+                                        <img src="img/formation/4-3-2-1.png" alt="">
+                                    </div>
+
+                                    <div class="record-goals">
+                                        <div class="ecl-record">
+                                            <span class="record"> 6 - 2</span>
+                                            <span>ECL RECORD</span>
+                                        </div>
+                                        <div class="goal-per-game">
+                                            <span class="goals">2.31</span>
+                                            <span>GOALS PER GAME</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="player player-2">
+
+                                    <div class="record-goals">
+                                        <div class="ecl-record">
+                                            <span class="record"> 6 - 2</span>
+                                            <span>ECL RECORD</span>
+                                        </div>
+                                        <div class="goal-per-game">
+                                            <span class="goals">2.22</span>
+                                            <span>GOALS PER GAME</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="formation">
+                                        <span>4-1-2-1-2</span>
+                                        <img src="img/formation/4-3-2-1.png" alt="">
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
