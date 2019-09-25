@@ -3893,10 +3893,10 @@ header.header.standings .contenedor-header {
 @media screen and (min-width: 1500px) {
 
   header.header.standings {
-    width: 98%;
+    width: 100%;
   }
 
-  header.header .contenedor-header {
+  header.header.standings .contenedor-header {
     max-width: 1416px;
     width: 100%;
   }
