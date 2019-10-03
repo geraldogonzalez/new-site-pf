@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>XBOX Standings</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/estilos.min.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <div class="consola">
                 <div class="titulo">
                     <i class="fab fa-xbox"></i>
-                    <h2><span class="console-standings">XBOX ONE</span> STANDINGS</h2>
+                    <h2 class="NimbusSanCon-Bol"><span class="console-standings">XBOX ONE</span> STANDINGS</h2>
                 </div>
                 <div class="consola-btn">
                     <a href="ps4-standings.html" class="btn-ps4">PS4</a>
@@ -29,16 +29,16 @@
             <nav>
                 <ul class="menu">
                     <li class="active"><a href="#">Standings</a></li>
-                    <li class=""><a href="xbox-rounds.html">Round</a><!--<i class="fas fa-chevron-down"></i></a>
+                    <li class=""><a href="xbox-rounds.html">Round<i class="fas fa-chevron-down"></i></a>
                         <ul class="submenu">
                             <li class="active"><a href="#">Round <span>1</span></a></li>
                             <li><a href="#">Round <span>2</span></a></li>
                             <li><a href="#">Round <span>3</span></a></li>
                             <li><a href="#">Round <span>4</span></a></li>
                             <li><a href="#">Round <span>5</span></a></li>
-                        </ul>-->
+                        </ul>
                     </li>
-                    <li><a href="ps4-rank.html">Ranking</a></li>
+                    <!--<li><a href="xbox-rank.html">Ranking</a></li>!-->
                 </ul>
                 <div class="search">
                     <i class="fas fa-search"></i> <input type="text" id="search" placeholder="Search">
@@ -49,7 +49,7 @@
 
     <!-- MAIN -->
 
-    <main class="container main main-standings xbox">
+    <main class="container main standings xbox">
         <div class="search-mobile">
             <i class="fas fa-search"></i> <input type="text" id="search-mobile" placeholder="Search player">
         </div>
@@ -63,7 +63,7 @@
                     <th class="NimbusSanCon-Bol">L<span class="delete">OST</span></th>
                     <th class="NimbusSanCon-Bol">MB</th>
                     <th class="NimbusSanCon-Bol">GF</th>
-                    <th class="NimbusSanCon-Bol">MATCHES</th>
+                    <th class="NimbusSanCon-Bol"><span class="delete">LAST 5</span> MATCHES</th>
                 </tr>
             </thead>
             <tbody id="table">
@@ -83,15 +83,12 @@
                     <td>11</td>
                     <td>31</td>
                     <td>
-                        <div class="last-matches eight">
+                        <div class="last-matches five">
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
-                            <i class="win fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
                         </div>
                         <div class="info">
                             <p class="oculto">+</p>
@@ -852,7 +849,7 @@
 
                 </tr>
 
-                <tr class="player-info" style="">
+                <tr class="player-info">
                     <td>
                         <span class="qualified"></span>
                         <div class="thumbnail"><img src="img/thumbnail.jpg" alt=""></div> <span
@@ -867,15 +864,12 @@
                     <td>11</td>
                     <td>31</td>
                     <td>
-                        <div class="last-matches eight">
+                        <div class="last-matches five">
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
-                            <i class="win fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
                         </div>
                         <div class="info">
                             <p class="oculto">+</p>
@@ -1636,7 +1630,7 @@
 
                 </tr>
 
-                <tr class="player-info" style="">
+                <tr class="player-info">
                     <td>
                         <div class="thumbnail"><img src="img/thumbnail.jpg" alt=""></div> <span
                             class="NimbusSanCon-Bol">Loka Modric</span>
@@ -1650,16 +1644,14 @@
                     <td>11</td>
                     <td>31</td>
                     <td>
-                        <div class="last-matches eight">
+                        <div class="last-matches five">
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
-                            <i class="win fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
                         </div>
+                        
                         <div class="info">
                             <p class="oculto">+</p>
                         </div>
@@ -2419,7 +2411,7 @@
 
                 </tr>
 
-                <tr class="player-info" style="">
+                <tr class="player-info">
                     <td>
                         <div class="thumbnail"><img src="img/thumbnail.jpg" alt=""></div> <span
                             class="NimbusSanCon-Bol">Neymar Jr</span>
@@ -2433,15 +2425,12 @@
                     <td>11</td>
                     <td>31</td>
                     <td>
-                        <div class="last-matches eight">
+                        <div class="last-matches five">
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
-                            <i class="win fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
                         </div>
                         <div class="info">
                             <p class="oculto">+</p>
@@ -3202,7 +3191,7 @@
 
                 </tr>
 
-                <tr class="player-info" style="">
+                <tr class="player-info">
                     <td>
                         <div class="thumbnail"><img src="img/thumbnail.jpg" alt=""></div> <span
                             class="NimbusSanCon-Bol">Kevin De Bruyne</span>
@@ -3216,15 +3205,12 @@
                     <td>11</td>
                     <td>31</td>
                     <td>
-                        <div class="last-matches eight">
+                        <div class="last-matches five">
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
-                            <i class="win fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
                         </div>
                         <div class="info">
                             <p class="oculto">+</p>
@@ -3985,7 +3971,7 @@
 
                 </tr>
 
-                <tr class="player-info" style="">
+                <tr class="player-info">
                     <td>
                         <div class="thumbnail"><img src="img/thumbnail.jpg" alt=""></div> <span
                             class="NimbusSanCon-Bol">Van Dijk</span>
@@ -3999,15 +3985,12 @@
                     <td>11</td>
                     <td>31</td>
                     <td>
-                        <div class="last-matches eight">
+                        <div class="last-matches five">
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
-                            <i class="win fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
                         </div>
                         <div class="info">
                             <p class="oculto">+</p>
@@ -4768,7 +4751,7 @@
 
                 </tr>
 
-                <tr class="player-info" style="">
+                <tr class="player-info">
                     <td>
                         <div class="thumbnail"><img src="img/thumbnail.jpg" alt=""></div> <span
                             class="NimbusSanCon-Bol">Sergio Ramos</span>
@@ -4782,15 +4765,12 @@
                     <td>11</td>
                     <td>31</td>
                     <td>
-                        <div class="last-matches eight">
+                        <div class="last-matches five">
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
-                            <i class="win fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
                         </div>
                         <div class="info">
                             <p class="oculto">+</p>
@@ -5551,7 +5531,7 @@
 
                 </tr>
 
-                <tr class="player-info" style="">
+                <tr class="player-info">
                     <td>
                         <div class="thumbnail"><img src="img/thumbnail.jpg" alt=""></div> <span
                             class="NimbusSanCon-Bol">Mohamed Salah</span>
@@ -5565,15 +5545,12 @@
                     <td>11</td>
                     <td>31</td>
                     <td>
-                        <div class="last-matches eight">
+                        <div class="last-matches five">
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
-                            <i class="win fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
                         </div>
                         <div class="info">
                             <p class="oculto">+</p>
@@ -6334,7 +6311,7 @@
 
                 </tr>
 
-                <tr class="player-info" style="">
+                <tr class="player-info">
                     <td>
                         <div class="thumbnail"><img src="img/thumbnail.jpg" alt=""></div> <span
                             class="NimbusSanCon-Bol">Harry Kane</span>
@@ -6348,15 +6325,12 @@
                     <td>11</td>
                     <td>31</td>
                     <td>
-                        <div class="last-matches eight">
+                        <div class="last-matches five">
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="win fas fa-circle" aria-hidden="true"></i>
                             <i class="lose fas fa-circle" aria-hidden="true"></i>
-                            <i class="win fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
-                            <i class="fas fa-circle" aria-hidden="true"></i>
                         </div>
                         <div class="info">
                             <p class="oculto">+</p>
