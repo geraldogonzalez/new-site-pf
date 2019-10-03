@@ -99,10 +99,14 @@ function anterior(e){
 }
 
 function dropdownMenu(e) {
+    e.preventDefault();
     if(e.target.classList.contains('fa-chevron-down')) {
         submenu.style.maxHeight = '1000px';
         submenu.style.overflow = 'visible';
+        submenu.style.zIndex = '10';
+        
         e.target.style.display = 'none';
+        e.target.parentElement.parentElement.classList.add('dropdown');
         document.querySelector('.fa-chevron-up').style.display = 'grid';
         document.querySelector('.fa-chevron-up').style.width = '100%';
         document.querySelector('.fa-chevron-up').style.height = '100%';
@@ -110,7 +114,10 @@ function dropdownMenu(e) {
     } else if(e.target.classList.contains('fa-chevron-up')) {
         submenu.style.maxHeight = '0';
         submenu.style.overflow = 'hidden';
+        submenu.style.zIndex = '-1';
+        
         e.target.style.display = 'none';
+        e.target.parentElement.parentElement.classList.remove('dropdown');
         document.querySelector('.fa-chevron-down').style.display = 'grid';
         document.querySelector('.fa-chevron-down').style.width = '100%';
         document.querySelector('.fa-chevron-down').style.height = '100%';
