@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XBOX Ranking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/estilos.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header standings rank rankings">
+        <div class="contenedor-header">
+            <div class="consola">
+                <div class="titulo">
+                    <i class="fab fa-xbox"></i>
+                    <h2 class="NimbusSanCon-Bol"><span class="console-standings">XBOX</span> RANKING</h2>
+                </div>
+                <div class="consola-btn btn-ranking">
+                    <a class="btn-ps4">PS4</a>
+                    <a class="btn-xbox active">XBOX 1</a> 
+                </div>
+            </div>
+
+            <nav>
+                <ul class="menu">
+                    <li class="active"><a href="#">Ranking</a></li>
+                    <li><a href="index.html">Rounds</a>
+                    </li>
+                </ul>
+                <div class="search">
+                    <i class="fas fa-search"></i> <input type="text" id="search" placeholder="Search">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+
+    <div class="container-rankings-consola">
+        <div class="rank-consola rankings-consola ps4 inactive">
+            <span></span>
+            <i class="fab fa-playstation"></i>
+            <span></span>
+        </div>
+
+        <div class="rank-consola rankings-consola xbox active">
+            <span></span>
+            <i class="fab fa-xbox"></i>
+            <span></span>
+        </div>
+    </div> 
+    
+
+    <main class="main rank rankings">
+
+        <div class="tables-container">
+      
+            <table class="tabla-rank ps4 inactive">
+                <thead>
+                    <tr>
+                        <th class="NimbusSanCon-Bol">RANK</th>
+                        <th class="NimbusSanCon-Bol">PLAYER</th>
+                        <th class="NimbusSanCon-Bol">TEAM</th>
+                        <th class="NimbusSanCon-Bol">COUNTRY</th>
+                        <th class="NimbusSanCon-Bol">POINTS</th>
+                    </tr>
+                </thead>
+
+                <tbody id="table">
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <span>2</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            1
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/messi.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">L. Messi</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/barcelona.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/argentina.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            45000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                <span>1</span>
+                                <i class="fas fa-caret-down down" aria-hidden="true"></i>
+                            </div>
+                            2
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/ronaldo.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">C. Ronaldo</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/juventus.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/portugal.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            42000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up default" aria-hidden="true"></i>
+                                <span>3</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            3
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/neymar.png" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Neymar Jr.</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/psg.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/brasil.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            25000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up default" aria-hidden="true"></i>
+                                <span>4</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            4
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/Hazard.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">E. Hazard</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/realmadrid.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/belgica.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <span>8</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            5
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/kdb.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">K. De Bruyne</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/city.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/belgica.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up default" aria-hidden="true"></i>
+                                <span>4</span>
+                                <i class="fas fa-caret-down down" aria-hidden="true"></i>
+                            </div>
+                            6
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/modric.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">L. Modrić</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/realmadrid.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/croacia.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                <span>7</span>
+                                <i class="fas fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            7
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/reus.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Reus</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/dortmund.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/alemania.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                <span>6</span>
+                                <i class="fas fa-caret-down down" aria-hidden="true"></i>
+                            </div>
+                            8
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/oblak.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Jan Oblak</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/atletico.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/eslovenia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up default" aria-hidden="true"></i>
+                                <span>9</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            9
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/kane.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Harry Kane</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/tottenham.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/inglaterra.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up default" aria-hidden="true"></i>
+                                <span>10</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            10
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/vandijk.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">V. Van Dijk</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/liverpool.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/holanda.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <span>11</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            11
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/lewandowski.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Robert Lewandowski</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/bayern.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/polonia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                <span>12</span>
+                                <i class="fas fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            12
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/donnarumma.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">G. Donnarumma</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/milan.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/italia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <span>13</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            13
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/terstegen.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">M. André Ter Stegen</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/barcelona.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/alemania.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                <span>14</span>
+                                <i class="fas fa-caret-down down" aria-hidden="true"></i>
+                            </div>
+                            14
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/ndombele.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Ndombelé</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/tottenham.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/francia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up default" aria-hidden="true"></i>
+                                <span>15</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            15
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/alexanderarnold.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">A. Arnold</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/liverpool.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/inglaterra.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up default" aria-hidden="true"></i>
+                                <span>16</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            16
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/vertonghen.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">J. Vertonghen</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/tottenham.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/belgica.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <span>17</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            17
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/piatek.png" alt=""></div>
+                                <span class="NimbusSanCon-Bol">K. Piatek</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/milan.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/polonia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up default" aria-hidden="true"></i>
+                                <span>18</span>
+                                <i class="fas fa-caret-down down" aria-hidden="true"></i>
+                            </div>
+                            18
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/alison.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Alisson</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/liverpool.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/brasil.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <span>19</span>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                            19
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/son.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Heung Min Son</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/tottenham.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/corea.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up default" aria-hidden="true"></i>
+                                <span>20</span>
+                                <i class="fas fa-caret-down down" aria-hidden="true"></i>
+                            </div>
+                            20
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/delight.png" alt=""></div>
+                                <span class="NimbusSanCon-Bol">K. De Light</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/juventus.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/holanda.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+            <table class="tabla-rank xbox active">
+                <thead>
+                    <tr>
+                        <th class="NimbusSanCon-Bol">RANK</th>
+                        <th class="NimbusSanCon-Bol">PLAYER</th>
+                        <th class="NimbusSanCon-Bol">TEAM</th>
+                        <th class="NimbusSanCon-Bol">COUNTRY</th>
+                        <th class="NimbusSanCon-Bol">POINTS</th>
+                    </tr>
+                </thead>
+
+                <tbody id="table">
+
+                    <tr class="player-info">
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/messi.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">L. Messi</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/barcelona.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/argentina.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            45000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/ronaldo.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">C. Ronaldo</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/juventus.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/portugal.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            42000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/neymar.png" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Neymar Jr.</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/psg.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/brasil.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            25000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/Hazard.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">E. Hazard</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/realmadrid.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/belgica.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/kdb.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">K. De Bruyne</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/city.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/belgica.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/modric.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">L. Modrić</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/realmadrid.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/croacia.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/reus.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Reus</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/dortmund.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/alemania.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            8
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/oblak.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Jan Oblak</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/atletico.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/eslovenia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            9
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/kane.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Harry Kane</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/tottenham.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/inglaterra.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            10
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/vandijk.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">V. Van Dijk</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/liverpool.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/holanda.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            11
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/lewandowski.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Robert Lewandowski</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/bayern.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/polonia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            12
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/donnarumma.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">G. Donnarumma</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/milan.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/italia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            13
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/terstegen.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">M. André Ter Stegen</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/barcelona.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/alemania.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            14
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/ndombele.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Ndombelé</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/tottenham.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/francia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            15
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/alexanderarnold.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">A. Arnold</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/liverpool.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/inglaterra.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            16
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/vertonghen.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">J. Vertonghen</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/tottenham.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/belgica.jpg" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            17
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/piatek.png" alt=""></div>
+                                <span class="NimbusSanCon-Bol">K. Piatek</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/milan.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/polonia.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            18
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/alison.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Alisson</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/liverpool.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/brasil.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            19
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/son.jpg" alt=""></div>
+                                <span class="NimbusSanCon-Bol">Heung Min Son</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/tottenham.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/corea.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="player-info">
+                        <td>
+                            20
+                        </td>
+                        <td>
+                            <div class="player">
+                                <div class="thumbnail"><img src="img/players/delight.png" alt=""></div>
+                                <span class="NimbusSanCon-Bol">K. De Light</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="team-logo">
+                                <img src="img/teams/juventus.png" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="nation">
+                                <img src="img/nations/holanda.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="points">
+                            20000
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <i class="fas fa-caret-down default" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="slide">
+            <i class="active fas fa-circle derecha" aria-hidden="true"></i>
+            <i class="fas fa-circle izquierda" aria-hidden="true"></i>
+        </div>
+
+        <a href="#" class="btn-ver-mas">
+            <span>+</span>
+            SEE FULL RANKINGS AT FIFA.GG
+        </a>
+    </main>
+
+    <script src="https://kit.fontawesome.com/6c25d394b9.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
