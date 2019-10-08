@@ -279,7 +279,6 @@ function acortarNombresTabla(){
 }
 
 
-
 function acortarNombresCards() {
     
     const nombresCards = document.querySelectorAll('.border-card .card .nation-nick .nick p');
