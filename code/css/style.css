@@ -61,7 +61,7 @@ header.header {
   background: #fff;
 }
 
-header.header-brackets {
+header.brackets {
   margin: 0 auto;
 }
 
@@ -138,14 +138,11 @@ header.header .contenedor-header .consola .consola-btn a {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 1024px) {
- 
-  header.header .contenedor-header .consola .consola-btn-bracket a {
-    font-size: 1.5rem;
-    width: 100px;
-  }
-
+header.header .contenedor-header .consola .consola-btn-bracket {
+  font-size: 1.5rem;
+  grid-template-columns: 80px repeat(2, 100px);
 }
+
 header.header .contenedor-header .consola .consola-btn a.btn-final {
   letter-spacing: -1px;
   font-size: 1.3rem;
@@ -343,6 +340,7 @@ nav .search input {
   
   header.header .contenedor-header .consola .titulo {
     justify-content: center;
+    align-items: center;
   }
 
 }
@@ -357,11 +355,11 @@ nav .search input {
     width: 92%;
   }
 
-  header.header-brackets {
+  header.brackets {
     border-bottom: 2px solid #c8c8c8;
   }
 
-  header.header-brackets .contenedor-header {
+  header.brackets .contenedor-header {
     width: 90%;
 
   }
@@ -484,21 +482,21 @@ nav .search input {
 
   /* HEADER DE BRACKETS   */
 
-  header.header-brackets .contenedor-header .consola {
+  header.brackets .contenedor-header .consola {
 
   }
 
-  header.header-brackets .contenedor-header .consola .consola-btn {
+  header.brackets .contenedor-header .consola .consola-btn {
     grid-template-columns: 100px repeat(2, 124px);
   }
 
-  header.header-brackets .contenedor-header .consola .titulo {
+  header.brackets .contenedor-header .consola .titulo {
     margin: 43px 0 27px 0;
     height: unset;
     height: 72px;
   }
 
-  header.header-brackets .contenedor-header .consola .titulo img {
+  header.brackets .contenedor-header .consola .titulo img {
     height: 100%;
     width: 70px;
   }
@@ -1550,9 +1548,6 @@ main {
   background: linear-gradient(to top, #cf0123, #f30042);
   border-radius: 0 0 3px 3px;
   color: white;
-  animation-name: live;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
   display: grid;
   align-content: center;
   padding-top: 0.6px;
@@ -1626,20 +1621,6 @@ main {
 
 .border-card .card .players-thumbnails-score .scores .draw p:first-child {
   padding-bottom: 2.5px;
-}
-
-@keyframes live {
-  0% {
-    color: transparent;
-  }
-
-  50% {
-    color: white;
-  }
-
-  100% {
-    color: transparent;
-  }
 }
 
 .card .players-info-games {
@@ -1768,7 +1749,8 @@ main {
   .border-card-final.ps4, 
   .border-card-final.live, 
   .border-card-final.cl-dark {
-    height: 200px;
+    max-height: 200px;
+    max-width: 277px;
   }
 
   .card-final {
@@ -1786,7 +1768,7 @@ main {
     border-top: 1px solid #d8d8d8;
     padding-top: 7px;
     display: grid;
-    grid-template-columns: repeat(2, 46%);
+    grid-template-columns: repeat(2, 45%);
     position: relative;
     grid-column-gap: 25px;
   }
@@ -1795,22 +1777,22 @@ main {
     content: '';
     position: absolute;
     width: 1px;
-    height: 60px;
+    height: 80px;
     background: #d8d8d8;
     left: 50%;
     margin-left: -.5px;
     top: 50%;
-    margin-top: -30px;
+    margin-top: -40px;
   }
 
   .card-final .formation-record .player {
     display: grid;
-    grid-template-columns: 40px 35px;
+    grid-template-columns: 40px 61px;
     grid-column-gap: 10px;
   }
 
   .card-final .formation-record .player-2 {
-    grid-template-columns: 35px 40px;
+    grid-template-columns: 61px 40px;
     justify-content: end;
   }
 
@@ -1827,6 +1809,51 @@ main {
   .card-final .formation-record .player .formation img {
     width: 40px;
   }
+
+  .card-final .formation-record .player .record-goals {
+    padding-top: 8px;
+    width: 65px;
+    display: grid;
+    grid-row-gap: 23px;
+    grid-template-rows: repeat(2, 22px);
+    text-align: center;
+    position: relative;
+  }
+
+  .card-final .formation-record .player .record-goals .ecl-record, 
+  .card-final .formation-record .player .record-goals .goal-per-game {
+    display: grid;
+    grid-template-rows: 14px 8px;
+    grid-row-gap: 3px;
+  }
+
+  .card-final .formation-record .player .record-goals::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background: #d8d8d8;
+    left: 50%;
+    margin-left: -35px;
+    top: 50%;
+    margin-top: -.5px;
+  }
+
+  .card-final .formation-record .player .record-goals .ecl-record .record, 
+  .card-final .formation-record .player .record-goals .goal-per-game .goals {
+    font-size: 14px;
+    font-family: NimbusSanCon-Bol;
+  }
+
+  .card-final .formation-record .player .record-goals .ecl-record span:last-child, 
+  .card-final .formation-record .player .record-goals .goal-per-game span:last-child {
+    font-size: 7px;
+    font-weight: bold;
+    color: #565656;
+    opacity: .8;
+    letter-spacing: .5px;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -2393,6 +2420,10 @@ main {
 
 /* --------------- MAIN --------------- */
 
+.main-grand-final {
+  margin-bottom: 85px;
+}
+
 .main-grand-final .hours {
   padding-bottom: 0.5rem;
   border-bottom: 1.5px solid #f1f1f1;
@@ -2710,7 +2741,7 @@ main {
 
 /* ------------ MEDIAQUERIES ------------ */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .grand-final-header {
     margin-bottom: 1rem !important;
   }
@@ -3066,10 +3097,11 @@ main {
     display: none;
   }
 
-  /* TRATANDO DE AJUSTAR LA TABLA A DISPOSITIVOS MÓVILES */
   header.header.standings {
     margin: 0 auto 0 auto;
   }
+  
+  /* TRATANDO DE AJUSTAR LA TABLA A DISPOSITIVOS MÓVILES */
 
   .main-standings {
     width: 100%;
@@ -3470,9 +3502,7 @@ main {
 
   header.header .contenedor-header .consola .titulo {
     margin: 0;
-    height: 40px;
-    line-height: 0;
-    order: unset;
+    line-height: 40px;
   }
 
   header.header.standings .contenedor-header .consola .titulo {
@@ -3495,13 +3525,20 @@ main {
     padding-left: 11px;
   }
 
-  .tabla-standings thead tr th:nth-child(4), .tabla-standings thead tr th:nth-child(5) {
+  .tabla-standings thead tr th:nth-child(4), 
+  .tabla-standings thead tr th:nth-child(5) {
     justify-content: start;
   }
 
   .tabla-standings thead tr th .delete {
     display: grid;
   }
+
+  .tabla-standings thead tr th:last-child {
+    display: grid; 
+    grid-auto-flow: column;
+    grid-column-gap: 3px;
+  } 
 
   .tabla-standings tbody tr td {
     justify-items: start;
@@ -3588,6 +3625,13 @@ main {
     width: 1019px;
   }
 
+  
+  .tabla-standings thead tr th:nth-child(4),
+  .tabla-standings thead tr th:nth-child(5) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
 }
 
 @media screen and (min-width: 1300px) {
@@ -3639,13 +3683,6 @@ header.header.standings .contenedor-header {
 
 .ps4 .tabla-standings thead tr th {
   background: linear-gradient(to top, #4b5ffc, #36c5fd);
-}
-
-
-.tabla-standings thead tr th:nth-child(4),
-.tabla-standings thead tr th:nth-child(5) {
-  display: flex;
-  justify-content: flex-start;
 }
 
 .tabla-standings thead tr th .delete {
@@ -4245,7 +4282,7 @@ header.header.rank {
     background: linear-gradient(to right, #00a661 0%, #97dc56 70%, transparent);
 }
 
-.main-rank {
+.main.rank {
     overflow: scroll;
     min-height: 50vh;
     display: grid;
@@ -4428,7 +4465,7 @@ header.header.rank {
   font-size: .67rem;
 }
 
-.main-rank .btn-ver-mas {
+.main.rank .btn-ver-mas {
   background: none;
   border: 1px solid rgba(22, 22, 22, 0.2);
   display: grid;
@@ -4441,11 +4478,11 @@ header.header.rank {
   max-height: 94px;
 }
 
-.main-rank .btn-ver-mas:hover {
+.main.rank .btn-ver-mas:hover {
   background: #f6f6f6;
 }
 
-.main-rank .btn-ver-mas span {
+.main.rank .btn-ver-mas span {
   font-family: SeravekWebBasicRegular;
   width: 40px;
   height: 40px;
@@ -4466,7 +4503,7 @@ header.header.rank {
         font-size: 2.5rem;
     }
 
-    .main-rank {
+    .main.rank {
         overflow: visible;
     }
 
@@ -4516,7 +4553,7 @@ header.header.rank {
         grid-template-rows: 10px; 
     }
 
-    .main-rank .btn-ver-mas {
+    .main.rank .btn-ver-mas {
       width: 564px;
     }
 
