@@ -69,6 +69,7 @@ if(tablaInfo) {
     function cerrarHistorial(){
         let filas = document.querySelectorAll('.tabla-standings tbody .player-info');
         filas.forEach( fila => {
+            desplazar = 0;
             fila.classList.remove('mostrar');
             fila.classList.add('ocultar');
             fila.lastElementChild.previousElementSibling.lastElementChild.classList.remove('open');
