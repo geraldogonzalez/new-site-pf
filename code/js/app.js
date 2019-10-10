@@ -60,22 +60,43 @@ function cargarEventListeners(){
 
 /* FUNCIONES. */
 
+// Función que cierra un historial al abrir otro.
+
+if(tablaInfo) {
+    function cerrarHistorial(){
+        let filas = document.querySelectorAll('.tabla-standings tbody .player-info');
+        filas.forEach( fila => {
+            fila.classList.remove('mostrar');
+            fila.lastElementChild.previousElementSibling.lastElementChild.classList.remove('open');
+            fila.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('mostrando'); 
+            fila.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.add('oculto');
+            fila.lastElementChild.scrollLeft = '0';
+            fila.lastElementChild.classList.remove('mostrar')
+            fila.lastElementChild.lastElementChild.classList.remove('active');
+            fila.lastElementChild.lastElementChild.previousElementSibling.classList.remove('active');
+        });
+    }
+}
+
 // Función que muestra el historial del player.
 function mostrarPartidos(e) {
+
 	if(e.target.classList.contains('oculto')){
+        cerrarHistorial();
+        desplazar = 0;
         let btnInfo = e.target.parentElement;
         let playerInfo = e.target.parentElement.parentElement.parentElement;
         let playerHistory = e.target.parentElement.parentElement.parentElement.childNodes[17];
         let siguiente = e.target.parentElement.parentElement.parentElement.childNodes[17].childNodes[15];
 
-		e.target.style.transform = 'rotate(-45deg)';
         btnInfo.classList.add('open');
         e.target.classList.add('mostrando');
         playerInfo.classList.add('mostrar');
+        playerInfo.classList.remove('ocultar');
         e.target.classList.remove('oculto');
         setTimeout(function(){
             playerHistory.classList.add('mostrar');
-            siguiente.style.display = 'grid';
+            siguiente.classList.add('active');
         }, 300);
     } else if (e.target.classList.contains('mostrando')){
         let btnInfo = e.target.parentElement;
@@ -83,18 +104,17 @@ function mostrarPartidos(e) {
         let playerHistory = e.target.parentElement.parentElement.parentElement.childNodes[17];
         let siguiente = e.target.parentElement.parentElement.parentElement.childNodes[17].childNodes[15];
         
-		e.target.style.transform = 'rotate(0)';
         e.target.classList.add('oculto');
         btnInfo.classList.remove('open');
         e.target.classList.remove('mostrar');
         playerHistory.classList.remove('mostrar');
         setTimeout(function(){
-            siguiente.style.display = 'none';
+            siguiente.classList.remove('active');
             playerInfo.classList.remove('mostrar');
+            playerInfo.classList.add('ocultar');
         }, 300);
     }
 }
-
 
 
 // Función que permite mover las cards en el slider.
@@ -105,16 +125,16 @@ function siguiente(e) {
 
         contenedorSlide.scrollLeft += 340;
         if(desplazar >= 1) {
-            e.target.parentElement.nextSibling.nextSibling.style.display = 'grid';
+            e.target.parentElement.nextSibling.nextSibling.classList.add('active');
         }
 
         if(window.matchMedia('(max-width: 1499px)').matches){
             if(desplazar >= 4) {
-                e.target.parentElement.style.display = 'none';
+                e.target.parentElement.classList.remove('active');
             }
         } else {
             if(desplazar >= 3) {
-                e.target.parentElement.style.display = 'none';
+                e.target.parentElement.classList.remove('active');
             }
         }
     }   
@@ -123,12 +143,12 @@ function siguiente(e) {
 function anterior(e) {
     if(e.target.classList.contains('fa-chevron-left')){
         desplazar = desplazar - 1; 
-        e.target.parentElement.previousSibling.previousSibling.style.display = 'grid';
+        e.target.parentElement.previousSibling.previousSibling.classList.add('active');
         let contenedorSlide = e.target.parentElement.parentElement;
 
         contenedorSlide.scrollLeft = contenedorSlide.scrollLeft - 340;
         if(desplazar <= 0) {
-            e.target.parentElement.style.display = 'none';
+            e.target.parentElement.classList.remove('active');
         }
     }   
 }
@@ -217,8 +237,9 @@ function tablaRank(e) {
 
 // Función para las filas de la tabla
 function desplazarFilas(e) {
-    
+
     const filas = document.querySelectorAll('.player-info');
+
     if(e.target.classList.contains('izquierda')) {
         filas.forEach( (fila) => {
             fila.classList.remove('derecha');
@@ -252,9 +273,9 @@ function restaurarTabla() {
     }
 }
 
+/* Funciones para recortar los nombres de los jugadores. */
 
-
-// Función para recortar los nombres de los jugadores.
+// En la tabla de ranking.
 function acortarNombresRank() {
 
     const nombres = document.querySelectorAll('.player-info td .player span'); 
@@ -266,6 +287,8 @@ function acortarNombresRank() {
 
 }
 
+
+// En la tabla de standings.
 function acortarNombresTabla(){
 
     const nombres = document.querySelectorAll('.player-info td:first-child span.NimbusSanCon-Bol');
@@ -279,6 +302,7 @@ function acortarNombresTabla(){
 }
 
 
+// En las cards en general.
 function acortarNombresCards() {
     
     const nombresCards = document.querySelectorAll('.border-card .card .nation-nick .nick p');
