@@ -1304,10 +1304,15 @@
     height: 64px;
     grid-template-rows: 64px;
     border-bottom: 1px solid #cfcfcf;
+    cursor: pointer;
   }
 
   .tabla-standings tbody tr:hover {
     background: #f6f6f6;
+  }
+
+  .tabla-standings tbody tr:hover td:nth-child(8) .info {
+    opacity: 1;
   }
 
   .tabla-standings tbody .player-info.mostrar {
@@ -1425,6 +1430,18 @@
   }
 
   .tabla-standings tbody tr td .info p {
+    transform: rotate(0);
+  }
+
+  .tabla-standings tbody tr td .info.open {
+    opacity: 1;
+  }
+
+  .tabla-standings tbody tr td .info.open p.mostrando {
+    transform: rotate(-45deg);
+  }
+
+  .tabla-standings tbody tr td .info p {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -1448,6 +1465,10 @@
     background: white;
  }
 
+ .tabla-standings tbody tr td div.game-history:nth-child(7) .border-card {
+    margin-right: 2rem;
+  }   
+
  .tabla-standings tbody tr td:last-child div h6 {
   margin: 0 0 0 14px;
   font-size: 10px;
@@ -1457,6 +1478,18 @@
 
  .tabla-standings tbody tr td .game-history .border-card {
   padding: 0 4px 0 0;
+  }
+
+  .tabla-standings tbody tr td .control {
+    transition: all .3s ease;
+    z-index: 1000;
+    width: 68px;
+    position: absolute;
+    height: 159px;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-items: center;
   }
 
  /* ---------- MEDIAQUERIES STANDINGS ----------*/
@@ -2023,16 +2056,9 @@
       justify-content: space-between;
     }
 
-    .tabla-standings tbody tr td .control {
-      transition: all .3s ease;
-      z-index: 1000;
-      width: 68px;
-      position: absolute;
-      height: 159px;
-      bottom: 0;
-      display: none;
-      align-items: center;
-      justify-items: center;
+    .tabla-standings tbody tr td .control.siguiente.active,
+    .tabla-standings tbody tr td .control.anterior.active     {
+      display: grid;
     }
 
     .tabla-standings tbody tr td .control .fas {
@@ -2084,10 +2110,6 @@
       grid-column-gap: 3px;
       padding: 12px 0 13px 4px;
       overflow: hidden;
-    }
-
-    .tabla-standings tbody tr td .info.open {
-      opacity: 1;
     }
   
 }
