@@ -31,7 +31,6 @@ function cargarEventListeners(){
         tablaInfo.addEventListener('click', mostrarPartidosFila);
         tablaInfo.addEventListener('click', mostrarPartidosTd);
         tablaInfo.addEventListener('click', mostrarPartidosTdChild);
-        tablaInfo.addEventListener('click', mostrarPartidosTdChildrens);
         tablaInfo.addEventListener('click', siguiente);
         tablaInfo.addEventListener('click', anterior);
         window.addEventListener('load', acortarNombresTabla);
@@ -214,38 +213,6 @@ function mostrarPartidosTdChild(e) {
             e.target.parentElement.parentElement.lastElementChild.lastElementChild.previousElementSibling.classList.remove('active');
             e.target.parentElement.parentElement.classList.remove('mostrar');
             e.target.parentElement.parentElement.classList.add('ocultar');
-        }, 300);
-        
-    }
-
-}
-
-function mostrarPartidosTdChildrens(e) {
-
-    if(e.target.parentElement.parentElement.parentElement.classList.contains('ocultar')){
-        cerrarHistorial();
-
-        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.classList.add('open');
-        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
-        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.add('mostrando'); 
-        e.target.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.classList.remove('active');
-        setTimeout(function(){
-            e.target.parentElement.parentElement.parentElement.lastElementChild.classList.add('mostrar');
-            e.target.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.previousElementSibling.classList.add('active');
-        }, 300);
-        e.target.parentElement.parentElement.parentElement.classList.remove('ocultar');
-        e.target.parentElement.parentElement.parentElement.classList.add('mostrar');
-    } else if (e.target.parentElement.parentElement.parentElement.classList.contains('mostrar')) {
-        
-        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.classList.remove('open');
-        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('mostrando'); 
-        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
-        e.target.parentElement.parentElement.parentElement.lastElementChild.classList.remove('mostrar');
-        setTimeout(function(){
-            e.target.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.classList.remove('active');
-            e.target.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.previousElementSibling.classList.remove('active');
-            e.target.parentElement.parentElement.parentElement.classList.remove('mostrar');
-            e.target.parentElement.parentElement.parentElement.classList.add('ocultar');
         }, 300);
         
     }
