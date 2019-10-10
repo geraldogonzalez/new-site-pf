@@ -28,6 +28,10 @@ function cargarEventListeners(){
     
     if(tablaInfo) {
         tablaInfo.addEventListener('click', mostrarPartidos);
+        tablaInfo.addEventListener('click', mostrarPartidosFila);
+        tablaInfo.addEventListener('click', mostrarPartidosTd);
+        tablaInfo.addEventListener('click', mostrarPartidosTdChild);
+        tablaInfo.addEventListener('click', mostrarPartidosTdChildrens);
         tablaInfo.addEventListener('click', siguiente);
         tablaInfo.addEventListener('click', anterior);
         window.addEventListener('load', acortarNombresTabla);
@@ -67,6 +71,7 @@ if(tablaInfo) {
         let filas = document.querySelectorAll('.tabla-standings tbody .player-info');
         filas.forEach( fila => {
             fila.classList.remove('mostrar');
+            fila.classList.add('ocultar');
             fila.lastElementChild.previousElementSibling.lastElementChild.classList.remove('open');
             fila.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('mostrando'); 
             fila.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.add('oculto');
@@ -114,6 +119,137 @@ function mostrarPartidos(e) {
             playerInfo.classList.add('ocultar');
         }, 300);
     }
+}
+
+
+// Funciones que permiten abrir la fila al clickear en cualquier lugar de la misma o en una celda de la fila.
+
+function mostrarPartidosFila(e) {
+
+    if(e.target.classList.contains('ocultar')){
+        cerrarHistorial();
+
+        e.target.lastElementChild.previousElementSibling.lastElementChild.classList.add('open');
+        e.target.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
+        e.target.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.add('mostrando'); 
+        e.target.lastElementChild.lastElementChild.classList.remove('active');
+        setTimeout(function(){
+            e.target.lastElementChild.classList.add('mostrar');
+            e.target.lastElementChild.lastElementChild.previousElementSibling.classList.add('active');
+        }, 300);
+        e.target.classList.remove('ocultar');
+        e.target.classList.add('mostrar');
+    } else if (e.target.classList.contains('mostrar')) {
+        
+        e.target.lastElementChild.previousElementSibling.lastElementChild.classList.remove('open');
+        e.target.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('mostrando'); 
+        e.target.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
+        e.target.lastElementChild.classList.remove('mostrar');
+        setTimeout(function(){
+            e.target.lastElementChild.lastElementChild.classList.remove('active');
+            e.target.lastElementChild.lastElementChild.previousElementSibling.classList.remove('active');
+            e.target.classList.remove('mostrar');
+            e.target.classList.add('ocultar');
+        }, 300);
+        
+    }
+
+}
+
+function mostrarPartidosTd(e) {
+
+    if(e.target.parentElement.classList.contains('ocultar')){
+        cerrarHistorial();
+
+        e.target.parentElement.lastElementChild.previousElementSibling.lastElementChild.classList.add('open');
+        e.target.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
+        e.target.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.add('mostrando'); 
+        e.target.parentElement.lastElementChild.lastElementChild.classList.remove('active');
+        setTimeout(function(){
+            e.target.parentElement.lastElementChild.classList.add('mostrar');
+            e.target.parentElement.lastElementChild.lastElementChild.previousElementSibling.classList.add('active');
+        }, 300);
+        e.target.parentElement.classList.remove('ocultar');
+        e.target.parentElement.classList.add('mostrar');
+    } else if (e.target.parentElement.classList.contains('mostrar')) {
+        
+        e.target.parentElement.lastElementChild.previousElementSibling.lastElementChild.classList.remove('open');
+        e.target.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('mostrando'); 
+        e.target.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
+        e.target.parentElement.lastElementChild.classList.remove('mostrar');
+        setTimeout(function(){
+            e.target.parentElement.lastElementChild.lastElementChild.classList.remove('active');
+            e.target.parentElement.lastElementChild.lastElementChild.previousElementSibling.classList.remove('active');
+            e.target.parentElement.classList.remove('mostrar');
+            e.target.parentElement.classList.add('ocultar');
+        }, 300);
+        
+    }
+
+}
+
+function mostrarPartidosTdChild(e) {
+
+    if(e.target.parentElement.parentElement.classList.contains('ocultar')){
+        cerrarHistorial();
+
+        e.target.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.classList.add('open');
+        e.target.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
+        e.target.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.add('mostrando'); 
+        e.target.parentElement.parentElement.lastElementChild.lastElementChild.classList.remove('active');
+        setTimeout(function(){
+            e.target.parentElement.parentElement.lastElementChild.classList.add('mostrar');
+            e.target.parentElement.parentElement.lastElementChild.lastElementChild.previousElementSibling.classList.add('active');
+        }, 300);
+        e.target.parentElement.parentElement.classList.remove('ocultar');
+        e.target.parentElement.parentElement.classList.add('mostrar');
+    } else if (e.target.parentElement.parentElement.classList.contains('mostrar')) {
+        
+        e.target.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.classList.remove('open');
+        e.target.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('mostrando'); 
+        e.target.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
+        e.target.parentElement.parentElement.lastElementChild.classList.remove('mostrar');
+        setTimeout(function(){
+            e.target.parentElement.parentElement.lastElementChild.lastElementChild.classList.remove('active');
+            e.target.parentElement.parentElement.lastElementChild.lastElementChild.previousElementSibling.classList.remove('active');
+            e.target.parentElement.parentElement.classList.remove('mostrar');
+            e.target.parentElement.parentElement.classList.add('ocultar');
+        }, 300);
+        
+    }
+
+}
+
+function mostrarPartidosTdChildrens(e) {
+
+    if(e.target.parentElement.parentElement.parentElement.classList.contains('ocultar')){
+        cerrarHistorial();
+
+        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.classList.add('open');
+        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
+        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.add('mostrando'); 
+        e.target.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.classList.remove('active');
+        setTimeout(function(){
+            e.target.parentElement.parentElement.parentElement.lastElementChild.classList.add('mostrar');
+            e.target.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.previousElementSibling.classList.add('active');
+        }, 300);
+        e.target.parentElement.parentElement.parentElement.classList.remove('ocultar');
+        e.target.parentElement.parentElement.parentElement.classList.add('mostrar');
+    } else if (e.target.parentElement.parentElement.parentElement.classList.contains('mostrar')) {
+        
+        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.classList.remove('open');
+        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('mostrando'); 
+        e.target.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling.lastElementChild.lastElementChild.classList.remove('oculto');
+        e.target.parentElement.parentElement.parentElement.lastElementChild.classList.remove('mostrar');
+        setTimeout(function(){
+            e.target.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.classList.remove('active');
+            e.target.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.previousElementSibling.classList.remove('active');
+            e.target.parentElement.parentElement.parentElement.classList.remove('mostrar');
+            e.target.parentElement.parentElement.parentElement.classList.add('ocultar');
+        }, 300);
+        
+    }
+
 }
 
 
