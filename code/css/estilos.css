@@ -1334,6 +1334,18 @@
     font-size: 15px;
   }
 
+  .tabla-standings tbody tr.mostrar::after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 142px;
+    background: linear-gradient(to right,rgba(255,255,255,.1), rgba(255,255,255,.34), #fff);
+    right: 0px;
+    bottom: 0px;
+    transition: all .3s ease;
+    z-index: 9;
+  }
+
   .tabla-standings tbody tr td:first-child {
     letter-spacing: -0.2px;
   }
@@ -1872,23 +1884,6 @@
 
 
 
-  /* MEDIAQUERIE SCREEN 823px */
-
-@media screen and (min-width: 823px) {
-
-    .tabla-standings thead tr, 
-    .tabla-standings tbody tr {
-      grid-template-columns: 188px repeat(6, 80px) 115px;
-    }
-    
-    .tabla-standings tbody {
-      width: 804px;
-    }
-
-}
-
-
-
   /* MEDIAQUERIE SCREEN 860px */
 
   @media screen and (min-width: 860px) {
@@ -2075,10 +2070,6 @@
       justify-items: center;
       align-items: center;
       margin-top: 12px;
-    }
-
-    .tabla-standings tbody tr td .control.siguiente i {
-      display: grid;
     }
 
     .tabla-standings tbody tr td .siguiente {
@@ -2892,7 +2883,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   font-size: 1.875rem;
   background: linear-gradient(to right,#af8d26,#d7b85c);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: transparent;
   color: #f0be25;
   line-height: 30px;
 }
@@ -3014,8 +3005,47 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   grid-row-gap: 1rem;
 }
 
-.main-grand-final .grand-final-container .grand-final .matchs > a {
+.main-grand-final .grand-final-container .grand-final .matchs > a {  
   text-decoration: none;
+  width: 388px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  position: relative;
+  left: -2px;
+  border-radius: 14px;
+  transition: all .3s ease;
+  z-index: 8;
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs > a:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,.4); 
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs > a.ps4:hover {
+  background: linear-gradient(to top,#4b5ffc,#36c5fd);
+  transition: all .3s ease;
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs > a.xbox:hover {
+  background: linear-gradient(to top,#00a661,#abe354);
+  transition: all .3s ease;
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.ps4 {
+  background: linear-gradient(to top,#4b5ffc,#36c5fd);
+  padding: 2px;
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.xbox {
+  background: linear-gradient(to top,#00a661,#abe354);
+  padding: 2px;
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card .card {
+  border: 1px solid transparent;
 }
 
 .main-grand-final .grand-final-container .grand-final .matchs > a:last-child {
@@ -3059,7 +3089,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   border-bottom-style: none;
   border-top-style: none;
   left: 50%;
-  margin-left: -1px;
+  margin-left: 0;
   height: 15px;
   bottom: 19px;
 }
@@ -3275,21 +3305,17 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   .main-grand-final .grand-final-container .grand-final .matchs {
     display: grid;
-    grid-template-columns: 336px 124px 336px;
-    width: 1000px;
+    grid-template-columns: 344px 124px 344px;
+    width: 1020px;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    top: 35px;
+    top: 19px;
     margin-bottom: 3rem;
   }
 
   .main-grand-final .grand-final-container .grand-final .matchs .border-card-final {
     transform: scale(1.151);
-  }
-  
-  .main-grand-final .grand-final-container .grand-final .matchs .border-card-final {
-    left: -2px;
   }
 
   .main-grand-final .grand-final-container .grand-final .matchs .fifa20-img {
@@ -5897,3 +5923,5 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 /* END ROUND MATCHUPS STYLES */
 
 /* ----------- END MAIN ROUNDS STYLES ----------- */
+
+
