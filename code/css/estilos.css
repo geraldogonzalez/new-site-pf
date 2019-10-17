@@ -1351,7 +1351,7 @@
   }
 
   .tabla-standings tbody tr td:first-child {
-    font-size: 1.2rem;
+    font-size: 1rem;
     justify-self: start;
     padding-left: 9px;
   }
@@ -1397,16 +1397,17 @@
   }
 
   .tabla-standings tbody tr td .last-matches.five {
-    grid-template-columns: repeat(5,7px);
-    grid-column-gap: 2px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 3px;
     font-size: 7px;
   }
 
   .tabla-standings tbody tr td .last-matches.eight {
     display: grid;
-    grid-template-columns: repeat(4, 7px);
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+    grid-template-columns: repeat(4,7px);
+    grid-column-gap: 5px;
+    grid-row-gap: 4px;
     font-size: 7px;
   }
 
