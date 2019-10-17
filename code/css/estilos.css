@@ -3008,17 +3008,6 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 .main-grand-final .grand-final-container .grand-final .matchs > a {  
   text-decoration: none;
-  width: 388px;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px;
-  position: relative;
-  left: -2px;
-  border-radius: 14px;
-  transition: all .3s ease;
-  z-index: 8;
 }
 
 .main-grand-final .grand-final-container .grand-final .matchs > a:hover {
@@ -3179,6 +3168,21 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .ecl-record, 
   .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .goal-per-game {
     grid-row-gap: 3px;
+  }
+
+  .main-grand-final .grand-final-container .grand-final .matchs > a {  
+    text-decoration: none;
+    width: 388px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    position: relative;
+    left: -2px;
+    border-radius: 14px;
+    transition: all .3s ease;
+    z-index: 8;
   }
 
   .main-grand-final .grand-final-container .grand-final .matchs .border-card-final {
