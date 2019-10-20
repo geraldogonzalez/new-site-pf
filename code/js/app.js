@@ -4,10 +4,10 @@ let tablaInfo = document.querySelector('.tabla-standings');
 // Variables para controlar el dropdown menu.
 let mqDropdown = window.matchMedia('(max-width: 1024px)');
 let menu = document.querySelector('.menu li:nth-child(2)');
-let submenu = document.querySelector('.menu .submenu');
 
 // Flechas para el player history de la interfaz de standings.
 let desplazar = 0;
+let contador = 0;
 
 // Botones de XBOX y PS4 para la interfaz de rankings.
 let btnRanking = document.querySelector('.btn-ranking');
@@ -34,6 +34,7 @@ function cargarEventListeners(){
         tablaInfo.addEventListener('click', siguiente);
         tablaInfo.addEventListener('click', anterior);
         window.addEventListener('load', acortarNombresTabla);
+        window.addEventListener('resize', cerrarHistorial);
     }
 
     if(cards) {
@@ -41,7 +42,7 @@ function cargarEventListeners(){
     }
 
     if(mqDropdown.matches){
-        menu.addEventListener('mouseover', dropdownMenu);
+        menu.addEventListener('click', dropdownMenu);
     }
 
     if (btnRanking) {
@@ -62,6 +63,7 @@ function cargarEventListeners(){
 
 
 /* FUNCIONES. */
+
 
 // Función que cierra un historial al abrir otro.
 
@@ -223,6 +225,7 @@ function mostrarPartidosTdChild(e) {
 
 // Función que permite mover las cards en el slider.
 function siguiente(e) {
+    let filas = document.querySelectorAll('.player-info');
     if(e.target.classList.contains('fa-chevron-right')){
         desplazar += 1; 
         let contenedorSlide = e.target.parentElement.parentElement;
@@ -258,36 +261,37 @@ function anterior(e) {
 }
 
 
-
 // Función para el dropdown mobile.
 function dropdownMenu(e) {
     e.preventDefault();
-    if(e.target.classList.contains('fa-chevron-down')) {
-        submenu.style.maxHeight = '1000px';
-        submenu.style.overflow = 'visible';
-        submenu.style.zIndex = '10';
+
+    if(e.target.classList.contains('dropdown-off')) {
         
-        e.target.style.display = 'none';
-        e.target.parentElement.parentElement.classList.add('dropdown');
-        document.querySelector('.fa-chevron-up').style.display = 'grid';
-        document.querySelector('.fa-chevron-up').style.width = '100%';
-        document.querySelector('.fa-chevron-up').style.height = '100%';
-        document.querySelector('.fa-chevron-up').style.alignItems = 'center';
-    } else if(e.target.classList.contains('fa-chevron-up')) {
-        submenu.style.maxHeight = '0';
-        submenu.style.overflow = 'hidden';
-        submenu.style.zIndex = '-1';
+        e.target.classList.add('dropdown-on');
+        e.target.classList.remove('dropdown-off');
         
-        e.target.style.display = 'none';
-        e.target.parentElement.parentElement.classList.remove('dropdown');
-        document.querySelector('.fa-chevron-down').style.display = 'grid';
-        document.querySelector('.fa-chevron-down').style.width = '100%';
-        document.querySelector('.fa-chevron-down').style.height = '100%';
-        document.querySelector('.fa-chevron-down').style.alignItems = 'center';
+        
+    } else if(e.target.classList.contains('dropdown-on')) {
+        e.target.classList.add('dropdown-off');
+        e.target.classList.remove('dropdown-on');
+    } else if(e.target.parentElement.classList.contains('dropdown-off')) {
+        
+        e.target.parentElement.classList.add('dropdown-on');
+        e.target.parentElement.classList.remove('dropdown-off');
+        
+    } else if(e.target.parentElement.classList.contains('dropdown-on')) {
+        e.target.parentElement.classList.add('dropdown-off');
+        e.target.parentElement.classList.remove('dropdown-on');
+    } else if(e.target.parentElement.parentElement.classList.contains('dropdown-off')) {
+        
+        e.target.parentElement.parentElement.classList.add('dropdown-on');
+        e.target.parentElement.parentElement.classList.remove('dropdown-off');
+        
+    } else if(e.target.parentElement.parentElement.classList.contains('dropdown-on')) {
+        e.target.parentElement.parentElement.classList.add('dropdown-off');
+        e.target.parentElement.parentElement.classList.remove('dropdown-on');
     }
 }
-
-
 
 // Función para el menu de ranking.
 function tablaRank(e) {
@@ -421,7 +425,7 @@ function acortarNombresCards() {
 
     nombresTeam.forEach( nombreTeam => {
         nombreTeam.childNodes[0].data = nombreTeam.childNodes[0].data.trim();
-        if(nombreTeam.childNodes[0].data.length >= 15) {
+        if(nombreTeam.childNodes[0].data.length >= 20) {
             nombreTeam.childNodes[0].data = nombreTeam.childNodes[0].data.substr(0, 17) + '...';
         }
     } );
