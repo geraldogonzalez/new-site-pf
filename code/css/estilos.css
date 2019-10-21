@@ -2335,7 +2335,7 @@
   position: absolute;
   height: 19px;
   width: 2px;
-  background: #d7b85c;
+  background: #e3cc91;
   left: 50%;
   margin-left: -1px;
   bottom: -16px;
@@ -2876,7 +2876,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation .thumbnail-console .thumbnail {
   padding: 3px;
-  background: linear-gradient(to top,#af8d26,#d7b85c);
+  background: linear-gradient(to top,#af8d26,#e3cc91);
   display: grid;
   border-radius: 50%;
   margin-bottom: 2px;
@@ -2930,7 +2930,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   font-family: NimbusSanCon-Bol;
   text-transform: uppercase;
   font-size: 1.875rem;
-  background: linear-gradient(to right,#af8d26,#d7b85c);
+  background: linear-gradient(to right,#af8d26,#e3cc91);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #f0be25;
@@ -2948,7 +2948,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     position: absolute;
     width: 3px;
     height: 15px;
-    background: #d7b85c;
+    background: #e3cc91;
     left: 50%;
     margin-left: -1.5px;
     top: -15px;
@@ -4575,7 +4575,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   /* Grand Final */
 
   .grand-final .border-card.grand-final {
-    background: linear-gradient(to top,#af8d26,#d7b85c);
+    background: linear-gradient(to top,#af8d26,#e3cc91);
   }
 
   .grand-final .border-card.grand-final .card {
@@ -4583,7 +4583,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   }
 
   .grand-final .card .players-thumbnails-score .player.win .thumbnail-logo .thumbnail {
-    background: linear-gradient(to top,#af8d26,#d7b85c);
+    background: linear-gradient(to top,#af8d26,#e3cc91);
   }
 
 
@@ -4836,22 +4836,22 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
     .border-card.livestream.grand-final .card span.right, 
     .border-card.playing-now.grand-final .card span.right {
-      background: linear-gradient(to right,white,#af8d26,#d7b85c,white);
+      background: linear-gradient(to right,white,#af8d26,#e3cc91,white);
     }
     
     .border-card.livestream.grand-final .card span.left, 
     .border-card.playing-now.grand-final .card span.left {
-      background: linear-gradient(to left,white,#af8d26,#d7b85c,white);
+      background: linear-gradient(to left,white,#af8d26,#e3cc91,white);
     }
 
     .border-card.livestream.grand-final .card span.bottom,
     .border-card.playing-now.grand-final .card span.bottom {
-      background: linear-gradient(to bottom,white,#af8d26,#d7b85c,white);
+      background: linear-gradient(to bottom,white,#af8d26,#e3cc91,white);
     }
     
     .border-card.livestream.grand-final .card span.top, 
     .border-card.playing-now.grand-final .card span.top {
-      background: linear-gradient(to top,white,#af8d26,#d7b85c,white);
+      background: linear-gradient(to top,white,#af8d26,#e3cc91,white);
     }
 
 
@@ -4988,7 +4988,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   /* Grand Final */
 
   .border-card.playing-now.card-final .players-thumbnails-score .scores .playing {
-    background: linear-gradient(to top, #af8d26, #d7b85c);
+    background: linear-gradient(to top, #af8d26, #e3cc91);
   }
 
   .border-card.grand-final .card .players-thumbnails-score .scores .draw .draw {
