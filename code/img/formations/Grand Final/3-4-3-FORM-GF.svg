@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="77px" viewBox="0 0 48 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group 48</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Card-Specifications" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CARD-SPECS-–-Brackets-Desktop-(2-of-2)" transform="translate(-1373.000000, -653.000000)">
+            <g id="Group-48" transform="translate(1373.000000, 653.000000)">
+                <g id="Group-21-Copy-48">
+                    <rect id="Rectangle" stroke="#B5B5B5" fill="#FFFFFF" x="0.5" y="1" width="47" height="75"></rect>
+                    <rect id="Rectangle" fill="#B5B5B5" x="0" y="38.5" width="48" height="1"></rect>
+                    <g id="Group-18" transform="translate(8.000000, 0.000000)">
+                        <path d="M23.8231055,14.0186955 C20.7194027,14.0486517 18.037768,14.0493134 14.3218162,14.0306341 C13.8522654,14.0282738 13.4508681,14.0261189 12.5746351,14.0213305 C10.6260215,14.0107149 9.3875564,14.0049442 8.16431001,14.0019977 C10.1704555,15.8905442 12.9804021,17 16.0026009,17 C19.0158022,17 21.8180745,15.8971533 23.8231055,14.0186955 Z" id="Combined-Shape" stroke="#B5B5B5"></path>
+                        <rect id="Rectangle" stroke="#B5B5B5" x="0.5" y="1" width="31" height="13"></rect>
+                        <rect id="Rectangle-Copy-99" stroke="#B5B5B5" x="8.5" y="1" width="15" height="6"></rect>
+                        <circle id="Oval" fill="#B5B5B5" cx="16.375" cy="10.875" r="1"></circle>
+                    </g>
+                    <g id="Group-18-Copy" transform="translate(24.000000, 68.000000) rotate(-180.000000) translate(-24.000000, -68.000000) translate(8.000000, 59.000000)">
+                        <path d="M23.8231055,14.0186955 C20.7194027,14.0486517 18.037768,14.0493134 14.3218162,14.0306341 C13.8522654,14.0282738 13.4508681,14.0261189 12.5746351,14.0213305 C10.6260215,14.0107149 9.3875564,14.0049442 8.16431001,14.0019977 C10.1704555,15.8905442 12.9804021,17 16.0026009,17 C19.0158022,17 21.8180745,15.8971533 23.8231055,14.0186955 Z" id="Combined-Shape" stroke="#B5B5B5"></path>
+                        <rect id="Rectangle" stroke="#B5B5B5" x="0.5" y="1" width="31" height="13"></rect>
+                        <rect id="Rectangle-Copy-99" stroke="#B5B5B5" x="8.5" y="1" width="15" height="6"></rect>
+                        <circle id="Oval" fill="#B5B5B5" cx="16.375" cy="8.875" r="1"></circle>
+                    </g>
+                    <circle id="Oval" stroke="#B5B5B5" cx="24" cy="38.5" r="9"></circle>
+                </g>
+                <g id="Group-13-Copy-54" transform="translate(24.500000, 18.500000) rotate(-360.000000) translate(-24.500000, -18.500000) translate(4.000000, 1.500000)" fill="#D7B85C">
+                    <circle id="Oval-Copy-18" transform="translate(2.250000, 20.750000) rotate(-270.000000) translate(-2.250000, -20.750000) " cx="2.25" cy="20.75" r="2.25"></circle>
+                    <circle id="Oval-Copy-19" transform="translate(8.250000, 9.250000) rotate(-270.000000) translate(-8.250000, -9.250000) " cx="8.25" cy="9.25" r="2.25"></circle>
+                    <circle id="Oval-Copy-20" transform="translate(20.250000, 9.250000) rotate(-270.000000) translate(-20.250000, -9.250000) " cx="20.25" cy="9.25" r="2.25"></circle>
+                    <circle id="Oval-Copy-27" transform="translate(27.250000, 20.750000) rotate(-270.000000) translate(-27.250000, -20.750000) " cx="27.25" cy="20.75" r="2.25"></circle>
+                    <circle id="Oval-Copy-28" transform="translate(20.250000, 31.750000) rotate(-270.000000) translate(-20.250000, -31.750000) " cx="20.25" cy="31.75" r="2.25"></circle>
+                    <circle id="Oval-Copy-29" transform="translate(14.250000, 20.750000) rotate(-270.000000) translate(-14.250000, -20.750000) " cx="14.25" cy="20.75" r="2.25"></circle>
+                    <circle id="Oval-Copy-31" transform="translate(8.250000, 31.750000) rotate(-270.000000) translate(-8.250000, -31.750000) " cx="8.25" cy="31.75" r="2.25"></circle>
+                    <circle id="Oval-Copy-30" transform="translate(38.583333, 20.750000) rotate(-270.000000) translate(-38.583333, -20.750000) " cx="38.5833333" cy="20.75" r="2.25"></circle>
+                    <circle id="Oval-Copy-32" transform="translate(32.250000, 31.750000) rotate(-270.000000) translate(-32.250000, -31.750000) " cx="32.25" cy="31.75" r="2.25"></circle>
+                    <circle id="Oval-Copy-21" transform="translate(32.250000, 9.250000) rotate(-270.000000) translate(-32.250000, -9.250000) " cx="32.25" cy="9.25" r="2.25"></circle>
+                    <circle id="Oval-Copy-20" transform="translate(20.250000, 2.250000) rotate(-270.000000) translate(-20.250000, -2.250000) " cx="20.25" cy="2.25" r="2.25"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
