@@ -921,7 +921,7 @@
       height: 2px;
       background: #979797;
       width: 100%;
-      top: 54%;
+      top: 53%;
       display: none;
     }
 
@@ -5375,6 +5375,10 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   bottom: -1px;
   transition: all .3s ease;
   font-weight: bold;
+}
+
+.main.brackets .round-title .rounds-container .round div.round-status div {
+  z-index: 1;
 }
 
 .main.rounds .rounds-container .rounds .round > span,
