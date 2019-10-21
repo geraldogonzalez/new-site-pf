@@ -2099,7 +2099,7 @@
     }
   
     .tabla-standings tbody tr td .control .fas.fa-chevron-right {
-      right: 5px;
+      right: 15px;
     }
   
     table tr td.player-history.mostrar .game-history:nth-child(7) {
