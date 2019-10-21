@@ -2250,7 +2250,7 @@
     }
 
     .tabla-standings tbody tr td .control .fas.fa-chevron-right {
-      right: 5px;
+      right: 15px;
     }
 
     .tabla-standings tbody tr td .control .fas.fa-chevron-left {
@@ -2787,7 +2787,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 @media screen and (min-width: 1900px) {
   
-  .header .contenedor-header {
+  .header.brackets .contenedor-header {
     max-width: unset;
     padding: 0 100px 0 192px;
   }
@@ -5774,8 +5774,10 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   justify-content: center;
   align-items: center;
   justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(279px, 279px));
   grid-template-rows: repeat(auto-fit, 104px);
   grid-row-gap: 8px;
+  grid-column-gap: 8px;
 }
 
 
@@ -5798,61 +5800,82 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 /* -------- MEDIAQUERIES -------- */
 
-  /* MEDIAQUERIE SCREEN 568px */
+  /* MEDIAQUERIE SCREEN 584px */
 
-@media screen and (min-width: 568px) {
+  @media screen and (min-width: 584px) {
   
-  .main.rounds .cards-container.matchs-16,
-  .main.rounds .cards-container.matchs-24,
-  .main.rounds .cards-container.matchs-32 {
-    grid-auto-flow: column;
-    grid-template-rows: repeat(8, 104px);
-    grid-column-gap: 20px;
+  .main.rounds .cards-container {
+    justify-content: space-between;
   }
 
-  .main.rounds .cards-container.matchs-24 {
-    grid-template-rows: repeat(2, 104px);
-  }
-
-  .main.rounds .cards-container.matchs-32 {
-    grid-template-rows: repeat(16, 104px);
+  .main.rounds .cards-container .lines {
+    display: block;
   }
 
 }
 
 
+  /* MEDIAQUERIE SCREEN 650px */
 
-  /* MEDIAQUERIE SCREEN 590px */
-
-  @media screen and (min-width: 590px) {
+  @media screen and (min-width: 650px) {
   
-  .main.rounds .cards-container {
-    grid-column-gap: unset;
-    justify-content: space-between;
-  }
-  
-  .main.rounds .cards-container .lines {
-    display: block;
-  }
-
-  }
-
-
-
-  /* MEDIAQUERIE SCREEN 640px */
-
-  @media screen and (min-width: 640px) {
-  
-    .main.rounds .cards-container.matchs-16,
-    .main.rounds .cards-container.matchs-24,
-    .main.rounds .cards-container.matchs-32 {
-      padding: 0;
+    .main.rounds .cards-container {
       justify-content: space-evenly;
-      grid-row-gap: 16px;
     }
   
   }
 
+
+
+  /* MEDIAQUERIE SCREEN 871px */
+
+  @media screen and (min-width: 871px) {
+  
+    .main.rounds .cards-container {
+      justify-content: space-between;
+    }
+
+    .main.rounds .cards-container .lines {
+      left: 33.5%;
+    }
+
+    .main.rounds .cards-container .lines.line-2 {
+      left: 66.5%;
+    }
+  
+  }
+  
+
+
+  /* MEDIAQUERIE SCREEN 900px */
+
+  @media screen and (min-width: 900px) {
+  
+    .main.rounds .cards-container .lines {
+      left: 33.3%;
+    }
+
+    .main.rounds .cards-container .lines.line-2 {
+      left: 66.8%;
+    }
+  
+  }
+
+
+
+  /* MEDIAQUERIE SCREEN 950px */
+
+  @media screen and (min-width: 950px) {
+  
+    .main.rounds .cards-container .lines {
+      left: 32.7%;
+    }
+
+    .main.rounds .cards-container .lines.line-2 {
+      left: 67%;
+    }
+  
+  }
 
 
   /* MEDIAQUERIE SCREEN 1024px */
@@ -5863,13 +5886,22 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     margin-bottom: 30px;
   }
 
+  .main.rounds .cards-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(336px, 336px));
+    grid-template-rows: repeat(auto-fit, 111px);
+    justify-content: space-evenly;
+  }
+
+  .main.rounds .cards-container .lines,
+  .main.rounds .cards-container .lines.line-2 {
+    left: 50%;
+  }
+
   .main.rounds .cards-container .border-card {
     min-height: 111px;
     max-height: 111px;
-  }
-
-  .main.rounds .cards-container.matchs-32 {
-    justify-content: space-around;
   }
 
 }
@@ -5880,45 +5912,20 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   @media screen and (min-width: 1300px) {
   
-    .main.rounds .cards-container.matchs-16,
-    .main.rounds .cards-container.matchs-24,
-    .main.rounds .cards-container.matchs-32 {
+    .main.rounds .cards-container {
       max-width: 1204px;
-      margin: 0 auto;
       padding: 0 6px 0 18.79px;
       justify-content: space-between;
-      grid-template-rows: repeat(6, 104px);
       grid-row-gap: 15px;
     }
 
-    .main.rounds .cards-container.matchs-16 .border-card.six {
-      grid-row: 1 / 2;  
+    .main.rounds .cards-container .lines, 
+    .main.rounds .cards-container .lines.line-2 {
+      left: 67.8%;
     }
 
-    .main.rounds .cards-container.matchs-24 {
-      grid-template-rows: repeat(2, 104px);
-      justify-content: space-around;
-    }
-
-    .main.rounds .cards-container.matchs-32 {
-      grid-template-rows: repeat(11, 104px);
-      justify-content: space-between;
-    }
-
-    .main.rounds .cards-container .line-3 {
-      display: none;
-    }
-
-    .main.rounds .cards-container.matchs-16 .line-1,
-    .main.rounds .cards-container.matchs-32 .line-1 {
+    .main.rounds .cards-container .line-1 {
       left: 33%;
-    }
-
-    .main.rounds .cards-container.matchs-16 .line-2,
-    .main.rounds .cards-container.matchs-32 .line-2 {
-      left: unset;
-      right: 32%;
-      margin-right: -.5px;
     }
   
   }
@@ -5929,75 +5936,24 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   @media screen and (min-width: 1500px) {
 
-    .main.rounds .cards-container.matchs-16,
-    .main.rounds .cards-container.matchs-24,
-    .main.rounds .cards-container.matchs-32 {
+    .main.rounds .cards-container {
       padding: 0 0 0 9px;
       max-width: 1415.210px;
-      grid-template-rows: repeat(4, 110px);
-      grid-row-gap: 20px;  
+      grid-row-gap: 20px;
+      justify-content: space-between;  
     }
 
-    .main.rounds .cards-container.matchs-16 .border-card.six {
-      grid-row: unset;  
+    .main.rounds .cards-container .lines.line-1 {
+      left: 25.2%;
     }
 
-    .main.rounds .cards-container.matchs-24 {
-      grid-template-rows: 104px;
-      justify-content: space-between;
-    }
-    
-    .main.rounds .cards-container.matchs-32 {
-      grid-template-rows: repeat(8, 110px);
-      justify-content: space-between;
+    .main.rounds .cards-container .lines.line-2 {
+      left: 50.3%;
     }
 
-    /* Lineas 5 rounds */
-
-    .main.rounds .cards-container.matchs-16 .line-1,
-    .main.rounds .cards-container.matchs-32 .line-1 {
-      left: 25.15%;
-    }
-  
-    .main.rounds .cards-container.matchs-16 .line-2 {
-      left: 50.4%;
-    }
-
-    .main.rounds .cards-container.matchs-32 .line-2 {
-      left: 50.2%;
-    }
-
-    .main.rounds .cards-container.matchs-16 .line-3 {
-      display: block;
-      left: 75.64%;
-    }
-
-    .main.rounds .cards-container.matchs-32 .line-3 {
-      display: block;
+    .main.rounds .cards-container .lines.line-3 {
       left: 75.5%;
     }
-
-
-    /* Lineas 7 rounds */
-
-    .main.rounds .cards-container.matchs-24 .line-1 {
-      left: 25.3%;
-    }
-  
-    .main.rounds .cards-container.matchs-24 .line-2 {
-      left: 50.67%;
-    }
-
-    .main.rounds .cards-container.matchs-24 .line-3 {
-      display: block;
-      left: 75.83%;
-    }
-
-
-
-    /* Lineas 8 rounds */
-
-
 
   }
 
