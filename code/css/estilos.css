@@ -133,7 +133,6 @@
     font-size: 26px;
     color: #161616;
     line-height: 26px;
-    height: 25px;
   }
 
   .header.brackets .contenedor-header .consola .titulo h2 {
@@ -303,7 +302,6 @@
   }
 
   .header.grand-final {
-    margin-bottom: 30px;
     position: initial;
   }
 
@@ -326,6 +324,7 @@
     opacity: .4;
     padding-bottom: 16px; 
     text-align: center;
+    transition: all .5s ease;
   }
 
   .header .contenedor-header .round-title-mobile a.active,
@@ -333,26 +332,14 @@
     opacity: 1;
   }
 
-  .header .contenedor-header .round-title-mobile a::before {
-    content: "";
+  .header .contenedor-header .round-title-mobile > span.barra {
     position: absolute;
-    width: 0;
+    width: 75.16px;
     height: 2px;
     bottom: -2px;
-    background: transparent;
-    left: 0;
-    transition: all .3s ease;
-  }
-
-  .header .contenedor-header .round-title-mobile a:hover::before {
-    width: 100%;
     background: #fc5461;
-    transition: all .3s ease;
-  }
-
-  .header .contenedor-header .round-title-mobile a.active::before {
-    width: 100%;
-    background: #fc5461;
+    left: 12px;
+    transition: all .5s ease;
   }
 
   /* End brackets PS4 & XBOX menu styles */
@@ -526,7 +513,6 @@
     
     .header.brackets .contenedor-header .consola .titulo h2 {
       font-size: 25px;
-      height: 26px;
     }
 
   }
@@ -882,11 +868,41 @@
       position: unset;
     }
 
-    .header.grand-final {
-      margin-bottom: 30px;
+    .container-hours {
+      border-bottom: 2px solid #c8c8c8;
     }
 
+    .main-grand-final .hours {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 12px 12px;
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: left;
+      grid-column-gap: 22px;
+    }
 
+    .main-grand-final .hours div {
+      font-size: 20px;
+      color: #161616;
+      position: relative;
+      padding-right: 22px;
+    }
+
+    .main-grand-final .hours div::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 20px;
+      background: black;
+      top: 50%;
+      margin-top: -10px;
+      right: 0;
+    }
+
+    .main-grand-final .hours div:last-child::after {
+      display: none;
+    }
 
     /* BRACKETS ROUNDS LAYOUT */
 
@@ -1009,6 +1025,10 @@
       max-width: 940px;
     }
 
+    .main-grand-final .hours {
+      max-width: 940px;
+    }
+
   }
  
   
@@ -1021,6 +1041,9 @@
       max-width: 980px;
     }
 
+    .main-grand-final .hours {
+      max-width: 980px;
+    }
   }
 
 
@@ -1032,6 +1055,15 @@
     .header .contenedor-header {
       max-width: 1000px;
       margin: 0 auto;
+    }
+
+    .main-grand-final .hours {
+      max-width: 1000px;
+      padding-left: 48px;
+    }
+
+    .main-grand-final .hours div {
+      font-size: 22px;
     }
 
     .header .contenedor-header .consola .consola-btn {
@@ -1099,6 +1131,10 @@
       max-width: 1019px;
     }
 
+    .main-grand-final .hours {
+      max-width: 1019px;
+    }
+
   }
 
 
@@ -1115,6 +1151,10 @@
     }
 
     .header .contenedor-header {
+      max-width: 1204px;
+    }
+
+    .main-grand-final .hours {
       max-width: 1204px;
     }
 
@@ -1179,6 +1219,10 @@
   @media screen and (min-width: 1500px) {  
 
     .header .contenedor-header {
+      max-width: 1440px;
+    }
+
+    .main-grand-final .hours {
       max-width: 1440px;
     }
 
@@ -1482,6 +1526,7 @@
     min-height: 140px;
     max-height: 140px;
     display: grid;
+    justify-content: left;
     grid-auto-flow: column;
     grid-column: 1 / 9;
     padding: 11px 0 14px 4px;
@@ -2105,7 +2150,7 @@
     .tabla-standings tbody tr td .control .fas.fa-chevron-right {
       right: 15px;
     }
-  
+
     table tr td.player-history.mostrar .game-history:nth-child(7) {
       padding-right: .3rem;
     }
@@ -2281,14 +2326,16 @@
 }
 
 .main.brackets .cards-container {
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .main.brackets .cards-container .round-matchs {
+  left: 0;
   display: grid;
   grid-template-columns: repeat(4, 317px);
   padding-bottom: 30px;
   padding-left: 7px;
+  transition: all .5s ease;
   position: relative;
 }
 
@@ -2469,6 +2516,10 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 /* MEDIAQUERIE SCREEN 900px */
 
 @media screen and (min-width: 900px) {
+
+  .main.brackets .cards-container {
+    overflow-x: scroll;
+  }
     
   .main.brackets .cards-container .round-matchs {
     padding-left: 27px;
@@ -2820,12 +2871,33 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 .main-grand-final .grand-final-container {
   display: grid;
   justify-content: center;
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  position: relative;
+  background: url(../img/FIFA20_Texture_BG_Light.png) center center;
 }
 
+.main-grand-final .grand-final-container img.fondo {
+  position: absolute;
+}
 .grand-final-container .cards.grand-final {
   display: grid;
   justify-items: center;
+  position: relative;
+  padding-top: 30px;
+  z-index: 100;
+}
+
+.main-grand-final .grand-final-container img.right {
+  width: 200px;
+  top: 0;
+  right: 0;
+}
+
+.main-grand-final .grand-final-container img.left {
+  width: 150px;
+  bottom: 0;
+  left: 0;
 }
 
 .main-grand-final .grand-final-container .grand-final .grand-final-winner {
@@ -2833,6 +2905,14 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   justify-items: center;
   margin-bottom: 1rem;
   grid-row-gap: 15px;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .trophy {
+  height: 70px;
+}
+
+.main-grand-final .grand-final-container .grand-final .grand-final-winner .trophy img {
+  height: 100%;
 }
 
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation {
@@ -3086,6 +3166,24 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   border: 1px solid transparent;
 }
 
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.default .card {
+  border: 1px solid #aaa;
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs > a.xbox.default,
+.main-grand-final .grand-final-container .grand-final .matchs > a.ps4.default,
+.main-grand-final .grand-final-container .grand-final .matchs > a.default {
+  background: transparent;
+  box-shadow: unset;
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.xbox.default,
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.ps4.default,
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.default {
+  background: transparent;
+  box-shadow: unset;
+}
+
 .main-grand-final .grand-final-container .grand-final .matchs > a:last-child {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
@@ -3139,12 +3237,125 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 /* ----------- MEDIAQUERIES-----------*/
 
-/* MEDIAQUERIE SCREEN 1024px */
+/* MEDIAQUERIE SCREEN 700px */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-height: 700px) {
 
   .main-grand-final .grand-final-container {
-    width: 1000px;
+    padding-bottom: 136px;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+
+  .main-grand-final .grand-final-container img.right {
+    width: 300px;
+    
+  }
+  
+  .main-grand-final .grand-final-container img.left {
+    width: 200px;
+  }
+
+}
+
+
+
+/* MEDIAQUERIE SCREEN 750px */
+
+@media screen and (min-height: 750px) {
+
+  .main-grand-final .grand-final-container {
+    padding-bottom: 200px;
+  }
+
+}
+
+
+
+
+/* MEDIAQUERIE SCREEN 810px */
+
+@media screen and (min-height: 810px) {
+
+  .main-grand-final .grand-final-container {
+    padding-bottom: 300px;
+  }
+
+}
+
+
+
+/* MEDIAQUERIE SCREEN 910px */
+
+@media screen and (min-height: 910px) {
+
+  .main-grand-final .grand-final-container img.right {
+    width: 400px;
+  }
+
+  .main-grand-final .grand-final-container img.left {
+    width: 300px;
+  }
+
+  .grand-final-container .cards.grand-final {
+    padding-top: 150px;
+  }
+
+  .main-grand-final .grand-final-container {
+    padding-bottom: 300px;
+  }
+
+}
+
+
+
+/* MEDIAQUERIE SCREEN 1040px */
+
+@media screen and (min-height: 1040px) {
+
+  .main-grand-final .grand-final-container img.right {
+    width: unset;
+  }
+
+  .main-grand-final .grand-final-container img.left {
+    width: unset;
+  }
+
+  .main-grand-final .grand-final-container {
+    padding-bottom: 500px;
+  }
+
+}
+
+@media screen and (min-height: 1230px) {
+
+  .grand-final-container .cards.grand-final {
+    padding-top: 300px;
+  }
+}
+
+
+
+/* MEDIAQUERIE SCREEN 1100px */
+
+@media screen and (min-width: 1100px) {
+
+  .main-grand-final .grand-final-container img.right {
+    width: 400px;
+  }
+
+  .main-grand-final .grand-final-container img.left {
+    width: 350px;
+  }
+
+  .main-grand-final .grand-final-container {
+    padding-bottom: 70px;
+  }
+
+  .main-grand-final .grand-final-container .grand-final .grand-final-winner .trophy {
+    height: 117px;
   }
 
   /* Grand Final Winner */
@@ -3377,6 +3588,22 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   .main-grand-final .grand-final-container .grand-final .matchs .fifa20-img img {
     width: 100%;
+  }
+
+}
+
+
+
+/* MEDIAQUERIE SCREEN 1500px */
+
+@media screen and (min-width: 1400px) {
+
+  .main-grand-final .grand-final-container img.right {
+    width: unset;
+  }
+
+  .main-grand-final .grand-final-container img.left {
+    width: unset;
   }
 
 }
@@ -4487,6 +4714,10 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   width: 40px;
 }
 
+.card-final .formation-record .player-2 .formation img {
+  transform: rotate(180deg)
+}
+
 .card-final .formation-record .player .record-goals {
   padding-top: 8px;
   width: 65px;
@@ -5120,6 +5351,18 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
       max-height: 105px;
     }
 
+    .main.brackets .border-card.livestream.cl-dark, 
+    .main.brackets .border-card.livestream.grand-final, 
+    .main.brackets .border-card.livestream.ps4, 
+    .main.brackets .border-card.livestream.xbox, 
+    .main.brackets .border-card.playing-now.cl-dark, 
+    .main.brackets .border-card.playing-now.grand-final, 
+    .main.brackets .border-card.playing-now.ps4, 
+    .main.brackets .border-card.playing-now.xbox {
+      max-width: 336px;
+      max-height: 111px;
+    }
+
     .card {
       padding: 12px 12px 15px 12px;
       width: 330px;
@@ -5128,32 +5371,6 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
       grid-row-gap: 15px;
       z-index: 20;
     }
-
-
-
-    /* Player thumb, final score and team logo styles */
-
-    .card .players-thumbnails-score .player .thumbnail-logo .thumbnail {
-      width: 37px;
-      height: 37px;
-    }
-
-    .card .players-thumbnails-score .player .thumbnail-logo .logo {
-      width: 37px;
-      height: 37px;
-    }
-
-    .card .players-thumbnails-score .scores {
-      grid-template-columns: repeat(2,30px);
-      grid-column-gap: 8px;
-    }
-
-    .card .players-thumbnails-score .scores .score {
-      height: 42px;
-    }
-
-    /* End player thumb, final score and team logo styles */
-
 
 
   /* Player nickname, nation, team name and games styles */
@@ -5228,10 +5445,6 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
       width: 45px;
     }
 
-    .card-final .formation-record .player-2 .formation img {
-      transform: rotate(180deg)
-    }
-
     .card-final .formation-record .player .record-goals {
       width: 80px;
       grid-row-gap: 25px;
@@ -5299,6 +5512,34 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     /* End win and lose styles*/
 
     /* END CURRENT GAME, GAME DRAW, GAME WIN, GAME LOSE, PLAYING NOW AND LIVESTREAM STYLES*/
+
+  }
+
+
+  @media screen and (min-width: 1100px) {
+    
+    /* Player thumb, final score and team logo styles */
+
+    .card .players-thumbnails-score .player .thumbnail-logo .thumbnail {
+      width: 37px;
+      height: 37px;
+    }
+
+    .card .players-thumbnails-score .player .thumbnail-logo .logo {
+      width: 37px;
+      height: 37px;
+    }
+
+    .card .players-thumbnails-score .scores {
+      grid-template-columns: repeat(2,30px);
+      grid-column-gap: 8px;
+    }
+
+    .card .players-thumbnails-score .scores .score {
+      height: 42px;
+    }
+
+    /* End player thumb, final score and team logo styles */
 
   }
 
@@ -5463,6 +5704,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 .main.rounds .rounds-container .rounds .round.playing a h3 {
   color: black;
+  text-transform: uppercase;
 }
 
 .main.rounds .rounds-container .rounds .round.playing a div {
@@ -5648,6 +5890,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   .main.rounds .rounds-container .rounds .round.playing,
   .main.brackets .round-title .rounds-container .round.playing {
     grid-row-gap: 8px;
+    overflow: hidden;
   }
   .main.rounds .rounds-container .rounds .round.playing a {
     max-width: 67px;
