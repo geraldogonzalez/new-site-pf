@@ -19,4 +19,4 @@
   * [INDEX](https://geraldogonzalez.github.io/new-site-pf/code/index.html)  
   * [RANKING](https://geraldogonzalez.github.io/new-site-pf/code/ranks.html)
   * [GRAND FINAL](https://geraldogonzalez.github.io/new-site-pf/code/grand-final.html)
-  * [GRAND FINAL WINNER](https://geraldogonzalez.github.io/new-site-pf/code/grand-final.html)
+  * [GRAND FINAL WINNER](https://geraldogonzalez.github.io/new-site-pf/code/grand-final-winner.html)
