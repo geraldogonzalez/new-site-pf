@@ -2,7 +2,7 @@
 let tablaInfo = document.querySelector('.tabla-standings');
 
 // Variables para controlar el dropdown menu.
-let mqDropdown = window.matchMedia('(max-width: 1024px)');
+let mqDropdown = window.matchMedia('(max-width: 1023px)');
 let menu = document.querySelector('.menu li:nth-child(2)');
 
 // Flechas para el player history de la interfaz de standings.
@@ -19,6 +19,11 @@ let tabla = document.querySelectorAll('.tabla-rank');
 // Main de rounds.
 let cards = document.querySelectorAll('.border-card .card');
 
+// Contenedor de brackets.
+let contenedorBrackets = document.querySelector('.main.brackets .cards-container .round-matchs');
+let menuMobile = document.querySelector('.round-title-mobile');
+let contadorToques = 0;
+let inicioX;
 
 // EVENTS LISTENERS
 
@@ -35,6 +40,17 @@ function cargarEventListeners(){
         tablaInfo.addEventListener('click', anterior);
         window.addEventListener('load', acortarNombresTabla);
         window.addEventListener('resize', cerrarHistorial);
+    }
+    
+    if(contenedorBrackets){
+        contenedorBrackets.addEventListener('touchstart', iniciarToque);
+        contenedorBrackets.addEventListener('touchmove', movimientoToque);
+        contenedorBrackets.addEventListener('touchend', finalizarToque);
+    }
+
+    if(menuMobile) {
+        menuMobile.addEventListener('touchstart', desplazamientoMenu);
+        window.addEventListener('resize', tamanioBarra);
     }
 
     if(cards) {
@@ -64,6 +80,272 @@ function cargarEventListeners(){
 
 /* FUNCIONES. */
 
+/* MOBILE TOUCH EN INTERFAZ DE BRACKETS */
+
+
+/* MENU */
+
+/* Función para adaptar el tamaño de la barra si hay un cambio en el tamaño o rotación de pantalla. */
+function tamanioBarra() {
+    let botones = document.querySelectorAll('.round-title-mobile > a');
+    let barra = document.querySelector('.round-title-mobile span.barra');
+
+    botones.forEach( boton => {
+        if(boton.classList.contains('active')){
+            let pixeles = boton.offsetLeft;
+            let ancho = boton.offsetWidth;
+
+            barra.style.left = pixeles + 'px';
+            barra.style.width = ancho + 'px';
+        }
+    });
+
+}
+
+
+/* Función que permite desplazarse por las diferentes rondas de brackets usando el menú. */
+function desplazamientoMenu(e){
+    e.preventDefault();
+    let botones = document.querySelectorAll('.round-title-mobile > a');
+    let barra = document.querySelector('.round-title-mobile span.barra');
+    
+    if(e.target.classList.contains('round-16')) {
+        let pixeles = e.target.offsetLeft;
+        let ancho = e.target.offsetWidth;
+        contadorToques = 0;
+
+        botones.forEach( boton => {
+            boton.classList.remove('active');
+        })
+
+        contenedorBrackets.style.left = 0;
+        barra.style.left = pixeles + 'px';
+        barra.style.width = ancho + 'px';
+        e.target.classList.add('active');
+    } else if(e.target.classList.contains('q-final') ) {
+        let pixeles = e.target.offsetLeft;
+        let ancho = e.target.offsetWidth;
+        let pantalla = window.screen.width;
+        let margen = (317 * 2) - pantalla;
+        contadorToques = 1;
+
+        if(margen < 0) {
+            margen = ((margen) * -1);
+        }
+
+        contenedorBrackets.style.left = '-' + (margen) + 'px';
+        barra.style.left = pixeles + 'px';
+        barra.style.width = ancho + 'px';
+        botones.forEach( boton => {
+            boton.classList.remove('active');
+        })
+        e.target.classList.add('active');
+    } else if(e.target.classList.contains('s-final')) {
+        let pixeles = e.target.offsetLeft;
+        let ancho = e.target.offsetWidth;
+        let pantalla = window.screen.width;
+        let margen = (317 * 2) - pantalla;
+        contadorToques = 2;
+
+        if(margen < 0) {
+            margen = ((margen) * -1);
+        }
+
+        contenedorBrackets.style.left = '-' + (margen + 317) + 'px';
+        barra.style.left = pixeles + 'px';
+        barra.style.width = ancho + 'px';
+        botones.forEach( boton => {
+            boton.classList.remove('active');
+        })
+        e.target.classList.add('active');
+    } else if(e.target.classList.contains('final')) {
+        let pixeles = e.target.offsetLeft;
+        let ancho = e.target.offsetWidth;
+        let pantalla = window.screen.width;
+        let margen = (317 * 2) - pantalla;
+        contadorToques = 3;
+
+        if(margen < 0) {
+            margen = ((margen) * -1);
+        }
+
+        contenedorBrackets.style.left = '-' + (margen + 634) + 'px';
+        barra.style.left = pixeles + 'px';
+        barra.style.width = ancho + 'px';
+        botones.forEach( boton => {
+            boton.classList.remove('active');
+        })
+        e.target.classList.add('active');
+    }
+
+}
+
+
+   
+/* TÁCTIL */
+
+function iniciarToque(e) {
+    inicioX = e.touches[0].clientX;
+}
+
+function movimientoToque(e) {
+
+    toque = e.touches[0];
+    deslizamiento = inicioX - toque.clientX;
+
+    if(deslizamiento < -50) {
+        return;
+    }
+
+}
+
+function finalizarToque(e) {
+    let deslizamiento = inicioX - e.changedTouches[0].clientX;
+    let pantalla = window.screen.width;
+    let botones = document.querySelectorAll('.round-title-mobile > a');
+    let barra = document.querySelector('.round-title-mobile span.barra');
+
+    if( window.screen.width > 1023){
+        return;
+    }
+
+    if(deslizamiento < -50) {
+            if(contadorToques === 3){
+                let ancho = botones[2].offsetWidth;
+                let pixeles = botones[2].offsetLeft;
+                let pantalla = window.screen.width;
+                let margen = (317 * 2) - pantalla;
+    
+                if(margen < 0) {
+                    margen = ((margen) * -1);
+                }
+                
+                contenedorBrackets.style.left = '-' + (margen + 317) + 'px';
+    
+                
+    
+                botones.forEach( boton => {
+                    boton.classList.remove('active');
+                })
+    
+                botones[2].classList.add('active');
+                barra.style.left = pixeles + 'px';
+                barra.style.width = ancho + 'px';
+    
+                contadorToques = 2;
+            } else if(contadorToques === 2){
+                let ancho = botones[1].offsetWidth;
+                let pixeles = botones[1].offsetLeft;
+                let pantalla = window.screen.width;
+                let margen = (317 * 2) - pantalla;
+    
+                if(margen < 0) {
+                    margen = ((margen) * -1);
+                }
+    
+                contenedorBrackets.style.left = '-' + (margen) + 'px';
+    
+                botones.forEach( boton => {
+                    boton.classList.remove('active');
+                })
+                
+                botones[1].classList.add('active');
+                barra.style.left = pixeles + 'px';
+                barra.style.width = ancho + 'px';
+    
+                contadorToques = 1;
+            } else if(contadorToques === 1){
+                let ancho = botones[0].offsetWidth;
+                let pixeles = botones[0].offsetLeft;
+    
+                contenedorBrackets.style.left = 0;
+    
+                botones.forEach( boton => {
+                    boton.classList.remove('active');
+                })
+    
+                botones[0].classList.add('active');
+                barra.style.left = pixeles + 'px';
+                barra.style.width = ancho + 'px';
+                contadorToques = 0;
+            } else if(contadorToques === 0){
+                return;
+            }
+    
+    } else if(deslizamiento > 50){
+            if(contadorToques === 0){
+                let ancho = botones[1].offsetWidth;
+                let pixeles = botones[1].offsetLeft;
+                let pantalla = window.screen.width;
+                let margen = (317 * 2) - pantalla;
+    
+                if(margen < 0) {
+                    margen = ((margen) * -1);
+                }
+    
+                contenedorBrackets.style.left = '-' + (margen) + 'px';
+    
+                botones.forEach( boton => {
+                    boton.classList.remove('active');
+                })
+                
+                botones[1].classList.add('active');
+                barra.style.left = pixeles + 'px';
+                barra.style.width = ancho + 'px';
+    
+                contadorToques = 1;
+            } else if(contadorToques === 1){
+                let ancho = botones[2].offsetWidth;
+                let pixeles = botones[2].offsetLeft;
+                let pantalla = window.screen.width;
+                let margen = (317 * 2) - pantalla;
+    
+                if(margen < 0) {
+                    margen = ((margen) * -1);
+                }
+                
+                contenedorBrackets.style.left = '-' + (margen + 317) + 'px';
+    
+                
+    
+                botones.forEach( boton => {
+                    boton.classList.remove('active');
+                })
+    
+                botones[2].classList.add('active');
+                barra.style.left = pixeles + 'px';
+                barra.style.width = ancho + 'px';
+    
+                contadorToques = 2;
+            } else if(contadorToques === 2){
+                let ancho = botones[3].offsetWidth;
+                let pixeles = botones[3].offsetLeft;
+                let pantalla = window.screen.width;
+                let margen = (317 * 2) - pantalla;
+    
+                if(margen < 0) {
+                    margen = ((margen) * -1);
+                }
+                
+                contenedorBrackets.style.left = '-' + (margen + 634) + 'px';
+    
+                botones.forEach( boton => {
+                    boton.classList.remove('active');
+                })
+    
+                botones[3].classList.add('active');
+                barra.style.left = pixeles + 'px';
+                barra.style.width = ancho + 'px';
+    
+                contadorToques = 3;
+            } else if(contadorToques === 3){
+                return;
+            }
+    
+    
+    }
+
+}
 
 // Función que cierra un historial al abrir otro.
 
@@ -420,6 +702,7 @@ function acortarNombresCards() {
         nombreCard.childNodes[0].data = nombreCard.childNodes[0].data.trim();
         if(nombreCard.childNodes[0].data.length >= 15) {
             nombreCard.childNodes[0].data = nombreCard.childNodes[0].data.substr(0, 12) + '...';
+            console.log("Acortados");
         }
     } );
 
@@ -427,6 +710,7 @@ function acortarNombresCards() {
         nombreTeam.childNodes[0].data = nombreTeam.childNodes[0].data.trim();
         if(nombreTeam.childNodes[0].data.length >= 20) {
             nombreTeam.childNodes[0].data = nombreTeam.childNodes[0].data.substr(0, 17) + '...';
+            console.log("Acortados");
         }
     } );
 }
