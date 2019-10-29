@@ -3023,7 +3023,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   /* Grand Final card */
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final::before {
+  .main-grand-final .grand-final-container .grand-final > .border-card::before {
     content: '';
     position: absolute;
     width: 3px;
@@ -3034,11 +3034,11 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     top: -15px;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .formation {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .formation {
     display: none;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record::before {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record::before {
     content: '';
     position: absolute;
     width: 1px;
@@ -3050,14 +3050,14 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     margin-top: -37px;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player {
     display: grid;
     grid-template-columns: 100%;
     grid-column-gap: unset;
     justify-items: center;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals {
     padding: 0;
     width: 100%;
     display: grid;
@@ -3069,7 +3069,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     grid-row-gap: 20px;
 }
 
-.main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals::before {
+.main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals::before {
   content: '';
   position: absolute;
   width: 111px;
@@ -3081,17 +3081,17 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   margin-top: -.5px;
 }
 
-.main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .ecl-record .record, 
-.main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .goal-per-game .goals {
+.main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .ecl-record .record, 
+.main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .goal-per-game .goals {
   font-size: 18px;
 }
 
-.main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .ecl-record span:last-child,
-.main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .goal-per-game span:last-child {
+.main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .ecl-record span:last-child,
+.main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .goal-per-game span:last-child {
   font-size: 9px;
 }
 
-.main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .ecl-record, .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .goal-per-game {
+.main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .ecl-record, .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .goal-per-game {
   grid-row-gap: 7px;
 }
 
@@ -3230,7 +3230,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   bottom: 19px;
 }
 
-.main-grand-final .grand-final-container .grand-final .border-card.grand-final {
+.main-grand-final .grand-final-container .grand-final > .border-card {
   margin-bottom: 2rem
 }
 
@@ -3370,7 +3370,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   /* Connector Grand Final */
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final::before {
+  .main-grand-final .grand-final-container .grand-final > .border-card::before {
     height: 30px;
     top: -30px;
   }
@@ -3379,26 +3379,26 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   /* Cards and console styles */
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .formation {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .formation {
     display: grid;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final {
+  .main-grand-final .grand-final-container .grand-final > .border-card {
     margin: 0 auto;
     transform: scale(1.25);
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player {
     display: grid;
     grid-template-columns: 45px 80px;
     grid-column-gap: 15px;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player-2 {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player-2 {
     grid-template-columns: 80px 45px;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals {
     padding-top: 8px;
     width: 80px;
     display: grid;
@@ -3408,24 +3408,24 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     position: relative;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals::before {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals::before {
     width: 80px;
     margin-left: -40px;
     top: 58%;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .ecl-record .record, 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .goal-per-game .goals {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .ecl-record .record, 
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .goal-per-game .goals {
     font-size: 14px;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .ecl-record span:last-child,
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .goal-per-game span:last-child {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .ecl-record span:last-child,
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .goal-per-game span:last-child {
     font-size: 7px;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .ecl-record, 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final .card-final .formation-record .player .record-goals .goal-per-game {
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .ecl-record, 
+  .main-grand-final .grand-final-container .grand-final > .border-card .card-final .formation-record .player .record-goals .goal-per-game {
     grid-row-gap: 3px;
   }
 
@@ -3496,7 +3496,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     grid-row-gap: unset;
   }
 
-  .main-grand-final .grand-final-container .grand-final .border-card.grand-final {
+  .main-grand-final .grand-final-container .grand-final > .border-card {
     margin-bottom: unset;
   }
 
@@ -4403,8 +4403,8 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 */
 
+  .game-history .border-card:hover .card, 
   .game-history .border-card.cl-dark:hover .card, 
-  .game-history .border-card.grand-final:hover .card, 
   .game-history .border-card.ps4:hover .card, 
   .game-history .border-card.xbox:hover .card { 
     border: 1px solid #aaa;
@@ -4546,6 +4546,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     display: grid;
     align-content: center;
     align-self: center;
+    justify-content: center;
   }
 
   .card .players-info-games .player .nation-nick .nation img {
@@ -4805,15 +4806,15 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   /* Grand Final */
 
-  .grand-final .border-card.grand-final {
+  .grand-final > .border-card {
     background: linear-gradient(to top,#af8d26,#e3cc91);
   }
 
-  .grand-final .border-card.grand-final .card {
+  .grand-final > .border-card .card {
     border: 1px solid transparent;
   }
 
-  .grand-final .card .players-thumbnails-score .player.win .thumbnail-logo .thumbnail {
+  .grand-final > .border-card .card .players-thumbnails-score .player.win .thumbnail-logo .thumbnail {
     background: linear-gradient(to top,#af8d26,#e3cc91);
   }
 
@@ -4873,8 +4874,8 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   /* Estilos para el borde de las cards */
   
+  .border-card:hover .card, 
   .border-card.cl-dark:hover .card, 
-  .border-card.grand-final:hover .card, 
   .border-card.ps4:hover .card, 
   .border-card.xbox:hover .card {
     border: 1px solid transparent;
@@ -5222,7 +5223,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     background: linear-gradient(to top, #af8d26, #e3cc91);
   }
 
-  .border-card.grand-final .card .players-thumbnails-score .scores .draw .draw {
+  .grand-final > .border-card .card .players-thumbnails-score .scores .draw .draw {
     background: #af8d26;
   }
 
@@ -5266,7 +5267,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
   /* Grand Final */
 
-  .border-card.grand-final .players-thumbnails-score .scores .win {
+  .grand-final > .border-card .players-thumbnails-score .scores .win {
     background: #af8d26;
   }
 
