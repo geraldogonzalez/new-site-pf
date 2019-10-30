@@ -1,21 +1,21 @@
 # New site PF.
 
-### If you want see the website, <a href="https://geraldogonzalez.github.io/new-site-pf/code/index.html" target="_blank">click here</a>
+### If you want see the website, [click here](https://geraldogonzalez.github.io/new-site-pf/code/index.html).
 
 ### List pages:
 
 * PlayStation 4:
-  * [ROUNDS](https://geraldogonzalez.github.io/new-site-pf/code/ps4-rounds.html)<a href="" target="_blank"></a>
-  * [STANDINGS](https://geraldogonzalez.github.io/new-site-pf/code/ps4-standings.html)<a href="" target="_blank"></a>
-  * [BRACKETS](https://geraldogonzalez.github.io/new-site-pf/code/ps4-brackets.html)<a href="" target="_blank"></a>
+  * [ROUNDS](https://geraldogonzalez.github.io/new-site-pf/code/ps4-rounds.html).
+  * [STANDINGS](https://geraldogonzalez.github.io/new-site-pf/code/ps4-standings.html).
+  * [BRACKETS](https://geraldogonzalez.github.io/new-site-pf/code/ps4-brackets.html).
   
 * XBOX ONE:
-  * [ROUNDS](https://geraldogonzalez.github.io/new-site-pf/code/xbox-rounds.html)<a href="" target="_blank"></a>
-  * [STANDINGS](https://geraldogonzalez.github.io/new-site-pf/code/xbox-standings.html)<a href="" target="_blank"></a>
-  * [BRACKETS](https://geraldogonzalez.github.io/new-site-pf/code/xbox-brackets.html)<a href="" target="_blank"></a>
+  * [ROUNDS](https://geraldogonzalez.github.io/new-site-pf/code/xbox-rounds.html).
+  * [STANDINGS](https://geraldogonzalez.github.io/new-site-pf/code/xbox-standings.html).
+  * [BRACKETS](https://geraldogonzalez.github.io/new-site-pf/code/xbox-brackets.html).
   
 * OTHERS:
-  * [INDEX](https://geraldogonzalez.github.io/new-site-pf/code/index.html)<a href="" target="_blank"></a>
-  * [RANKING](https://geraldogonzalez.github.io/new-site-pf/code/ranks.html)<a href="" target="_blank"></a>
-  * [GRAND FINAL](https://geraldogonzalez.github.io/new-site-pf/code/grand-final.html)<a href="" target="_blank"></a>
-  * [GRAND FINAL WINNER](https://geraldogonzalez.github.io/new-site-pf/code/grand-final-winner.html)<a href="" target="_blank"></a>
+  * [INDEX](https://geraldogonzalez.github.io/new-site-pf/code/index.html).
+  * [RANKING](https://geraldogonzalez.github.io/new-site-pf/code/ranks.html).
+  * [GRAND FINAL](https://geraldogonzalez.github.io/new-site-pf/code/grand-final.html).
+  * [GRAND FINAL WINNER](https://geraldogonzalez.github.io/new-site-pf/code/grand-final-winner.html).
