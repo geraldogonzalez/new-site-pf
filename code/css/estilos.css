@@ -4478,6 +4478,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     border-radius: 50%;
     width: 100%;
     height: 100%;
+    background: white;
   }
 
   .card .players-thumbnails-score .player .thumbnail-logo .logo {
