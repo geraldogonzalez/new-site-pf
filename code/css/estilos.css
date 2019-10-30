@@ -2418,27 +2418,31 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 /*  Colores de console */
 
-.main.brackets .cards-container .cards .border-card .connector1, 
-.main.brackets .cards-container .cards .border-card .connector1 .connector2, 
-.main.brackets .cards-container .cards .border-card .connector3, 
-.main.brackets .cards-container .cards .border-card .connector3 .connector4 {
+.main.brackets .cards-container .cards .card-container {
+  position: relative;
+}
+
+.main.brackets .cards-container .cards .card-container .connector1, 
+.main.brackets .cards-container .cards .card-container .connector1 .connector2, 
+.main.brackets .cards-container .cards .card-container .connector3, 
+.main.brackets .cards-container .cards .card-container .connector3 .connector4 {
   position: absolute;
   border: 2px solid #00a661;
   border-left-style: none;
   z-index: 8;
 }
 
-.main.brackets .cards-container .cards .border-card.ps4 .connector1, 
-.main.brackets .cards-container .cards .border-card.ps4 .connector1 .connector2, 
-.main.brackets .cards-container .cards .border-card.ps4 .connector3, 
-.main.brackets .cards-container .cards .border-card.ps4 .connector3 .connector4 {
+.main.brackets.ps4 .cards-container .cards .card-container .connector1, 
+.main.brackets.ps4 .cards-container .cards .card-container .connector1 .connector2, 
+.main.brackets.ps4 .cards-container .cards .card-container .connector3, 
+.main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4 {
   border-color: #4b5ffc;
 }
 
-.main.brackets .cards-container .cards .border-card.cl-dark .connector1, 
-.main.brackets .cards-container .cards .border-card.cl-dark .connector1 .connector2, 
-.main.brackets .cards-container .cards .border-card.cl-dark .connector3, 
-.main.brackets .cards-container .cards .border-card.cl-dark .connector3 .connector4 {
+.main.brackets.cl-dark .cards-container .cards .card-container .connector1, 
+.main.brackets.cl-dark .cards-container .cards .card-container .connector1 .connector2, 
+.main.brackets.cl-dark .cards-container .cards .card-container .connector3, 
+.main.brackets.cl-dark .cards-container .cards .card-container .connector3 .connector4 {
   border-color: #5af7dc;
 }
 
@@ -2446,55 +2450,55 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 /* Estilos generales */
 
-.main.brackets .cards-container .cards .border-card .connector1, 
-.main.brackets .cards-container .cards .border-card .connector3 {
+.main.brackets .cards-container .cards .card-container .connector1, 
+.main.brackets .cards-container .cards .card-container .connector3 {
   height: 53px;
   width: 22px;
   right: -19px;
 }
 
-.main.brackets .cards-container .cards .border-card .connector1 {
+.main.brackets .cards-container .cards .card-container .connector1 {
   top: 53px;
   border-bottom: none;
 }
 
-.main.brackets .cards-container .cards .border-card .connector3 {
+.main.brackets .cards-container .cards .card-container .connector3 {
   bottom: 53px;
   border-top: none;
 }
 
-.main.brackets .cards-container .cards.round-16 .border-card .connector1 .connector2, 
-.main.brackets .cards-container .cards.round-16 .border-card .connector3 .connector4, 
-.main.brackets .cards-container .cards.quarterfinal .border-card .connector1 .connector2, 
-.main.brackets .cards-container .cards.quarterfinal .border-card .connector3 .connector4, 
-.main.brackets .cards-container .cards.semi-final .border-card .connector1 .connector2, 
-.main.brackets .cards-container .cards.semi-final .border-card .connector3 .connector4 {
+.main.brackets .cards-container .cards.round-16 .card-container .connector1 .connector2, 
+.main.brackets .cards-container .cards.round-16 .card-container .connector3 .connector4, 
+.main.brackets .cards-container .cards.quarterfinal .card-container .connector1 .connector2, 
+.main.brackets .cards-container .cards.quarterfinal .card-container .connector3 .connector4, 
+.main.brackets .cards-container .cards.semi-final .card-container .connector1 .connector2, 
+.main.brackets .cards-container .cards.semi-final .card-container .connector3 .connector4 {
   width: 22px;
   right: -24px;
   border-top: none;
 }
 
-.main.brackets .cards-container .cards.round-16 .border-card .connector1 .connector2, 
-.main.brackets .cards-container .cards.quarterfinal .border-card .connector1 .connector2, 
-.main.brackets .cards-container .cards.semi-final .border-card .connector1 .connector2 {
+.main.brackets .cards-container .cards.round-16 .card-container .connector1 .connector2, 
+.main.brackets .cards-container .cards.quarterfinal .card-container .connector1 .connector2, 
+.main.brackets .cards-container .cards.semi-final .card-container .connector1 .connector2 {
   border: none;
 }
 
-.main.brackets .cards-container .cards .border-card .connector1 .connector2 {
+.main.brackets .cards-container .cards .card-container .connector1 .connector2 {
   bottom: -2px;
 }
 
 /* Quarterfinal connectors */
 
-.main.brackets .cards-container .cards.quarterfinal .border-card .connector1,
-.main.brackets .cards-container .cards.quarterfinal .border-card .connector3 {
+.main.brackets .cards-container .cards.quarterfinal .card-container .connector1,
+.main.brackets .cards-container .cards.quarterfinal .card-container .connector3 {
   height: 106px;
 }
 
 /* Semifinal connectors */
 
-.main.brackets .cards-container .cards.semi-final .border-card .connector1,
-.main.brackets .cards-container .cards.semi-final .border-card .connector3 {
+.main.brackets .cards-container .cards.semi-final .card-container .connector1,
+.main.brackets .cards-container .cards.semi-final .card-container .connector3 {
   height: 213px;
 }
 
@@ -2617,30 +2621,30 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
       left: 1458px;
     }
 
-    .main.brackets .cards-container .cards.round-16 .border-card .connector1 .connector2, 
-    .main.brackets .cards-container .cards.round-16 .border-card .connector3 .connector4, 
-    .main.brackets .cards-container .cards.quarterfinal .border-card .connector1 .connector2, 
-    .main.brackets .cards-container .cards.quarterfinal .border-card .connector3 .connector4, 
-    .main.brackets .cards-container .cards.semi-final .border-card .connector1 .connector2, 
-    .main.brackets .cards-container .cards.semi-final .border-card .connector3 .connector4 {
+    .main.brackets .cards-container .cards.round-16 .card-container .connector1 .connector2, 
+    .main.brackets .cards-container .cards.round-16 .card-container .connector3 .connector4, 
+    .main.brackets .cards-container .cards.quarterfinal .card-container .connector1 .connector2, 
+    .main.brackets .cards-container .cards.quarterfinal .card-container .connector3 .connector4, 
+    .main.brackets .cards-container .cards.semi-final .card-container .connector1 .connector2, 
+    .main.brackets .cards-container .cards.semi-final .card-container .connector3 .connector4 {
       width: 17px;
       right: -19px;
     }
 
-    .main.brackets .cards-container .cards .border-card .connector1, 
-    .main.brackets .cards-container .cards .border-card .connector3 {
+    .main.brackets .cards-container .cards .card-container .connector1, 
+    .main.brackets .cards-container .cards .card-container .connector3 {
       height: 60px;
       width: 17px;
       right: -14px;
     }
 
-    .main.brackets .cards-container .cards.quarterfinal .border-card .connector1, 
-    .main.brackets .cards-container .cards.quarterfinal .border-card .connector3 {
+    .main.brackets .cards-container .cards.quarterfinal .card-container .connector1, 
+    .main.brackets .cards-container .cards.quarterfinal .card-container .connector3 {
       height: 117px;
     }
 
-    .main.brackets .cards-container .cards.semi-final .border-card .connector1, 
-    .main.brackets .cards-container .cards.semi-final .border-card .connector3 {
+    .main.brackets .cards-container .cards.semi-final .card-container .connector1,
+    .main.brackets .cards-container .cards.semi-final .card-container .connector3 {
       height: 231px;
     }
   
@@ -4927,11 +4931,24 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     .border-card.playing-now.grand-final, 
     .border-card.playing-now.ps4, 
     .border-card.playing-now.xbox {
-        max-width: 273px;
-        max-height: 98px;
-        justify-content: center;
-        align-content: center;
-    } 
+      max-width: 279px;
+      max-height: 98px;
+      justify-content: center;
+      align-content: center;
+      overflow: hidden;
+    }
+
+    .main.brackets .border-card.livestream.cl-dark, 
+    .main.brackets .border-card.livestream.grand-final, 
+    .main.brackets .border-card.livestream.ps4, 
+    .main.brackets .border-card.livestream.xbox, 
+    .main.brackets .border-card.playing-now.cl-dark, 
+    .main.brackets .border-card.playing-now.grand-final, 
+    .main.brackets .border-card.playing-now.ps4, 
+    .main.brackets .border-card.playing-now.xbox {
+      max-width: 279px;
+      max-height: 104px;
+    }
     
     .border-card.livestream.cl-dark:hover .card, 
     .border-card.livestream.grand-final:hover .card, 
@@ -4942,48 +4959,48 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     .border-card.playing-now.ps4:hover .card, 
     .border-card.playing-now.xbox:hover .card {
       border: 1px solid #aaa;
-    } 
+    }
 
-    .border-card .card span.left,
-    .border-card .card span.right {
+    .border-card > span.left,
+    .border-card > span.right {
       position: absolute;
       width: 100%;
-      height: 4px;
+      height: 10px;
       border-radius: 3px;
     }
 
-    .border-card .card span.bottom, 
-    .border-card .card span.top {
+    .border-card > span.bottom, 
+    .border-card > span.top {
       position: absolute;
       height: 100%;
-      width: 4px;
+      width: 10px;
       border-radius: 3px;
     }
 
-    .border-card.livestream .card span.right, 
-    .border-card.playing-now .card span.right {
+    .border-card.livestream > span.right, 
+    .border-card.playing-now > span.right {
       top: -1px;
       left: -1px;
       animation: animation-right 1105ms linear infinite;
     }
 
-    .border-card.livestream .card span.left, 
-    .border-card.playing-now .card span.left {
+    .border-card.livestream > span.left, 
+    .border-card.playing-now > span.left {
       bottom: -1px;
       right: -1px;
       animation: animation-left 1105ms linear infinite;
     }
 
-    .border-card.livestream .card span.bottom, 
-    .border-card.playing-now .card span.bottom {
+    .border-card.livestream > span.bottom, 
+    .border-card.playing-now > span.bottom {
       top: 0;
       right: -1px;
       animation: animation-bottom 1105ms linear infinite;
       animation-delay: .552s;
     }
 
-    .border-card.livestream .card span.top, 
-    .border-card.playing-now .card span.top {
+    .border-card.livestream > span.top, 
+    .border-card.playing-now > span.top {
       top: 0;
       left: -1px;
       animation: animation-top 1105ms linear infinite;
@@ -4994,95 +5011,93 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
     /* XBOX */
 
-    .border-card.livestream.xbox .card span.right, 
-    .border-card.playing-now.xbox .card span.right {
-      background: linear-gradient(to right,white,#00a661,#abe354,white);
+    .border-card.livestream.xbox > span.right, 
+    .border-card.playing-now.xbox > span.right {
+      background: linear-gradient(to right,#00a661,#abe354);
     }
 
-    .border-card.livestream.xbox .card span.left, 
-    .border-card.playing-now.xbox .card span.left {
-      background: linear-gradient(to left,white,#00a661,#abe354,white);
+    .border-card.livestream.xbox > span.left, 
+    .border-card.playing-now.xbox > span.left {
+      background: linear-gradient(to left,#00a661,#abe354);
     }
 
-    .border-card.livestream.xbox .card span.bottom, 
-    .border-card.playing-now.xbox .card span.bottom {
-      background: linear-gradient(to bottom,white,#00a661,#abe354,white);
+    .border-card.livestream.xbox > span.bottom, 
+    .border-card.playing-now.xbox > span.bottom {
+      background: linear-gradient(to bottom,#00a661,#abe354);
     }
 
-    .border-card.livestream.xbox .card span.top, 
-    .border-card.playing-now.xbox .card span.top {
-      background: linear-gradient(to top,white,#00a661,#abe354,white);
+    .border-card.livestream.xbox > span.top, 
+    .border-card.playing-now.xbox > span.top {
+      background: linear-gradient(to top,#00a661,#abe354);
     }
 
 
 
     /* PS4 */
 
-    .border-card.livestream.ps4 .card span.right, 
-    .border-card.playing-now.ps4 .card span.right {
-      background: linear-gradient(to right,white,#4b5ffc,#36c5fd,white);
+    .border-card.livestream.ps4 > span.right, 
+    .border-card.playing-now.ps4 > span.right {
+      background: linear-gradient(to right,#4b5ffc,#36c5fd);
     }
     
-    .border-card.livestream.ps4 .card span.left, 
-    .border-card.playing-now.ps4 .card span.left {
-      background: linear-gradient(to left,white,#4b5ffc,#36c5fd,white);
+    .border-card.livestream.ps4 > span.left, 
+    .border-card.playing-now.ps4 > span.left {
+      background: linear-gradient(to left,#4b5ffc,#36c5fd);
     }
 
-    .border-card.livestream.ps4 .card span.bottom, 
-    .border-card.playing-now.ps4 .card span.bottom {
-      background: linear-gradient(to bottom,white,#4b5ffc,#36c5fd,white);
+    .border-card.livestream.ps4 > span.bottom, 
+    .border-card.playing-now.ps4 > span.bottom {
+      background: linear-gradient(to bottom,#4b5ffc,#36c5fd);
     }
     
-    .border-card.livestream.ps4 .card span.top, 
-    .border-card.playing-now.ps4 .card span.top {
-      background: linear-gradient(to top,white,#4b5ffc,#36c5fd,white);
+    .border-card.livestream.ps4 > span.top, 
+    .border-card.playing-now.ps4 > span.top {
+      background: linear-gradient(to top,#4b5ffc,#36c5fd);
     }
   
 
     
     /* Champions League Dark */
 
-    .border-card.livestream.cl-dark .card span.right, 
-    .border-card.playing-now.cl-dark .card span.right {
-      background: linear-gradient(to right,white,#5af7dc,white);
+    .border-card.livestream.cl-dark > span.right, 
+    .border-card.playing-now.cl-dark > span.right {
+      background: linear-gradient(to right,#5af7dc);
     }
     
-    .border-card.livestream.cl-dark .card span.left, 
-    .border-card.playing-now.cl-dark .card span.left {
-      background: linear-gradient(to left,white,#5af7dc,white);
+    .border-card.livestream.cl-dark > span.left, 
+    .border-card.playing-now.cl-dark > span.left {
+      background: linear-gradient(to left,#5af7dc);
     }
 
-    .border-card.livestream.cl-dark .card span.bottom, 
-    .border-card.playing-now.cl-dark .card span.bottom {
-      background: linear-gradient(to bottom,white,#5af7dc,white);
+    .border-card.livestream.cl-dark > span.bottom, 
+    .border-card.playing-now.cl-dark > span.bottom {
+      background: linear-gradient(to bottom,#5af7dc);
     }
     
-    .border-card.livestream.cl-dark .card span.top, 
-    .border-card.playing-now.cl-dark .card span.top {
-      background: linear-gradient(to top,white,#5af7dc,white);
+    .border-card.livestream.cl-dark > span.top, 
+    .border-card.playing-now.cl-dark > span.top {
+      background: linear-gradient(to top,#5af7dc);
     }
-
-
 
     /* Grand final */
 
-    .border-card.livestream.grand-final .card span.right, 
-    .border-card.playing-now.grand-final .card span.right {
+    .border-card.livestream.grand-final > span.right, 
+    .border-card.playing-now.grand-final > span.right {
       background: linear-gradient(to right,white,#af8d26,#e3cc91,white);
     }
     
-    .border-card.livestream.grand-final .card span.left, 
-    .border-card.playing-now.grand-final .card span.left {
+    .border-card.livestream.grand-final > span.left, 
+    .border-card.playing-now.grand-final > span.left {
       background: linear-gradient(to left,white,#af8d26,#e3cc91,white);
     }
 
-    .border-card.livestream.grand-final .card span.bottom,
-    .border-card.playing-now.grand-final .card span.bottom {
+    .border-card.livestream.grand-final > span.bottom,
+    .border-card.playing-now.grand-final > span.bottom {
       background: linear-gradient(to bottom,white,#af8d26,#e3cc91,white);
     }
     
-    .border-card.livestream.grand-final .card span.top, 
-    .border-card.playing-now.grand-final .card span.top {
+    .border-card.livestream.grand-final > span.top, 
+    .border-card.playing-now.grand-final > span.top {
       background: linear-gradient(to top,white,#af8d26,#e3cc91,white);
     }
 
@@ -5348,8 +5363,8 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     .border-card.playing-now.grand-final, 
     .border-card.playing-now.ps4, 
     .border-card.playing-now.xbox {
-      max-width: 330px;
-      max-height: 105px;
+      max-width: 336px;
+      max-height: 111px;
     }
 
     .main.brackets .border-card.livestream.cl-dark, 
