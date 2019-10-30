@@ -5622,6 +5622,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   font-weight: normal;
   color: #bdbdbd;
   transition: all .3s ease;
+  text-transform: uppercase;
 }
 
 .main.brackets .rounds-container .round div.round-status h3 {
@@ -5720,7 +5721,6 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 .main.rounds .rounds-container .rounds .round.playing a h3 {
   color: black;
-  text-transform: uppercase;
 }
 
 .main.rounds .rounds-container .rounds .round.playing a div {
