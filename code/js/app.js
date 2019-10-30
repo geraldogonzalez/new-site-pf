@@ -545,7 +545,6 @@ function anterior(e) {
 
 // Función para el dropdown mobile.
 function dropdownMenu(e) {
-    e.preventDefault();
 
     if(e.target.classList.contains('dropdown-off')) {
         
