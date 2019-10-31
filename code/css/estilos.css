@@ -267,7 +267,7 @@
   }
   
   .header.header.standings .contenedor-header nav .menu > li:nth-child(2) > a {
-    grid-template-columns: 24px 56px;
+    grid-template-columns: 52px 29px;
   }
 
   .header .contenedor-header nav .menu li:nth-child(2) a .fas {
