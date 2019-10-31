@@ -5724,7 +5724,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 /* Round playing styles */
 
-.main.rounds .rounds-container .rounds .round.playing.active a h3 {
+.main.rounds .rounds-container .rounds .round.playing a h3 {
   color: black;
 }
 
@@ -5738,7 +5738,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   align-items: center;
 }
 
-.main.rounds .rounds-container .rounds .round.playing.active > span {
+.main.rounds .rounds-container .rounds .round.playing > span {
   color: #000;
 }
 
