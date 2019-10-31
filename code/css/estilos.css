@@ -5669,16 +5669,19 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   background: white;
 }
 
-.main.rounds .rounds-container .rounds .round.complete a:hover h3 {
+.main.rounds .rounds-container .rounds .round.complete a:hover h3,
+.main.rounds .rounds-container .rounds .round.complete.active a h3 {
   color: black;
 }
 
-.main.rounds .rounds-container .rounds .round.complete a:hover div {
+.main.rounds .rounds-container .rounds .round.complete a:hover div,
+.main.rounds .rounds-container .rounds .round.complete.active a div {
   color: white;
   background: #00a661;
 }
 
-.main.rounds .rounds-container .rounds .round.complete a:hover + span.date {
+.main.rounds .rounds-container .rounds .round.complete a:hover + span.date,
+.main.rounds .rounds-container .rounds .round.complete.active a + span.date {
   color: #000;
 }
 
