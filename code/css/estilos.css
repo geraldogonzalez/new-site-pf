@@ -1402,12 +1402,13 @@
 
   .tabla-standings tbody tr td:first-child {
     letter-spacing: -0.2px;
-  }
-
-  .tabla-standings tbody tr td:first-child {
     font-size: 1rem;
     justify-self: start;
     padding-left: 9px;
+  }
+
+  .tabla-standings tbody tr td:first-child img {
+    background: white;
   }
 
   .ps4 .tabla-standings tbody tr td:first-child {
