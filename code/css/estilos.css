@@ -5671,18 +5671,18 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 }
 
 .main.rounds .rounds-container .rounds .round.complete a:hover h3,
-.main.rounds .rounds-container .rounds .round.complete.active a h3 {
+.main.rounds .rounds-container .rounds .round.active a h3 {
   color: black;
 }
 
 .main.rounds .rounds-container .rounds .round.complete a:hover div,
-.main.rounds .rounds-container .rounds .round.complete.active a div {
+.main.rounds .rounds-container .rounds .round.active a div {
   color: white;
   background: #00a661;
 }
 
 .main.rounds .rounds-container .rounds .round.complete a:hover + span.date,
-.main.rounds .rounds-container .rounds .round.complete.active a + span.date {
+.main.rounds .rounds-container .rounds .round.active a + span.date {
   color: #000;
 }
 
@@ -5724,7 +5724,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 /* Round playing styles */
 
-.main.rounds .rounds-container .rounds .round.playing a h3 {
+.main.rounds .rounds-container .rounds .round.playing.active a h3 {
   color: black;
 }
 
@@ -5738,7 +5738,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   align-items: center;
 }
 
-.main.rounds .rounds-container .rounds .round.playing > span {
+.main.rounds .rounds-container .rounds .round.playing.active > span {
   color: #000;
 }
 
