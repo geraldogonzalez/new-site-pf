@@ -1059,7 +1059,6 @@
 
     .main-grand-final .hours {
       max-width: 1000px;
-      padding-left: 48px;
     }
 
     .main-grand-final .hours div {
@@ -1452,7 +1451,7 @@
 
   .tabla-standings tbody tr td:nth-child(8) {
     grid-column-gap: 4px;
-    justify-content: center;
+    justify-content: end;
   }
 
   .tabla-standings tbody tr td .last-matches.five {
@@ -1563,6 +1562,56 @@
     display: none;
     align-items: center;
     justify-items: center;
+  }
+
+
+
+  /* SEARCH WITHOUT RESULTS */
+
+  .tabla-standings tbody tr.no-results {
+    grid-template-rows: unset;
+    grid-template-columns: 100%;
+    align-items: unset;
+    height: 300px;
+    padding-top: 85px;
+    border-bottom: none;
+    overflow: visible;
+  }
+
+  .tabla-standings tbody tr.no-results:hover {
+    background: white;
+    cursor: default;
+  }
+
+  .tabla-standings tbody tr.no-results td:first-child {
+    grid-template-columns: unset;
+    grid-column-gap: unset;
+    font-size: unset;
+    letter-spacing: unset;
+    padding: 0;
+    justify-content: center;
+    justify-items: center;
+    grid-auto-flow: row;
+    grid-template-rows: 106px 33px 18px;
+    min-height: 100%;
+    max-height: 100%;
+    width: 100%;
+    grid-row-gap: 30px;
+    opacity: 1;
+    overflow: visible;
+  }
+
+  .tabla-standings tbody tr.no-results td > h2 {
+  font-size: 33px;
+    line-height: 33px;
+    font-family: NimbusSanCon-Bol;
+    color: #161616;
+    font-weight: normal;
+  }
+
+  .tabla-standings tbody tr.no-results td > p {
+    color: #a3a3a3;
+    font-size: 18px;
   }
 
  /* ---------- MEDIAQUERIES STANDINGS ----------*/
@@ -2327,7 +2376,7 @@
 }
 
 .main.brackets .cards-container {
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 .main.brackets .cards-container .round-matchs {
@@ -2417,7 +2466,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 /* ESTILOS PARA CONECTORES */
 
-/*  Colores de console */
+/*  Colores de consola */
 
 .main.brackets .cards-container .cards .card-container {
   position: relative;
@@ -2820,27 +2869,27 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 @media screen and (min-width: 1800px) {
 
   .main.brackets .round-title .rounds-container {
-    padding-left: 168px;
+    padding-left: 270px;
   }
 
   .main.brackets .cards-container .round-matchs {
-    padding-left: 188px;
+    padding-left: 294px;
   }
 
   .main.brackets .cards-container .round-matchs .cards span.vertical-line {
-    left: 537px;
+    left: 642px;
   }
 
   .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
-    left: 901px;
+    left: 1007px;
   }
 
   .main.brackets .cards-container .round-matchs .cards.semi-final span.vertical-line {
-    left: 1265px;
+    left: 1371px;
   }
 
   .main.brackets .cards-container .round-matchs .cards.final span.vertical-line {
-    left: 1628px;
+    left: 1734px;
   }
 
 }
@@ -2850,11 +2899,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 /* MEDIAQUERIE SCREEN 1800px */
 
 @media screen and (min-width: 1900px) {
-  
-  .header.brackets .contenedor-header {
-    max-width: unset;
-    padding: 0 100px 0 192px;
-  }
+
 
   .header.brackets .contenedor-header .consola {
     padding: 0;
@@ -2879,7 +2924,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   margin: 0 auto;
   padding-bottom: 80px;
   position: relative;
-  background: url(../img/FIFA20_Texture_BG_Light.png) center center;
+  background: url(../img/FIFA20_Texture_BG_Light.png) no-repeat;
 }
 
 .main-grand-final .grand-final-container img.fondo {
@@ -4663,6 +4708,12 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
 
 /* Grand Final card styles */
 
+.card-container {
+  z-index: 20;
+  position: relative;
+  border-radius: 13px;
+}
+
 .border-card-final {
   max-width: 279px;
   max-height: 202px;
@@ -4833,7 +4884,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
     /* XBOX */
 
   .border-card.xbox:hover {
-    background: linear-gradient(to right,#00a661,#abe354);
+    /* background: linear-gradient(to right,#00a661,#abe354); */
   }
 
   
@@ -4841,7 +4892,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   /* PS4 */
   
   .border-card.ps4:hover {
-    background: linear-gradient(to right,#4b5ffc,#36c5fd);
+    /* background: linear-gradient(to right,#4b5ffc,#36c5fd); */
   }
 
   
@@ -4849,7 +4900,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   /* Champions League Dark */
 
   .border-card.cl-dark:hover {
-    background: #5af7dc;
+   /* background: #5af7dc; */
   }
 
   
@@ -4857,7 +4908,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   /* XBOX final card */
 
   .border-card-final.xbox:hover {
-    background: linear-gradient(to top,#00a661,#abe354);
+    /*background: linear-gradient(to top,#00a661,#abe354);*/
   }
 
 
@@ -4865,7 +4916,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   /* PS4 final card */
 
   .border-card-final.ps4:hover {
-    background: linear-gradient(to top,#4b5ffc,#36c5fd);
+    /*background: linear-gradient(to top,#4b5ffc,#36c5fd);*/
   }
 
 
@@ -4873,7 +4924,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   /* Champions League Dark */
 
   .border-card-final.cl-dark:hover {
-    background: #5af7dc;
+    /*background: #5af7dc;*/
   }
 
 
@@ -4884,7 +4935,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   .border-card.cl-dark:hover .card, 
   .border-card.ps4:hover .card, 
   .border-card.xbox:hover .card {
-    border: 1px solid transparent;
+    /*border: 1px solid transparent;*/
   }
 
 }
@@ -5714,12 +5765,6 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   margin-top: -6px;
   margin-left: 41px;
 }
-
-.main.rounds .rounds-container .rounds .round.upcoming a {
-  cursor: default;
-}
-
-
 
 
 /* Round playing styles */
