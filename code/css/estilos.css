@@ -4712,6 +4712,7 @@ main.brackets .cards-container .round-matchs .cards.final .view-grand-final img 
   z-index: 20;
   position: relative;
   border-radius: 13px;
+  background: white;
 }
 
 .border-card-final {
