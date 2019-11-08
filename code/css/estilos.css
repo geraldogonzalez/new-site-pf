@@ -2412,6 +2412,33 @@ align-content: space-around;
 padding-top: 16px;
 }
 
+.main.brackets .cards-container .cards:nth-child(+n+2) .card-container .border-card::before,
+.main.brackets .cards-container .cards:nth-child(+n+2) .card-container::before {
+  position: absolute;
+  content: "";
+  background: #00a661;
+  height: 2px;
+  width: 10px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.main.brackets.ps4 .cards-container .cards:nth-child(+n+2) .card-container .border-card::before,
+.main.brackets.ps4 .cards-container .cards:nth-child(+n+2) .card-container::before {
+  background: #4b5ffc;
+}
+
+.main.brackets .cards-container .cards.semi-final .card-container .border-card::before,
+.main.brackets .cards-container .cards.semi-final .card-container::before {
+  margin-top: 0;
+}
+
+.main.brackets .cards-container .cards.final .card-container .border-card-final::before, 
+.main.brackets .cards-container .cards.final .card-container::before {
+  top: 74%;
+  margin-top: -2px;
+}
+
 .main.brackets .cards-container .round-matchs .cards.final {
 align-content: center;
 grid-row-gap: 15px;
@@ -2423,10 +2450,11 @@ justify-items: center;
 }
 
 .main.brackets .cards-container .round-matchs .cards.final .border-card {
-margin-top: 166px;
+  margin-top: 166px;
 }
 
-.main.brackets .cards-container .round-matchs .cards.final .border-card::after {
+.main.brackets .cards-container .cards.final .card-container .border-card-final::after,
+.main.brackets .cards-container .cards.final .card-container::after {
 content: '';
 position: absolute;
 height: 19px;
@@ -2607,6 +2635,30 @@ height: 213px;
     padding-top: 30px;
   }
 
+  .main.brackets .cards-container .cards.semi-final .card-container .border-card::before, 
+  .main.brackets .cards-container .cards.semi-final .card-container::before {
+    margin-top: -1px;
+  }
+
+  .main.brackets .cards-container .cards.final .card-container .border-card::before, 
+  .main.brackets .cards-container .cards.final .card-container::before {
+    top: 50%;
+    margin-top: -1px;
+  }
+
+  .main.brackets .cards-container .cards.final .card-container .border-card-final::after, 
+  .main.brackets .cards-container .cards.final .card-container::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 35px;
+    background: #af8d26;
+    top: 50%;
+    margin-top: -1px;
+    right: -31px;
+    left: unset;
+  }
+
   .main.brackets .cards-container .round-matchs .cards.grand-final {
     display: grid;
   }
@@ -2617,21 +2669,6 @@ height: 213px;
 
   .main.brackets .cards-container .round-matchs .cards.final div.view-grand-final {
     display: none;
-  }
-
-  .main.brackets .cards-container .round-matchs .cards.final .border-card::after {
-    display: none;
-  }
-
-  .main.brackets .cards-container .round-matchs .cards.final .border-card::before {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 35px;
-    background: #af8d26;
-    top: 50%;
-    margin-top: -1px;
-    right: -31px;
   }
 
   .main.brackets .cards-container .round-matchs .cards.grand-final div.view-grand-final {
@@ -2683,7 +2720,7 @@ height: 213px;
   .main.brackets .cards-container .cards .card-container .connector1, 
   .main.brackets .cards-container .cards .card-container .connector3 {
     height: 60px;
-    width: 17px;
+    width: 20px;
     right: -14px;
   }
 
@@ -4658,10 +4695,12 @@ justify-content: center;
 .card .players-info-games .player .nation-nick .nick p {
   font-size: 18px;
   color: #000;
+  white-space: pre;
 }
 
 .card .players-info-games .player2 .nation-nick .nick p {
   text-align: right;
+  white-space: normal;
 }
 
 .card .players-info-games .player .team {
@@ -4669,10 +4708,12 @@ justify-content: center;
   color: #040404;
   font-style: italic;
   opacity: .7;
+  white-space: pre;
 }
 
 .card .players-info-games .player2 .team {
   text-align: right;
+  white-space: normal;
 }
 
 .card .players-info-games .games {
@@ -5059,6 +5100,13 @@ letter-spacing: .5px;
     max-width: 279px;
     max-height: 104px;
   }
+
+  .main.brackets .border-card-final.livestream.ps4,
+  .main.brackets .border-card-final.playing-now.ps4,
+  .main.brackets .border-card-final.livestream.xbox,
+  .main.brackets .border-card-final.playing-now.xbox {
+    max-height: 201px;
+  }
   
   .border-card.livestream.cl-dark:hover .card, 
   .border-card.livestream.grand-final:hover .card, 
@@ -5197,7 +5245,7 @@ letter-spacing: .5px;
   .border-card.playing-now.border-card-final.xbox .card > span.left,
   .border-card.playing-now.border-card-final.xbox > span.right,
   .border-card.playing-now.border-card-final.xbox .card > span.right  {
-    background: linear-gradient(to top,white,white);
+    background: linear-gradient(to top,transparent,transparent);
   }
 
   /* PS4 */
@@ -5256,7 +5304,7 @@ letter-spacing: .5px;
   .border-card.playing-now.border-card-final.ps4 .card > span.left,
   .border-card.playing-now.border-card-final.ps4 > span.right,
   .border-card.playing-now.border-card-final.ps4 .card > span.right {
-    background: linear-gradient(to top,white,white);
+    background: linear-gradient(to top,transparent,transparent);
   }
   
   /* Champions League Dark */
@@ -5315,7 +5363,7 @@ letter-spacing: .5px;
   .border-card.playing-now.border-card-final.cl-dark .card > span.left,
   .border-card.playing-now.border-card-final.cl-dark > span.right,
   .border-card.playing-now.border-card-final.cl-dark .card > span.right  {
-    background: linear-gradient(to top,white,white);
+    background: linear-gradient(to top,transparent,transparent);
   }
 
   /* Grand final */
@@ -5358,7 +5406,7 @@ letter-spacing: .5px;
   .border-card.playing-now.border-card-final .card > span.bottom, 
   .border-card.playing-now.border-card-final .card > span.left, 
   .border-card.playing-now.border-card-final .card > span.right {
-    background: linear-gradient(to top,white,white);
+    background: linear-gradient(to top,transparent,transparent);
   }
 
      
@@ -5661,6 +5709,13 @@ letter-spacing: .5px;
   .main.brackets .border-card.playing-now.xbox {
     max-width: 336px;
     max-height: 111px;
+  }
+
+  .main.brackets .border-card-final.livestream.ps4,
+  .main.brackets .border-card-final.playing-now.ps4,
+  .main.brackets .border-card-final.livestream.xbox,
+  .main.brackets .border-card-final.playing-now.xbox {
+    max-height: 216px;
   }
 
   .border-card-final.livestream,
