@@ -3228,8 +3228,19 @@ background: linear-gradient(to top,#00a661,#abe354);
 padding: 2px;
 }
 
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.ps4,
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.xbox {
+  background: transparent;
+}
+
+
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card .card {
 border: 1px solid transparent;
+}
+
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.ps4 .card,
+.main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.xbox .card {
+  border: 1px solid #aaa;
 }
 
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.default .card {
@@ -3631,8 +3642,8 @@ border-bottom-style: none;
 
 .main-grand-final .grand-final-container .grand-final .consolas .conector1 {
   width: 66.5%;
-  height: 33px;
-  bottom: -36px;
+  height: 34px;
+  bottom: -38px;
   border-bottom-style: none;
 }
 
@@ -5135,28 +5146,36 @@ letter-spacing: .5px;
   .border-card.livestream.xbox > span.right, 
   .border-card.playing-now.xbox > span.right,
   .border-card.livestream.xbox .card > span.right, 
-  .border-card.playing-now.xbox .card > span.right {
+  .border-card.playing-now.xbox .card > span.right,
+  .border-card.livestream.border-card-final.xbox > span.right,
+  .border-card.livestream.border-card-final.xbox .card > span.right {
     background: linear-gradient(to right,white,#00a661,#abe354,white);
   }
 
   .border-card.livestream.xbox > span.left, 
   .border-card.playing-now.xbox > span.left,
   .border-card.livestream.xbox .card > span.left, 
-  .border-card.playing-now.xbox .card > span.left {
+  .border-card.playing-now.xbox .card > span.left,
+  .border-card.livestream.border-card-final.xbox > span.left,
+  .border-card.livestream.border-card-final.xbox .card > span.left {
     background: linear-gradient(to left,white,#00a661,#abe354,white);
   }
 
   .border-card.livestream.xbox > span.bottom, 
   .border-card.playing-now.xbox > span.bottom,
   .border-card.livestream.xbox .card > span.bottom, 
-  .border-card.playing-now.xbox .card > span.bottom {
+  .border-card.playing-now.xbox .card > span.bottom,
+  .border-card.livestream.border-card-final.xbox > span.bottom,
+  .border-card.livestream.border-card-final.xbox .card > span.bottom {
     background: linear-gradient(to bottom,white,#00a661,#abe354,white);
   }
 
   .border-card.livestream.xbox > span.top, 
   .border-card.playing-now.xbox > span.top,
   .border-card.livestream.xbox .card > span.top, 
-  .border-card.playing-now.xbox .card > span.top {
+  .border-card.playing-now.xbox .card > span.top,
+  .border-card.livestream.border-card-final.xbox > span.top,
+  .border-card.livestream.border-card-final.xbox .card > span.top {
     background: linear-gradient(to top,white,#00a661,#abe354,white);
   }
 
@@ -5169,7 +5188,15 @@ letter-spacing: .5px;
   .border-card.playing-now.xbox .card > span.top, 
   .border-card.playing-now.xbox .card > span.bottom, 
   .border-card.playing-now.xbox .card > span.left, 
-  .border-card.playing-now.xbox .card > span.right  {
+  .border-card.playing-now.xbox .card > span.right,
+  .border-card.playing-now.border-card-final.xbox > span.top,
+  .border-card.playing-now.border-card-final.xbox .card > span.top,
+  .border-card.playing-now.border-card-final.xbox > span.bottom,
+  .border-card.playing-now.border-card-final.xbox .card > span.bottom,
+  .border-card.playing-now.border-card-final.xbox > span.left,
+  .border-card.playing-now.border-card-final.xbox .card > span.left,
+  .border-card.playing-now.border-card-final.xbox > span.right,
+  .border-card.playing-now.border-card-final.xbox .card > span.right  {
     background: linear-gradient(to top,white,white);
   }
 
@@ -5178,28 +5205,36 @@ letter-spacing: .5px;
   .border-card.livestream.ps4 > span.right, 
   .border-card.playing-now.ps4 > span.right,
   .border-card.livestream.ps4 .card > span.right, 
-  .border-card.playing-now.ps4 .card > span.right {
+  .border-card.playing-now.ps4 .card > span.right,
+  .border-card.livestream.border-card-final.ps4 > span.right,
+  .border-card.livestream.border-card-final.ps4 .card > span.right {
     background: linear-gradient(to right,white,#4b5ffc,#36c5fd,white);
   }
   
   .border-card.livestream.ps4 > span.left, 
   .border-card.playing-now.ps4 > span.left,
   .border-card.livestream.ps4 .card > span.left, 
-  .border-card.playing-now.ps4 .card > span.left {
+  .border-card.playing-now.ps4 .card > span.left,
+  .border-card.livestream.border-card-final.ps4 > span.left,
+  .border-card.livestream.border-card-final.ps4 .card > span.left {
     background: linear-gradient(to left,white,#4b5ffc,#36c5fd,white);
   }
 
   .border-card.livestream.ps4 > span.bottom, 
   .border-card.playing-now.ps4 > span.bottom,
   .border-card.livestream.ps4 .card > span.bottom, 
-  .border-card.playing-now.ps4 .card > span.bottom {
+  .border-card.playing-now.ps4 .card > span.bottom,
+  .border-card.livestream.border-card-final.ps4 > span.bottom,
+  .border-card.livestream.border-card-final.ps4 .card > span.bottom {
     background: linear-gradient(to bottom,white,#4b5ffc,#36c5fd,white);
   }
   
   .border-card.livestream.ps4 > span.top, 
   .border-card.playing-now.ps4 > span.top,
   .border-card.livestream.ps4 .card > span.top, 
-  .border-card.playing-now.ps4 .card > span.top {
+  .border-card.playing-now.ps4 .card > span.top,
+  .border-card.livestream.border-card-final.ps4 > span.top,
+  .border-card.livestream.border-card-final.ps4 .card > span.top {
     background: linear-gradient(to top,white,#4b5ffc,#36c5fd,white);
   }
 
@@ -5212,7 +5247,15 @@ letter-spacing: .5px;
   .border-card.playing-now.ps4 .card > span.top, 
   .border-card.playing-now.ps4 .card > span.bottom,
   .border-card.playing-now.ps4 .card > span.left, 
-  .border-card.playing-now.ps4 .card > span.right {
+  .border-card.playing-now.ps4 .card > span.right,
+  .border-card.playing-now.border-card-final.ps4 > span.top,
+  .border-card.playing-now.border-card-final.ps4 .card > span.top,
+  .border-card.playing-now.border-card-final.ps4 > span.bottom,
+  .border-card.playing-now.border-card-final.ps4 .card > span.bottom,
+  .border-card.playing-now.border-card-final.ps4 > span.left,
+  .border-card.playing-now.border-card-final.ps4 .card > span.left,
+  .border-card.playing-now.border-card-final.ps4 > span.right,
+  .border-card.playing-now.border-card-final.ps4 .card > span.right {
     background: linear-gradient(to top,white,white);
   }
   
@@ -5221,28 +5264,36 @@ letter-spacing: .5px;
   .border-card.livestream.cl-dark > span.right, 
   .border-card.playing-now.cl-dark > span.right,
   .border-card.livestream.cl-dark .card > span.right, 
-  .border-card.playing-now.cl-dark .card > span.right {
+  .border-card.playing-now.cl-dark .card > span.right,
+  .border-card.livestream.border-card-final.cl-dark > span.right,
+  .border-card.livestream.border-card-final.cl-dark .card > span.right {
     background: linear-gradient(to right,white,#5af7dc,white);
   }
   
   .border-card.livestream.cl-dark > span.left, 
   .border-card.playing-now.cl-dark > span.left,
   .border-card.livestream.cl-dark .card > span.left, 
-  .border-card.playing-now.cl-dark .card > span.left {
+  .border-card.playing-now.cl-dark .card > span.left,
+  .border-card.livestream.border-card-final.cl-dark > span.left,
+  .border-card.livestream.border-card-final.cl-dark .card > span.left {
     background: linear-gradient(to left,white,#5af7dc,white);
   }
 
   .border-card.livestream.cl-dark > span.bottom, 
   .border-card.playing-now.cl-dark > span.bottom,
   .border-card.livestream.cl-dark .card > span.bottom, 
-  .border-card.playing-now.cl-dark .card > span.bottom {
+  .border-card.playing-now.cl-dark .card > span.bottom,
+  .border-card.livestream.border-card-final.cl-dark > span.bottom,
+  .border-card.livestream.border-card-final.cl-dark .card > span.bottom {
     background: linear-gradient(to bottom,white,#5af7dc,white);
   }
   
   .border-card.livestream.cl-dark > span.top, 
   .border-card.playing-now.cl-dark > span.top,
   .border-card.livestream.cl-dark .card > span.top, 
-  .border-card.playing-now.cl-dark .card > span.top {
+  .border-card.playing-now.cl-dark .card > span.top,
+  .border-card.livestream.border-card-final.cl-dark > span.top,
+  .border-card.livestream.border-card-final.cl-dark .card > span.top {
     background: linear-gradient(to top,white,#5af7dc,white);
   }
 
@@ -5255,7 +5306,15 @@ letter-spacing: .5px;
   .border-card.playing-now.cl-dark .card > span.top, 
   .border-card.playing-now.cl-dark .card > span.bottom, 
   .border-card.playing-now.cl-dark .card > span.left, 
-  .border-card.playing-now.cl-dark .card > span.right {
+  .border-card.playing-now.cl-dark .card > span.right,
+  .border-card.playing-now.border-card-final.cl-dark > span.top,
+  .border-card.playing-now.border-card-final.cl-dark .card > span.top,
+  .border-card.playing-now.border-card-final.cl-dark > span.bottom,
+  .border-card.playing-now.border-card-final.cl-dark .card > span.bottom,
+  .border-card.playing-now.border-card-final.cl-dark > span.left,
+  .border-card.playing-now.border-card-final.cl-dark .card > span.left,
+  .border-card.playing-now.border-card-final.cl-dark > span.right,
+  .border-card.playing-now.border-card-final.cl-dark .card > span.right  {
     background: linear-gradient(to top,white,white);
   }
 
@@ -5300,6 +5359,18 @@ letter-spacing: .5px;
   .border-card.playing-now.border-card-final .card > span.left, 
   .border-card.playing-now.border-card-final .card > span.right {
     background: linear-gradient(to top,white,white);
+  }
+
+     
+  .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.border-card-final:hover .card > span.top, 
+  .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.border-card-final:hover .card > span.bottom, 
+  .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.border-card-final:hover .card > span.left, 
+  .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.border-card-final:hover .card > span.right,
+  .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.border-card-final:hover > span.top, 
+  .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.border-card-final:hover > span.bottom, 
+  .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.border-card-final:hover > span.left, 
+  .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.border-card-final:hover > span.right {
+    background: transparent;
   }
 
   /* Border animation */
