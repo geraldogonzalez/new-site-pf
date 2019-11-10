@@ -4804,6 +4804,13 @@ max-height: 202px;
 overflow: hidden;
 }
 
+.main-grand-final .grand-final > .card-container .border-card-final.livestream,
+.main-grand-final .grand-final > .card-container .border-card-final.playing-now,
+.main-grand-final .grand-final .card-container .border-card-final.livestream,
+.main-grand-final .grand-final .card-container .border-card-final.playing-now {
+  max-height: 202px;
+}
+
 .card-final {
 padding: 12px;
 height: 196px;
@@ -5718,8 +5725,12 @@ letter-spacing: .5px;
     max-height: 216px;
   }
 
-  .border-card-final.livestream,
-  .border-card-final.playing-now  {
+  .main-grand-final .grand-final > .card-container .border-card-final.livestream,
+  .main-grand-final .grand-final > .card-container .border-card-final.playing-now,
+  .main-grand-final .grand-final a .card-container .border-card-final.livestream.ps4,
+  .main-grand-final .grand-final a .card-container .border-card-final.playing-now.ps4,
+  .main-grand-final .grand-final a .card-container .border-card-final.livestream.xbox,
+  .main-grand-final .grand-final a .card-container .border-card-final.playing-now.xbox {
     max-height: 216px;
   }
 
