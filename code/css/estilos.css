@@ -3052,6 +3052,7 @@ position: relative;
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation .thumbnail-console .thumbnail img {
 width: 100%;
 border-radius: 50%;
+background: white;
 }
 
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation .thumbnail-console .console {
@@ -5610,7 +5611,7 @@ letter-spacing: .5px;
 
 .grand-final > .border-card .players-thumbnails-score .scores .win,
 .grand-final > .card-container .border-card .players-thumbnails-score .scores .win {
-  background: #af8d26;
+  background: linear-gradient(to top, #af8d26, #d7b85c);
 }
 
 
