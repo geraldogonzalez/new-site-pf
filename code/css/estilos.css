@@ -4595,7 +4595,7 @@ justify-content: center;
   width: 34px;
   height: 34px;
   padding: 2px;
-  background: #7c7c7c;
+  background: linear-gradient(to top,#af8d26,#e3cc91);
   border-radius: 50%;
 }
 
@@ -5782,7 +5782,7 @@ letter-spacing: .5px;
   /* Grand Final card styles */
 
   .card-container {
-    width: 337px;
+    max-width: 337px;
   }
 
   .border-card-final {
