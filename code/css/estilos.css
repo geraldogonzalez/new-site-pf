@@ -1359,7 +1359,8 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   cursor: pointer;
 }
 
-.tabla-standings tbody tr:hover {
+.tabla-standings tbody tr:hover,
+.tabla-standings tbody tr.mostrar {
   background: #f6f6f6;
 }
 
@@ -2904,30 +2905,50 @@ height: 213px;
 
 @media screen and (min-width: 1800px) {
 
+.main.brackets .cards-container .round-title {
+  padding-left: 0;
+}
+
 .main.brackets .round-title .rounds-container {
-  padding-left: 270px;
+  padding-left: 190px;
+  justify-content: center;
 }
 
 .main.brackets .cards-container .round-matchs {
-  padding-left: 294px;
+  padding-left: 220px;
+  justify-content: center;
 }
 
 .main.brackets .cards-container .round-matchs .cards span.vertical-line {
-  left: 642px;
+  left: 50%;
+  margin-left: -365px;
 }
 
 .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
-  left: 1007px;
+  left: 50%;
+  margin-left: -1px;
 }
 
 .main.brackets .cards-container .round-matchs .cards.semi-final span.vertical-line {
-  left: 1371px;
+  left: 50%;
+  margin-left: 363px;
 }
 
 .main.brackets .cards-container .round-matchs .cards.final span.vertical-line {
-  left: 1734px;
+  left: 50%;
+  margin-left: 727px;
 }
 
+}
+
+/* MEDIAQUERIE SCREEN 1850px */
+
+@media screen and (min-width: 1850px) {
+  
+  .main.brackets .round-title .rounds-container {
+    padding-left: 220px;
+    justify-content: center;
+  }
 }
 
 
