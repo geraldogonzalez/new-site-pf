@@ -37,7 +37,6 @@ html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   background: #fff;
-  scroll-behavior: smooth;
 }
 
 *::after,
@@ -60,6 +59,45 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
     margin: 0; 
     padding: 0;
 }
+
+
+/* ----------- LOADING SCREEN ----------- */
+
+
+.main .loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  opacity: 0;
+  z-index: -1;
+  top: 0;
+  transition: all 1s ease;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.main .loading .loading-img {
+  height: 30vh;
+}
+
+.main .loading .loading-img img {
+  height: 100%;
+}
+
+.main .loading .loading-lines div {
+  width: 10px;
+  height: 10px;
+  background: black;
+}
+
+.main .loading.active {
+  opacity: 1;
+  z-index: 9999;
+}
+
+
 
 /* ----------- HEADER STYLES ----------- */
 
@@ -1283,6 +1321,14 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   margin: 0 auto;
 } 
 
+.tabla-standings thead {
+  position: sticky;
+  background: white;
+  top: 0;
+  padding-top: 5px;
+  z-index: 100;
+}
+
 .tabla-standings thead tr, 
 .tabla-standings tbody tr {
   display: grid;
@@ -1938,7 +1984,7 @@ font-size: 33px;
   .tabla-standings tbody {
     width: 749px;
   }
-
+  
 }
 
 
@@ -2075,6 +2121,14 @@ font-size: 33px;
 /* MEDIAQUERIE SCREEN 1024px */
 
 @media screen and (min-width: 1024px) {
+
+  .tabla-standings thead {
+    position: static;
+    background: transparent;
+    top: unset;
+    padding-top: 0;
+    z-index: unset;
+  }
 
   .tabla-standings thead tr, 
   .tabla-standings tbody tr {
@@ -3087,7 +3141,7 @@ border-radius: 50%;
 }
 
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation .thumbnail-console .console.ps4 {
-background: linear-gradient(to top,#4b5ffc,#36c5fd);
+  background: linear-gradient(to top,#4b5ffc,#36c5fd);
 }
 
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation .thumbnail-console .console.xbox {
