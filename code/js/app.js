@@ -709,7 +709,6 @@ function acortarNombresCards() {
         nombreTeam.childNodes[0].data = nombreTeam.childNodes[0].data.trim();
         if(nombreTeam.childNodes[0].data.length >= 20) {
             nombreTeam.childNodes[0].data = nombreTeam.childNodes[0].data.substr(0, 17) + '...';
-            console.log("Acortados");
         }
     } );
 }
