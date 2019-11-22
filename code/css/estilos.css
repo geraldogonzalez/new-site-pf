@@ -2535,7 +2535,8 @@ padding-top: 16px;
   content: "";
   background: #00a661;
   height: 2px;
-  width: 10px;
+  width: 30px;
+  margin-left: -20px;
   top: 50%;
   margin-top: -1px;
 }
@@ -2631,6 +2632,11 @@ z-index: 8;
 .main.brackets.ps4 .cards-container .cards .card-container .connector3, 
 .main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4 {
 border-color: #4b5ffc;
+}
+
+.main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4,
+.main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4 {
+  border-color: transparent;
 }
 
 .main.brackets.cl-dark .cards-container .cards .card-container .connector1, 
@@ -3478,7 +3484,7 @@ border-bottom-style: none;
   border-top-style: none;
   left: 50%;
   margin-left: 0;
-  height: 15px;
+  height: 17px;
   bottom: 19px;
 }
 
