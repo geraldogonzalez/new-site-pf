@@ -2538,7 +2538,7 @@ padding-top: 16px;
   width: 30px;
   margin-left: -20px;
   top: 50%;
-  margin-top: -1px;
+  margin-top: -4px;
 }
 
 .main.brackets.ps4 .cards-container .cards:nth-child(+n+2) .card-container .border-card::before,
@@ -2554,7 +2554,7 @@ padding-top: 16px;
 .main.brackets .cards-container .cards.final .card-container .border-card-final::before, 
 .main.brackets .cards-container .cards.final .card-container::before {
   top: 74%;
-  margin-top: -2px;
+  margin-top: -4px;
 }
 
 .main.brackets .cards-container .round-matchs .cards.final {
