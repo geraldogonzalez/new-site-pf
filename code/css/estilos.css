@@ -2602,6 +2602,7 @@ box-shadow: 0 2px 4px rgba(0,0,0,.5);
 main.brackets .cards-container .round-matchs .cards.final .view-grand-final img {
 width: 176px;
 height: 152px;
+border-radius: 11px;
 }
 
 .main.brackets .cards-container .round-matchs .cards.grand-final {
@@ -2635,7 +2636,8 @@ z-index: 8;
 }
 
 .main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4,
-.main.brackets.xbox .cards-container .cards .card-container .connector3 .connector4 {
+.main.brackets.xbox .cards-container .cards .card-container .connector3 .connector4,
+.main.brackets .cards-container .cards .card-container .connector3 .connector4 {
   border-color: transparent;
 }
 
@@ -2818,6 +2820,7 @@ height: 213px;
   .main.brackets .cards-container .round-matchs .cards.grand-final img {
     width: 176px;
     height: 152px;  
+    border-radius: 11px;
   }
 
   .main.brackets .cards-container .round-matchs .cards span.vertical-line {
