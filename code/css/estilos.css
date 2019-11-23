@@ -2631,11 +2631,11 @@ z-index: 8;
 .main.brackets.ps4 .cards-container .cards .card-container .connector1 .connector2, 
 .main.brackets.ps4 .cards-container .cards .card-container .connector3, 
 .main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4 {
-border-color: #4b5ffc;
+  border-color: #4b5ffc;
 }
 
 .main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4,
-.main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4 {
+.main.brackets.xbox .cards-container .cards .card-container .connector3 .connector4 {
   border-color: transparent;
 }
 
@@ -2756,6 +2756,12 @@ height: 213px;
 
   .main.brackets .cards-container .round-matchs .cards {
     padding-top: 30px;
+  }
+
+  .main.brackets .cards-container .cards:nth-child(+n+2) .card-container .border-card::before, 
+  .main.brackets .cards-container .cards:nth-child(+n+2) .card-container::before {
+    width: 25px;
+    margin-left: -15px;
   }
 
   .main.brackets .cards-container .cards.semi-final .card-container .border-card::before, 
