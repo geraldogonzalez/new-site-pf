@@ -164,7 +164,7 @@
   /* ----------- HEADER STYLES ----------- */
   
   .header {
-      border-bottom: 2px solid #5e5e5e;
+      border-bottom: 2px solid #37373d;
       padding-top: 32px;
   }
   
@@ -1028,9 +1028,9 @@
     .main.brackets .round-title .rounds-container {
       height: 72px;
       display: grid;
-      border-bottom: 2px solid #5e5e5e;
+      border-bottom: 2px solid #37373d;
       grid-template-columns: repeat(4, 317px);
-      background: #333;
+      background: #18191b;
     }
   
     .main.brackets .round-title .rounds-container .round:last-child {
@@ -1069,9 +1069,9 @@
   
     .main.brackets .round-title .rounds-container .round.complete div.round-status div {
       width: 75px;
-      border: 1px solid #00a661;
-      color: #49b962;
-      background: black;
+      border: 1px solid #3aa757;
+      color: #3aa757;
+      background: #070707;
     }
   
     /* Round playing styles */
@@ -1089,7 +1089,7 @@
       width: 67px;
       height: 20px;
       line-height: 22px;
-      background: #00a661;
+      background: #3aa757;
       color: white;
       display: grid;
       align-items: center;
@@ -1481,7 +1481,7 @@
     position: relative;
     height: 64px;
     grid-template-rows: 64px;
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid #37373d;
     cursor: pointer;
   }
   
@@ -1502,7 +1502,7 @@
 
   .tabla-standings tbody tr:hover,
   .tabla-standings tbody tr.mostrar {
-    background: #111;
+    background: #18191d;
   }
   
   .tabla-standings tbody tr:hover td:nth-child(8) .info {
@@ -1583,7 +1583,7 @@
     height: 1.5rem;
     width: 1.9rem;
     border-radius: 6px;
-    border: 1px solid #5e5e5e;
+    border: 1px solid #fff;
   }
   
   .tabla-standings tbody tr td:nth-child(2), 
@@ -1635,10 +1635,10 @@
     align-items: center;
     justify-items: center;
     text-align: center;
-    background: #333;
+    background: black;
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 1px solid #5e5e5e;
+    border: 1px solid #37373d;
     border-radius: 50%;
   }
   
@@ -1676,7 +1676,7 @@
     overflow-x: scroll;
     opacity: 0;
     scroll-behavior: smooth;
-    background: #111;
+    background: black;
   }
   
   .tabla-standings tbody tr td div.game-history:nth-child(7) .border-card {
@@ -2470,7 +2470,7 @@
     }
   
     .tabla-standings tbody tr td .info {
-      border: 1px solid #5e5e5e;
+      border: 1px solid #37373d;
       width: 2.5rem;
       height: 2.5rem;
       opacity: .5;
@@ -2544,7 +2544,7 @@
   position: absolute;
   height: 100%;
   width: 1px;
-  background: #333;
+  background: #37373d;
   left: 304px;
   }
   
@@ -4022,7 +4022,7 @@
   .tabla-rank tbody tr td:nth-child(4) .nation {
   width: 43px;
   height: 25px;
-  border: 1px solid #5e5e5e;
+  border: 1px solid #fff;
   border-radius: 7px;
   }
   
@@ -4730,13 +4730,13 @@
   .game-history .border-card.cl-dark:hover .card, 
   .game-history .border-card.ps4:hover .card, 
   .game-history .border-card.xbox:hover .card { 
-    border: 1px solid #5e5e5e;
+    border: 1px solid #37373d;
   }
   
   .card {
     padding: 12px;
-    border: 1px solid #5e5e5e;
-    background: #333;
+    border: 1px solid #37373d;
+    background: #18191b;
     width: 273px;
     height: 98px;
     border-radius: 10px;
@@ -4778,7 +4778,7 @@
   .card .players-thumbnails-score .player .thumbnail-logo::before {
     content: "";
     position: absolute;
-    background: #5e5e5e;
+    background: #37373d;
     width: 1px;
     height: 100%;
     left: 50%;
@@ -4818,19 +4818,19 @@
   }
   
   .card .players-thumbnails-score .scores .score {
-    background: #333;
+    background: #28282d;
     display: grid;
     align-content: center;
     justify-content: center;
     border-radius: 3px;
     height: 38px;
     overflow: hidden;
-    box-shadow: 0px 1px 3px rgba(255,255,255,.3);
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
     position: relative;
   }
 
   .card .players-thumbnails-score .scores .score.lose {
-    box-shadow: 0px 1px 3px rgba(255,255,255,.3);
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
   }
   
   .card .players-thumbnails-score .scores .score p {
@@ -4869,7 +4869,7 @@
     max-height: 12px;
     max-width: 20px;
     overflow: hidden;
-    border: 1px solid #5e5e5e;
+    border: 1px solid #fff;
     border-radius: 3px;
     display: grid;
     align-content: center;
@@ -4903,7 +4903,7 @@
   
   .card .players-info-games .player .team {
     font-size: 12px;
-    color: white;
+    color: rgba(255, 255, 255, .5);
     font-style: italic;
     opacity: .7;
     white-space: pre;
@@ -4956,7 +4956,7 @@
   .card .players-info-games .games span:nth-child(2) {
     font-size: 7px;
     line-height: 7px;
-    color: white;
+    color: rgba(255, 255, 255, .5);
     letter-spacing: .5px;
     font-weight: 700;
   }
@@ -4969,7 +4969,7 @@
     top: 60%;
     margin-top: -.5px;
     left: 17%;
-    background: #5e5e5e;
+    background: rgba(55, 55, 61, .6);;
   }
   
   .card .players-info-games .games span.line:nth-child(2)::after {
@@ -4980,7 +4980,7 @@
   top: 60%;
   margin-top: -.5px;
   right: 17%;
-  background: #5e5e5e;
+  background: rgba(55, 55, 61, .6);
   }
   
   /* End player nickname, nation, team name and games styles */
@@ -5013,11 +5013,11 @@
   padding: 12px;
   height: 196px;
   grid-template-rows: 34px 28px auto;
-  background: #333;
+  background: #18191b;
   }
   
   .card-final .formation-record {
-  border-top: 1px solid #5e5e5e;
+  border-top: 1px solid #37373d;
   padding-top: 7px;
   display: grid;
   grid-template-columns: repeat(2, 45%);
@@ -5030,7 +5030,7 @@
   position: absolute;
   width: 1px;
   height: 80px;
-  background: #5e5e5e;
+  background: #37373d;
   left: 50%;
   margin-left: -.5px;
   top: 50%;
@@ -5081,7 +5081,7 @@
   position: absolute;
   width: 70px;
   height: 1px;
-  background: #5e5e5e;
+  background: #37373d;
   left: 50%;
   margin-left: -35px;
   top: 50%;
@@ -6144,8 +6144,8 @@
   .main.rounds .rounds-container,
   .main.brackets .round-title {
   height: 72px;
-  border-bottom: 2px solid #5e5e5e;
-  background: #333;
+  border-bottom: 2px solid #37373d;
+  background: #18191b;
   margin-bottom: 16px;
   } 
   
@@ -6187,13 +6187,13 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
-  color: #777;
+  color: rgba(255, 255, 255, 0.5);
   transition: all .3s ease;
   text-transform: uppercase;
   }
   
   .main.brackets .rounds-container .round div.round-status h3 {
-  color: #777;
+    color: rgba(255, 255, 255, 0.5);
   }
   
   .main.rounds .rounds-container .rounds .round a div,
@@ -6217,25 +6217,21 @@
   .main.rounds .rounds-container .rounds .round > span,
   .main.brackets .round-title .rounds-container .round > span {
   font-size: 12px;
-  color: #777;
+  color: rgba(255, 255, 255, .5);
   letter-spacing: -0.2px;
   transition: all .3s ease;
-  }
-  
-  .main.brackets .round-title .rounds-container .round > span {
-  color: #777;
   }
   
   /* Round complete styles */
   
   .main.rounds .rounds-container .rounds .round.complete a div {
   width: 75px;
-  border: 1px solid #00a661;
-  color: #49b962;
-  background: black;
+  border: 1px solid #3aa757;
+  color: #3aa757;
+  background: #070707;
   }
 
-  .main.rounds .rounds-container .rounds .round.complete.active:last-child a div {
+  .main.rounds .rounds-container .rounds .round.complete:last-child a div {
     width: 119px;
   }
   
@@ -6245,8 +6241,8 @@
   }
   
   .main.rounds .rounds-container .rounds .round.active a div {
-  color: black;
-  background: #00a661;
+  color: white;
+  background: #3aa757;
   }
   
   .main.rounds .rounds-container .rounds .round.complete a:hover + span.date,
@@ -6261,14 +6257,14 @@
   .main.rounds .rounds-container .rounds .round.upcoming a div,
   .main.brackets .round-title .rounds-container .round.upcoming div.round-status div {
   width: 119px;
-  border: 1px solid #979797;
+  border: 1px solid #3d3d37;
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
   align-items: center;
   grid-column-gap: 13px;
   color: #7c7c7c;
-  background: black;
+  background: #070707;
   }
   
   .main.rounds .rounds-container .rounds .round.upcoming a div::before,
@@ -6295,16 +6291,16 @@
     width: 67px;
     height: 20px;
     line-height: 22px;
-    background: black;
-    color: #00a661;
+    background: #070707;
+    color: #3aa757;
     display: grid;
     align-items: center;
-    border: 1px solid #00a661;
+    border: 1px solid #3aa757;
   }
 
   .main.rounds .rounds-container .rounds .round.playing.active a div {
-    background: #00a661;
-    color: black;
+    background: #3aa757;
+    color: white;
   }
   
   .main.rounds .rounds-container .rounds .round.playing.active > span,
@@ -6640,7 +6636,7 @@
   position: absolute;
   height: 100%;
   width: 1px;
-  background: #333;
+  background: #37373d;
   left: 50%;
   margin-left: -1px;
   display: none;

@@ -6220,7 +6220,7 @@ color: #49b962;
 background: white;
 }
 
-.main.rounds .rounds-container .rounds .round.complete.active:last-child a div {
+.main.rounds .rounds-container .rounds .round.complete:last-child a div {
   width: 119px;
 }
 
