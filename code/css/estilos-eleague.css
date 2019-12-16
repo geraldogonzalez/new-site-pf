@@ -36,7 +36,7 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    background: #000;
+    background: #070707;
   }
   
   *::after,
@@ -47,7 +47,7 @@
   
   body {
     font-family: SeravekWebBasicRegular;
-    background: #000;
+    background: #070707;
     margin: 0;
   }
   
@@ -1676,7 +1676,7 @@
     overflow-x: scroll;
     opacity: 0;
     scroll-behavior: smooth;
-    background: black;
+    background: #070707;
   }
   
   .tabla-standings tbody tr td div.game-history:nth-child(7) .border-card {
@@ -4706,7 +4706,7 @@
     align-items: center;
     border-radius: 12px;
     padding: 3px;
-    background: black;
+    background: #070707;
     position: relative;
     max-width: 279px;
     max-height: 202px;
@@ -5160,7 +5160,7 @@
   
   .grand-final > .border-card.livestream,
   .grand-final > .card-container .border-card.livestream {
-    background: black;
+    background: #070707;
   }
   
   .grand-final > .border-card.livestream .card,
