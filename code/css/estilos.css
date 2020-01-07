@@ -1024,6 +1024,10 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
     background: #f6f6f6;
   }
 
+  .main.brackets.round-32 .round-title .rounds-container {
+    grid-template-columns: repeat(5, 317px);
+  }
+
   .main.brackets .round-title .rounds-container .round:last-child {
     display: none;
   }
@@ -2534,6 +2538,10 @@ transition: all .5s ease;
 position: relative;
 }
 
+.main.brackets.round-32 .cards-container .round-matchs {
+  grid-template-columns: repeat(5, 317px);
+}
+
 .main.brackets .cards-container .round-matchs .cards span.vertical-line {
 position: absolute;
 height: 100%;
@@ -2542,6 +2550,10 @@ background: #d7d7d7;
 left: 304px;
 }
 
+.main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+  left: 1255px;
+}
+    
 .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
 left: 621px;
 }
@@ -2685,6 +2697,15 @@ width: 22px;
 right: -19px;
 }
 
+/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+.main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector1, 
+.main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector3 {
+  height: 110px;
+  }
+
+/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+
 .main.brackets .cards-container .cards .card-container .connector1 {
 top: 53px;
 border-bottom: none;
@@ -2716,12 +2737,29 @@ border: none;
 bottom: -2px;
 }
 
+/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+.main.brackets .cards-container .cards .card-container .connector1 .connector2 {
+  border: none;
+}
+
+/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+
 /* Quarterfinal connectors */
 
 .main.brackets .cards-container .cards.quarterfinal .card-container .connector1,
 .main.brackets .cards-container .cards.quarterfinal .card-container .connector3 {
 height: 106px;
 }
+
+/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+.main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector1, 
+.main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector3 {
+  height: 216px;
+  }
+
+/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
 
 /* Semifinal connectors */
 
@@ -2730,6 +2768,14 @@ height: 106px;
 height: 213px;
 }
 
+/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+.main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector1, 
+.main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector3 {
+  height: 430px;
+  }
+
+/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
 
 /* ----------- MEDIAQUERIES BRACKETS -----------*/
 
@@ -2761,6 +2807,10 @@ height: 213px;
   left: 324px;
 }
 
+.main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+  left: 1275px;
+}
+
 .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
   left: 641px;
 }
@@ -2781,6 +2831,14 @@ height: 213px;
     grid-template-columns: repeat(4, 364px) 190px;
     padding-left: 19px;
   }
+
+  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+  .main.brackets.round-32 .cards-container .round-matchs {
+    grid-template-columns: repeat(5, 364px) 190px;
+  }
+
+  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
 
   .main.brackets .cards-container .round-matchs .cards {
     padding-top: 30px;
@@ -2854,6 +2912,10 @@ height: 213px;
     left: 367px;
   }
 
+  .main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+    left: 1824px;
+  }
+
   .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
     left: 731px;
   }
@@ -2879,21 +2941,46 @@ height: 213px;
   .main.brackets .cards-container .cards .card-container .connector1, 
   .main.brackets .cards-container .cards .card-container .connector3 {
     height: 60px;
-    width: 18px;
+    width: 17px;
     right: -14px;
   }
+
+  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+  .main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector1, 
+  .main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector3 {
+    height: 118px;
+  }
+
+  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
 
   .main.brackets .cards-container .cards.quarterfinal .card-container .connector1, 
   .main.brackets .cards-container .cards.quarterfinal .card-container .connector3 {
     height: 117px;
   }
 
+  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+  .main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector1, 
+  .main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector3 {
+    height: 233px;
+  }
+
+  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+
   .main.brackets .cards-container .cards.semi-final .card-container .connector1,
   .main.brackets .cards-container .cards.semi-final .card-container .connector3 {
     height: 231px;
   }
 
+  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
 
+  .main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector1, 
+  .main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector3 {
+    height: 460px;
+  }
+  
+  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
 
 }
 
@@ -2915,8 +3002,12 @@ height: 213px;
   left: 413px;
 }
 
+.main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+  left: 1869px;
+}
+
 .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
-  left: 778px;
+  left: 776px;
 }
 
 .main.brackets .cards-container .round-matchs .cards.semi-final span.vertical-line {
@@ -2945,6 +3036,10 @@ height: 213px;
 
 .main.brackets .cards-container .round-matchs .cards span.vertical-line {
   left: 405px;
+}
+
+.main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+  left: 1861px;
 }
 
 .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
@@ -2979,6 +3074,10 @@ height: 213px;
   left: 381px;
 }
 
+.main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+  left: 1837px;
+}
+
 .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
   left: 745px;;
 }
@@ -3011,6 +3110,10 @@ height: 213px;
   left: 437px;
 }
 
+.main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+  left: 1893px;
+}
+
 .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
   left: 801px;
 }
@@ -3040,7 +3143,11 @@ height: 213px;
 }
 
 .main.brackets .cards-container .round-matchs .cards span.vertical-line {
-  left: 487px;
+  left: 486px;
+}
+
+.main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+  left: 1943px;
 }
 
 .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
@@ -3077,9 +3184,18 @@ height: 213px;
   justify-content: center;
 }
 
+.main.brackets.round-32 .cards-container .round-matchs {
+  padding-left: 580px;
+}
+
+.main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+  left: 50%;
+  margin-left: 1090px;
+}
+
 .main.brackets .cards-container .round-matchs .cards span.vertical-line {
   left: 50%;
-  margin-left: -365px;
+  margin-left: -366px;
 }
 
 .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
@@ -3107,6 +3223,11 @@ height: 213px;
     padding-left: 220px;
     justify-content: center;
   }
+
+  .main.brackets.round-32 .round-title .rounds-container {
+    padding-left: 300px;
+  }
+  
 }
 
 
@@ -6389,6 +6510,14 @@ display: none;
   height: 90px;
   grid-template-columns: repeat(4, 364px) 190px;
 }
+
+  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+.main.brackets.round-32 .round-title .rounds-container {
+  grid-template-columns: repeat(5, 364px) 190px;
+}
+
+  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
 
 .main.brackets .round-title .rounds-container .round {
   height: 90px;
