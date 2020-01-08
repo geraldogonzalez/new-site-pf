@@ -2539,6 +2539,10 @@
   transition: all .5s ease;
   position: relative;
   }
+
+  .main.brackets.round-32 .cards-container .round-matchs {
+    grid-template-columns: repeat(5, 317px);
+  }
   
   .main.brackets .cards-container .round-matchs .cards span.vertical-line {
   position: absolute;
@@ -2546,6 +2550,10 @@
   width: 1px;
   background: #37373d;
   left: 304px;
+  }
+
+  .main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+    left: 1255px;
   }
   
   .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
@@ -2691,6 +2699,15 @@
   width: 22px;
   right: -19px;
   }
+
+/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+  .main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector1, 
+  .main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector3 {
+    height: 110px;
+    }
+
+/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
   
   .main.brackets .cards-container .cards .card-container .connector1 {
   top: 53px;
@@ -2739,6 +2756,15 @@
   height: 106px;
   }
   
+/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+.main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector1, 
+.main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector3 {
+  height: 216px;
+}
+
+/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+
   /* Semifinal connectors */
   
   .main.brackets .cards-container .cards.semi-final .card-container .connector1,
@@ -2746,7 +2772,16 @@
   height: 213px;
   }
   
-  
+/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+
+.main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector1, 
+.main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector3 {
+  height: 430px;
+  }
+
+/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+
+
   /* ----------- MEDIAQUERIES BRACKETS -----------*/
   
   /* MEDIAQUERIE SCREEN 411px */
@@ -2818,7 +2853,7 @@
     .main.brackets .cards-container .cards:nth-child(+n+2) .card-container::before {
       width: 18px;
       margin-left: -14px;
-      z-index: 9;
+      z-index: 10;
     }
   
     .main.brackets .cards-container .cards.semi-final .card-container .border-card::before, 
@@ -3161,6 +3196,11 @@
   .main.brackets .cards-container .round-matchs .cards span.vertical-line {
     left: 50%;
     margin-left: -365px;
+  }
+
+  .main.brackets.round-32 .cards-container .round-matchs .cards.round-32 span.vertical-line {
+    left: 50%;
+    margin-left: 1090px;
   }
   
   .main.brackets .cards-container .round-matchs .cards.quarterfinal span.vertical-line {
@@ -5072,7 +5112,7 @@
   z-index: 20;
   position: relative;
   border-radius: 13px;
-  background: black;
+  background: #070707;
   }
   
   .border-card-final {
