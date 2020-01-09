@@ -3271,6 +3271,7 @@
   .main-grand-final .grand-final-container img.fondo {
   position: absolute;
   }
+
   .grand-final-container .cards.grand-final {
   display: grid;
   justify-items: center;
@@ -3623,6 +3624,11 @@
   .main-grand-final .grand-final-container .grand-final .consolas .playstation {
   position: relative;
   left: -12px;
+  color: white;
+  }
+  
+  .main-grand-final .grand-final-container .grand-final .consolas .xbox-one {
+    color: white;
   }
   
   .main-grand-final .grand-final-container .grand-final .consolas .conector1 {
@@ -6104,12 +6110,14 @@
   
     .border-card-final {
       max-height: 216px;
+      max-width: 337px;
     }
   
     .border-card-final .card {
       padding: 12px;
       height: 210px;
       grid-template-rows: 37px 24px auto;
+      width: 331px;
     }
   
     .card-final .formation-record {

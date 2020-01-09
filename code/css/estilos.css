@@ -6091,12 +6091,14 @@ letter-spacing: .5px;
 
   .border-card-final {
     max-height: 216px;
+    max-width: 337px;
   }
 
   .border-card-final .card {
     padding: 12px;
     height: 210px;
     grid-template-rows: 37px 24px auto;
+    width: 331px;
   }
 
   .card-final .formation-record {
