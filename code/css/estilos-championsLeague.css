@@ -5228,7 +5228,7 @@ letter-spacing: .5px;
 /* XBOX */
 
 .xbox .players-thumbnails-score .player .thumbnail-logo .thumbnail {
-  background: linear-gradient(to right,#0d3aff,#ff16ff);
+  background: linear-gradient(to top,#0d3aff,#ff16ff);
 }
 
 
@@ -5286,7 +5286,7 @@ letter-spacing: .5px;
 /* Champions League Dark */
 
 .border-card:hover {
- background: linear-gradient(to right, #0d3aff, #ff16ff);
+ background: linear-gradient(to top, #0d3aff 0%, #ff16ff 100%);
  cursor: pointer;
 }
 
