@@ -562,7 +562,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 }
 
 .header .contenedor-header nav .menu > li > ul li i {
-  justify-self: end;
+  justify-self: end; 
   color: #00004B;
   -webkit-text-stroke: 2px #0724a5;
   transition: all .3s ease;
