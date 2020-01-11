@@ -1548,7 +1548,7 @@
   }
   
   .tabla-standings tbody tr td:first-child img {
-    background: black;
+    background: #fff;
   }
   
   .ps4 .tabla-standings tbody tr td:first-child {
@@ -4296,7 +4296,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: black;
+  background: #fff;
   }
   
   .tabla-rank tbody tr td .team-logo {
@@ -4922,7 +4922,7 @@
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    background: #333;
+    background: #fff;
   }
   
   .card .players-thumbnails-score .player .thumbnail-logo .logo {
