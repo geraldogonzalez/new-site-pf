@@ -5882,10 +5882,10 @@ letter-spacing: .5px;
 
 /* LOSE */
 
-.card .players-thumbnails-score .lose {
-  /*filter: grayscale(1);
-  opacity: .75;*/
-}
+/*.card .players-thumbnails-score .lose {
+  filter: grayscale(1);
+  opacity: .75;
+}*/
 
 .card .players-thumbnails-score .player.lose .thumbnail-logo .thumbnail {
   background: #b1b1b1;
