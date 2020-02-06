@@ -454,7 +454,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
 .header .contenedor-header.grand-final-header .consola .titulo {
   display: grid;
-  grid-template-columns: 3.125rem auto;
+  grid-template-columns: minmax(3.125rem, 6.250rem) auto;
   height: 3.125rem;
   align-items: center;
 }
@@ -1211,7 +1211,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   /* Brackets buttons and title */
 
   .header .contenedor-header.grand-final-header .consola .titulo {
-    grid-template-columns: 4.5rem auto;
+    grid-template-columns: minmax(4.5rem, 9rem) auto;
     height: 4.5rem;
     grid-column-gap: 12px;
   }
@@ -1479,8 +1479,8 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   cursor: pointer;
 }
 
-.main.xbox .tabla-standings tbody tr:nth-child(17)::before,
-.main.ps4 .tabla-standings tbody tr:nth-child(17)::before {
+.main.xbox.finished .tabla-standings tbody tr:nth-child(17)::before,
+.main.ps4.finished .tabla-standings tbody tr:nth-child(17)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1490,8 +1490,13 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   background: linear-gradient(to top, #00a661, #97dc56);
 }
 
-.main.ps4 .tabla-standings tbody tr:nth-child(17)::before {
+.main.ps4.finished .tabla-standings tbody tr:nth-child(17)::before {
   background: linear-gradient(to top, #4b5ffc, #36c5fd);
+}
+
+.main.ps4.finished .tabla-standings.competitors tbody tr:nth-child(17)::before, 
+.main.xbox.finished .tabla-standings.competitors tbody tr:nth-child(17)::before {
+  display: none;
 }
 
 .tabla-standings tbody tr:hover,
@@ -2033,6 +2038,139 @@ font-size: 33px;
 }
 
 }
+
+
+
+  /* ---------- COMPETITORS STYLES ---------- */
+
+  .tabla-standings.competitors {
+    padding-top: 1.5rem;
+  }
+
+  .tabla-standings.competitors thead tr th:nth-child(2), 
+  .tabla-standings.competitors thead tr th:nth-child(3) {
+    display: grid;
+  }
+
+  .tabla-standings.competitors thead tr, 
+  .tabla-standings.competitors tbody tr {
+    grid-template-columns: 41vw repeat(2, 25vw);
+  }
+
+  .tabla-standings.competitors tbody {
+    width: 92vw;
+    max-width: 92vw;
+  }
+
+  .tabla-standings.competitors tbody tr td:nth-child(2), 
+  .tabla-standings.competitors tbody tr td:nth-child(3) {
+    display: grid;
+  }
+
+  /* ---------- MEDIAQUERIES ---------- */
+
+  @media screen and (min-width: 700px) {
+
+    .tabla-standings.competitors tbody tr td:first-child {
+      grid-column-gap: 1rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:first-child .NimbusSanCon-Bol {
+      font-size: 1.2rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:first-child .thumbnail {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(2) img,
+    .tabla-standings.competitors tbody tr td:nth-child(3) img {
+      width: 2.5rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(3) img {
+      height: 1.8rem;
+    }
+
+  }
+
+
+  @media screen and (min-width: 1024px) {
+
+    .tabla-standings.competitors thead tr, 
+    .tabla-standings.competitors tbody tr {
+      grid-template-columns: 400px repeat(2, 100px);
+    }
+
+    .tabla-standings.competitors tbody {
+      width: 610px;
+      max-width: 610px;
+    }
+
+    .tabla-standings.competitors thead tr th:nth-child(2),
+    .tabla-standings.competitors thead tr th:nth-child(3) {
+      text-align: center;
+      padding-left: 0;
+      justify-content: center;
+    }
+
+
+  }
+
+  @media screen and (min-width: 1300px) {
+
+    .tabla-standings.competitors thead tr th:first-child {
+      text-align: left;
+      padding-left: 1.25rem;
+    }
+
+    .tabla-standings.competitors thead tr, 
+    .tabla-standings.competitors tbody tr {
+      grid-template-columns: 400px repeat(2, 100px);
+    }
+
+    .tabla-standings.competitors tbody {
+      width: 610px;
+      max-width: 610px;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(2), 
+    .tabla-standings.competitors tbody tr td:nth-child(3) {
+      padding-left: 0;
+      justify-items: center;
+    }
+
+    .tabla-standings.competitors thead tr th:nth-child(2),
+    .tabla-standings.competitors thead tr th:nth-child(3) {
+      text-align: center;
+      padding-left: 0;
+      justify-content: center;
+    }
+
+    .tabla-standings.competitors tbody tr td:first-child .NimbusSanCon-Bol {
+      font-size: 1.375rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:first-child .thumbnail {
+      width: 3.125rem;
+      height: 3.125rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(2) img {
+      width: 3.125rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(3) img {
+      height: 1.875rem;
+      width: 2.9375rem;
+    }
+
+  }
+
+  /* ---------- END MEDIAQUERIES ---------- */
+  
+  /* ---------- END COMPETITORS STYLES ---------- */
 
 
 
@@ -3398,6 +3536,7 @@ font-family: NimbusSanCon-Bol;
 text-transform: uppercase;
 font-size: 1.875rem;
 background: linear-gradient(to right,#af8d26,#e3cc91);
+background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 color: #f0be25;
@@ -5292,60 +5431,60 @@ letter-spacing: .5px;
 
   /* XBOX */
 
-.border-card.xbox:hover {
-  /* background: linear-gradient(to right,#00a661,#abe354); */
-}
+/*.border-card.xbox:hover {
+ background: linear-gradient(to right,#00a661,#abe354);
+}*/
 
 
 
 /* PS4 */
 
-.border-card.ps4:hover {
-  /* background: linear-gradient(to right,#4b5ffc,#36c5fd); */
-}
+/*.border-card.ps4:hover {
+ background: linear-gradient(to right,#4b5ffc,#36c5fd); 
+}*/
 
 
 
 /* Champions League Dark */
 
-.border-card.cl-dark:hover {
- /* background: #5af7dc; */
-}
+/*.border-card.cl-dark:hover {
+ background: #5af7dc; 
+}*/
 
 
 
 /* XBOX final card */
 
-.border-card-final.xbox:hover {
-  /*background: linear-gradient(to top,#00a661,#abe354);*/
-}
+/*.border-card-final.xbox:hover {
+  background: linear-gradient(to top,#00a661,#abe354);
+}*/
 
 
 
 /* PS4 final card */
 
-.border-card-final.ps4:hover {
-  /*background: linear-gradient(to top,#4b5ffc,#36c5fd);*/
-}
+/*.border-card-final.ps4:hover {
+  background: linear-gradient(to top,#4b5ffc,#36c5fd);
+}*/
 
 
 
 /* Champions League Dark */
 
-.border-card-final.cl-dark:hover {
-  /*background: #5af7dc;*/
-}
+/*.border-card-final.cl-dark:hover {
+  background: #5af7dc;
+}*/
 
 
 
 /* Estilos para el borde de las cards */
 
-.border-card:hover .card, 
+/*.border-card:hover .card, 
 .border-card.cl-dark:hover .card, 
 .border-card.ps4:hover .card, 
 .border-card.xbox:hover .card {
-  /*border: 1px solid transparent;*/
-}
+  border: 1px solid transparent;
+}*/
 
 }
 
@@ -6343,10 +6482,6 @@ color: #49b962;
 background: white;
 }
 
-.main.rounds .rounds-container .rounds .round.complete:last-child a div {
-  width: 119px;
-}
-
 .main.rounds .rounds-container .rounds .round.complete a:hover h3,
 .main.rounds .rounds-container .rounds .round.playing a:hover h3,
 .main.rounds .rounds-container .rounds .round.active a h3,
@@ -6593,7 +6728,9 @@ display: none;
   max-width: 75px;
 }
 
-
+.main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div {
+  width: 119px;
+}
 
 /* Playing button styles */
 
