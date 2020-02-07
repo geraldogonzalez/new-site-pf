@@ -5228,7 +5228,7 @@ justify-content: center;
   align-items: center;
   border-radius: 12px;
   padding: 3px;
-  background: #000;
+  background: 0 0;
   position: relative;
   max-width: 279px;
   max-height: 202px;
