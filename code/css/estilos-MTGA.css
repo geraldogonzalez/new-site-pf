@@ -2698,11 +2698,15 @@ overflow-x: scroll;
   z-index: 1;
 }
 
-.main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(10)::before,
+.main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(9)::before {
+  margin-top: 4px;
+}
+
 .main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(12)::before {
   margin-top: 4px;
 }
 
+.main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(10)::before,
 .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(11)::before,
 .main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(14)::before,
 .main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(13)::before {
@@ -2859,10 +2863,15 @@ display: none;
   grid-column: 1 / 2;
 }
 
-.main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(8),
-.main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(9) {
+.main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(8) {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
+  align-self: center;
+}
+
+.main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(9) {
+  grid-column: 2/3;
+  grid-row: 3/4;
   align-self: center;
 }
 
@@ -2883,7 +2892,7 @@ display: none;
 
 .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(10) {
   grid-column: 2 / 3;
-  grid-row: 3 / 4;
+  grid-row: 4/5;
 }
 
 .main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(8) .connector1,
@@ -2903,8 +2912,9 @@ display: none;
 }
 
 .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(11) {
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  align-self: center;
 }
 
 .main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(10) .connector1,
@@ -2913,6 +2923,12 @@ display: none;
 .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(8) .connector3,
 .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(12) .connector1 {
   border-right: none;
+}
+
+.main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(11) .connector1 {
+  left: 276px;
+  width: 657px;
+  height: 105px;
 }
 
 .main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(12) {
@@ -2988,6 +3004,7 @@ display: none;
 
 .main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(12) .connector1,
 .main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(15) .connector3,
+.main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(14) .connector1, 
 .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(14) .connector3 {
   display: none;
 }
@@ -3240,9 +3257,13 @@ height: 213px;
   }
 
   .main.brackets .cards-container .round-matchs .cards.final .border-card,
-  .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(10)::before,
+  .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(9)::before,
   .main.brackets.rounds-4 .cards-container .cards .card-container:nth-child(12)::before {
     margin-top: 0px;
+  }
+  
+  .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(10)::before {
+    margin-top: -3px;
   }
 
   .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(13)::before {
@@ -3254,6 +3275,12 @@ height: 213px;
     height: 119px;
     width: 19px;
     right: -14px;
+  }
+
+  .main.brackets.rounds-7 .cards-container .cards .card-container:nth-child(11) .connector1 {
+    left: 333px;
+    width: 746px;
+    height: 114px;
   }
 
   .main.brackets .cards-container .round-matchs .cards.grand-final {
