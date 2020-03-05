@@ -4527,12 +4527,12 @@ margin: 0 auto;
 transition: all .3s ease;
 }
 
-.tabla-rank.inactive {
+.tabla-rank.inactive, .main.standings.inactive {
 opacity: 0;
 display: none;
 }
 
-.tabla-rank.active {
+.tabla-rank.active, .main.standings.active {
 display: grid;
 opacity: 1;
 }
@@ -4988,7 +4988,7 @@ justify-content: center;
   display: grid;
 }
 
-.tabla-rank.inactive {
+.tabla-rank.inactive, .main.standings.inactive {
   display: grid; 
   opacity: 1;
 }
@@ -7023,9 +7023,38 @@ display: none;
   max-width: 75px;
 }
 
-.main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div {
+.main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div,
+.main.rounds .rounds-container .rounds .round.playing:last-child a div,
+.main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
   width: 119px;
 }
+
+.main.rounds .rounds-container .rounds .round.playing:last-child a div,
+.main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
+  color:#EF8527;
+  background: #000;
+  animation: 3s infinite lastMatch;
+}
+
+@keyframes lastMatch {
+  
+  0% {
+    background: #EF8527;
+    color: #fff;
+  }
+  50% {
+    color: #EF8527;
+    background: #000;
+  }
+
+  100% {
+    color: #fff;
+    background: #EF8527;
+  }
+
+}
+
+
 
 /* Playing button styles */
 

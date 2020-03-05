@@ -1,15 +1,3 @@
-:root {
-  --bg-color: #00004B;
-  --white: #fff;
-  --darkFucsia: #672bf7;
-  --lightFucsia: #dd1afb;
-  --line: #5af7dc; 
-  --border: rgba(13, 58, 255, .4);
-  --border-card: #0c3aff;
-  --bg-card: rgba(13, 58, 255, 0.3);
-}
-
-
 /* ----------- Nimbus FONT ----------- */
 
 @font-face {
@@ -48,7 +36,7 @@ html {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  background: var(--bg-color);
+  background: #fff;
 }
 
 *::after,
@@ -59,7 +47,7 @@ html {
 
 body {
   font-family: SeravekWebBasicRegular;
-  background: var(--bg-color);
+  background: #fff;
   margin: 0;
 }
 
@@ -79,7 +67,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   position: fixed;
   z-index: -1;
   opacity: 0;
-  background: var(--white);
+  background: white;
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -116,7 +104,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   display: block;
   width: 25%;
   height: 25%;
-  background-color: var(--white);
+  background-color: #bdbdbd;
   border-radius: 100%;
   animation: circle-load-before 2.0s infinite ease-in-out both; 
   transition: all .5s ease;
@@ -165,7 +153,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 .main.rounds .not-published h2 {
   text-transform: uppercase;
   font-size: 3rem;
-  color: var(--white);
+  color: #bdbdbd;
   font-family: "NimbusSanCon-Bol";
   letter-spacing: .5px;
   font-weight: normal;
@@ -176,7 +164,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 /* ----------- HEADER STYLES ----------- */
 
 .header {
-    border-bottom: 2px solid var(--border);
+    border-bottom: 2px solid #c8c8c8;
     padding-top: 32px;
 }
 
@@ -206,15 +194,15 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 /* Start button general styles */
 
 .header .contenedor-header .consola .consola-btn a {
-  background: var(--bg-color);
+  background: white;
   display: grid;
   width: 100%;
   height: 100%;
   align-items: center;
   justify-items: center;
   text-decoration: none;
-  color: var(--white);
-  border: 2px solid var(--white);
+  color: #161616;
+  border: 2px solid #161616;
   border-radius: 2px;
   opacity: .4;
 }
@@ -243,7 +231,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
 .header .contenedor-header .consola .titulo h2 {
   font-size: 26px;
-  color: var(--white);
+  color: #161616;
   line-height: 26px;
 }
 
@@ -279,7 +267,6 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
 .header .contenedor-header .consola .titulo i {
   font-size: 25px;
-  color: var(--white);
 }
 
 
@@ -312,7 +299,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
 .header .contenedor-header nav .menu li {
   line-height: 19px;
-  background: var(--bg-color);
+  background: white;
   transition: all 0.3s ease;
 }
 
@@ -335,33 +322,31 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 .header .contenedor-header nav .menu > li:hover::before,
 .header .contenedor-header nav .menu > li.active::before {
   width: 100%;
-  background: var(--line);
+  background: #fc5461;
   transition: all .3s ease;
 }
 
 .header .contenedor-header nav .menu > li:nth-child(2).active::before {
   width: 98px;
-  background: var(--line);
+  background: #fc5461;
 }
 
 .header .contenedor-header nav .menu > li.active.dropdown-on::before {
   width: 130px;
-  background: var(--line);
+  background: #fc5461;
 }
 
 .header .contenedor-header nav .menu li a {      
   display: block;
   text-align: center;
   text-decoration: none;
-  color: gray;
+  color: #a3a3a3;
   letter-spacing: -.2px;
   font-size: 15px;
-  transition: all .3s ease;
 }
 
-.header .contenedor-header nav .menu > li.active > a,
-.header .contenedor-header nav .menu > li:hover > a {
-  color: var(--white);
+.header .contenedor-header nav .menu > li.active > a {
+  color: #000;
 }
 
 /* End general menu styles */
@@ -412,7 +397,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 .header.brackets {
   position: sticky;
   top: 0;
-  background: var(--bg-color);
+  background: white;
   z-index: 21;
 }
 
@@ -435,7 +420,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   position: relative;
   font-size: 15px;
   text-decoration: none;
-  color: var(--white);
+  color: #161616;
   opacity: .4;
   padding-bottom: 16px; 
   text-align: center;
@@ -452,7 +437,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   width: 75.16px;
   height: 2px;
   bottom: -2px;
-  background: var(--line);
+  background: #fc5461;
   left: 12px;
   transition: all .5s ease;
 }
@@ -486,13 +471,13 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   display: grid;
   grid-template-columns: 24% repeat(2, 28%) 20%;
   justify-content: space-between;
-  border-top: 2px solid var(--border);
+  border-top: 2px solid #c8c8c8;
 }
 
 .header .contenedor-header.grand-final-header .hours-mobile div {
   text-align: center;
   font-size: 18px;
-  color: var(--white);
+  color: #161616;
   position: relative;
 }
 
@@ -501,7 +486,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   position: absolute;
   width: 2px;
   height: 16px;
-  background: var(--border);
+  background: black;
   top: 50%;
   margin-top: -8px;
   right: 0;
@@ -535,7 +520,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   max-height: 0;
   overflow: hidden;
   top: 2.09rem;
-  border: 1px solid var(--border);
+  border: 1px solid #c8c8c8;
   border-top: none;
   border-radius: 0 0 10px 10px;
   width: 130px;
@@ -554,7 +539,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
     align-items: center;
     padding: 0 16px 0 14px;
     grid-template-columns: 70% 30%;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #c8c8c8;
     height: 42px;
     transition: all .3s ease;
 }
@@ -566,7 +551,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
 .header .contenedor-header nav .menu > li > ul li a {
   justify-self: start;
-  color: gray;
+  color: #a3a3a3;
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 10px;
@@ -574,30 +559,30 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 }
 
 .header .contenedor-header nav .menu > li > ul li i {
-  justify-self: end; 
-  color: var(--bg-color);
-  -webkit-text-stroke: 2px #0724a5;
+  justify-self: end;
+  color: white;
+  -webkit-text-stroke: 2px #0d3aff;
   transition: all .3s ease;
 }
 
 .header .contenedor-header nav .menu > li > ul li.active {
-  background: #0724a5;
+  background: #eeecec;
 }
 
 .header .contenedor-header nav .menu > li > ul li:hover {
-  background: #0724a5;
+  background: #eeecec;
 }
 
 .header .contenedor-header nav .menu > li > ul li:hover a {
-    color: var(--white);
+    color: #000;
 }
 
 .header .contenedor-header nav .menu > li > ul li.active a {
-  color: var(--white);
+  color: #000;
 }
 
 .header .contenedor-header nav .menu > li > ul li.active i {
-  color: var(--bg-color);
+  color: #0d3aff;
   -webkit-text-stroke: unset;
 }
 
@@ -931,7 +916,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   }
 
   .header .contenedor-header nav .menu > li {
-    padding-bottom: 19px; 
+    padding-bottom: 13px; 
   }
 
 
@@ -950,7 +935,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
     align-items: center;
     grid-column-gap: 12px;
     margin: -19px 7px 0 0;
-    color: var(--white);
+    color: #a3a3a3;
     font-size: 15px;
     line-height: 18px;
   }
@@ -958,12 +943,8 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   .header.standings .contenedor-header nav .search input {
     transition: all .3s ease;
     text-align: right;
-    width: 95px;
-    border: 1px solid var(--white);
-    background: var(--bg-color);
-    border-radius: 3px;
-    padding-right: 5px;
-    color: var(--white);
+    width: 85px;
+    border: none;
   }
 
   .header.standings .contenedor-header nav .search input:focus {
@@ -991,7 +972,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   }
 
   .container-hours {
-    border-bottom: 2px solid var(--border);
+    border-bottom: 2px solid #c8c8c8;
   }
 
   .main-grand-final .hours {
@@ -1006,7 +987,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
   .main-grand-final .hours div {
     font-size: 20px;
-    color: var(--white);
+    color: #161616;
     position: relative;
     padding-right: 22px;
   }
@@ -1016,7 +997,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
     position: absolute;
     width: 2px;
     height: 20px;
-    background: var(--border);
+    background: black;
     top: 50%;
     margin-top: -10px;
     right: 0;
@@ -1038,9 +1019,9 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   .main.brackets .round-title .rounds-container {
     height: 72px;
     display: grid;
-    border-bottom: 2px solid var(--border);
+    border-bottom: 2px solid #e9e9e9;
     grid-template-columns: repeat(4, 317px);
-    background: #0724a5;
+    background: #f6f6f6;
   }
 
   .main.brackets.round-32 .round-title .rounds-container {
@@ -1083,34 +1064,33 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
   .main.brackets .round-title .rounds-container .round.complete div.round-status div {
     width: 75px;
-    border: 1px solid var(--line);
+    border: 1px solid #00a661;
     color: #49b962;
-    background: var(--bg-color);
+    background: white;
   }
 
   /* Round playing styles */
 
   .main.brackets .round-title .rounds-container .round.playing div.round-status h3 {
-    color: var(--white);
+    color: black;
   }
 
   .main.brackets .round-title .rounds-container .round.playing > span {
     opacity: 1;
-    color: var(--white);
   }
 
   .main.brackets .round-title .rounds-container .round.playing div.round-status div {
     width: 67px;
     height: 20px;
     line-height: 22px;
-    background: var(--line);
-    color: var(--white);
+    background: #00a661;
+    color: white;
     display: grid;
     align-items: center;
   }
 
   .main.brackets .round-title .rounds-container .round.playing::after {
-    background: var(--white);
+    background: #d5d5d5;
   }
 
   .main.brackets .round-title .rounds-container .round.playing::before {
@@ -1269,11 +1249,11 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 @media screen and (min-width: 1300px) {  
 
   .header {
-    padding-top: 47px;
+    padding-top: 43px;
   }
 
   .header.brackets {
-    padding-top: 43px;
+    padding: 43px 0 25px 0;
   }
 
   .header.brackets.grand-final {
@@ -1289,7 +1269,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   }
 
   .header .contenedor-header .consola {
-    margin-bottom: 33px;
+    margin-bottom: 20px;
   }
 
   .header .contenedor-header .consola .titulo {
@@ -1371,7 +1351,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 /* Search bar */
 
 .standings .search-mobile {    
-  background: var(--bg-color);
+  background: #f6f6f6;
   padding-left: 21px;
   height: 38px;
   display: grid;
@@ -1385,14 +1365,14 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 .standings .search-mobile i {
   color: #a3a3a3;
   font-size: 13px;
-  background: var(--bg-color);
+  background: #f6f6f6;
 }
 
 .standings .search-mobile input {
   line-height: 17px;
   border: none;
-  color: gray;
-  background: var(--bg-color);
+  color: #a3a3a3;
+  background: #f6f6f6;
   height: 100%;
   font-size: 14px;
   transition: all .3s ease;
@@ -1417,7 +1397,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
 .tabla-standings thead {
   position: sticky;
-  background: var(--bg-color);
+  background: white;
   top: 0;
   padding-top: 5px;
   z-index: 100;
@@ -1436,7 +1416,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 }
 
 .tabla-standings thead tr th {
-  background: var(--border-card);
+  background: linear-gradient(to top, #0d3aff, #ff16ff);
   color: #f3f3f3;
   letter-spacing: -.1px;
   height: 100%;
@@ -1448,7 +1428,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 }
 
 .main.ps4 .tabla-standings thead tr th {
-  background: var(--border-card);
+  background: linear-gradient(to top, #0d3aff, #ff16ff);
 }
 
 .tabla-standings thead tr th {
@@ -1495,34 +1475,37 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   position: relative;
   height: 64px;
   grid-template-rows: 64px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #cfcfcf;
   cursor: pointer;
 }
 
-.main.xbox .tabla-standings tbody tr:nth-child(17)::before,
-.main.ps4 .tabla-standings tbody tr:nth-child(17)::before {
+.main.xbox.finished .tabla-standings tbody tr:nth-child(17)::before,
+.main.ps4.finished .tabla-standings tbody tr:nth-child(17)::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 2px;
   width: 100%;
-  background: #FF16FF;
+  background: linear-gradient(to top, #0d3aff, #ff16ff);
 }
 
-.main.ps4 .tabla-standings tbody tr:nth-child(17)::before {
-  background: linear-gradient(to top, var(--darkFucsia), var(--lightFucsia));
+.main.ps4.finished .tabla-standings tbody tr:nth-child(17)::before {
+  background: linear-gradient(to top, #0d3aff, #ff16ff);
+}
+
+.main.ps4.finished .tabla-standings.competitors tbody tr:nth-child(17)::before, 
+.main.xbox.finished .tabla-standings.competitors tbody tr:nth-child(17)::before {
+  display: none;
 }
 
 .tabla-standings tbody tr:hover,
 .tabla-standings tbody tr.mostrar {
-  background: rgba(13,58,255,.2);
+  background: #f6f6f6;
 }
 
 .tabla-standings tbody tr:hover td:nth-child(8) .info {
   opacity: 1;
-  color: var(--bg-color);
-  background: var(--white);
 }
 
 .tabla-standings tbody .player-info.mostrar {
@@ -1539,7 +1522,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   grid-auto-flow: column;
   align-items: center;
   justify-items: center;
-  color: var(--white);
+  color: #404040;
   letter-spacing: -0.5px;
   font-size: 15px;
 }
@@ -1549,7 +1532,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   position: absolute;
   width: 35px;
   height: 142px;
-  background: transparent;
+  background: linear-gradient(to right,rgba(255,255,255,.1), rgba(255,255,255,.34), #fff);
   right: 0px;
   bottom: 0px;
   transition: all .3s ease;
@@ -1564,7 +1547,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 }
 
 .tabla-standings tbody tr td:first-child img {
-  background: var(--bg-color);
+  background: white;
 }
 
 .ps4 .tabla-standings tbody tr td:first-child {
@@ -1578,18 +1561,18 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   left: 0;
   top: 32px;
   margin-top: -15px;
-  background: linear-gradient(to top, var(--darkFucsia), var(--lightFucsia));
+  background: linear-gradient(to top, #0d3aff, #ff16ff);
   border-radius: 4px;
   position: absolute;
 }
 
 .main.xbox .tabla-standings tbody tr td:first-child span.qualified {
-  background: linear-gradient(to top, var(--darkFucsia), var(--lightFucsia));
+  background: linear-gradient(to top, #0d3aff, #ff16ff);
 }
 
 .main.ps4 .tabla-standings tbody tr td:first-child span.qualified.default, 
 .main.xbox .tabla-standings tbody tr td:first-child span.qualified.default {
-  background: var(--white);
+  background: #d7d7d7;
 }
 
 .tabla-standings tbody tr td:first-child .thumbnail {
@@ -1656,10 +1639,10 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   align-items: center;
   justify-items: center;
   text-align: center;
-  background: var(--bg-color);
+  background: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
 }
 
@@ -1697,7 +1680,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   overflow-x: scroll;
   opacity: 0;
   scroll-behavior: smooth;
-  background: var(--bg-color);
+  background: white;
 }
 
 .tabla-standings tbody tr td div.game-history:nth-child(7) .border-card {
@@ -1742,7 +1725,7 @@ padding: 0 4px 0 0;
 }
 
 .tabla-standings tbody tr.no-results:hover {
-  background: var(--white);
+  background: white;
   cursor: default;
 }
 
@@ -1768,7 +1751,7 @@ padding: 0 4px 0 0;
 font-size: 33px;
   line-height: 33px;
   font-family: NimbusSanCon-Bol;
-  color: var(--white);
+  color: #161616;
   font-weight: normal;
 }
 
@@ -2058,6 +2041,138 @@ font-size: 33px;
 
 
 
+  /* ---------- COMPETITORS STYLES ---------- */
+
+  .tabla-standings.competitors {
+    padding-top: 1.5rem;
+  }
+
+  .tabla-standings.competitors thead tr th:nth-child(2), 
+  .tabla-standings.competitors thead tr th:nth-child(3) {
+    display: grid;
+  }
+
+  .tabla-standings.competitors thead tr, 
+  .tabla-standings.competitors tbody tr {
+    grid-template-columns: 41vw repeat(2, 25vw);
+  }
+
+  .tabla-standings.competitors tbody {
+    width: 92vw;
+    max-width: 92vw;
+  }
+
+  .tabla-standings.competitors tbody tr td:nth-child(2), 
+  .tabla-standings.competitors tbody tr td:nth-child(3) {
+    display: grid;
+  }
+
+  /* ---------- MEDIAQUERIES ---------- */
+
+  @media screen and (min-width: 700px) {
+
+    .tabla-standings.competitors tbody tr td:first-child {
+      grid-column-gap: 1rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:first-child .NimbusSanCon-Bol {
+      font-size: 1.2rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:first-child .thumbnail {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(2) img,
+    .tabla-standings.competitors tbody tr td:nth-child(3) img {
+      width: 2.5rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(3) img {
+      height: 1.8rem;
+    }
+
+  }
+
+
+  @media screen and (min-width: 1024px) {
+
+    .tabla-standings.competitors thead tr, 
+    .tabla-standings.competitors tbody tr {
+      grid-template-columns: 400px repeat(2, 100px);
+    }
+
+    .tabla-standings.competitors tbody {
+      width: 610px;
+      max-width: 610px;
+    }
+
+    .tabla-standings.competitors thead tr th:nth-child(2),
+    .tabla-standings.competitors thead tr th:nth-child(3) {
+      text-align: center;
+      padding-left: 0;
+      justify-content: center;
+    }
+
+
+  }
+
+  @media screen and (min-width: 1300px) {
+
+    .tabla-standings.competitors thead tr th:first-child {
+      text-align: left;
+      padding-left: 1.25rem;
+    }
+
+    .tabla-standings.competitors thead tr, 
+    .tabla-standings.competitors tbody tr {
+      grid-template-columns: 400px repeat(2, 100px);
+    }
+
+    .tabla-standings.competitors tbody {
+      width: 610px;
+      max-width: 610px;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(2), 
+    .tabla-standings.competitors tbody tr td:nth-child(3) {
+      padding-left: 0;
+      justify-items: center;
+    }
+
+    .tabla-standings.competitors thead tr th:nth-child(2),
+    .tabla-standings.competitors thead tr th:nth-child(3) {
+      text-align: center;
+      padding-left: 0;
+      justify-content: center;
+    }
+
+    .tabla-standings.competitors tbody tr td:first-child .NimbusSanCon-Bol {
+      font-size: 1.375rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:first-child .thumbnail {
+      width: 3.125rem;
+      height: 3.125rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(2) img {
+      width: 3.125rem;
+    }
+
+    .tabla-standings.competitors tbody tr td:nth-child(3) img {
+      height: 1.875rem;
+      width: 2.9375rem;
+    }
+
+  }
+
+  /* ---------- END MEDIAQUERIES ---------- */
+  
+  /* ---------- END COMPETITORS STYLES ---------- */
+
+
 /* MEDIAQUERIE SCREEN 731px */
 
 @media screen and (min-width: 731px) {
@@ -2344,8 +2459,8 @@ font-size: 33px;
   .tabla-standings tbody tr td .control .fas {
     width: 40px;
     height: 40px;
-    border: 1px solid var(--border);
-    background: var(--bg-color);
+    border: 1px solid #000;
+    background: #fff;
     position: absolute;
     border-radius: 50%;
     cursor: pointer;
@@ -2359,12 +2474,12 @@ font-size: 33px;
 
   .tabla-standings tbody tr td .siguiente {
     right: 0;
-    background: transparent;
+    background: linear-gradient(to right,rgba(255,255,255,.1),rgba(255,255,255,.34),#fff);
   }
 
   .tabla-standings tbody tr td .anterior {
     left: 0;
-    background: transparent;
+    background: linear-gradient(to left,rgba(255,255,255,.1),rgba(255,255,255,.34),#fff);
     display: none;
   }
 
@@ -2490,7 +2605,7 @@ font-size: 33px;
   }
 
   .tabla-standings tbody tr td .info {
-    border: 1px solid var(--border);
+    border: 1px solid #000;
     width: 2.5rem;
     height: 2.5rem;
     opacity: .2;
@@ -2568,7 +2683,7 @@ position: relative;
 position: absolute;
 height: 100%;
 width: 1px;
-background: var(--border);
+background: #d7d7d7;
 left: 304px;
 }
 
@@ -3366,7 +3481,7 @@ position: relative;
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation .thumbnail-console .thumbnail img {
 width: 100%;
 border-radius: 50%;
-background: var(--white);
+background: white;
 }
 
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation .thumbnail-console .console {
@@ -3390,7 +3505,7 @@ background: linear-gradient(to top,#0d3aff,#ff16ff);
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation .thumbnail-console .console i {
 width: 100%;
 height: 100%;
-background: var(--white);
+background: #fff;
 display: grid;
 align-items: center;
 text-align: center;
@@ -3412,6 +3527,7 @@ font-family: NimbusSanCon-Bol;
 text-transform: uppercase;
 font-size: 1.875rem;
 background: linear-gradient(to right,#af8d26,#e3cc91);
+background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 color: #f0be25;
@@ -3582,7 +3698,7 @@ padding: 2px;
 
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.ps4,
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.xbox {
-  background: var(--line);
+  background: transparent;
 }
 
 
@@ -3592,17 +3708,11 @@ border: 1px solid transparent;
 
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.ps4 .card,
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.xbox .card {
-  background: var(--line);
+  border: 1px solid #aaa;
 }
 
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.default .card {
-  background: var(--line);
-}
-
-
-.main-grand-final .grand-final-container .grand-final .matchs > a:hover .border-card.ps4 .card, 
-.main-grand-final .grand-final-container .grand-final .matchs > a:hover .border-card.xbox .card {
-  border: 1px solid transparent;
+border: 1px solid #aaa;
 }
 
 .main-grand-final .grand-final-container .grand-final .matchs > a.xbox.default,
@@ -3638,11 +3748,6 @@ position: relative;
 .main-grand-final .grand-final-container .grand-final .consolas .playstation {
 position: relative;
 left: -12px;
-color: var(--white);
-}
-
-.main-grand-final .grand-final-container .grand-final .consolas .xbox-one {
-  color: var(--white);
 }
 
 .main-grand-final .grand-final-container .grand-final .consolas .conector1 {
@@ -4110,19 +4215,19 @@ opacity: 1;
 .rank-consola.xbox span:last-of-type {
 width: 100%;
 height: 3px;
-background: linear-gradient(to left, #0d3aff 0%, #ff16ff 70%, var(--white));
+background: linear-gradient(to left, #0d3aff 0%, #ff16ff 70%, white);
 }
 
 .rank-consola.ps4 span:last-of-type {
-background: linear-gradient(to right, #0d3aff 0%, #ff16ff 70%, var(--white));
+background: linear-gradient(to right, #0d3aff 0%, #ff16ff 70%, white);
 }
 
 .rank-consola.xbox span:first-of-type {
-background: linear-gradient(to left, #0d3aff 0%, #97dc56 70%, var(--white));
+background: linear-gradient(to left, #0d3aff 0%, #97dc56 70%, white);
 }
 
 .rank-consola.xbox span:last-of-type {
-background: linear-gradient(to right, #0d3aff 0%, #97dc56 70%, var(--white));
+background: linear-gradient(to right, #0d3aff 0%, #97dc56 70%, white);
 }
 
 .tabla-rank {
@@ -4194,7 +4299,7 @@ overflow: hidden;
 height: 45px;
 align-items: center;
 border-bottom: 1px solid #cfcfcf;
-background: var(--white);
+background: #fff;
 position: relative; 
 }
 
@@ -4306,7 +4411,7 @@ background: linear-gradient(to top,#0d3aff,#ff16ff);
 width: 100%;
 height: 100%;
 border-radius: 50%;
-background: var(--white);
+background: white;
 }
 
 .tabla-rank tbody tr td .team-logo {
@@ -4358,7 +4463,7 @@ grid-column-gap: 8px;
 
 .main.rank .slide i {
 -webkit-text-stroke: 1px #979797;
-color: var(--white);
+color: white;
 cursor: pointer;
 }
 
@@ -4381,7 +4486,7 @@ display: grid;
 justify-items: center;
 align-content: start;
 grid-row-gap: 4px;
-background: var(--white);
+background: white;
 border: 1px solid rgba(22,22,22,.2);
 color: #a3a3a3;
 font-family: NimbusSanCon-Bol;
@@ -4804,7 +4909,7 @@ justify-content: center;
 
 .border-card.default .card .players-info-games .player1 .nation-nick, 
 .border-card.default .card .players-info-games .player2 .nation-nick {
-  color: var(--white);
+  color: #000;
   opacity: .3;
   font-size: 14px;
   font-family: NimbusSanCon-Bol;
@@ -4816,7 +4921,7 @@ justify-content: center;
 }
 
 .border-card.default .card .players-info-games .player .team {
-  color: var(--white);
+  color: #000;
   opacity: .3;
   font-size: 14px;
 }
@@ -4865,13 +4970,13 @@ justify-content: center;
 .game-history .border-card.cl-dark:hover .card, 
 .game-history .border-card.ps4:hover .card, 
 .game-history .border-card.xbox:hover .card { 
-  border: 1px solid var(--border);
+  border: 1px solid #aaa;
 }
 
 .card {
   padding: 12px;
-  border: 1px solid var(--border);
-  background: #0724a5;
+  border: 1px solid #aaa;
+  background: #f6f6f6;
   width: 273px;
   height: 98px;
   border-radius: 10px;
@@ -4913,7 +5018,7 @@ justify-content: center;
 .card .players-thumbnails-score .player .thumbnail-logo::before {
   content: "";
   position: absolute;
-  background: var(--white);
+  background: rgba(126,87,87,.2);
   width: 1px;
   height: 100%;
   left: 50%;
@@ -4932,7 +5037,7 @@ justify-content: center;
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  background: var(--white);
+  background: white;
 }
 
 .card .players-thumbnails-score .player .thumbnail-logo .logo {
@@ -4953,19 +5058,19 @@ justify-content: center;
 }
 
 .card .players-thumbnails-score .scores .score {
-  background: #01004B;
+  background: #fff;
   display: grid;
   align-content: center;
   justify-content: center;
   border-radius: 3px;
   height: 38px;
   overflow: hidden;
-  box-shadow: 0px 2px rgba(0, 0, 75, 0.5);
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
   position: relative;
 }
 
 .card .players-thumbnails-score .scores .score p {
-  color: var(--white);
+  color: #040404;
   font-size: 22px;
 }
 
@@ -5000,7 +5105,7 @@ justify-content: center;
   max-height: 12px;
   max-width: 20px;
   overflow: hidden;
-  border: 1px solid var(--white);
+  border: 1px solid #d7d7d7;
   border-radius: 3px;
   display: grid;
   align-content: center;
@@ -5021,13 +5126,9 @@ justify-content: center;
   align-content: center;
 }
 
-.card .players-info-games .player2 .nation-nick .nick {
-  text-align: right;
-}
-
 .card .players-info-games .player .nation-nick .nick p {
   font-size: 18px;
-  color: var(--white);
+  color: #000;
   white-space: pre;
 }
 
@@ -5038,7 +5139,7 @@ justify-content: center;
 
 .card .players-info-games .player .team {
   font-size: 12px;
-  color: rgba(255, 255, 255, .7);
+  color: #040404;
   font-style: italic;
   opacity: .7;
   white-space: pre;
@@ -5065,7 +5166,7 @@ justify-content: center;
   justify-items: center;
   align-items: baseline;
   grid-column-gap: 4px;
-  color: var(--white);
+  color: #161616;
   position: relative;
   letter-spacing: -.35px;
 }
@@ -5091,7 +5192,7 @@ justify-content: center;
 .card .players-info-games .games span:nth-child(2) {
   font-size: 7px;
   line-height: 7px;
-  color: rgba(255, 255, 255, .79);
+  color: #565656;
   letter-spacing: .5px;
   font-weight: 700;
 }
@@ -5128,7 +5229,7 @@ background: #d8d8d8;
 z-index: 20;
 position: relative;
 border-radius: 13px;
-background: var(--bg-color);
+background: white;
 }
 
 .border-card-final {
@@ -5148,7 +5249,7 @@ overflow: hidden;
 padding: 12px;
 height: 196px;
 grid-template-rows: 34px 28px auto;
-background: var(--bg-color);
+background: #f4f4f4;
 }
 
 .card-final .formation-record {
@@ -5188,7 +5289,7 @@ display: grid;
 grid-template-rows: 12px 68px;
 grid-row-gap: 5px;
 justify-items: center;
-color: var(--white);
+color: #000;
 font-family: NimbusSanCon-Bol;
 font-size: 12px;
 }
@@ -5234,14 +5335,14 @@ grid-row-gap: 3px;
 .card-final .formation-record .player .record-goals .goal-per-game .goals {
 font-size: 14px;
 font-family: NimbusSanCon-Bol;
-color: var(--white);
+color: #000;
 }
 
 .card-final .formation-record .player .record-goals .ecl-record span:last-child, 
 .card-final .formation-record .player .record-goals .goal-per-game span:last-child {
 font-size: 7px;
 font-weight: bold;
-color: var(--white);
+color: #565656;
 opacity: .8;
 letter-spacing: .5px;
 }
@@ -5265,7 +5366,7 @@ letter-spacing: .5px;
 /* XBOX */
 
 .xbox .players-thumbnails-score .player .thumbnail-logo .thumbnail {
-  background: linear-gradient(to top,var(--darkFucsia), var(--lightFucsia));
+  background: linear-gradient(to top,#0d3aff,#ff16ff);
 }
 
 
@@ -5273,7 +5374,7 @@ letter-spacing: .5px;
 /* PS4 */
 
 .ps4 .players-thumbnails-score .player .thumbnail-logo .thumbnail {
-  background: linear-gradient(to top,var(--darkFucsia), var(--lightFucsia));
+  background: linear-gradient(to top,#0d3aff,#ff16ff);
 }
 
 
@@ -5281,7 +5382,7 @@ letter-spacing: .5px;
 /* Champions League Dark */
 
 .cl-dark .players-thumbnails-score .player .thumbnail-logo .thumbnail {
-  background: var(--border);
+  background: #5af7dc;
 }
 
 
@@ -5295,12 +5396,12 @@ letter-spacing: .5px;
 
 .grand-final > .border-card.livestream,
 .grand-final > .card-container .border-card.livestream {
-  background: var(--line);
+  background: white;
 }
 
 .grand-final > .border-card.livestream .card,
 .grand-final > .card-container .border-card.livestream .card {
-  border: 1px solid var(--border);
+  border: 1px solid #aaa;
 }
 
 .grand-final > .border-card .card,
@@ -5351,7 +5452,7 @@ letter-spacing: .5px;
 .border-card.playing-now.cl-dark:hover,
 .border-card.livestream.grand-final:hover,
 .border-card.playing-now.grand-final:hover {
-  background: var(--line);
+  background: transparent;
 }
 
 /* Standings player historial */
@@ -5416,7 +5517,7 @@ letter-spacing: .5px;
   .border-card.playing-now.grand-final:hover .card, 
   .border-card.playing-now.ps4:hover .card, 
   .border-card.playing-now.xbox:hover .card {
-    border: 1px solid var(--border);
+    border: 1px solid #aaa;
   }
 
   .border-card > span.left,
@@ -5497,7 +5598,7 @@ letter-spacing: .5px;
   .border-card.playing-now.xbox .card > span.right,
   .border-card.livestream.border-card-final.xbox > span.right,
   .border-card.livestream.border-card-final.xbox .card > span.right {
-    background: linear-gradient(to right, transparent, var(--line), transparent);
+    background: linear-gradient(to right, white, #0d3aff, #ff16ff, white);
   }
 
   .border-card.livestream.xbox > span.left, 
@@ -5506,7 +5607,7 @@ letter-spacing: .5px;
   .border-card.playing-now.xbox .card > span.left,
   .border-card.livestream.border-card-final.xbox > span.left,
   .border-card.livestream.border-card-final.xbox .card > span.left {
-    background: linear-gradient(to left, transparent, var(--line), transparent);
+    background: linear-gradient(to left, white, #0d3aff, #ff16ff, white);
   }
 
   .border-card.livestream.xbox > span.bottom, 
@@ -5515,7 +5616,7 @@ letter-spacing: .5px;
   .border-card.playing-now.xbox .card > span.bottom,
   .border-card.livestream.border-card-final.xbox > span.bottom,
   .border-card.livestream.border-card-final.xbox .card > span.bottom {
-    background: linear-gradient(to bottom, transparent, var(--line), transparent);
+    background: linear-gradient(to bottom, white, #0d3aff, #ff16ff, white);
   }
 
   .border-card.livestream.xbox > span.top, 
@@ -5524,7 +5625,7 @@ letter-spacing: .5px;
   .border-card.playing-now.xbox .card > span.top,
   .border-card.livestream.border-card-final.xbox > span.top,
   .border-card.livestream.border-card-final.xbox .card > span.top {
-    background: linear-gradient(to top, transparent, var(--line), transparent);
+    background: linear-gradient(to top, white, #0d3aff, #ff16ff, white);
   }
 
   /* ELIMINAMOS LA ANIMACIÓN DE PLAYING NOW */
@@ -5545,7 +5646,7 @@ letter-spacing: .5px;
   .border-card.playing-now.border-card-final.xbox .card > span.left,
   .border-card.playing-now.border-card-final.xbox > span.right,
   .border-card.playing-now.border-card-final.xbox .card > span.right  {
-    background: linear-gradient(to top, transparent, var(--line), transparent);
+    background: linear-gradient(to top,transparent,transparent);
   }
 
   /* PS4 */
@@ -5556,7 +5657,7 @@ letter-spacing: .5px;
   .border-card.playing-now.ps4 .card > span.right,
   .border-card.livestream.border-card-final.ps4 > span.right,
   .border-card.livestream.border-card-final.ps4 .card > span.right {
-    background: linear-gradient(to right, transparent, var(--line), transparent);
+    background: linear-gradient(to right,white,#0d3aff,#ff16ff,white);
   }
   
   .border-card.livestream.ps4 > span.left, 
@@ -5565,7 +5666,7 @@ letter-spacing: .5px;
   .border-card.playing-now.ps4 .card > span.left,
   .border-card.livestream.border-card-final.ps4 > span.left,
   .border-card.livestream.border-card-final.ps4 .card > span.left {
-    background: linear-gradient(to left, transparent, var(--line), transparent);
+    background: linear-gradient(to left,white,#0d3aff,#ff16ff,white);
   }
 
   .border-card.livestream.ps4 > span.bottom, 
@@ -5574,7 +5675,7 @@ letter-spacing: .5px;
   .border-card.playing-now.ps4 .card > span.bottom,
   .border-card.livestream.border-card-final.ps4 > span.bottom,
   .border-card.livestream.border-card-final.ps4 .card > span.bottom {
-    background: linear-gradient(to bottom, transparent, var(--line), transparent);
+    background: linear-gradient(to bottom,white,#0d3aff,#ff16ff,white);
   }
   
   .border-card.livestream.ps4 > span.top, 
@@ -5583,7 +5684,7 @@ letter-spacing: .5px;
   .border-card.playing-now.ps4 .card > span.top,
   .border-card.livestream.border-card-final.ps4 > span.top,
   .border-card.livestream.border-card-final.ps4 .card > span.top {
-    background: linear-gradient(to top, transparent, var(--line), transparent);
+    background: linear-gradient(to top,white,#0d3aff,#ff16ff,white);
   }
 
   /* ELIMINAMOS LA ANIMACIÓN DE PLAYING NOW */
@@ -5615,7 +5716,7 @@ letter-spacing: .5px;
   .border-card.playing-now.cl-dark .card > span.right,
   .border-card.livestream.border-card-final.cl-dark > span.right,
   .border-card.livestream.border-card-final.cl-dark .card > span.right {
-    background: linear-gradient(to right,transparent,var(--border),transparent);
+    background: linear-gradient(to right,white,#5af7dc,white);
   }
   
   .border-card.livestream.cl-dark > span.left, 
@@ -5624,7 +5725,7 @@ letter-spacing: .5px;
   .border-card.playing-now.cl-dark .card > span.left,
   .border-card.livestream.border-card-final.cl-dark > span.left,
   .border-card.livestream.border-card-final.cl-dark .card > span.left {
-    background: linear-gradient(to left,transparent,var(--border),transparent);
+    background: linear-gradient(to left,white,#5af7dc,white);
   }
 
   .border-card.livestream.cl-dark > span.bottom, 
@@ -5633,7 +5734,7 @@ letter-spacing: .5px;
   .border-card.playing-now.cl-dark .card > span.bottom,
   .border-card.livestream.border-card-final.cl-dark > span.bottom,
   .border-card.livestream.border-card-final.cl-dark .card > span.bottom {
-    background: linear-gradient(to bottom,transparent,var(--border),transparent);
+    background: linear-gradient(to bottom,white,#5af7dc,white);
   }
   
   .border-card.livestream.cl-dark > span.top, 
@@ -5642,7 +5743,7 @@ letter-spacing: .5px;
   .border-card.playing-now.cl-dark .card > span.top,
   .border-card.livestream.border-card-final.cl-dark > span.top,
   .border-card.livestream.border-card-final.cl-dark .card > span.top {
-    background: linear-gradient(to top,transparent,var(--border),transparent);
+    background: linear-gradient(to top,white,#5af7dc,white);
   }
 
   /* ELIMINAMOS LA ANIMACIÓN DE PLAYING NOW */
@@ -5672,28 +5773,28 @@ letter-spacing: .5px;
   .border-card.playing-now.border-card-final > span.right,
   .border-card.livestream.border-card-final .card > span.right, 
   .border-card.playing-now.border-card-final .card > span.right {
-    background: linear-gradient(to right,transparent,#af8d26,#e3cc91,transparent);
+    background: linear-gradient(to right,white,#af8d26,#e3cc91,white);
   }
   
   .border-card.livestream.border-card-final > span.left, 
   .border-card.playing-now.border-card-final > span.left,
   .border-card.livestream.border-card-final .card > span.left, 
   .border-card.playing-now.border-card-final .card > span.left {
-    background: linear-gradient(to left,transparent,#af8d26,#e3cc91,transparent);
+    background: linear-gradient(to left,white,#af8d26,#e3cc91,white);
   }
 
   .border-card.livestream.border-card-final > span.bottom,
   .border-card.playing-now.border-card-final > span.bottom,
   .border-card.livestream.border-card-final .card > span.bottom, 
   .border-card.playing-now.border-card-final .card > span.bottom {
-    background: linear-gradient(to bottom,transparent,#af8d26,#e3cc91,transparent);
+    background: linear-gradient(to bottom,white,#af8d26,#e3cc91,white);
   }
   
   .border-card.livestream.border-card-final > span.top, 
   .border-card.playing-now.border-card-final > span.top,
   .border-card.livestream.border-card-final .card > span.top, 
   .border-card.playing-now.border-card-final .card > span.top {
-    background: linear-gradient(to top,transparent,#af8d26,#e3cc91,transparent);
+    background: linear-gradient(to top,white,#af8d26,#e3cc91,white);
   }
 
   /* ELIMINAMOS LA ANIMACIÓN DE PLAYING NOW */
@@ -5795,7 +5896,7 @@ letter-spacing: .5px;
   letter-spacing: .4px;
   background: linear-gradient(to top,#cf0123,#f30042);
   border-radius: 0 0 3px 3px;
-  color: var(--white);
+  color: #fff;
   display: grid;
   align-items: center;
   padding-top: .063rem;
@@ -5817,7 +5918,7 @@ letter-spacing: .5px;
 /* XBOX */
 
 .border-card.playing-now.xbox .players-thumbnails-score .scores .playing {
-  background: linear-gradient(to top, var(--darkFucsia), var(--lightFucsia));
+  background: linear-gradient(to top, #0d3aff, #ff16ff);
 }
 
 .border-card.xbox .card .players-thumbnails-score .scores .draw .draw {
@@ -5865,7 +5966,7 @@ letter-spacing: .5px;
  /* XBOX */
 
  .border-card.xbox .players-thumbnails-score .scores .win {
-  background: #0C3AFF;
+  background: linear-gradient(to top, #0d3aff, #ff16ff);
 }
 
 
@@ -5873,7 +5974,7 @@ letter-spacing: .5px;
 /* PS4 */
 
 .border-card.ps4 .players-thumbnails-score .scores .win {
-  background: #0C3AFF;
+  background: linear-gradient(to top, #0d3aff, #ff16ff);
 }
 
 
@@ -5881,7 +5982,7 @@ letter-spacing: .5px;
 /* Champions League dark */
 
 .border-card.cl-dark .players-thumbnails-score .scores .win {
-  background: var(--border);
+  background: #5af7dc;
 }
 
 
@@ -5897,10 +5998,10 @@ letter-spacing: .5px;
 
 /* LOSE */
 
-/*.card .players-thumbnails-score .lose {
+.card .players-thumbnails-score .lose {
   filter: grayscale(1);
   opacity: .75;
-}*/
+}
 
 .card .players-thumbnails-score .player.lose .thumbnail-logo .thumbnail {
   background: #b1b1b1;
@@ -5947,11 +6048,11 @@ letter-spacing: .5px;
 }
 
 .card .players-thumbnails-score .scores .score.lose p {
-  color: var(--white);
+  color: #161616;
 }
 
 .border-card .card .players-thumbnails-score .scores .win p {
-  color: var(--white);
+  color: #fff;
 }
 
 /* End win and lose styles*/
@@ -6228,8 +6329,8 @@ letter-spacing: .5px;
 .main.rounds .rounds-container,
 .main.brackets .round-title {
 height: 72px;
-border-bottom: 2px solid var(--border);
-background: rgba(13, 58, 255, .4);
+border-bottom: 2px solid #e9e9e9;
+background: #f6f6f6;
 margin-bottom: 16px;
 } 
 
@@ -6271,13 +6372,13 @@ font-family: NimbusSanCon-Bol;
 font-size: 24px;
 line-height: 24px;
 font-weight: normal;
-color: gray;
+color: #bdbdbd;
 transition: all .3s ease;
 text-transform: uppercase;
 }
 
 .main.brackets .rounds-container .round div.round-status h3 {
-color: gray;
+color: #000;
 }
 
 .main.rounds .rounds-container .rounds .round a div,
@@ -6301,45 +6402,41 @@ z-index: 1;
 .main.rounds .rounds-container .rounds .round > span,
 .main.brackets .round-title .rounds-container .round > span {
 font-size: 12px;
-color: gray;
+color: #bdbdbd;
 letter-spacing: -0.2px;
 transition: all .3s ease;
 }
 
 .main.brackets .round-title .rounds-container .round > span {
-color: gray;
+color: #000;
 }
 
 /* Round complete styles */
 
 .main.rounds .rounds-container .rounds .round.complete a div {
 width: 75px;
-border: 1px solid var(--line);
-color: var(--line);
-background: var(--bg-color);
-}
-
-.main.rounds .rounds-container .rounds .round.complete:last-child a div {
-  width: 119px;
+border: 1px solid #00a661;
+color: #49b962;
+background: white;
 }
 
 .main.rounds .rounds-container .rounds .round.complete a:hover h3,
 .main.rounds .rounds-container .rounds .round.playing a:hover h3,
 .main.rounds .rounds-container .rounds .round.active a h3,
 .main.rounds .rounds-container .rounds .round.active > span {
-color: var(--white);
+color: black;
 }
 
 .main.rounds .rounds-container .rounds .round.active a div {
-color: var(--bg-color);
-background: var(--line);
+color: white;
+background: #00a661;
 }
 
 .main.rounds .rounds-container .rounds .round.complete a:hover + span.date,
 .main.rounds .rounds-container .rounds .round.playing a:hover + span.games,
 .main.rounds .rounds-container .rounds .round.playing.active a + span.date,
 .main.rounds .rounds-container .rounds .round.active a + span.date {
-color: var(--white);
+color: #000;
 }
 
 
@@ -6355,8 +6452,8 @@ grid-auto-flow: column;
 justify-content: center;
 align-items: center;
 grid-column-gap: 13px;
-color: var(--white);
-background: var(--bg-color);
+color: #7c7c7c;
+background: #fff;
 }
 
 .main.rounds .rounds-container .rounds .round.upcoming a div::before,
@@ -6378,16 +6475,16 @@ margin-left: 41px;
 width: 67px;
 height: 20px;
 line-height: 22px;
-background: var(--white);
-color: var(--line);
+background: white;
+color: #00a661;
 display: grid;
 align-items: center;
-border: 1px solid var(--line);
+border: 1px solid #00a661;
 }
 
 .main.rounds .rounds-container .rounds .round.playing.active a div {
-background: var(--line);
-color: var(--white);
+background: #00a661;
+color: white;
 }
 
 .main.rounds .rounds-container .rounds .complete,
@@ -6562,7 +6659,7 @@ display: none;
 /* Complete button styles */
 
 .main.rounds .rounds-container .rounds .round.complete::before {
-  background: var(--line);
+  background: #3aa757;
 }
 
 .main.rounds .rounds-container .rounds .round.complete a {
@@ -6570,32 +6667,35 @@ display: none;
 }
 
 .main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div,
-.main.rounds .rounds-container .rounds .round.playing:last-child a div,
+  .main.rounds .rounds-container .rounds .round.playing:last-child a div,
 .main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
   width: 119px;
 }
 
 .main.rounds .rounds-container .rounds .round.playing:last-child a div,
 .main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
-  background: var(--line);
-  color: var(--bg-color);
+  background: #fff;
+  color: #3aa757;
   animation: 3s infinite lastMatch;
 }
 
 @keyframes lastMatch {
+  
   0% {
-    color: var(--bg-color);
+    color: #3aa757;
   }
   50% {
-    color: var(--line);
-    background: var(--bg-color);
+    color: #fff;
+    background: #3aa757;
   }
 
   100% {
-    color: var(--bg-color);
-    background: var(--line);
+    color: #3aa757;
+    background: #fff;
   }
+
 }
+
 
 
 /* Playing button styles */
@@ -6753,7 +6853,7 @@ grid-column-gap: 8px;
 position: absolute;
 height: 100%;
 width: 1px;
-background: var(--border);
+background: #d7d7d7;
 left: 50%;
 margin-left: -1px;
 display: none;

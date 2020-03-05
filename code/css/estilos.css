@@ -916,7 +916,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   }
 
   .header .contenedor-header nav .menu > li {
-    padding-bottom: 19px; 
+    padding-bottom: 13px;
   }
 
 
@@ -1249,11 +1249,11 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 @media screen and (min-width: 1300px) {  
 
   .header {
-    padding-top: 47px;
+    padding-top: 43px;
   }
 
   .header.brackets {
-    padding-top: 43px;
+    padding: 43px 0 25px 0;
   }
 
   .header.brackets.grand-final {
@@ -1269,7 +1269,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   }
 
   .header .contenedor-header .consola {
-    margin-bottom: 33px;
+    margin-bottom: 20px;
   }
 
   .header .contenedor-header .consola .titulo {
@@ -2042,6 +2042,44 @@ font-size: 33px;
 
 
   /* ---------- COMPETITORS STYLES ---------- */
+  
+  .competitors .tabla-rank tbody {
+    width: 304px;
+    grid-auto-flow: row;
+    grid-template-rows: unset;
+  }
+
+  .competitors .tabla-rank thead tr, 
+  .competitors .tabla-rank tbody tr {
+    display: grid;
+    grid-template-columns: 40% 38% 20%;
+    grid-column-gap: 4px;
+    height: 40px;
+    text-align: center;
+  }
+
+  .competitors .tabla-rank tbody tr td:first-child {
+    justify-content: unset;
+    grid-column-gap: 0;
+  }
+
+  .competitors .tabla-rank tbody tr td:first-child .thumbnail img {
+    width: 37px;
+    height: 37px;
+  }
+
+  .competitors .tabla-rank tbody tr td:nth-child(2) img {
+    justify-items: unset;
+    width: 37px;
+    height: 37px;
+  }
+
+  .competitors .tabla-rank tbody tr td:last-child img {
+    height: 20px;
+    width: 35px;
+    border-radius: 5px;
+    border: 1px solid #dfdfdf;
+  }
 
   .tabla-standings.competitors {
     padding-top: 1.5rem;
@@ -2100,12 +2138,12 @@ font-size: 33px;
 
     .tabla-standings.competitors thead tr, 
     .tabla-standings.competitors tbody tr {
-      grid-template-columns: 400px repeat(2, 100px);
+      grid-template-columns: 230px repeat(2,100px);
     }
 
     .tabla-standings.competitors tbody {
-      width: 610px;
-      max-width: 610px;
+      width: 430px;
+      max-width: 430px;
     }
 
     .tabla-standings.competitors thead tr th:nth-child(2),
@@ -2125,14 +2163,14 @@ font-size: 33px;
       padding-left: 1.25rem;
     }
 
-    .tabla-standings.competitors thead tr, 
-    .tabla-standings.competitors tbody tr {
-      grid-template-columns: 400px repeat(2, 100px);
+    .main .tabla-standings.competitors thead tr, 
+    .main .tabla-standings.competitors tbody tr {
+      grid-template-columns: 230px repeat(2, 155px);
     }
 
-    .tabla-standings.competitors tbody {
-      width: 610px;
-      max-width: 610px;
+    .main .tabla-standings.competitors > tbody {
+      width: 540px;
+      max-width: 540px;
     }
 
     .tabla-standings.competitors tbody tr td:nth-child(2), 
@@ -2298,9 +2336,19 @@ font-size: 33px;
   .tabla-standings thead tr, .tabla-standings tbody tr {
     grid-template-columns: 182px repeat(6, 88px) 150px;
   }
+
+  .tabla-standings.competitors thead tr, 
+  .tabla-standings.competitors tbody tr {
+    grid-template-columns: 182px repeat(2, 100px);
+  }
   
   .tabla-standings tbody {
     width: 881px;
+  }
+
+  .tabla-standings.competitors tbody {
+    width: 382px;
+    max-width: 382px;
   }
 
   .standings .search-mobile {
@@ -2637,6 +2685,12 @@ font-size: 33px;
   .tabla-standings, .tabla-standings tbody {
     width: 1416px;
     max-width: 1416px;
+  }
+
+  .tabla-standings.competitors,
+  .tabla-standings.competitors tbody {
+    width: unset;
+    max-width: unset;
   }
 
   .tabla-standings tbody tr td .control .fas.fa-chevron-right {
@@ -4244,12 +4298,12 @@ margin: 0 auto;
 transition: all .3s ease;
 }
 
-.tabla-rank.inactive {
+.tabla-rank.inactive, .main.standings.inactive {
 opacity: 0;
 display: none;
 }
 
-.tabla-rank.active {
+.tabla-rank.active, .main.standings.active {
 display: grid;
 opacity: 1;
 }
@@ -4704,7 +4758,7 @@ justify-content: center;
   display: grid;
 }
 
-.tabla-rank.inactive {
+.tabla-rank.inactive, .main.standings.inactive {
   display: grid; 
   opacity: 1;
 }
@@ -4834,7 +4888,7 @@ justify-content: center;
 
 .container-rankings-consola, 
 .tables-container {
-  grid-template-columns: repeat(2, 530px);
+  grid-template-columns: repeat(2, 600px);
   grid-column-gap: 60px;
 }
 
@@ -6470,7 +6524,7 @@ transition: all .3s ease;
 }
 
 .main.brackets .round-title .rounds-container .round > span {
-color: #000;
+color: var(--white);
 }
 
 /* Round complete styles */
@@ -6478,7 +6532,7 @@ color: #000;
 .main.rounds .rounds-container .rounds .round.complete a div {
 width: 75px;
 border: 1px solid #00a661;
-color: #49b962;
+color: #00a661;
 background: white;
 }
 
@@ -6721,15 +6775,43 @@ display: none;
 /* Complete button styles */
 
 .main.rounds .rounds-container .rounds .round.complete::before {
-  background: #3aa757;
+  background: #00a661;
 }
 
 .main.rounds .rounds-container .rounds .round.complete a {
   max-width: 75px;
 }
 
-.main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div {
+.main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div,
+.main.rounds .rounds-container .rounds .round.playing:last-child a div,
+.main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
   width: 119px;
+}
+
+.main.rounds .rounds-container .rounds .round.playing:last-child a div,
+.main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div,
+.main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
+  background: #fff;
+  color: #3aa757;
+  border: 1px solid #3aa757;
+  animation: 3s infinite lastMatch;
+}
+
+@keyframes lastMatch {
+  
+  0% {
+    color: #3aa757;
+  }
+  50% {
+    color: #fff;
+    background: #3aa757;
+  }
+
+  100% {
+    color: #3aa757;
+    background: #fff;
+  }
+
 }
 
 /* Playing button styles */
