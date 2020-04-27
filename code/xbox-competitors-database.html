@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XBOX Competitors Database</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header standings competitors">
+        <div class="contenedor-header">
+            <div class="consola">
+                <div class="titulo">
+                    <img src="img/ea-sports.png" alt="">
+                    <div class="text">
+                        <span>FIFA 20</span>   
+                        <h2 class="NimbusSanCon-Bol">COMPETITORS DATABASE</h2>
+                    </div>
+                </div>
+                <div class="consola-btn">
+                    <a href="ps4-competitors-database.html" class="btn-ps4">PS4</a>
+                    <a href="#" class="btn-xbox active">XBOX 1</a>
+                </div>
+            </div>
+
+            <nav>
+                <ul class="menu">
+                    <li class="active"><a href="#">Standings</a></li>
+                    <li><a href="ps4-rounds.html">Round<i class="fas fa-chevron-down"></i></a>
+                    </li>
+                    <!--<li><a href="ps4-rank.html">Ranking</a></li>!-->
+                </ul>
+                <div class="search">
+                    <input type="text" id="search" placeholder="Search competitor, team or nationality">
+                    <i class="fas fa-search"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+
+    <main class="main standings competitors-db xbox">
+        <div class="search-mobile">
+            <input type="text" id="search-mobile" placeholder="Search player">
+            <i class="fas fa-search"></i>
+        </div>
+        <table class="tabla-standings tabla-competitors">
+            <thead>
+                <tr>
+                    <th class="NimbusSanCon-Bol">COMPETITOR</th>
+                    <th class="NimbusSanCon-Bol">NAME</th>
+                    <th class="NimbusSanCon-Bol">TEAM</th>
+                    <th class="NimbusSanCon-Bol">NATIONALITY</th>
+                    <th class="NimbusSanCon-Bol">POINTS <i class="fas fa-sort-down"></i></th>
+                </tr>
+            </thead>
+            <tbody id="table">
+
+                <tr class="player-info ocultar">
+                    <td>
+                        <div class="position">
+                            <div class="rank-arrows">
+                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <span>2</span>
+                                <i class="fas fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            <span>1</span>
+                        </div>
+                        <div class="thumbnail"><img src="img/players/ronaldo.png"  alt=""></div> 
+                        <span class="NimbusSanCon-Bol">CR7</span>
+                    </td>
+
+                    <td>Cristiano Ronaldo</td>
+
+                    <td> <img src="img/teams/escudo.png" alt=""> </td>
+
+                    <td> <img src="img/nations/portugal.jpg" alt=""> </td>
+
+                    <td>5,420</td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/search.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://kit.fontawesome.com/6c25d394b9.js"></script>
+</body>
+
+</html>

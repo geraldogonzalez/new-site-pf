@@ -6754,6 +6754,10 @@ letter-spacing: -0.2px;
 transition: all .3s ease;
 }
 
+.main.brackets .round-title .rounds-container .round > span {
+  height: 13px;
+}
+
 /* Round complete styles */
 
 .main.rounds .rounds-container .rounds .round.complete a div {
@@ -7023,38 +7027,9 @@ display: none;
   max-width: 75px;
 }
 
-.main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div,
-.main.rounds .rounds-container .rounds .round.playing:last-child a div,
-.main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
+.main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div {
   width: 119px;
 }
-
-.main.rounds .rounds-container .rounds .round.playing:last-child a div,
-.main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
-  color:#EF8527;
-  background: #000;
-  animation: 3s infinite lastMatch;
-}
-
-@keyframes lastMatch {
-  
-  0% {
-    background: #EF8527;
-    color: #fff;
-  }
-  50% {
-    color: #EF8527;
-    background: #000;
-  }
-
-  100% {
-    color: #fff;
-    background: #EF8527;
-  }
-
-}
-
-
 
 /* Playing button styles */
 

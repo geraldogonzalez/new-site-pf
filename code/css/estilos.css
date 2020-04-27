@@ -512,6 +512,63 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
 
 
+
+/* Start competitors styles */
+
+.header.competitors .contenedor-header .consola .titulo {
+  margin-bottom: .5rem;
+  grid-template-columns: 40px auto;
+  height: 44px;
+}
+
+.header.competitors .contenedor-header .consola .titulo > img {
+  width: 40px;
+}
+
+.header.competitors .contenedor-header .consola .titulo .text > span {
+  color: #404040;
+  opacity: .72;
+}
+
+.header.standings.competitors .contenedor-header nav .search {
+  position: relative;
+  top: 8px;
+}
+
+.header.standings.competitors .contenedor-header nav .search input {
+  width: 328px;
+  height: 34px;
+}
+
+.header.standings.competitors .contenedor-header nav .search input:focus {
+  width: 328px;
+  outline: none;
+}
+
+@media screen and (min-width: 1300px) {
+    
+  .header.competitors .contenedor-header .consola .titulo {
+    margin-bottom: 0;
+    grid-template-columns: 57px auto;
+    height: 60px;
+  }
+
+  .header.competitors .contenedor-header .consola .titulo > img {
+    width: 57px;
+  }
+
+  .header.competitors .contenedor-header .consola .titulo > .text {
+    display: grid;
+    grid-row-gap: 6px;
+  }
+
+}
+
+/* End competitors styles */
+
+
+
+
 /* Start menu styles (dropdown) > */
 
 .header .contenedor-header nav .menu > li > ul {
@@ -2038,6 +2095,533 @@ font-size: 33px;
 }
 
 }
+
+
+/* --- MAIN COMPETITORS DATABASE --- */
+
+.tabla-competitors thead tr, 
+.tabla-competitors tbody tr {
+  grid-template-columns: 100px 50px 84px 60px;
+  /*
+  grid-template-columns: 120px 71px 90px 66px;*/
+}
+ 
+.tabla-competitors thead tr th:nth-child(3) {
+  display: grid;
+}
+
+.tabla-competitors thead tr th:last-child {
+  padding: 0;
+}
+
+.tabla-competitors thead tr th:last-child > i {
+  display: none;
+}
+ 
+.tabla-competitors tbody tr td:nth-child(3) {
+  display: grid;
+}
+
+.tabla-competitors tbody tr td:last-child {
+  display: none;
+}
+
+.tabla-competitors tbody tr td:first-child {
+  grid-column-gap: 18px;
+}
+
+.tabla-competitors tbody tr td:first-child .position {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-column-gap: 8px;
+}
+
+.tabla-competitors tbody tr td:first-child .position .rank-arrows {
+  display: grid;
+  grid-template-rows: 8px 12px 8px;
+  align-items: center;
+  justify-items: center;
+  font-size: 14px;
+}
+
+.tabla-competitors tbody tr td:first-child .position > span {
+  font-family: NimbusSanCon-Bol;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  top: -1px;
+}
+
+.tabla-competitors tbody tr td:first-child .position .rank-arrows > span {
+  font-family: SeravekWebBasicRegular;
+  font-size: 12px;
+  opacity: .75;
+  letter-spacing: -.1px;
+}
+
+.tabla-competitors tbody tr td:first-child .position .rank-arrows i,
+.tabla-competitors tbody tr td:first-child .position .rank-arrows .default {
+  color: #cdcdcd;
+}
+
+.tabla-competitors tbody tr td:first-child .position .rank-arrows .up {
+  color: #00a661;
+}
+
+.tabla-competitors tbody tr td:first-child .position .rank-arrows .down {
+  color: #df002c;
+}
+
+.tabla-competitors tbody tr td:first-child > span {
+  font-size: 20px;
+  position: relative;
+  top: -1px;
+}
+
+.tabla-competitors tbody tr td:nth-child(3) img {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 0;
+}
+
+.tabla-competitors tbody tr td:nth-child(4) img {
+  height: 1.5rem;
+  width: 1.9rem;
+  border-radius: 6px;
+  border: 1px solid #d7d7d7;
+}
+
+.tabla-competitors tbody tr td:nth-child(5) {
+  font-family: NimbusSanCon-Bol;
+  font-size: 16px;
+}
+
+
+/* ------- MEDIAQUERIES COMPETITORS DATABASE------- */
+
+/* MEDIAQUERIE SCREEN 360px */
+
+@media screen and (min-width: 360px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 115px 67px 90px 60px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 375px */
+
+@media screen and (min-width: 375px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 120px 71px 90px 66px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 411px */
+
+@media screen and (min-width: 411px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 143px 75px 90px 75px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 414px */
+
+@media screen and (min-width: 414px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 146px 75px 90px 75px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 450px */
+
+@media screen and (min-width: 450px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 157px 85px 95px 85px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 470px */
+
+@media screen and (min-width: 470px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 157px 85px 95px 85px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 500px */
+
+@media screen and (min-width: 500px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 182px 95px 100px 95px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 530px */
+
+@media screen and (min-width: 530px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 200px 100px 102px 100px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 568px */
+
+@media screen and (min-width: 568px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 210px 110px 110px 110px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 600px */
+
+@media screen and (min-width: 600px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 185px 134px 85px 100px 65px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 640px */
+
+@media screen and (min-width: 640px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 190px 148px 85px 100px 86px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 667px */
+
+@media screen and (min-width: 667px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 190px 155px 93px 105px 93px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 700px */
+
+@media screen and (min-width: 700px) {
+
+  .tabla-competitors thead tr, 
+  .tabla-competitors tbody tr {
+    grid-template-columns: 190px 170px 100px 109px 100px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 731px */
+
+@media screen and (min-width: 731px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 190px 170px 115px 115px 110px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 736px */
+
+@media screen and (min-width: 736px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 190px 170px 115px 115px 110px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 768px */
+
+@media screen and (min-width: 768px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 210px 170px 120px 120px 117px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 800px */
+
+@media screen and (min-width: 800px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 210px 170px 125px 124px 140px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 812px */
+
+@media screen and (min-width: 812px) {
+  
+  .header.competitors .contenedor-header .consola .titulo {
+    margin-bottom: 0;
+  }
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 210px 170px 130px 126px 140px;
+  }
+/*
+  .competitors-db .tabla-competitors thead tr th:nth-child(2), 
+  .competitors-db .tabla-competitors tbody tr td:nth-child(2),
+  .competitors-db .tabla-competitors thead tr th:nth-child(3),
+  .competitors-db .tabla-competitors thead tr th:nth-child(4) {
+    justify-content: start;
+    padding-left: 11px;
+  }
+*/
+}
+
+
+/* MEDIAQUERIE SCREEN 823px */
+
+@media screen and (min-width: 823px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 210px 170px 134px 134px 144px;
+  }
+  
+  .tabla-competitors tbody tr td:first-child {
+    grid-column-gap: 12px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 860px */
+
+@media screen and (min-width: 860px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 219px 170px 140px 140px 160px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 900px */
+
+@media screen and (min-width: 900px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 230px 170px 154px 155px 160px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 940px */
+
+@media screen and (min-width: 940px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 230px 184px 165px 165px 165px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 980px */
+
+@media screen and (min-width: 980px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 250px 201px 166px 166px 166px;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 1024px */
+
+@media screen and (min-width: 1024px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 325px 304px 105px 140px 90px;
+  }
+
+  .competitors-db .tabla-competitors tbody tr td:nth-child(3) img {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(4) img {
+    height: 1.6rem;
+    width: 2.1rem;
+  }
+
+}
+
+
+/* MEDIAQUERIE SCREEN 1130px */
+
+@media screen and (min-width: 1130px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 340px 313px 105px 140px 90px;
+  }
+
+}
+
+
+
+
+/* MEDIAQUERIE SCREEN 1300px */
+
+@media screen and (min-width: 1300px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 360px 324px 159px 159px 159px;
+  }
+
+  .competitors-db .tabla-competitors tbody tr td:first-child {
+    grid-template-columns: 23px auto;
+    grid-column-gap: 39.75px;
+  }
+
+  .competitors-db .tabla-competitors tbody tr td:nth-child(3) img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(4) img {
+    height: 1.875rem;
+    width: 2.9375rem;
+  }
+
+  .competitors-db .tabla-competitors tbody tr td:nth-child(3),
+  .competitors-db .tabla-competitors tbody tr td:nth-child(4),
+  .competitors-db .tabla-competitors tbody tr td:nth-child(5) {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .competitors-db .tabla-competitors thead tr th:last-child {
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 22px;
+  }
+
+  .competitors-db .tabla-competitors thead tr th:last-child > i {
+    display: grid;
+    position: relative;
+    font-size: 10px;
+    top: -0.5px;
+  }
+
+  .competitors-db .tabla-competitors tbody tr td:first-child .thumbnail {
+    width: 46px;
+    height: 46px;
+  }
+
+  .tabla-competitors tbody tr td:first-child > span {
+    font-size: 22px;
+    left: -15px;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(5) {
+    font-size: 22px;
+  }
+
+  .tabla-competitors tbody tr td:first-child .position {
+    grid-column-gap: 7px;
+  }
+
+  .tabla-competitors tbody tr td:first-child .position .rank-arrows > span {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .tabla-competitors thead tr th {
+    font-size: 16px;
+  }
+
+  .tabla-competitors tbody tr td:first-child .position > span {
+    font-size: 26.6px;
+  }
+
+}
+
+
+
+
+/* MEDIAQUERIE SCREEN 1500px */
+
+@media screen and (min-width: 1500px) {
+
+  .competitors-db .tabla-competitors thead tr, 
+  .competitors-db .tabla-competitors tbody tr {
+    grid-template-columns: 489px 422px 159px 159px 159px;
+    grid-column-gap: 7px;
+  }
+
+}
+
+/* --- END MAIN COMPETITORS DATABASE --- */
 
 
 

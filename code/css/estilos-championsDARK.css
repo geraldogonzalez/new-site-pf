@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   position: fixed;
   z-index: -1;
   opacity: 0;
-  background: var(--white);
+  background: var(--bg-color);
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   display: block;
   width: 25%;
   height: 25%;
-  background-color: var(--white);
+  background-color: var(--line);
   border-radius: 100%;
   animation: circle-load-before 2.0s infinite ease-in-out both; 
   transition: all .5s ease;
@@ -501,7 +501,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   position: absolute;
   width: 2px;
   height: 16px;
-  background: var(--border);
+  background: var(--line);
   top: 50%;
   margin-top: -8px;
   right: 0;
@@ -1016,7 +1016,7 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
     position: absolute;
     width: 2px;
     height: 20px;
-    background: var(--border);
+    background: var(--line);
     top: 50%;
     margin-top: -10px;
     right: 0;
@@ -1078,13 +1078,13 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   /* Round complete styles */
 
   .main.brackets .round-title .rounds-container .round.complete::before {
-    background: #3aa757;
+    background: var(--line);
   }
 
   .main.brackets .round-title .rounds-container .round.complete div.round-status div {
     width: 75px;
     border: 1px solid var(--line);
-    color: #49b962;
+    color: var(--line);
     background: var(--bg-color);
   }
 
@@ -1104,17 +1104,17 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
     height: 20px;
     line-height: 22px;
     background: var(--line);
-    color: var(--white);
+    color: var(--bg-color);
     display: grid;
     align-items: center;
   }
 
   .main.brackets .round-title .rounds-container .round.playing::after {
-    background: var(--white);
+    background: #979797;
   }
 
   .main.brackets .round-title .rounds-container .round.playing::before {
-    background: #3aa757;
+    background: var(--line);
     width: 0%;
     left: 0;
     animation: 1.7s infinite playing-brackets;
@@ -1578,13 +1578,13 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   left: 0;
   top: 32px;
   margin-top: -15px;
-  background: linear-gradient(to top, var(--darkFucsia), var(--lightFucsia));
+  background: var(--line);
   border-radius: 4px;
   position: absolute;
 }
 
 .main.xbox .tabla-standings tbody tr td:first-child span.qualified {
-  background: linear-gradient(to top, var(--darkFucsia), var(--lightFucsia));
+  background: var(--line);
 }
 
 .main.ps4 .tabla-standings tbody tr td:first-child span.qualified.default, 
@@ -2595,7 +2595,7 @@ padding-top: 16px;
 .main.brackets .cards-container .cards:nth-child(+n+2) .card-container::before {
   position: absolute;
   content: "";
-  background: #ff16ff;
+  background: var(--line);
   height: 2px;
   width: 24px;
   margin-left: -20px;
@@ -2605,7 +2605,7 @@ padding-top: 16px;
 }
 
 .main.brackets.ps4 .cards-container .cards:nth-child(+n+2) .card-container::before {
-  background: #ff16ff;
+  background: var(--line);
 }
 
 .main.brackets .cards-container .cards.semi-final .card-container::before {
@@ -2637,7 +2637,7 @@ content: '';
 position: absolute;
 height: 19px;
 width: 2px;
-background: #e3cc91;
+background: var(--line);
 left: 50%;
 margin-left: -1px;
 bottom: -16px;
@@ -2648,7 +2648,7 @@ main.brackets .cards-container .round-matchs .cards.grand-final .view-grand-fina
 display: flex;
 justify-content: center;
 align-items: center;
-background: linear-gradient(to top, #af8d26, #e3cc91);
+background: var(--line);
 height: 156px;
 width: 180px;
 border-radius: 13px;
@@ -2683,7 +2683,7 @@ position: relative;
 .main.brackets .cards-container .cards .card-container .connector3, 
 .main.brackets .cards-container .cards .card-container .connector3 .connector4 {
 position: absolute;
-border: 2px solid #ff16ff;
+border: 2px solid var(--line);
 border-left-style: none;
 z-index: 9;
 }
@@ -2692,7 +2692,7 @@ z-index: 9;
 .main.brackets.ps4 .cards-container .cards .card-container .connector1 .connector2, 
 .main.brackets.ps4 .cards-container .cards .card-container .connector3, 
 .main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4 {
-  border-color: #ff16ff;
+  border-color: var(--line);
 }
 
 .main.brackets.ps4 .cards-container .cards .card-container .connector3 .connector4,
@@ -2711,14 +2711,14 @@ width: 22px;
 right: -19px;
 }
 
-/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+/* â†“â†“ PARA BRACKETS DE 32 ROUNDS â†“â†“ */
 
 .main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector1, 
 .main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector3 {
   height: 110px;
   }
 
-/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+/* â†‘â†‘ PARA BRACKETS DE 32 ROUNDS â†‘â†‘ */
 
 .main.brackets .cards-container .cards .card-container .connector1 {
 top: 53px;
@@ -2751,13 +2751,13 @@ border: none;
 bottom: -2px;
 }
 
-/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+/* â†“â†“ PARA BRACKETS DE 32 ROUNDS â†“â†“ */
 
 .main.brackets .cards-container .cards .card-container .connector1 .connector2 {
   border: none;
 }
 
-/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+/* â†‘â†‘ PARA BRACKETS DE 32 ROUNDS â†‘â†‘ */
 
 /* Quarterfinal connectors */
 
@@ -2766,14 +2766,14 @@ bottom: -2px;
 height: 106px;
 }
 
-/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+/* â†“â†“ PARA BRACKETS DE 32 ROUNDS â†“â†“ */
 
 .main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector1, 
 .main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector3 {
   height: 216px;
 }
 
-/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+/* â†‘â†‘ PARA BRACKETS DE 32 ROUNDS â†‘â†‘ */
 
 /* Semifinal connectors */
 
@@ -2782,14 +2782,14 @@ height: 106px;
 height: 213px;
 }
 
-/* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+/* â†“â†“ PARA BRACKETS DE 32 ROUNDS â†“â†“ */
 
 .main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector1, 
 .main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector3 {
   height: 430px;
   }
 
-/* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+/* â†‘â†‘ PARA BRACKETS DE 32 ROUNDS â†‘â†‘ */
 
 /* ----------- MEDIAQUERIES BRACKETS -----------*/
 
@@ -2846,13 +2846,13 @@ height: 213px;
     padding-left: 19px;
   }
 
-  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+  /* â†“â†“ PARA BRACKETS DE 32 ROUNDS â†“â†“ */
 
   .main.brackets.round-32 .cards-container .round-matchs {
     grid-template-columns: repeat(5, 364px) 190px;
   }
 
-  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+  /* â†‘â†‘ PARA BRACKETS DE 32 ROUNDS â†‘â†‘ */
 
   .main.brackets .cards-container .round-matchs .cards {
     padding-top: 30px;
@@ -2959,42 +2959,42 @@ height: 213px;
     right: -14px;
   }
 
-  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+  /* â†“â†“ PARA BRACKETS DE 32 ROUNDS â†“â†“ */
 
   .main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector1, 
   .main.brackets.round-32 .cards-container .cards.round-16 .card-container .connector3 {
     height: 118px;
   }
 
-  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+  /* â†‘â†‘ PARA BRACKETS DE 32 ROUNDS â†‘â†‘ */
 
   .main.brackets .cards-container .cards.quarterfinal .card-container .connector1, 
   .main.brackets .cards-container .cards.quarterfinal .card-container .connector3 {
     height: 117px;
   }
 
-  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+  /* â†“â†“ PARA BRACKETS DE 32 ROUNDS â†“â†“ */
 
   .main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector1, 
   .main.brackets.round-32 .cards-container .cards.quarterfinal .card-container .connector3 {
     height: 233px;
   }
 
-  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+  /* â†‘â†‘ PARA BRACKETS DE 32 ROUNDS â†‘â†‘ */
 
   .main.brackets .cards-container .cards.semi-final .card-container .connector1,
   .main.brackets .cards-container .cards.semi-final .card-container .connector3 {
     height: 231px;
   }
 
-  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+  /* â†“â†“ PARA BRACKETS DE 32 ROUNDS â†“â†“ */
 
   .main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector1, 
   .main.brackets.round-32 .cards-container .cards.semi-final .card-container .connector3 {
     height: 460px;
   }
   
-  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+  /* â†‘â†‘ PARA BRACKETS DE 32 ROUNDS â†‘â†‘ */
 
 }
 
@@ -3328,7 +3328,7 @@ content: '';
 position: absolute;
 width: 1px;
 height: 50px;
-background: #d8d8d8;
+background: var(--line);
 left: 61px;
 top: 50%;
 margin-top: -25px;
@@ -3339,7 +3339,7 @@ content: '';
 position: absolute;
 width: 1px;
 height: 50px;
-background: #d8d8d8;
+background: var(--line);
 right: 61px;
 top: 50%;
 margin-top: -25px;
@@ -3390,7 +3390,8 @@ background: linear-gradient(to top,#0d3aff,#ff16ff);
 .main-grand-final .grand-final-container .grand-final .grand-final-winner .team-thumbnail-nation .thumbnail-console .console i {
 width: 100%;
 height: 100%;
-background: var(--white);
+background: var(--bg-color);
+color: var(--white);
 display: grid;
 align-items: center;
 text-align: center;
@@ -3582,21 +3583,21 @@ padding: 2px;
 
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.ps4,
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.xbox {
-  background: var(--line);
+  background: transparent;
 }
 
 
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card .card {
-border: 1px solid transparent;
+border: 1px solid var(--border-card);
 }
 
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.ps4 .card,
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.livestream.xbox .card {
-  background: var(--line);
+  background: #0724a5;
 }
 
 .main-grand-final .grand-final-container .grand-final .matchs > a .border-card.default .card {
-  background: var(--line);
+  background: var(--bg-color);
 }
 
 
@@ -4194,7 +4195,7 @@ overflow: hidden;
 height: 45px;
 align-items: center;
 border-bottom: 1px solid #cfcfcf;
-background: var(--white);
+background: var(--bg-color);
 position: relative; 
 }
 
@@ -4848,7 +4849,7 @@ justify-content: center;
   transition: all .3s ease;
 }
 
-/* BOX SHADOW INHABILITADO DE MOMENTO A PETICIÓN DE EA*/
+/* BOX SHADOW INHABILITADO DE MOMENTO A PETICIÃ“N DE EA*/
 
 /*
 
@@ -5148,7 +5149,7 @@ overflow: hidden;
 padding: 12px;
 height: 196px;
 grid-template-rows: 34px 28px auto;
-background: var(--bg-color);
+background: #0724a5;
 }
 
 .card-final .formation-record {
@@ -5295,7 +5296,7 @@ letter-spacing: .5px;
 
 .grand-final > .border-card.livestream,
 .grand-final > .card-container .border-card.livestream {
-  background: var(--line);
+  background: var(--bg-color);
 }
 
 .grand-final > .border-card.livestream .card,
@@ -5527,7 +5528,7 @@ letter-spacing: .5px;
     background: linear-gradient(to top, transparent, var(--line), transparent);
   }
 
-  /* ELIMINAMOS LA ANIMACIÓN DE PLAYING NOW */
+  /* ELIMINAMOS LA ANIMACIÃ“N DE PLAYING NOW */
    
   .border-card.playing-now.xbox > span.top, 
   .border-card.playing-now.xbox > span.bottom, 
@@ -5586,7 +5587,7 @@ letter-spacing: .5px;
     background: linear-gradient(to top, transparent, var(--line), transparent);
   }
 
-  /* ELIMINAMOS LA ANIMACIÓN DE PLAYING NOW */
+  /* ELIMINAMOS LA ANIMACIÃ“N DE PLAYING NOW */
     
   .border-card.playing-now.ps4 > span.top, 
   .border-card.playing-now.ps4 > span.bottom, 
@@ -5645,7 +5646,7 @@ letter-spacing: .5px;
     background: linear-gradient(to top,transparent,var(--border),transparent);
   }
 
-  /* ELIMINAMOS LA ANIMACIÓN DE PLAYING NOW */
+  /* ELIMINAMOS LA ANIMACIÃ“N DE PLAYING NOW */
    
   .border-card.playing-now.cl-dark > span.top, 
   .border-card.playing-now.cl-dark > span.bottom, 
@@ -5696,7 +5697,7 @@ letter-spacing: .5px;
     background: linear-gradient(to top,transparent,#af8d26,#e3cc91,transparent);
   }
 
-  /* ELIMINAMOS LA ANIMACIÓN DE PLAYING NOW */
+  /* ELIMINAMOS LA ANIMACIÃ“N DE PLAYING NOW */
    
   .border-card.playing-now.border-card-final > span.top, 
   .border-card.playing-now.border-card-final > span.bottom, 
@@ -5911,7 +5912,8 @@ letter-spacing: .5px;
   filter: grayscale(1);
 }
 
-.card .players-info-games .lose {
+.card .players-info-games .lose,
+.card .players-thumbnails-score .lose {
   opacity: .5;
 }
 
@@ -6229,7 +6231,7 @@ letter-spacing: .5px;
 .main.brackets .round-title {
 height: 72px;
 border-bottom: 2px solid var(--border);
-background: rgba(13, 58, 255, .4);
+background: #0724a5;
 margin-bottom: 16px;
 } 
 
@@ -6308,6 +6310,7 @@ transition: all .3s ease;
 
 .main.brackets .round-title .rounds-container .round > span {
 color: gray;
+height: 13px;
 }
 
 /* Round complete styles */
@@ -6320,7 +6323,7 @@ background: var(--bg-color);
 }
 
 .main.rounds .rounds-container .rounds .round.complete:last-child a div {
-  width: 119px;
+  width: 75px;
 }
 
 .main.rounds .rounds-container .rounds .round.complete a:hover h3,
@@ -6387,7 +6390,7 @@ border: 1px solid var(--line);
 
 .main.rounds .rounds-container .rounds .round.playing.active a div {
 background: var(--line);
-color: var(--white);
+color: var(--bg-color);
 }
 
 .main.rounds .rounds-container .rounds .complete,
@@ -6489,13 +6492,13 @@ display: none;
   grid-template-columns: repeat(4, 364px) 190px;
 }
 
-  /* ↓↓ PARA BRACKETS DE 32 ROUNDS ↓↓ */
+  /* â†“â†“ PARA BRACKETS DE 32 ROUNDS â†“â†“ */
 
 .main.brackets.round-32 .round-title .rounds-container {
   grid-template-columns: repeat(5, 364px) 190px;
 }
 
-  /* ↑↑ PARA BRACKETS DE 32 ROUNDS ↑↑ */
+  /* â†‘â†‘ PARA BRACKETS DE 32 ROUNDS â†‘â†‘ */
 
 .main.brackets .round-title .rounds-container .round {
   height: 90px;
