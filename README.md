@@ -18,6 +18,8 @@ List pages:
   
     * [BRACKETS](https://geraldogonzalez.github.io/new-site-pf/code/ps4-brackets.html).
   
+    * [COMPETITORS DATABASE](https://geraldogonzalez.github.io/new-site-pf/code/ps4-competitors-database.html).
+  
 
 
 * XBOX ONE:
@@ -27,6 +29,8 @@ List pages:
     * [STANDINGS](https://geraldogonzalez.github.io/new-site-pf/code/xbox-standings.html).
   
     * [BRACKETS](https://geraldogonzalez.github.io/new-site-pf/code/xbox-brackets.html).
+  
+    * [COMPETITORS DATABASE](https://geraldogonzalez.github.io/new-site-pf/code/xbox-competitors-database.html).
   
 
 
