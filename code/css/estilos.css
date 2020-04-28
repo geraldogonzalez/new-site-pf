@@ -515,19 +515,33 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
 
 /* Start competitors styles */
 
+.header.competitors {
+  border-bottom: none;
+}
+
+.header.competitors .contenedor-header .consola {
+  margin-bottom: 14px;
+  grid-row-gap: 14px;
+}
+
 .header.competitors .contenedor-header .consola .titulo {
   margin-bottom: .5rem;
-  grid-template-columns: 40px auto;
+  grid-template-columns: 50px auto;
   height: 44px;
 }
 
 .header.competitors .contenedor-header .consola .titulo > img {
-  width: 40px;
+  width: 50px;
+}
+
+.header.competitors .contenedor-header nav {
+  display: none;
 }
 
 .header.competitors .contenedor-header .consola .titulo .text > span {
   color: #404040;
   opacity: .72;
+  font-size: 14px;
 }
 
 .header.standings.competitors .contenedor-header nav .search {
@@ -2057,7 +2071,8 @@ font-size: 33px;
   grid-column-gap: 3px;
 }
 
-.tabla-standings tbody tr td:first-child .thumbnail {
+.tabla-standings tbody tr td:first-child .thumbnail,
+.tabla-competitors tbody tr td .thumbnail {
   width: 1.875rem;
   height: 1.875rem;
   display: grid;
@@ -2068,11 +2083,13 @@ font-size: 33px;
   border-radius: 50%;
 }
 
-.ps4 .tabla-standings tbody tr td:first-child .thumbnail {
+.ps4 .tabla-standings tbody tr td:first-child .thumbnail,
+.ps4 .tabla-competitors tbody tr td .thumbnail {
   background: linear-gradient(to top, #4b5ffc, #36c5fd);
 }
 
-.tabla-standings tbody tr td:first-child .thumbnail img {
+.tabla-standings tbody tr td:first-child .thumbnail img,
+.tabla-competitors tbody tr td .thumbnail img {
   border-radius: 50%;
   width: 100%;
 }
@@ -2099,27 +2116,70 @@ font-size: 33px;
 
 /* --- MAIN COMPETITORS DATABASE --- */
 
+.competitors-db .search-mobile {
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.tabla-competitors thead {
+  padding-top: 0;
+}
+
+.tabla-competitors tbody {
+  width: 302px;
+} 
+
+.tabla-competitors tbody tr {
+  border-bottom: 1px solid rgba(97, 97, 97, 0.3);
+}
+
+.tabla-competitors thead tr th {
+  font-size: 16px;
+}
+
+
 .tabla-competitors thead tr, 
 .tabla-competitors tbody tr {
-  grid-template-columns: 100px 50px 84px 60px;
-  /*
-  grid-template-columns: 120px 71px 90px 66px;*/
+  grid-template-columns: 47px 101px 40px 43px 55px;
+  grid-column-gap: 4px;
 }
  
-.tabla-competitors thead tr th:nth-child(3) {
+.tabla-competitors thead tr th:nth-child(2),
+.tabla-competitors tbody tr td:nth-child(2) {
   display: grid;
+}
+
+.tabla-competitors tbody tr td:nth-child(2) > .position,
+.tabla-competitors tbody tr td:nth-child(2) > .thumbnail {
+  display: none;
+}
+
+.tabla-competitors thead tr th:first-child {
+  padding: 0;
+  text-align: center;
+}
+
+.tabla-competitors thead tr th:nth-child(2) {
+  padding-left: 6px;
+  text-align: left;
+}
+
+.tabla-competitors thead tr th:nth-child(5) > span {
+  display: none;
 }
 
 .tabla-competitors thead tr th:last-child {
   padding: 0;
+  text-align: center;
 }
 
 .tabla-competitors thead tr th:last-child > i {
   display: none;
 }
- 
-.tabla-competitors tbody tr td:nth-child(3) {
-  display: grid;
+
+.tabla-competitors tbody tr td:nth-child(2) {
+  padding-left: 6px;
+  justify-items: start;
 }
 
 .tabla-competitors tbody tr td:last-child {
@@ -2130,14 +2190,20 @@ font-size: 33px;
   grid-column-gap: 18px;
 }
 
-.tabla-competitors tbody tr td:first-child .position {
+.tabla-competitors tbody tr td:first-child .position,
+.tabla-competitors tbody tr td:nth-child(2) .position {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   grid-column-gap: 8px;
 }
 
-.tabla-competitors tbody tr td:first-child .position .rank-arrows {
+.tabla-competitors tbody tr td:nth-child(2) .position {
+  display: none;
+}
+
+.tabla-competitors tbody tr td:first-child .position .rank-arrows,
+.tabla-competitors tbody tr td:nth-child(2) .position .rank-arrows {
   display: grid;
   grid-template-rows: 8px 12px 8px;
   align-items: center;
@@ -2145,57 +2211,65 @@ font-size: 33px;
   font-size: 14px;
 }
 
-.tabla-competitors tbody tr td:first-child .position > span {
+.tabla-competitors tbody tr td:first-child .position > span,
+.tabla-competitors tbody tr td:nth-child(2) .position > span {
   font-family: NimbusSanCon-Bol;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   position: relative;
   top: -1px;
 }
 
-.tabla-competitors tbody tr td:first-child .position .rank-arrows > span {
+.tabla-competitors tbody tr td:first-child .position .rank-arrows > span,
+.tabla-competitors tbody tr td:nth-child(2) .position .rank-arrows > span {
   font-family: SeravekWebBasicRegular;
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 13px;
   opacity: .75;
   letter-spacing: -.1px;
 }
 
 .tabla-competitors tbody tr td:first-child .position .rank-arrows i,
-.tabla-competitors tbody tr td:first-child .position .rank-arrows .default {
+.tabla-competitors tbody tr td:first-child .position .rank-arrows .default,
+.tabla-competitors tbody tr td:nth-child(2) .position .rank-arrows i,
+.tabla-competitors tbody tr td:nth-child(2) .position .rank-arrows .default {
   color: #cdcdcd;
 }
 
-.tabla-competitors tbody tr td:first-child .position .rank-arrows .up {
+.tabla-competitors tbody tr td:first-child .position .rank-arrows .up,
+.tabla-competitors tbody tr td:nth-child(2) .position .rank-arrows .up {
   color: #00a661;
 }
 
-.tabla-competitors tbody tr td:first-child .position .rank-arrows .down {
+.tabla-competitors tbody tr td:first-child .position .rank-arrows .down,
+.tabla-competitors tbody tr td:nth-child(2) .position .rank-arrows .down {
   color: #df002c;
 }
 
-.tabla-competitors tbody tr td:first-child > span {
-  font-size: 20px;
+.tabla-competitors tbody tr td:nth-child(2) > span {
+  font-size: 16px;
   position: relative;
   top: -1px;
+  letter-spacing: -0.2px;
 }
 
-.tabla-competitors tbody tr td:nth-child(3) img {
-  width: 34px;
-  height: 34px;
+.tabla-competitors tbody tr td:nth-child(4) img {
+  width: 28px;
+  height: 28px;
   border: none;
   border-radius: 0;
 }
 
-.tabla-competitors tbody tr td:nth-child(4) img {
-  height: 1.5rem;
-  width: 1.9rem;
+.tabla-competitors tbody tr td:nth-child(5) img {
+  height: 19px;
+  width: 30px;
   border-radius: 6px;
   border: 1px solid #d7d7d7;
 }
 
-.tabla-competitors tbody tr td:nth-child(5) {
+.tabla-competitors tbody tr td:nth-child(6) {
   font-family: NimbusSanCon-Bol;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 
@@ -2207,8 +2281,12 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 115px 67px 90px 60px;
+    grid-template-columns: 55px 101px 52px 52px 65px;
   }
+
+  .tabla-competitors tbody {
+    width: 341px; 
+  } 
 
 }
 
@@ -2217,11 +2295,16 @@ font-size: 33px;
 
 @media screen and (min-width: 375px) {
 
+
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 120px 71px 90px 66px;
+    grid-template-columns: 60px 105px 55px 55px 65px;
   }
 
+  .tabla-competitors tbody {
+    width: 356px; 
+  } 
+  
 }
 
 
@@ -2231,8 +2314,12 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 143px 75px 90px 75px;
+    grid-template-columns: 70px 111px 65px 65px 65px;
   }
+
+  .tabla-competitors tbody {
+    width: 392px; 
+  } 
 
 }
 
@@ -2243,8 +2330,12 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 146px 75px 90px 75px;
+    grid-template-columns: 70px 114px 65px 65px 65px;
   }
+
+  .tabla-competitors tbody {
+    width: 395px; 
+  } 
 
 }
 
@@ -2255,7 +2346,16 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 157px 85px 95px 85px;
+    grid-template-columns: 75px 120px 75px 70px 75px;
+  }
+
+  .tabla-competitors tbody {
+    width: 431px; 
+  } 
+
+  .tabla-competitors tbody tr td:first-child {
+    justify-self: center;
+    padding-left: 0;
   }
 
 }
@@ -2267,7 +2367,11 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 157px 85px 95px 85px;
+    grid-template-columns: 80px 130px 75px 75px 75px;
+  }
+
+  .tabla-competitors tbody {
+    width: 451px; 
   }
 
 }
@@ -2279,7 +2383,11 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 182px 95px 100px 95px;
+    grid-template-columns: 80px 135px 80px 80px 90px;
+  }
+
+  .tabla-competitors tbody {
+    width: 481px; 
   }
 
 }
@@ -2291,7 +2399,11 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 200px 100px 102px 100px;
+    grid-template-columns: 90px 150px 85px 80px 90px;
+  }
+
+  .tabla-competitors tbody {
+    width: 511px;
   }
 
 }
@@ -2303,7 +2415,11 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 210px 110px 110px 110px;
+    grid-template-columns: 95px 160px 95px 93px 90px;
+  }
+
+  .tabla-competitors tbody {
+    width: 549px;
   }
 
 }
@@ -2315,7 +2431,16 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 185px 134px 85px 100px 65px;
+    grid-template-columns: 100px 165px 100px 100px 100px;
+  }
+
+  .tabla-competitors tbody {
+    width: 581px;
+  }
+
+  .tabla-competitors thead tr th:nth-child(3),
+  .tabla-competitors tbody tr td:nth-child(3) {
+    display: none;
   }
 
 }
@@ -2327,7 +2452,11 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 190px 148px 85px 100px 86px;
+    grid-template-columns: 105px 170px 110px 110px 110px;
+  }
+
+  .tabla-competitors tbody {
+    width: 621px;
   }
 
 }
@@ -2339,7 +2468,11 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 190px 155px 93px 105px 93px;
+    grid-template-columns: 115px 170px 115px 116px 116px;
+  }
+
+  .tabla-competitors tbody {
+    width: 648px;
   }
 
 }
@@ -2351,7 +2484,11 @@ font-size: 33px;
 
   .tabla-competitors thead tr, 
   .tabla-competitors tbody tr {
-    grid-template-columns: 190px 170px 100px 109px 100px;
+    grid-template-columns: 120px 175px 125px 125px 120px;
+  }
+
+  .tabla-competitors tbody {
+    width: 681px;
   }
 
 }
@@ -2363,7 +2500,11 @@ font-size: 33px;
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 190px 170px 115px 115px 110px;
+    grid-template-columns: 130px 176px 130px 130px 130px;
+  }
+
+  .tabla-competitors tbody {
+    width: 712px;
   }
 
 }
@@ -2375,7 +2516,11 @@ font-size: 33px;
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 190px 170px 115px 115px 110px;
+    grid-template-columns: 130px 181px 130px 130px 130px;
+  }
+
+  .tabla-competitors tbody {
+    width: 717px;
   }
 
 }
@@ -2387,7 +2532,11 @@ font-size: 33px;
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 210px 170px 120px 120px 117px;
+    grid-template-columns: 140px 190px 135px 135px 133px;
+  }
+
+  .tabla-competitors tbody {
+    width: 749px;
   }
 
 }
@@ -2399,7 +2548,11 @@ font-size: 33px;
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 210px 170px 125px 124px 140px;
+    grid-template-columns: 145px 185px 145px 145px 145px;
+  }
+
+  .tabla-competitors tbody {
+    width: 781px;
   }
 
 }
@@ -2408,24 +2561,16 @@ font-size: 33px;
 /* MEDIAQUERIE SCREEN 812px */
 
 @media screen and (min-width: 812px) {
-  
-  .header.competitors .contenedor-header .consola .titulo {
-    margin-bottom: 0;
-  }
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 210px 170px 130px 126px 140px;
+    grid-template-columns: 150px 190px 147px 145px 145px;
   }
-/*
-  .competitors-db .tabla-competitors thead tr th:nth-child(2), 
-  .competitors-db .tabla-competitors tbody tr td:nth-child(2),
-  .competitors-db .tabla-competitors thead tr th:nth-child(3),
-  .competitors-db .tabla-competitors thead tr th:nth-child(4) {
-    justify-content: start;
-    padding-left: 11px;
+
+  .tabla-competitors tbody {
+    width: 793px;
   }
-*/
+
 }
 
 
@@ -2435,11 +2580,21 @@ font-size: 33px;
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 210px 170px 134px 134px 144px;
+    grid-template-columns: 150px 190px 147px 145px 145px;
   }
-  
-  .tabla-competitors tbody tr td:first-child {
-    grid-column-gap: 12px;
+
+  .tabla-competitors tbody {
+    width: 804px;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(4) img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(5) img {
+    height: 1.5rem;
+    width: 1.9rem;
   }
 
 }
@@ -2451,7 +2606,11 @@ font-size: 33px;
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 219px 170px 140px 140px 160px;
+    grid-template-columns: 160px 190px 160px 160px 155px;
+  }
+
+  .tabla-competitors tbody {
+    width: 841px;
   }
 
 }
@@ -2461,9 +2620,21 @@ font-size: 33px;
 
 @media screen and (min-width: 900px) {
 
+  .header.competitors {
+    margin-bottom: 20px;
+  }
+
+  .header.competitors .contenedor-header nav .menu > li {
+    display: none;
+  }
+
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 230px 170px 154px 155px 160px;
+    grid-template-columns: 165px 200px 165px 165px 170px;
+  }
+
+  .tabla-competitors tbody {
+    width: 881px;
   }
 
 }
@@ -2475,7 +2646,11 @@ font-size: 33px;
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 230px 184px 165px 165px 165px;
+    grid-template-columns: 175px 200px 175px 175px 180px;
+  }
+
+  .tabla-competitors tbody {
+    width: 921px;
   }
 
 }
@@ -2487,7 +2662,11 @@ font-size: 33px;
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 250px 201px 166px 166px 166px;
+    grid-template-columns: 185px 215px 180px 180px 185px;
+  }
+
+  .tabla-competitors tbody {
+    width: 961px;
   }
 
 }
@@ -2499,17 +2678,75 @@ font-size: 33px;
 
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
-    grid-template-columns: 325px 304px 105px 140px 90px;
+    grid-template-columns: 215px 215px 155px 185px 190px;
   }
 
-  .competitors-db .tabla-competitors tbody tr td:nth-child(3) img {
+  .tabla-competitors thead tr th:nth-child(3), 
+  .tabla-competitors tbody tr td:nth-child(3) {
+    display: grid;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(2) > .position, 
+  .tabla-competitors tbody tr td:nth-child(2) > .thumbnail {
+    display: grid;
+  }
+  
+  .competitors-db .tabla-competitors tbody tr td:nth-child(2) > .thumbnail {
     width: 2.2rem;
     height: 2.2rem;
   }
 
-  .tabla-competitors tbody tr td:nth-child(4) img {
+  .competitors-db .tabla-competitors tbody tr td:nth-child(2) img {
+    width: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .tabla-competitors thead tr th:first-child,
+  .tabla-competitors tbody tr td:first-child {
+    display: none;
+  }
+
+  .tabla-competitors thead tr th:nth-child(2),
+  .tabla-competitors tbody tr td:nth-child(2) {
+    padding-left: 16px;
+    text-align: left;
+  }
+
+  .tabla-competitors thead tr th:nth-child(5) > span {
+    display: inline-block;
+  }
+
+  .tabla-competitors tbody {
+    width: 976px;
+  }
+
+  .competitors-db .tabla-competitors tbody tr td:nth-child(+n+4) {
+    justify-items: center;
+    padding-left: 0;
+  }
+
+  .competitors-db .tabla-competitors tbody tr td:nth-child(4) img {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(5) img {
     height: 1.6rem;
     width: 2.1rem;
+  }
+
+  .competitors-db .tabla-competitors thead tr th:last-child {
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 22px;
+  }
+
+  .tabla-competitors thead tr th:last-child > i {
+    display: grid;
+    position: relative;
+    font-size: 10px;
+    top: -0.5px;
   }
 
 }
@@ -2524,6 +2761,45 @@ font-size: 33px;
     grid-template-columns: 340px 313px 105px 140px 90px;
   }
 
+  .header.competitors {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+  }
+
+  .header.competitors .contenedor-header {
+    margin-bottom: 8px;
+  }
+
+  .header.competitors .contenedor-header .consola {
+    margin-bottom: 20px;
+  }
+
+  .header.competitors .contenedor-header nav {
+    padding: 0 4px 0 7px;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(2) .position > span {
+    font-size: 26.6px;
+  }
+
+  .competitors-db .tabla-competitors tbody tr td:nth-child(2) > .thumbnail {
+    width: 46px;
+    height: 46px;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(2) {
+    justify-content: start;
+    grid-column-gap: 34.75px;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(2) > span {
+    font-size: 22px;
+    left: -9.75px;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(3) {
+    font-size: 20px;
+  }
+
 }
 
 
@@ -2533,24 +2809,13 @@ font-size: 33px;
 
 @media screen and (min-width: 1300px) {
 
+  .header.competitors {
+    margin-bottom: 42px;
+  }
+
   .competitors-db .tabla-competitors thead tr, 
   .competitors-db .tabla-competitors tbody tr {
     grid-template-columns: 360px 324px 159px 159px 159px;
-  }
-
-  .competitors-db .tabla-competitors tbody tr td:first-child {
-    grid-template-columns: 23px auto;
-    grid-column-gap: 39.75px;
-  }
-
-  .competitors-db .tabla-competitors tbody tr td:nth-child(3) img {
-    width: 3.125rem;
-    height: 3.125rem;
-  }
-
-  .tabla-competitors tbody tr td:nth-child(4) img {
-    height: 1.875rem;
-    width: 2.9375rem;
   }
 
   .competitors-db .tabla-competitors tbody tr td:nth-child(3),
@@ -2583,7 +2848,22 @@ font-size: 33px;
     left: -15px;
   }
 
-  .tabla-competitors tbody tr td:nth-child(5) {
+  .competitors-db .tabla-competitors tbody tr td:first-child {
+    grid-template-columns: 23px auto;
+    grid-column-gap: 39.75px;
+  }
+
+  .competitors-db .tabla-competitors tbody tr td:nth-child(4) img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+  
+  .tabla-competitors tbody tr td:nth-child(5) img {
+    width: 43.92px;
+    height: 28.15px;
+  }
+
+  .tabla-competitors tbody tr td:nth-child(6) {
     font-size: 22px;
   }
 
