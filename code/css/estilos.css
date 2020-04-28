@@ -8258,7 +8258,6 @@ max-height: 104px;
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
-  padding-left: 11px;
   align-items: end;
   font-size: 12px;
   grid-column-gap: 45px;
