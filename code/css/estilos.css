@@ -8408,6 +8408,238 @@ max-height: 104px;
   background: linear-gradient(to right, #1C3CF3 0%, #E93CF7 100%);
 }
 
+@media screen and (min-width: 640px) {
+
+  .header.player-profile {
+    grid-template-rows: 55px 101px 54px;
+  }
+  
+  .player-data .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .player-data .container .global-series-info {
+    padding-right: 18px;
+  }
+
+}
+
+@media screen and (min-width: 1130px) {
+
+  .container {
+    width: 1024px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .header.player-profile {
+    grid-template-rows: 61px 223px 61px;
+  }
+
+  .header.player-profile .breadcumbs-search {
+    background: #f2f2f2;
+    border-bottom: 1px solid #cccccc;
+    padding: 0;
+    display: grid;
+    align-items: center;
+  }
+
+  .header.player-profile .breadcumbs-search::before {
+    display: none;
+  }
+
+  .header.player-profile .breadcumbs-search .container .breadcumbs > a {
+    font-size: 16px;
+    position: relative;
+    transition: all 370ms ease-in-out;
+  }
+
+  .header.player-profile .breadcumbs-search .container .breadcumbs > a.competitors {
+    width: 116px;
+  }
+
+  .header.player-profile .breadcumbs-search .container .breadcumbs > a.gamertag {
+    cursor: default;
+  }
+
+  .header.player-profile .breadcumbs-search .container .breadcumbs > a.competitors:hover {
+    margin-top: -5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .header.player-profile .breadcumbs-search .container .breadcumbs > a.gamertag {
+    padding: 0 15px;
+    max-width: 134px;
+  }
+
+  .header.player-profile .breadcumbs-search .container .breadcumbs {
+    grid-column-gap: 10px;
+  }
+
+  .header.player-profile .breadcumbs-search .container .search {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-column-gap: 20px;
+  }
+
+  .header.player-profile .breadcumbs-search .container .search > input {
+    font-family: Arial;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    width: 218px;
+    height: 34px;
+    color: #797979;
+    font-size: 16px;
+  }
+
+  .header.player-profile .breadcumbs-search .container .search::before {
+    display: none;
+  }
+
+  .header.player-profile .breadcumbs-search .container .search > i {
+    color: rgba(22, 22, 22, .5);
+    font-size: 19px;
+  }
+
+  .header.player-profile .breadcumbs-search .container .search > i.fa-search {
+    grid-column: 1 / 2;
+  }
+
+  .header.player-profile .breadcumbs-search .container .search > i.fa-times {
+    color: #000;
+    display: none;
+  }
+
+  .player-data::after {
+    height: 5px;
+  }
+
+  .player-data .container,
+  .nav-bar .container {
+    height: 100%;
+  }
+
+  .header.player-profile .player-data .container .player-information {
+    grid-column-gap: 25px;
+  }
+
+  .header.player-profile .player-data .container .player-information .thumbnail {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+  }
+
+  .header.player-profile .player-data .container .player-information .team-gamertag-nation {
+    grid-auto-flow: unset;
+    align-content: center;
+    grid-row-gap: 14px;
+  }
+
+  .header.player-profile .player-data .container .player-information .team-gamertag-nation .team-nation {
+    grid-auto-flow: column;
+    grid-column-gap: 15px;
+    align-items: center;
+  }
+
+  .header.player-profile .player-data .container .player-information .team-gamertag-nation .team-nation::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 32px;
+    background: #CCCCCC;
+    left: 52px;
+    top: 50%;
+    margin-top: -16px;
+  }
+
+  .header.player-profile .player-data .container .player-information .team-gamertag-nation .team-nation .nation {
+    width: 45px;
+    height: 26px;
+  }
+
+  .header.player-profile .player-data .container .player-information .team-gamertag-nation .team-nation .team {
+    width: 42px;
+    height: 42px;
+  }
+
+  .header.player-profile .player-data .container .player-information .team-gamertag-nation .gamertag-teamname {
+    grid-row-gap: 6px;
+  }
+
+  .header.player-profile .player-data .container .player-information .team-gamertag-nation .gamertag-teamname h2 {
+    font-size: 50px;
+  }
+
+  .header.player-profile .player-data .container .player-information .team-gamertag-nation .gamertag-teamname p {
+    font-size: 20px;
+  }
+
+  .player-data .container .global-series-info {
+    grid-auto-flow: unset;
+    grid-row-gap: 29px;
+    padding-right: 0;
+  }
+
+  .player-data .container .global-series-info .global {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 329px;
+    padding: 0 8px;
+  }
+
+  .player-data .container .global-series-info .global::before {
+    bottom: -16px;
+  }
+
+  .player-data .container .global-series-info .global:last-child::before {
+    display: none;
+  } 
+
+  .player-data .container .global-series-info .global .title {
+    grid-column: 1 / 2;
+    font-size: 20px;
+  }
+
+  .player-data .container .global-series-info .global .title span {
+    display: inline-block;
+  }
+
+  .player-data .container .global-series-info .global-series-rank .rank > span,
+  .player-data .container .global-series-info .global-series-points .points {
+    font-size: 28px;
+  }
+
+  .player-data .container .global-series-info .primary-platform .fa-xbox {
+    font-size: 26px;
+    top: 0px;
+  }
+
+  .nav-bar .global-series-seasons {
+    grid-template-columns: repeat(auto-fit, minmax(89px, 89px));
+  }
+
+  .nav-bar .global-series-seasons a {
+    font-size: 20px;
+    line-height: 61px;
+  }
+
+}
+
+@media screen and (min-width: 1500px) {
+
+  .container {
+    width: 1416px;
+    max-width: 1416px;
+  }
+
+}
+
+
 /* END HEADER STYLES */
 
 
