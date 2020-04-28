@@ -8139,7 +8139,6 @@ max-height: 104px;
 
 .player-data {
   padding-top: 12px;
-  padding-left: 18px;
   padding-bottom: 20px;
   position: relative;
 }
@@ -8163,6 +8162,7 @@ max-height: 104px;
   display: grid;
   grid-auto-flow: column;
   justify-content: start;
+  padding-left: 18px;
   grid-column-gap: 12px;
 }
 
@@ -8257,7 +8257,7 @@ max-height: 104px;
 .player-data .container .global-series-info {
   display: grid;
   grid-auto-flow: column;
-  justify-content: start;
+  justify-content: center;
   padding-left: 11px;
   align-items: end;
   font-size: 12px;
