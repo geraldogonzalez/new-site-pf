@@ -8008,3 +8008,408 @@ max-height: 104px;
 /* END ROUND MATCHUPS STYLES */
 
 /* ----------- END MAIN ROUNDS STYLES ----------- */
+
+
+
+
+
+
+/* ----------- PLAYER PROFILE STYLES ----------- */
+
+
+/* START HEADER STYLES */
+
+
+/* Bradcumbs & Search */
+
+.header.player-profile {
+  background: #fff;
+  display: grid;
+  grid-template-rows: 55px 163px 54px;
+  padding: 0;
+}
+
+.header.player-profile .breadcumbs-search {
+  padding: 14px 20px 12px 12px;
+  background: #f0f0f0;
+  position: relative;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.header.player-profile .breadcumbs-search::before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #AFE45C 0%, #24A96A 100%);
+}
+
+.header.player-profile.ps4 .breadcumbs-search::before,
+.header.player-profile.ps4 .player-data::after {
+  background: linear-gradient(to right, #36C5FD 0%, #4B5FFC 100%);
+}
+
+.header.player-profile.winner .breadcumbs-search::before,
+.header.player-profile.winner .player-data::after {
+  background: linear-gradient(to right, #F3DFAE 0%, #D7B85C 39.91%, #AF8D26 100%);
+}
+
+.header.player-profile.cl-dark .breadcumbs-search::before,
+.header.player-profile.cl-dark .player-data::after {
+  background: linear-gradient(to right, #1C3CF3 0%, #E93CF7 100%);
+}
+
+.header.player-profile .breadcumbs-search .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header.player-profile .breadcumbs-search .container .breadcumbs {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-column-gap: 7px;
+}
+
+.header.player-profile .breadcumbs-search .container .breadcumbs .players {
+  display: none;
+}
+
+.header.player-profile .breadcumbs-search .container .breadcumbs > a {  
+  display: grid;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: -0.002em;
+  color: #000;
+  font-size: 15px;
+  height: 28px;
+}
+
+.header.player-profile .breadcumbs-search .container .breadcumbs > i {
+  color: #B0B0B0;
+}
+
+.header.player-profile .breadcumbs-search .container .breadcumbs > a.competitors {
+  background: #fff;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  width: 101px;
+}
+
+.header.player-profile .breadcumbs-search .container .breadcumbs > a.gamertag {
+  background: #F6F6F6;
+  border: 1px solid #AAAAAA;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, .2);
+  padding: 0 11px;
+  max-width: 126px;
+}
+
+.header.player-profile .breadcumbs-search .container .search > input {
+  width: 0;
+  border: none;
+  outline: 0;
+  background: transparent;
+}
+
+.header.player-profile .breadcumbs-search .container .search {
+  position: relative;
+}
+
+.header.player-profile .breadcumbs-search .container .search::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 29px;
+  top: -6px;
+  left: -9px;
+  background: #AFAFAF;
+}
+
+.header.player-profile .breadcumbs-search .container .search > i {
+  color: rgba(22, 22, 22, .5);
+}
+
+
+/* Player data */
+
+.player-data {
+  padding-top: 12px;
+  padding-left: 18px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.player-data::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #AFE45C 0%, #24A96A 100%);
+}
+
+.player-data .container {
+  display: grid;
+  grid-row-gap: 12px;
+}
+
+.header.player-profile .player-data .container .player-information {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-column-gap: 12px;
+}
+
+.header.player-profile .player-data .container .player-information .thumbnail {
+  width: 70px;
+  height: 70px;
+  padding: 2px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #AFE45C 0%, #24A96A 100%);
+}
+
+.header.player-profile.ps4 .player-data .container .player-information .thumbnail {
+  background: linear-gradient(to top, #36C5FD 0%, #4B5FFC 100%);
+}
+
+.header.player-profile.winner .player-data .container .player-information .thumbnail {
+  background: linear-gradient(to top, #F3DFAE 0%, #D7B85C 39.91%, #AF8D26 100%);
+}
+
+.header.player-profile.cl-dark .player-data .container .player-information .thumbnail {
+  background: linear-gradient(to top, #1C3CF3 0%, #E93CF7 100%);
+}
+
+.header.player-profile .player-data .container .player-information .thumbnail img {
+  width: 100%;
+  background: white;
+  border-radius: 50%;
+}
+
+.header.player-profile .player-data .container .player-information .team-gamertag-nation {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-column-gap: 12px;
+}
+
+.header.player-profile .player-data .container .player-information .team-gamertag-nation .team-nation {
+  display: grid;
+  grid-row-gap: 17px;
+  position: relative;
+  width: 24px;
+}
+
+.header.player-profile .player-data .container .player-information .team-gamertag-nation .team-nation::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  background: #C4C4C4;
+  top: 23px;
+}
+
+.header.player-profile .player-data .container .player-information .team-gamertag-nation .team-nation .nation {
+  width: 24px;
+  height: 15px;
+  border: 0.603951px solid #D7D7D7;
+  border-radius: 3px;
+  background: #D8D8D8;
+}
+
+.header.player-profile .player-data .container .player-information .team-gamertag-nation .team-nation .team {
+  width: 24px;
+  height: 24px;
+}
+
+.header.player-profile .player-data .container .player-information .team-gamertag-nation .gamertag-teamname {
+  display: grid;
+  align-items: center;
+  grid-row-gap: 6px;
+  position: relative;
+  top: -7px;
+}
+
+.header.player-profile .player-data .container .player-information .team-gamertag-nation .gamertag-teamname h2,
+.header.player-profile .player-data .container .player-information .team-gamertag-nation .gamertag-teamname p {
+  margin: 0;
+  padding: 0;
+}
+
+.header.player-profile .player-data .container .player-information .team-gamertag-nation .gamertag-teamname h2 {
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-family: NimbusSanCon-Bol;
+  font-weight: normal;
+}
+
+.header.player-profile .player-data .container .player-information .team-gamertag-nation .gamertag-teamname p {  
+  font-size: 16px;
+}
+
+.player-data .container .global-series-info {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  padding-left: 11px;
+  align-items: end;
+  font-size: 12px;
+  grid-column-gap: 45px;
+}
+
+.player-data .container .global-series-info .global {
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 11px;
+  position: relative;
+}
+
+.player-data .container .global-series-info .global::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 17px;
+  background: #C2C2C2;
+}
+
+.player-data .container .global-series-info .global .title span {
+  display: none;
+}
+
+.player-data .container .global-series-info .global-series-rank .rank {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  grid-column-gap: 8px;
+}
+
+.player-data .container .global-series-info .global-series-rank .rank > span {
+  font-size: 24px;
+  font-family: NimbusSanCon-Bol;
+  position: relative;
+  top: -2px;
+}
+
+.player-data .container .global-series-info .global-series-rank .rank .rank-arrows {
+  display: grid;
+  grid-template-rows: 7px 12px 7px;
+  align-items: center;
+  justify-items: center;
+  font-size: 12px;
+}
+
+.player-data .container .global-series-info .global-series-rank .rank .rank-arrows > span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.player-data .container .global-series-info .global-series-rank .rank .rank-arrows i {
+  color: #cdcdcd;
+}
+
+.player-data .container .global-series-info .global-series-rank .rank .rank-arrows i.up {
+  color: #00a661;
+}
+
+.player-data .container .global-series-info .global-series-rank .rank .rank-arrows i.down {
+  color: #df002c;
+}
+
+.player-data .container .global-series-info .global .title {
+  font-size: 12px;
+}
+
+.player-data .container .global-series-info .global-series-points .points {
+  font-size: 24px;  
+  font-family: NimbusSanCon-Bol;
+}
+
+.player-data .container .global-series-info .primary-platform .fa-xbox {
+  font-size: 18px;
+  position: relative;
+  top: -4px;
+}
+
+.nav-bar {
+  background: linear-gradient(90.44deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.nav-bar .global-series-seasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  height: 100%;
+}
+
+.nav-bar .global-series-seasons a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  font-size: 15px;
+  text-align: center;
+  line-height: 54px;
+}
+
+.nav-bar .global-series-seasons a::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background: #DEDEDE;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-bar .global-series-seasons a.active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-bar .global-series-seasons a::after,
+.nav-bar .global-series-seasons a.active::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  background: transparent;
+  left: 0;
+  transition: all .5s ease-in-out;
+}
+
+.nav-bar .global-series-seasons a:hover::after,
+.nav-bar .global-series-seasons a.active::after {
+  width: 100%;
+  background: linear-gradient(to right, #AFE45C -32.65%, #24A96A 100%);
+}
+
+.header.ps4 .nav-bar .global-series-seasons a:hover::after,
+.header.ps4 .nav-bar .global-series-seasons a.active::after {
+  background: linear-gradient(to right, #36C5FD -32.65%, #4B5FFC 100%);
+}
+
+.header.winner .nav-bar .global-series-seasons a:hover::after,
+.header.winner .nav-bar .global-series-seasons a.active::after {
+  background: linear-gradient(to right, #F3DFAE 0%, #D7B85C 39.91%, #AF8D26 100%);
+}
+
+.header.cl-dark .nav-bar .global-series-seasons a:hover::after,
+.header.cl-dark .nav-bar .global-series-seasons a.active::after {
+  background: linear-gradient(to right, #1C3CF3 0%, #E93CF7 100%);
+}
+
+/* END HEADER STYLES */
+
+
+/* ----------- END PLAYER PROFILE STYLES ----------- */
