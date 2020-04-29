@@ -8134,6 +8134,13 @@ max-height: 104px;
   color: rgba(22, 22, 22, .5);
 }
 
+.header.player-profile .breadcumbs-search .container .search > i.fa-times {
+  color: #000;
+  cursor: pointer;
+  transition: transform 370ms ease-in-out;
+  display: none;
+}
+
 
 /* Player data */
 
@@ -8171,19 +8178,19 @@ max-height: 104px;
   height: 70px;
   padding: 2px;
   border-radius: 50%;
-  background: linear-gradient(to top, #AFE45C 0%, #24A96A 100%);
+  background: linear-gradient(to bottom, #AFE45C 0%, #24A96A 100%);
 }
 
 .header.player-profile.ps4 .player-data .container .player-information .thumbnail {
-  background: linear-gradient(to top, #36C5FD 0%, #4B5FFC 100%);
+  background: linear-gradient(to bottom, #36C5FD 0%, #4B5FFC 100%);
 }
 
 .header.player-profile.winner .player-data .container .player-information .thumbnail {
-  background: linear-gradient(to top, #F3DFAE 0%, #D7B85C 39.91%, #AF8D26 100%);
+  background: linear-gradient(to bottom, #F3DFAE 0%, #D7B85C 39.91%, #AF8D26 100%);
 }
 
 .header.player-profile.cl-dark .player-data .container .player-information .thumbnail {
-  background: linear-gradient(to top, #1C3CF3 0%, #E93CF7 100%);
+  background: linear-gradient(to bottom, #1C3CF3 0%, #E93CF7 100%);
 }
 
 .header.player-profile .player-data .container .player-information .thumbnail img {
@@ -8333,7 +8340,7 @@ max-height: 104px;
   font-family: NimbusSanCon-Bol;
 }
 
-.player-data .container .global-series-info .primary-platform .fa-xbox {
+.player-data .container .global-series-info .primary-platform .fab {
   font-size: 18px;
   position: relative;
   top: -4px;
@@ -8358,6 +8365,7 @@ max-height: 104px;
   font-size: 15px;
   text-align: center;
   line-height: 54px;
+  transition: all .5s ease-in-out;
 }
 
 .nav-bar .global-series-seasons a::before {
@@ -8371,7 +8379,12 @@ max-height: 104px;
   transform: translateY(-50%);
 }
 
-.nav-bar .global-series-seasons a.active {
+.nav-bar .global-series-seasons a:last-child::before {
+  display: none;
+}
+
+.nav-bar .global-series-seasons a.active,
+.nav-bar .global-series-seasons a:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -8509,9 +8522,8 @@ max-height: 104px;
     grid-column: 1 / 2;
   }
 
-  .header.player-profile .breadcumbs-search .container .search > i.fa-times {
-    color: #000;
-    display: none;
+  .header.player-profile .breadcumbs-search .container .search > i.fa-times:hover {
+    transform: scale(1.1);
   }
 
   .player-data::after {
@@ -8525,6 +8537,7 @@ max-height: 104px;
 
   .header.player-profile .player-data .container .player-information {
     grid-column-gap: 25px;
+    padding-left: 0;
   }
 
   .header.player-profile .player-data .container .player-information .thumbnail {
@@ -8614,7 +8627,7 @@ max-height: 104px;
     font-size: 28px;
   }
 
-  .player-data .container .global-series-info .primary-platform .fa-xbox {
+  .player-data .container .global-series-info .primary-platform .fab {
     font-size: 26px;
     top: 0px;
   }
