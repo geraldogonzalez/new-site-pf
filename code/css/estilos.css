@@ -8656,4 +8656,173 @@ max-height: 104px;
 /* END HEADER STYLES */
 
 
+
+
+/* START MAIN STYLES */
+
+
+.main.player-profile {
+  margin-bottom: 3rem;
+}
+
+.main.player-profile .global-series .container {
+  padding: 0 10px;
+}
+
+.main.player-profile .global-series .container h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: NimbusSanCon-Bol;
+  font-weight: normal;
+  line-height: 24px;
+  margin-top: 26px;
+  margin-bottom: 15px;
+}
+
+.main.player-profile .container .events-container {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-columns: 183px;
+  grid-template-rows: 206px;
+}
+
+.main.player-profile .container .card-event {
+  border: 1px solid #AAAAAA;
+  background: #F6F6F6;
+  padding: 12px 12px 17px 12px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  grid-row-gap: 25px;
+  max-height: 206px;
+}
+
+.main.player-profile .container .card-event::before {
+  content: '';
+  position: absolute;
+  width: 159px;
+  height: 1px;
+  left: 50%;
+  top: 124px;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, .2);
+} 
+
+.main.player-profile .container .card-event::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #AFE45C 0%, #24A96A 100%);
+}
+
+.main.player-profile.ps4 .container .card-event::after {
+  background: linear-gradient(to right, #36C5FD 0%, #4B5FFC 100%);
+}
+
+.main.player-profile.winner .container .card-event::after{
+  background: linear-gradient(to right, #F3DFAE 0%, #D7B85C 39.91%, #AF8D26 100%);
+}
+
+.main.player-profile.cl-dark .container .card-event::after {
+  background: linear-gradient(to right, #1C3CF3 0%, #E93CF7 100%);
+}
+
+.main.player-profile .container .card-event .logo-position {
+  display: grid;
+  justify-content: start;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 95px 48px;
+  grid-column-gap: 14px;
+}
+
+.main.player-profile .container .logo-position .logo img {
+  height: 95px;
+}
+
+.main.player-profile .container .position .top {
+  display: grid;
+  grid-row-gap: 9px;
+  color: #808080;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+}
+
+.main.player-profile .container .position .top::before {
+  content: '';
+  position: absolute;
+  width: 38px;
+  height: 1px;
+  background: #808080;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.main.player-profile .container .position .top i {
+  font-size: 13px;
+}
+
+.main.player-profile .container .position .round {
+  text-align: center;
+  font-size: 34px;
+  font-family: NimbusSanCon-Bol;
+}
+
+.main.player-profile .container .position .top .console {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-column-gap: 7px;
+}
+
+.main.player-profile .container .location-name {
+  display: grid;
+  grid-row-gap: 9px;
+}
+
+.main.player-profile .container .location {
+  display: grid;
+  color: #7B7B7B;
+  justify-content: start;
+  align-items: center;
+  grid-column-gap: 13px;
+  font-size: 11px;
+  grid-auto-flow: column;
+  position: relative;
+}
+
+.main.player-profile .container .location::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 12px;
+  background: #C9C9C9;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 52px;
+}
+
+.main.player-profile .container .name {
+  font-size: 20px;
+  font-family: NimbusSanCon-Bol;
+  font-weight: normal;
+  line-height: 18px;
+  position: relative;
+  top: -6px;
+}
+
+.main.player-profile .scroll {
+  display: none;
+}
+
+/* END MAIN STYLES */
+
 /* ----------- END PLAYER PROFILE STYLES ----------- */
