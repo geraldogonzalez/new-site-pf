@@ -8087,6 +8087,7 @@ max-height: 104px;
   color: #000;
   font-size: 15px;
   height: 28px;
+  transition: all 370ms ease-in-out;
 }
 
 .header.player-profile .breadcumbs-search .container .breadcumbs > i {
@@ -8098,6 +8099,11 @@ max-height: 104px;
   border: 1px solid #E5E5E5;
   border-radius: 4px;
   width: 101px;
+}
+
+.header.player-profile .breadcumbs-search .container .breadcumbs > a.competitors:hover {
+  margin-top: -5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header.player-profile .breadcumbs-search .container .breadcumbs > a.gamertag {
@@ -8466,7 +8472,6 @@ max-height: 104px;
   .header.player-profile .breadcumbs-search .container .breadcumbs > a {
     font-size: 16px;
     position: relative;
-    transition: all 370ms ease-in-out;
   }
 
   .header.player-profile .breadcumbs-search .container .breadcumbs > a.competitors {
@@ -8475,11 +8480,6 @@ max-height: 104px;
 
   .header.player-profile .breadcumbs-search .container .breadcumbs > a.gamertag {
     cursor: default;
-  }
-
-  .header.player-profile .breadcumbs-search .container .breadcumbs > a.competitors:hover {
-    margin-top: -5px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .header.player-profile .breadcumbs-search .container .breadcumbs > a.gamertag {
@@ -8665,17 +8665,30 @@ max-height: 104px;
   margin-bottom: 3rem;
 }
 
-.main.player-profile .global-series .container {
+.main.player-profile > section {
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.main.player-profile > section:last-child {
+  border-bottom: none;
+}
+
+.main.player-profile > section > .container {
   padding: 0 10px;
 }
 
-.main.player-profile .global-series .container h2 {
+.main.player-profile > section:first-child > .container h2 {
+  margin-top: 26px;
+}
+
+.main.player-profile > section > .container h2 {
   font-size: 24px;
   text-transform: uppercase;
   font-family: NimbusSanCon-Bol;
   font-weight: normal;
   line-height: 24px;
-  margin-top: 26px;
   margin-bottom: 15px;
 }
 
@@ -8697,7 +8710,16 @@ max-height: 104px;
   align-content: start;
   grid-row-gap: 25px;
   max-height: 206px;
+  transition: all 370ms ease-in-out;
+  cursor: pointer;
 }
+
+
+.main.player-profile .container .card-event:hover {
+  margin-top: -16px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 6px 9px rgba(0, 0, 0, 0.2);
+}
+
 
 .main.player-profile .container .card-event::before {
   content: '';
@@ -8705,7 +8727,7 @@ max-height: 104px;
   width: 159px;
   height: 1px;
   left: 50%;
-  top: 124px;
+  top: 120px;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, .2);
 } 
@@ -8720,15 +8742,15 @@ max-height: 104px;
   background: linear-gradient(to right, #AFE45C 0%, #24A96A 100%);
 }
 
-.main.player-profile.ps4 .container .card-event::after {
+.main.player-profile .container .card-event.ps4::after {
   background: linear-gradient(to right, #36C5FD 0%, #4B5FFC 100%);
 }
 
-.main.player-profile.winner .container .card-event::after{
+.main.player-profile .container .card-event.winner::after{
   background: linear-gradient(to right, #F3DFAE 0%, #D7B85C 39.91%, #AF8D26 100%);
 }
 
-.main.player-profile.cl-dark .container .card-event::after {
+.main.player-profile .container .card-event.cl-dark::after {
   background: linear-gradient(to right, #1C3CF3 0%, #E93CF7 100%);
 }
 
@@ -8737,7 +8759,8 @@ max-height: 104px;
   justify-content: start;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 95px 48px;
+  grid-template-columns: 95px 38px;
+  grid-template-rows: 95px;
   grid-column-gap: 14px;
 }
 
@@ -8774,6 +8797,18 @@ max-height: 104px;
   text-align: center;
   font-size: 34px;
   font-family: NimbusSanCon-Bol;
+  position: relative;
+}
+
+.main.player-profile .container .card-event.winner .position .round.first::before {
+  content: '';
+  position: absolute;
+  width: 46px;
+  height: 3px;
+  background: linear-gradient(to right, rgba(243, 223, 174, 0) 0%, #F3DFAE 20.31%, #D7B85C 33.33%, #AF8D26 49.48%, #D7B85C 65.63%, #F3DFAE 78.13%, rgba(243, 223, 174, 0) 100%);
+  left: 50%;
+  top: 39px;
+  transform: translateX(-50%);
 }
 
 .main.player-profile .container .position .top .console {
@@ -8807,7 +8842,11 @@ max-height: 104px;
   background: #C9C9C9;
   top: 50%;
   transform: translateY(-50%);
-  left: 52px;
+  left: 41px;
+}
+
+.main.player-profile .container .location .fa-map-marker-alt {
+  display: none;
 }
 
 .main.player-profile .container .name {
@@ -8819,8 +8858,412 @@ max-height: 104px;
   top: -6px;
 }
 
+.main.player-profile .container .lifetime .name {  
+  font-size: 20px;
+  font-family: NimbusSanCon-Bol;
+  font-weight: normal;
+  top: -4px;
+  margin-bottom: 3px;
+}
+
+.main.player-profile .container .lifetime .points-titles {
+  color: #7B7B7B;
+  font-size: 10px;
+  display: grid;
+  grid-row-gap: 3px;
+}
+
+.main.player-profile .container .lifetime .points-titles span {
+  font-weight: bold;
+}
+
 .main.player-profile .scroll {
   display: none;
+}
+
+.main.player-profile > section.stats > .container h2 {
+  margin-bottom: 5px;
+}
+
+.main.player-profile > section.stats > .container .event-stats-name {
+  margin-bottom: 16px;
+  display: inline-block;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.main.player-profile > section.stats > .container .stats-container {
+  margin: 0 auto;
+  width: 296px;
+  height: 391px;
+  background: #F6F6F6;
+  border: 1px solid #AAAAAA;
+  border-radius: 10px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .search-container {
+  width: 100%;
+  height: 50px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #AAAAAA;
+  border-radius: 10px 10px 0px 0px;
+  display: grid;
+  grid-template-columns: 52px auto;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+}
+
+.main.player-profile > section.stats > .container .stats-container .search-container::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 25px;
+  background: #AAAAAA;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 53px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .search-container > .icon {
+  display: inline-block; 
+  width: 17px;
+  height: 17px;
+  background: #7D7D7D;
+} 
+
+.main.player-profile > section.stats > .container .stats-container .search-container > input {
+  border: none;
+  outline: none;
+  height: 100%;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .5);
+  width: 100%;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.main.player-profile > section.stats > .container .card-stats {
+  padding: 14px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .thumbnail-total {
+  display: grid;
+  grid-template-columns: 118px 128px;
+  justify-content: start;
+  grid-column-gap: 22px;
+  margin-bottom: 14px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .thumbnail-total .thumbnail-gradient {
+  padding: 6px;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  background: linear-gradient(to left, #AFE45C 0%, #24A96A 100%);
+}
+
+.main.player-profile.ps4 > section.stats > .container .stats-container .thumbnail-total .thumbnail-gradient {
+  background: linear-gradient(to left, #36C5FD 0%, #4B5FFC 100%);
+}
+
+.main.player-profile.winner > section.stats > .container .stats-container .thumbnail-total .thumbnail-gradient {
+  background: linear-gradient(to left, #F3DFAE 0%, #D7B85C 39.91%, #AF8D26 100%);
+}
+
+.main.player-profile.cl-dark > section.stats > .container .stats-container .thumbnail-total .thumbnail-gradient {
+  background: linear-gradient(to left, #1C3CF3 0%, #E93CF7 100%);
+}
+
+.main.player-profile > section.stats > .container .stats-container .thumbnail-total .thumbnail-gradient .thumbnail-padding {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 7px;
+  background: #F6F6F6;
+}
+
+.main.player-profile > section.stats > .container .stats-container .thumbnail-total .thumbnail-gradient .thumbnail-padding img {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #C4C4C4;
+}
+
+.main.player-profile > section.stats > .container .stats-container .thumbnail-total .total {
+  display: grid;
+  align-content: center;
+  grid-row-gap: 15px;
+  position: relative;
+}
+
+.main.player-profile > section.stats > .container .stats-container .thumbnail-total .total::before {
+  content: '';
+  position: absolute;
+  width: 128px;
+  height: 1px;
+  background: #C5C5C5;
+  top: 60px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .thumbnail-total .total > div {
+  display: grid;
+  grid-template-rows: 18px 20px;
+  grid-row-gap: 8px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .thumbnail-total .total > div .total-text {
+  font-family: NimbusSanCon-Bol;
+  font-size: 18px;
+  margin: 0;
+}
+
+.main.player-profile > section.stats > .container .stats-container .games-data {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-column-gap: 18px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .media {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-column-gap: 7px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .media > span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #C9C9C9;
+  border-radius: 3px;
+  font-family: NimbusSanCon-Bol;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.main.player-profile > section.stats > .container .stats-container .total-wins .media > span {
+  background: linear-gradient(224.61deg, #ABE354 0%, #00A661 97.78%);
+  border-radius: 3px;
+}
+
+.main.player-profile.ps4 > section.stats > .container .stats-container .total-wins .media > span {
+  background: linear-gradient(224.61deg, #36C5FD 0%, #4B5FFC 97.78%);
+  border-radius: 3px;
+}
+
+.main.player-profile.winner > section.stats > .container .stats-container .total-wins .media > span {
+  background: linear-gradient(224.61deg, #F3DFAE 0%, #D7B85C 39.91%, #AF8D26 97.78%);
+  border-radius: 3px;
+}
+
+.main.player-profile.cl-dark > section.stats > .container .stats-container .total-wins .media > span {
+  background: linear-gradient(224.61deg, #1C3CF3 0%, #E93CF7 97.78%);
+}
+
+.main.player-profile > section.stats > .container .stats-container .media .percent,
+.main.player-profile > section.stats > .container .stats-container .games-played {
+  font-family: NimbusSanCon-Bol;
+  font-size: 15px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .penalty {
+  display: none;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats {
+  display: grid;
+  grid-template-rows: repeat(4, 12px) 24px;
+  grid-row-gap: 29px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat {
+  font-size: 16px;
+  line-height: 12px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat::after {
+  content: '';
+  position: absolute;
+  width: 268px;
+  height: 1px;
+  left: 0;
+  bottom: -15px;
+  background: #C5C5C5;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat:last-child::after {
+  display: none;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat .total,
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat .fouls {
+  font-family: NimbusSanCon-Bol;
+  font-size: 18px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat:last-child {
+  top: -7px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat .fouls {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 48px;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat .fouls .color-card {
+  position: relative;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat .fouls .color-card::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 25px;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #C5C5C5;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat .fouls .color-card::after {
+  content: '';
+  position: absolute;
+  width: 17px;
+  height: 24px;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  background: #FF0000;
+}
+
+.main.player-profile > section.stats > .container .stats-container .player-stats .stat .fouls .color-card.yellow::after {
+  background: #FFC700;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+  .main.player-profile .global-series .container h2 {
+    font-size: 32px;
+    margin-top: 45px;
+    margin-bottom: 32px;
+  }
+
+  .main.player-profile .container .events-container {
+    grid-template-columns: 228px;
+    grid-template-rows: 260px;
+    grid-row-gap: 12px;
+  }
+
+  .main.player-profile .container .card-event {
+    max-height: 260px;
+    grid-row-gap: 21px;
+    padding: 22px 15px 24px 15px;
+  }
+  
+  .main.player-profile .container .card-event::before {
+    width: 198px;
+    top: 152px;
+  }
+
+  .main.player-profile .container .card-event::after {
+    height: 7px;
+  }
+
+  .main.player-profile .container .card-event .logo-position {
+    grid-template-columns: 120px 38px;
+    grid-template-rows: 120px;
+    grid-column-gap: 22px;
+  }
+  
+  .main.player-profile .container .logo-position .logo img {
+    height: 120px;
+  }
+
+  .main.player-profile .container .position .round {  
+    font-size: 48px;
+  }
+
+  .main.player-profile .container .location {
+    grid-column-gap: 21px;
+    font-size: 12px;
+  }
+
+  .main.player-profile .container .location::before {
+    left: 48px;
+  }
+
+  .main.player-profile .container .location .city {
+    display: grid; 
+    justify-content: start;
+    align-items: center;
+    grid-column-gap: 4px;
+  }
+
+  .main.player-profile .container .location .fa-map-marker-alt {
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .main.player-profile .container .name {
+    font-size: 22px;
+    top: -4px;
+    line-height: 22px;
+  }
+
+  .main.player-profile .container .card-event.winner .position .round.first::before {
+    width: 72px;
+    height: 4px;
+    top: 57px;
+  }
+
+  .main.player-profile .container .lifetime {
+    position: relative;
+    top: 6px;
+  }
+
+  .main.player-profile .container .lifetime .name {
+    font-size: 22px;
+  }
+
+  .main.player-profile .container .lifetime .points-titles {
+    font-size: 14px;
+    grid-row-gap: 1px;
+  }
+
+  .main.player-profile .container .lifetime .points-titles > div {
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    grid-column-gap: 5px;
+  }
+
+  .main.player-profile .container .lifetime .points-titles .text {
+    font-size: 12px;
+  }
+
+}
+
+@media screen and (min-width: 1130px) {
+
+  .main.player-profile .global-series .container {
+    padding: 0;
+  }
+
 }
 
 /* END MAIN STYLES */
