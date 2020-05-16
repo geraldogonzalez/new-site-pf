@@ -19,7 +19,10 @@ List pages:
     * [BRACKETS](https://geraldogonzalez.github.io/new-site-pf/code/ps4-brackets.html).
   
     * [COMPETITORS DATABASE](https://geraldogonzalez.github.io/new-site-pf/code/ps4-competitors-database.html).
-  
+    
+    
+    * [COMPETITORS DATABASE](https://geraldogonzalez.github.io/new-site-pf/code/ps4-player-profile.html).
+    
 
 
 * XBOX ONE:
