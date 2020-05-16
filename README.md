@@ -21,7 +21,7 @@ List pages:
     * [COMPETITORS DATABASE](https://geraldogonzalez.github.io/new-site-pf/code/ps4-competitors-database.html).
     
     
-    * [COMPETITORS DATABASE](https://geraldogonzalez.github.io/new-site-pf/code/ps4-player-profile.html).
+    * [PLAYER PROFILE](https://geraldogonzalez.github.io/new-site-pf/code/ps4-player-profile.html).
     
 
 
