@@ -1061,12 +1061,21 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
   .main.brackets .round-title .rounds-container .round.complete::before {
     background: #3aa757;
   }
+  
+  .main.brackets.ps4 .round-title .rounds-container .round.complete::before {
+    background: #4B5FFC;
+  }
 
   .main.brackets .round-title .rounds-container .round.complete div.round-status div {
     width: 75px;
     border: 1px solid #00a661;
     color: #49b962;
     background: white;
+  }
+    
+  .main.brackets.ps4 .round-title .rounds-container .round.complete div.round-status div {
+    border: 1px solid #4B5FFC;
+    color: #4B5FFC;
   }
 
   /* Round playing styles */
@@ -1089,6 +1098,10 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
     align-items: center;
   }
 
+  .main.brackets.ps4 .round-title .rounds-container .round.playing div.round-status div {
+    background: #4B5FFC;
+  }
+
   .main.brackets .round-title .rounds-container .round.playing::after {
     background: #d5d5d5;
   }
@@ -1098,6 +1111,10 @@ h1, h2, h3, h4, h5, h6, div, img, section, footer, main, article {
     width: 0%;
     left: 0;
     animation: 1.7s infinite playing-brackets;
+  }
+
+  .main.brackets.ps4 .round-title .rounds-container .round.playing::before {
+    background: #4B5FFC;
   }
 
     /* Animation */
@@ -6409,6 +6426,7 @@ transition: all .3s ease;
 
 .main.brackets .round-title .rounds-container .round > span {
 color: #000;
+height: 13px;
 }
 
 /* Round complete styles */
@@ -6419,6 +6437,11 @@ border: 1px solid #00a661;
 color: #49b962;
 background: white;
 }
+
+.main.rounds.ps4 .rounds-container .rounds .round.complete a div {
+  border: 1px solid #4B5FFC;
+  color: #4B5FFC;
+  }
 
 .main.rounds .rounds-container .rounds .round.complete a:hover h3,
 .main.rounds .rounds-container .rounds .round.playing a:hover h3,
@@ -6431,6 +6454,11 @@ color: black;
 color: white;
 background: #00a661;
 }
+
+.main.rounds.ps4 .rounds-container .rounds .round.active a div {
+  background: #4B5FFC;
+  color: white;
+  }
 
 .main.rounds .rounds-container .rounds .round.complete a:hover + span.date,
 .main.rounds .rounds-container .rounds .round.playing a:hover + span.games,
@@ -6482,10 +6510,19 @@ align-items: center;
 border: 1px solid #00a661;
 }
 
+.main.rounds.ps4 .rounds-container .rounds .round.playing a div {
+  border: 1px solid #4B5FFC;
+  color: #4B5FFC;
+}
+
 .main.rounds .rounds-container .rounds .round.playing.active a div {
 background: #00a661;
 color: white;
 }
+
+.main.rounds.ps4 .rounds-container .rounds .round.playing.active a div {
+  background: #4B5FFC;
+  }
 
 .main.rounds .rounds-container .rounds .complete,
 .main.rounds .rounds-container .rounds .upcoming {
@@ -6662,41 +6699,17 @@ display: none;
   background: #3aa757;
 }
 
+.main.rounds.ps4 .rounds-container .rounds .round.complete::before {
+  background: #4B5FFC;
+  }
+
 .main.rounds .rounds-container .rounds .round.complete a {
   max-width: 75px;
 }
 
-.main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div,
-  .main.rounds .rounds-container .rounds .round.playing:last-child a div,
-.main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
+.main.rounds .rounds-container .rounds .round.complete:nth-child(5) a div {
   width: 119px;
 }
-
-.main.rounds .rounds-container .rounds .round.playing:last-child a div,
-.main.brackets .round-title .rounds-container .round.playing:last-child div.round-status div {
-  background: #fff;
-  color: #3aa757;
-  animation: 3s infinite lastMatch;
-}
-
-@keyframes lastMatch {
-  
-  0% {
-    color: #3aa757;
-  }
-  50% {
-    color: #fff;
-    background: #3aa757;
-  }
-
-  100% {
-    color: #3aa757;
-    background: #fff;
-  }
-
-}
-
-
 
 /* Playing button styles */
 
@@ -6723,6 +6736,10 @@ display: none;
   width: 0%;
   left: 0;
   animation: 1.7s infinite playing;
+}
+
+.main.rounds.ps4 .rounds-container .rounds .round.playing::before {
+  background: #4B5FFC;
 }
 
 .main.brackets .round-title .rounds-container .round::after, 

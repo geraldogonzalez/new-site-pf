@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XBOX - Player profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos-white.css">
 </head>
 <body>
 
@@ -21,16 +21,18 @@
     
                     <a href="ps4-competitors-database.html" class="competitors">Competitors</a>
                     <a href="#" class="players">Players</a>
-                    <i class="fas fa-chevron-right"></i>
+                    <img class="search-icon" src="img/icons/arrow-right.svg" alt="">
                     <a href="#" class="gamertag">Cristiano Ro...</a>
     
                 </article>
     
                 
                 <article class="search">
+
                    <input type="text" id="search" placeholder="Search Another Competitor">
-                   <i class="fas fa-search"></i> 
-                   <i class="fas fa-times"></i>
+                   <img class="search-icon" src="img/icons/search.svg" alt="">
+                   <img class="close-icon" src="img/icons/close.svg" alt="">
+                   
                 </article>
 
             </div>
@@ -52,7 +54,7 @@
                         <div class="team-nation">
 
                             <img class="nation" src="img/nations/portugal.jpg" alt="">
-                            <img class="team" src="img/teams/juventus.png" alt="">
+                            <img class="team" src="img/shield.svg" alt="">
 
                         </div>
 
@@ -77,16 +79,18 @@
 
                             <div class="rank-arrows">
 
-                                <i class="fas fa-caret-up up" aria-hidden="true"></i>
+                                <img src="img/icons/green-arrow-up.svg" class="arrow">
+
                                 <span>2</span>
-                                <i class="fas fa-caret-down down" aria-hidden="true"></i>
+
+                                <img src="img/icons/red-arrow-down.svg" class="arrow">
 
                             </div>
 
                         </div>
 
                         <div class="title">
-                            G<span>lobal</span>S<span>eries</span> Rank 20<span>20</span>
+                            G<span>lobal</span> S<span>eries</span> Rank 20<span>20</span>
                         </div>
 
                     </div>
@@ -98,14 +102,14 @@
                         </div>
 
                         <div class="title">
-                            G<span>lobal</span>S<span>eries</span> Points
+                            G<span>lobal</span> S<span>eries</span> Points
                         </div>
 
                     </div>
 
                     <div class="global primary-platform"> 
 
-                        <i class="fab fa-playstation"></i>
+                        <img src="img/icons/ps4.svg" class="console" alt="" >
 
                         <div class="title">
                             <span>Primary</span> Platform
@@ -140,6 +144,8 @@
 
     <main class="main player-profile ps4">
 
+        
+
         <section class="global-series">
 
             <div class="container">
@@ -147,118 +153,60 @@
                 <h2 class="title">FIFA 20 GLOBAL SERIES</h2>
 
                 <div class="global-cards-container">
+                    
+                <article class="events-container">
 
-                    <article class="events-container">
-
-                        <div class="card-event ps4">
-
-                            <div class="logo-position">
-    
-                                <div class="logo">
-                                    <img src="img/events logos/FIFA9-CGD-Events-Final.svg" alt="">
-                                </div>
-    
-                                <div class="position">
-    
-                                    <div class="top">
-                                        <div class="console">
-                                            <i class="fab fa-playstation"></i>
-                                            <i class="fab fa-playstation"></i>
-                                        </div>
-                                        <div class="final-position">TOP</div>
-                                    </div>
-    
-                                    <div class="round">
-                                        4
-                                    </div>
-    
-                                </div>
-    
-                            </div>
-    
-                            <div class="location-name">
-                                
-                                <div class="location">
-    
-                                    <div class="city">
-    
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>London</span>
-    
-                                    </div>
-    
-                                    <div class="date">
-                                        Jan 17-19, 2020
-                                    </div>
-    
-                                </div>
-    
-                                <div class="name">
-                                    FIFA EWORLD CUP GRAND FINAL 19
-                                </div>
-    
-                            </div>
-
-                        </div>
+                    <div class="card-event ps4">
                         
-                    <!--
-                        <div class="card-event ps4">
-                            
-                            <div class="logo-position">
-    
-                                <div class="logo">
-                                    <img src="img/events logos/FEWC_Global_Series_Playoff_Blue_Large_On_Light_AW 1.svg" alt="">
-                                </div>
-    
-                                <div class="position">
-    
-                                    <div class="top">
-                                        <div class="console">
-                                            <i class="fab fa-playstation"></i>
-                                        </div>
-                                        <div class="final-position">FINISH</div>
-                                    </div>
-    
-                                    <div class="round">
-                                        16
-                                    </div>
-    
-                                </div>
-    
-                            </div>
-    
-                            <div class="lifetime">
-    
-                                <div class="name">
-                                    FIFA 20 GLOBAL SERIES
-                                </div>
-                                
-                                <div class="points-titles">
-    
-                                    <div class="points">
-                                        <i class="fab fa-playstation"></i>
+                        <div class="logo-position">
 
-                                        <div class="text">
-                                            Points = <span>1,150</span>
-                                        </div>
-                                    </div>
-    
-                                    <div class="titles">
-                                        <i class="fab fa-playstation"></i>
-
-                                        <div class="text">
-                                            Titles won = <span>2</span>
-                                        </div>
-                                    </div>
-    
-                                </div>
-    
+                            <div class="logo">
+                                <img src="img/trophies/FIFA eWoldCup Trophy 1.svg" alt="" >
                             </div>
 
+                            <div class="position">
+
+                                <div class="top">
+
+                                    <div class="console">
+                                        <img src="img/icons/ps4-gray.svg" class="console" alt="" >
+
+                                    </div>
+
+                                    <div class="final-position">CHAMPION</div>
+
+                                    </div>
+
+                                    <div class="round first">1</div>
+
+                                </div>
+
+                        </div>  
+
+                        <div class="location-name">
+                                            
+                            <div class="location">
+                
+                                <div class="city">
+                
+                                    <img src="img/icons/marker.svg" alt="" />
+                
+                                    <span>Monterrey</span>
+                
+                                </div>
+                
+                                <div class="date">09-06-1995</div>
+                
+                            </div>
+                
+                            <div class="name">NOMBRE DEL EVENTO AQUÍ</div>
+                
                         </div>
-                    -->
+                
+                    </div>
+                                                        
                     </article>
-
+                    
                     <div class="scroll">
 
                         <div class="left-arrow">
@@ -285,16 +233,21 @@
 
             <div class="container">
 
-                <h2 class="title">FIFA 20 GLOBAL SERIES</h2>
-                <span class="event-stats-name">These stats are gathered from XXX events</span>
+                <h2 class="title">FIFA 20 GLOBAL SERIES STATS</h2>
+                <span class="event-stats-name">These stats are gathered from 1 event</span>
 
+                
                 <article class="stats-container">
-
+                    
                     <div class="search-container">
-                        <span class="icon"></span>
-                        <input type="search" name="search" placeholder="Tap to Compare Competitors" id="">
+
+                        <img src="img/icons/search.svg" class="icon">
+
+                        <input type="search" name="search" placeholder="Tap to Compare Competitors" id="" >
+
                     </div>
 
+                            
                     <div class="card-stats">
 
                         <div class="thumbnail-total">
@@ -302,7 +255,7 @@
                             <div class="thumbnail-gradient">
 
                                 <div class="thumbnail-padding">
-                                    <img src="img/players/ronaldo.png" alt="">
+                                    <img src="img/players/ronaldo.png" alt="" >
                                 </div>
                                 
                             </div>
@@ -320,12 +273,12 @@
 
                                                 <span>W</span>
                                                 
-                                                <div class="percent">50%</div>
+                                                <div class="percent">80%</div>
 
                                             </div>
 
                                             <div class="games-played">
-                                                25 GAMES
+                                                8 GAMES
                                             </div>
 
                                         </div>
@@ -333,7 +286,7 @@
                                         <div class="penalty">
                                             <span class="penalty-border"></span>
 
-                                            <span>25%</span> Penalty Wins
+                                            <span>0%</span> Penalty Wins
                                         </div>
 
                                     </div>
@@ -350,12 +303,12 @@
 
                                                 <span>L</span>
                                                 
-                                                <div class="percent">50%</div>
+                                                <div class="percent">20%</div>
 
                                             </div>
 
                                             <div class="games-played">
-                                                25 GAMES
+                                            2 GAMES
                                             </div>
 
                                         </div>
@@ -363,7 +316,7 @@
                                         <div class="penalty">
                                             <span class="penalty-border"></span>
 
-                                            <span>75%</span> Penalty Losses
+                                            <span>0%</span> Penalty Losses
                                         </div>
 
                                     </div>
@@ -372,67 +325,252 @@
                             </div>
 
                         </div>
-
+                        
                         <div class="player-stats">
 
                             <div class="stat">
-
+                
                                 <span class="title">Total Games Played</span>
-                                
-                                <span class="total">50</span> 
-
+                                    
+                                <span class="total">10</span> 
+                
                             </div>
-
+                
+                
                             <div class="stat">
-
+                
                                 <span class="title">Goals</span>
-                                
-                                <span class="total">80</span> 
-
+                                    
+                                <span class="total">40</span> 
+                
                             </div>
-
+                
+                
                             <div class="stat">
-
+                
                                 <span class="title">Goals Against</span>
-                                
-                                <span class="total">30</span>
-
+                                    
+                                <span class="total">23</span>
+                
                             </div>
-
+                
+                
                             <div class="stat">
-
+                
                                 <span class="title">Own Goals</span>
-                                
-                                <span class="total">12</span>
-
+                                    
+                                <span class="total">5</span>
+                
                             </div>
-
+                
+                
                             <div class="stat">
-
+                
                                 <span class="title">Fouls</span>
-
+                
                                 <div class="fouls">
-                                    <span class="total">104</span>
-                                    <span class="color-card red">10</span>
-                                    <span class="color-card yellow">10</span>
+                
+                                    <span class="total">10</span>
+                
+                                    <span class="color-card red">1</span>
+                                    
+                                    <span class="color-card yellow">3</span>
+                
                                 </div>
-
+                
                             </div>
-
+                
                         </div>
 
                     </div>
 
                 </article>
 
+                <article class="stats-cards">
+
+                    <div class="precision-stats">
+
+                        <div class="precision-card">
+
+                            <p class="precision-title">SHOOTING</p>
+                
+                            <div class="precision-bar-data">
+                
+                                <div class="precision-bar">
+                
+                                    <div class="precision-bar-text">
+                
+                                        <p class="percent">60%</p>
+                
+                                        <span>COMPLETION</span>
+                
+                                    </div>
+                
+                                </div>
+                
+                                    <div class="media-total">
+                
+                                        <div class="first">
+                
+                                            <span>Ni idea</span>
+                
+                                            <p>20</p>
+                
+                                        </div>
+                
+                                        <div class="second">
+                
+                                            <span>Ni idea 2</span>
+                
+                                            <p>20</p>
+                
+                                        </div>
+                
+                                    </div>
+                
+                            </div>
+                
+                        </div>
+            
+                    </div>
+                
+                </article>
+
             </div>
 
         </section>
+        
+        <section class="match-history">
+            
+            <div class="container">
+                
+                <h2 class="title">EVENTS MATCH HISTORY</h2>
+                
+                
+                <table class="tabla-event-history">
+                        
+                    <thead>
 
-        <section class="event-history">
+                        <tr>
+
+                            <th class="NimbusSanCon-Bol">EVENT</th>
+
+                            <th class="NimbusSanCon-Bol">LOCATION</th>
+
+                            <th class="NimbusSanCon-Bol">DATE</th>
+
+                            <th class="NimbusSanCon-Bol">PLATFORM FINISH</th>
+                            
+                            <th class="NimbusSanCon-Bol"><span>GRAND FINAL</span> FINISH</th>
+
+                        </tr>
+
+                    </thead>
+                    
+                    <tbody>
+
+                        <tr class="player-info open">
+
+                            <td class="event-name NimbusSanCon-Bol">
+                
+                                <img src="img/trophies/FIFA eWoldCup Trophy 1.svg" alt="">
+                
+                                <span>eWorldCupFinal</span>
+                
+                            </td>
+                
+                            <td>London</td>
+                
+                            <td>November 2019</td>
+                
+                            <td>3</td>
+                
+                            <td>
+                
+                                <span>-</span>
+                
+                                <img class="button" src="img/icons/circle-close.svg" alt="">
+                                
+                            </td>
+                
+                            <td class="player-history">
+
+                                <div class="match">
+                    
+                                    <h6>Round 1</h6>
+                                    
+                                    <div class="card default"></div>
+                    
+                                </div>
+                    
+                    
+                                <div class="arrow left">
+                                    <img src="img/icons/chevron-circle-right.svg" alt="">
+                                </div>
+                    
+                                <div class="arrow right">
+                                    <img src="img/icons/chevron-circle-left.svg" alt="">
+                                </div>
+                    
+                            </td>
+                
+                        </tr>
+
+                        <tr class="player-info">
+
+                            <td class="event-name NimbusSanCon-Bol">
+                
+                                <img src="img/trophies/FIFA eWoldCup Trophy 1.svg" alt="">
+                
+                                <span>Fut Champions Cup</span>
+                
+                            </td>
+                
+                            <td>Madrid</td>
+                
+                            <td>May 2019</td>
+                
+                            <td>3</td>
+                
+                            <td>
+                
+                                <span>-</span>
+                
+                                <img class="button" src="img/icons/circle-close.svg" alt="">
+                                
+                            </td>
+                
+                            <td class="player-history">
+
+                                <div class="match">
+                    
+                                    <h6>Round 1</h6>
+                                    
+                                    <div class="card default"></div>
+                    
+                                </div>
+                    
+                    
+                                <div class="arrow left">
+                                    <img src="img/icons/chevron-circle-right.svg" alt="">
+                                </div>
+                    
+                                <div class="arrow right">
+                                    <img src="img/icons/chevron-circle-left.svg" alt="">
+                                </div>
+                    
+                            </td>
+                
+                        </tr>
+        
+                    </tbody>
+
+                </table>
+
+            </div>
+
 
         </section>
-
 
     </main>
 
